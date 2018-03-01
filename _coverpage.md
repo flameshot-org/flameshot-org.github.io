@@ -9,4 +9,4 @@
 * In-app screenshot edit
 
 [GitHub](https://github.com/lupoDharkael/flameshot)
-[Get Started](#quick-start)
+[Get Started](/getting-start)
