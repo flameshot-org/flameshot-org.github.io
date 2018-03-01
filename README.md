@@ -1,5 +1,5 @@
 # Flameshot
-![image](./_media/icon.png) 
+![image](./_media/logo.png) 
 > Powerful yet simple to use screenshot software.
 
 [![Build Status](https://img.shields.io/travis/lupoDharkael/flameshot.svg)](https://travis-ci.org/lupoDharkael/flameshot)
