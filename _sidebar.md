@@ -1,17 +1,17 @@
 * Guide
 
-  * [Getting Started](getting-start.md)
-  * [Key Bindings](key-bindings.md)
-  * [FAQ](faq.md)
+  * [Getting Started](/getting-start)
+  * [Key Bindings](/key-bindings)
+  * [FAQ](/faq)
 
 * Advanced
 
-  * [Configuration](configuration.md)
-  * [Command Line Options](command-line-options.md)
+  * [Configuration](/configuration)
+  * [Command Line Options](/command-line-options)
 
 * More
 
-  * [Download](download.md)
-  * [Translation](translation.md)
+  * [Download](/download)
+  * [Translation](/translation)
 
-* [Changelog](changelog.md)
+* [Changelog](/changelog)
