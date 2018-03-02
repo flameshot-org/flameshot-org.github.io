@@ -31,7 +31,7 @@
       auto2top: true,
       maxLevel: 3,
       subMaxLevel: 2,
-      routerMode: 'history', // default: 'hash'
+      // routerMode: 'history', // default: 'hash'
       search: {
         maxAge: 43200000,
         paths: 'auto',
@@ -61,7 +61,7 @@
     }
 
     if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
+		navigator.serviceWorker.register('sw.js')
     }
 
   </script>
