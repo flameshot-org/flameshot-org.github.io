@@ -2,7 +2,7 @@
 >2018.02.24
 
 ### Features:
-* Polish, french, georgian, chinese, turkish and rusian translations
+* Polish, French, Georgian, Chinese, Turkish and Rusian translations
 * Modal widgets doesn't prevent the start of a new capture
 * Improved hidpi support (still needs some work)
 * Tool buttons now don't go out of the screen
