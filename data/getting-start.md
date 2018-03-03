@@ -10,13 +10,13 @@ There are packages available for a few distros:
 - [Docker](https://github.com/ManuelLR/docker-flameshot)
 
 In addition, we also have continuous integration, it currently provides the following package:
-- Debian8
-- Debian9
-- Ubuntu16.04
-- Ubuntu17.10
+- Debian8 (jessie)
+- Debian9 (stretch)
+- Ubuntu16.04 (xenial)
+- Ubuntu17.10 (artful)
 - Fedora26
 - Fedora27
-- AppImage
+- AppImage: it can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
 
 Check the [Download](/download) for more information.
 
