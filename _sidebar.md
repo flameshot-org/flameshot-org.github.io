@@ -2,6 +2,7 @@
 
   * [Getting Started](/getting-start)
   * [Key Bindings](/key-bindings)
+  * [Troubleshooting](/troubleshooting)
   * [FAQ](/faq)
 
 * Advanced
