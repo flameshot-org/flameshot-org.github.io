@@ -1,3 +1,31 @@
+## v0.6.0
+>2018.08.17
+
+### Features:
+* Allow systray customization with themes. Use "flameshot-tray" as the name of the icon.
+* Unification of the desktop file with actions.
+* Notification when screenshots are saved in the clipboard.
+* Use datetime as default name for pics.
+* Undo/Redo with Ctrl+z and Ctrl+Shift+z.
+* Add "Take Screenshot" option as menu item in the systray.
+* Add Side-Panel (open it with Space).
+* Add autostart to config flags.
+* Add Pin tool.
+* Filename: replace colons with dashes.
+* Add Text tool.
+* Delete Imgur image button after uploading it from the preview window.
+* Capture single screen:
+* flameshot screen (capture the screen containing the mouse) and
+* flameshot screen -n 1 (capture the first screen).
+* Store settings colors in hexadecimal format.
+
+### Fixes
+* flameshot full -c shouldn't block the desktop.
+* Now you can overwrite exported configuration with the same name as a previous exports.
+* Fix flameshot --raw wait time with delay.
+* Fix negative selection geometry bug.
+* Improved hidpi support with some bugs fixed.
+
 ## v0.5.1
 >2018.02.24
 
