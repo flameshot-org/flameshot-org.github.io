@@ -15,8 +15,7 @@
 * Add Text tool.
 * Delete Imgur image button after uploading it from the preview window.
 * Capture single screen:
-* flameshot screen (capture the screen containing the mouse) and
-* flameshot screen -n 1 (capture the first screen).
+`flameshot screen` (capture the screen containing the mouse) and `flameshot screen -n 1` (capture the first screen).
 * Store settings colors in hexadecimal format.
 
 ### Fixes
