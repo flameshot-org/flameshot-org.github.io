@@ -48,3 +48,34 @@ Steps for using the configuration:
 5. Click _Edit_ → _Import..._, navigate to the Desktop folder (or wherever you saved the configuration file) and open the configuration file.
 6. Now the Flameshot entry should appear in the list. Click _Apply_ to apply the changes.
 7. If you want to change the defaults, you can expand the entry, select the appropriate action and modify it as you wish; the process is pretty mush self-explanatory.
+
+#### On Ubuntu and other Gnome based distros
+
+You can easily configure your 'print' keyboard shortcut to be assigned to Flameshot. Below an example to open Flameshot in GUI mode:
+
+1. Open _Settings_ → _Devices_ → _Keyboard_  → _Shortcuts_.
+
+2. Search for 'print', and unbind the screen capture function by selecting it, and clicking _backspace_.
+
+3. Scroll down and click on the '+'.
+
+4. On 'Name', name it 'Flameshot' or 'PrintScreen'.
+
+5. Define the command as 'flameshot gui'.
+
+6. Select 'Define shortcut...'and click your keyboard <kbd>Prt Sc</kbd> key.
+
+Now you can use your default keyboard key to launch Flameshot.
+
+For defining multiple shortcuts you can repeat the process above, and just change the command.
+
+Some examples of commands are:
+
+```bash
+# Capture a region using the GUI, and have it automatically saved to your pictures folder when clicking the save button in GUI
+flameshot gui -p /home/user/Pictures
+# Capture the active monitor and save it automatically to your pictures folder
+flameshot screen -p /home/user/Pictures
+# Capture the full desktop (all monitors) and save it automatically to your pictures folder
+flameshot full -p /home/user/Pictures
+```
