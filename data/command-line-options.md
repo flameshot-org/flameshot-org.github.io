@@ -34,7 +34,7 @@ Check out the information window to see all the available shortcuts in the graph
 ## CLI configuration
 You can use the graphical menu to configure Flameshot, but alternatively you can use your terminal or scripts to do so.
 
-- open the confguration menu:
+- open the configuration menu:
 
    `flameshot config`
 

@@ -17,7 +17,7 @@ These shortcuts are available in GUI mode:
 <kbd>Shift</kbd> + drag a handler of the selection area: mirror redimension in the opposite handler.
 
 ### Global
-If you want use Flameshot as a default screenshot utility, chanses are you want to launch it using the <kbd>Prt Sc</kbd> key. Flameshot doesn't yet offer a fully-automated option to do so, but you can configure your system to do so.
+If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prt Sc</kbd> key. Flameshot doesn't yet offer a fully-automated option to do so, but you can configure your system to do so.
 
 #### On KDE Plasma desktop
 To make configuration easier, there's a [file](https://github.com/lupoDharkael/flameshot/docs/shortcuts-config/flameshot-shortcuts-kde) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
