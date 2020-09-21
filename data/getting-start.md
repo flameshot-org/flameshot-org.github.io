@@ -16,7 +16,7 @@ In addition, we also have continuous integration, it currently provides the foll
 - Ubuntu17.10 (artful)
 - Fedora26
 - Fedora27
-- AppImage: it can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
+- AppImage: it can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives. To get a quick start on AppImage [click here](\appimage-snap-flatpak).
 
 Check the [Download](/download) for more information.
 
