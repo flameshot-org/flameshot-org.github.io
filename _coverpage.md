@@ -1,12 +1,14 @@
 ![logo](_media/logo.png)
 
-# Flameshot <small>0.6.0</small>
+# Flameshot <small>0.8.0</small>
 
 > Powerful yet simple to use screenshot software.
 
-* Easy to use
-* Customizable appearance
-* In-app screenshot edit
+* Customizable appearance.
+* Easy to use.
+* In-app screenshot edition.
+* DBus interface.
+* Upload to Imgur.
 
-[GitHub](https://github.com/lupoDharkael/flameshot)
+[GitHub](https://github.com/flameshot-org/flameshot)
 [Get Started](/getting-start)
