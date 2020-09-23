@@ -1,3 +1,43 @@
+## v0.8.0
+>2020.09.19
+
+### Features:
+* Add translation:
+  * Japanese
+  * Brazilian Portuguese
+  * Serbian
+  * Dutch
+  * Ukrainian
+  * German
+  * Slovak
+  * Basque
+  * Czech
+  * Swedish
+  * Italian
+  * Korean
+  * Dutch
+* Allow enter key to copy image to clipboard
+* side panel: Add thickness slider
+* Add support for saving as JPG and BMP files.
+* Allow 45 degree adjustment for some tools
+* Add option to close after capture (WARNING: this function is buggy! It may not work well if you are going to copy the image to clipboard! If you encounter problems related to clipboard, please disable this feature in the configuration and try again.)
+* Add a basic launcher panel.
+* Add option to auto copy URL after upload
+* Add a circle counter tool.
+* Replace the blur tool with pixelate tool.
+* Convert buildsystem from QMake to CMake.
+* Add launcher action into .desktop file.
+* Added Generic Packages (Snap, Flatpak, AppImage)
+* Improved Windows support
+
+### Fixes
+* Fix capture after pressing ctrl + S during textarea input
+
+### Known Issues
+* Wayland support is experimental. In generic packages (Snap, Flatpak, AppImage) there may be extra issues with Wayland.
+* In generic packages(Snap, Flatpak, AppImage) due to confinement "Open With External Application" does not work.
+* If "close after capture" is enabled, and a user copies the image to clipboard, the image may not actually be in the clipboard. We recommend using the "Save" feature with close after capture.
+
 ## v0.6.0
 >2018.08.17
 
