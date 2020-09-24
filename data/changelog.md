@@ -1,4 +1,11 @@
 ## v0.8.0
+>2020.09.24
+
+### Fixes
+* Fixed ubuntu 18.04 packaging
+* Auto contrast on circle counter
+
+## v0.8.0
 >2020.09.19
 
 ### Features:
