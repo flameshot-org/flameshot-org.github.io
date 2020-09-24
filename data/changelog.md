@@ -1,4 +1,4 @@
-## [v0.8.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.1)
+## [v0.8.1](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.1)
 >2020.09.24
 
 ### Fixes
