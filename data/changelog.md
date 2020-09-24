@@ -110,7 +110,7 @@
 * Configuration import, export and reset.
 * Experimental Wayland support (Plasma & Gnome)
 
-### Accesibility
+### Accessibility
 * Capture selection resizable using any border.
 
 ### Fixes
