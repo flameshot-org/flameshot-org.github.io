@@ -1,4 +1,13 @@
-## v0.8.0
+## [v0.8.1](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.1)
+>2020.09.24
+
+### Fixes
+* Fixed ubuntu 18.04 packaging
+* Auto contrast on circle counter
+
+--------------------------------------------------------------------------------
+
+## [v0.8.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.0)
 >2020.09.19
 
 ### Features:
@@ -38,7 +47,9 @@
 * In generic packages(Snap, Flatpak, AppImage) due to confinement "Open With External Application" does not work.
 * If "close after capture" is enabled, and a user copies the image to clipboard, the image may not actually be in the clipboard. We recommend using the "Save" feature with close after capture.
 
-## v0.6.0
+--------------------------------------------------------------------------------
+
+## [v0.6.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.6.0)
 >2018.08.17
 
 ### Features:
@@ -65,7 +76,9 @@
 * Fix negative selection geometry bug.
 * Improved hidpi support with some bugs fixed.
 
-## v0.5.1
+--------------------------------------------------------------------------------
+
+## [v0.5.1](https://github.com/flameshot-org/flameshot/releases/tag/v0.5.1)
 >2018.02.24
 
 ### Features:
@@ -80,7 +93,9 @@
 ### Fixes
 * Minor fixes
 
-## v0.5.0
+--------------------------------------------------------------------------------
+
+## [v0.5.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.5.0)
 >2017.12.20
 
 ### Features
@@ -103,20 +118,26 @@
 * Now the cli wont break if you preppend a dash before gui, full and config arguments.
 * Fix rare crash condition creating a selection during a graphical capture.
 
-## v0.4.2
+--------------------------------------------------------------------------------
+
+## [v0.4.2](https://github.com/flameshot-org/flameshot/releases/tag/v0.4.2)
 >2017.09.17
 
 ### Hotfix: 
 * persistent configuration wasn't handled correctly for new users, failing to set a "initiated" status flag in the configuration. That is used to let the program know if a new process of Flameshot is the first launch of the program.
 
-## v0.4.1
+--------------------------------------------------------------------------------
+
+## [v0.4.1](https://github.com/flameshot-org/flameshot/releases/tag/v0.4.1)
 >2017.08.29
 
 ### Features
 * Slightly darker capture background (Cross cursor more visible in Plasma)
 * Flameshot compiles with QT 5.3 (Debian 8, Linux Mint, etc)
 
-## v0.4.0
+--------------------------------------------------------------------------------
+
+## [v0.4.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.4.0)
 >2017.08.17
 
 ### Features
@@ -141,7 +162,9 @@
 ### Extras
 * More code cleanup! (still more to do)
 
-## v0.3.0
+--------------------------------------------------------------------------------
+
+## [v0.3.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.3.0)
 >2017.07.25
 
 ### Features
@@ -161,13 +184,17 @@
 * Huge general code refactor.
 * Dbus API refactor.
 
-## v0.2.1
+--------------------------------------------------------------------------------
+
+## [v0.2.1](https://github.com/flameshot-org/flameshot/releases/tag/v0.2.1)
 >2017.07.04
 
 ### Fixes
 * Fix inability to change active buttons in non english translated versions of the software due to a wrong identification of the type of the buttons.
 
-## v0.2.0
+--------------------------------------------------------------------------------
+
+## [v0.2.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.2.0)
 >2017.06.20
 
 ### Features
@@ -175,7 +202,9 @@
 * Independence of full screen captures not affecting the graphical captures.
 * Desktop entry for a more convenient desktop integration.
 
-## v0.1.0
+--------------------------------------------------------------------------------
+
+## [v0.1.0](https://github.com/flameshot-org/flameshot/releases/tag/v0.1.0)
 >2017.06.19
 
 ### Features
