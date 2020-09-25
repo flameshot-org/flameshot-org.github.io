@@ -16,8 +16,7 @@ rm Flameshot-*-x86_64.AppImage
 ```
 
 3. Download the latest AppImage
-2.1. Get it from [Release](https://github.com/flameshotapp/packages/releases) page:
-https://github.com/flameshot-org/flameshot/releases/download/v0.8.0/Flameshot-0.8.0-x86_64.AppImage
+2.1. Get it from [Release page](https://github.com/flameshot-org/flameshot/releases/latest)
 OR
 2.2. use the following to automatically download the latest.
  ```sh
@@ -38,7 +37,11 @@ chmod +x Flameshot-*-x86_64.AppImage
 This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
 
 6.1 click on the tray icon and select "Take screenshot"
-6.2 `./Flameshot-*-x86_64.AppImage gui`
+
+6.2 open terminal and use the following to run the application:
+```sh
+./Flameshot-*-x86_64.AppImage gui
+```
 
 
 ## Snap
