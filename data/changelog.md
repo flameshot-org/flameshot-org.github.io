@@ -1,3 +1,14 @@
+## [v0.8.3](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.3)
+>2020.09.28
+
+### Fixes
+* Fixed Snap Packaging
+* Small bug fixes
+
+--------------------------------------------------------------------------------
+
+
+
 ## [v0.8.1](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.1)
 >2020.09.24
 

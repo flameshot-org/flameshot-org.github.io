@@ -1,6 +1,6 @@
 ![logo](_media/logo.png)
 
-# Flameshot <small>0.8.1</small>
+# Flameshot <small>0.8.3</small>
 
 > Powerful yet simple to use screenshot software.
 
