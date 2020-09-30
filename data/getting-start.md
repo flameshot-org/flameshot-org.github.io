@@ -8,6 +8,7 @@ There are packages available for a few distros:
 - [openSUSE](https://software.opensuse.org/package/flameshot)
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
 - [Docker](https://github.com/ManuelLR/docker-flameshot)
+- [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
 
 In addition, we also have continuous integration, it currently provides the following package:
 - Debian8 (jessie)
