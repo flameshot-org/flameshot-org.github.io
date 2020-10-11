@@ -1,3 +1,26 @@
+## [v0.8.4](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.4)
+>2020.10.10
+
+### Fixes
+
+
+* Renamed assets to match DBUS name for flathub support
+* Fixed issue where theme was not applied to widgets
+* Fixed issue where pixelate tool did not properly apply pixel size and was not symmetric horizontally and vertically
+* Fixed visual artifact in pin to desktop in appimage release
+* Fixed issue where CTRL + S did not save active text in text tool
+* Imgur tool now opens in the center of the screen
+* Translation Updates
+  * Brazilian Portuguese
+  * German
+  * Korean
+  * Basque
+
+
+--------------------------------------------------------------------------------
+
+
+
 ## [v0.8.3](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.3)
 >2020.09.28
 
