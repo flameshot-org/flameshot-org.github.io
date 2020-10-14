@@ -8,8 +8,10 @@ Here we discuss commands to be used in a **GNU/Linux** system. We migh later add
 flameshot --version
 ```
 The output would look like:
+> ```
 > Flameshot v0.8.3
 > Compiled with Qt 5.15.0
+> ```
 
 ## Display Server Protocol
 
@@ -31,10 +33,12 @@ Short format:
 xrandr --listactivemonitors
 ```
 The output would look like:
+> ```
 > Monitors: 3
 > 0: +*HDMI-1-1 1920/509x1080/286+1080+0  HDMI-1-1
 > 1: +HDMI-0 1080/509x1920/286+3000+0  HDMI-0
 > 2: +HDMI-1 1080/509x1920/286+0+80  HDMI-1
+> ```
 
 Long format:
 
@@ -42,6 +46,7 @@ Long format:
 xrandr | grep -v " disconnected "
 ```
 The output would look like:
+> ```
 > Screen 0: minimum 8 x 8, current 4080 x 2000, maximum 32767 x 32767
 > HDMI-0 connected 1080x1920+3000+0 left (normal left inverted right x axis y axis) 509mm x 286mm
 >    1920x1080     60.00*+  59.94    50.00    60.00    50.04
@@ -98,6 +103,7 @@ The output would look like:
 >   640x480 (0x1d9) 25.175MHz -HSync -VSync
 >         h: width   640 start  656 end  752 total  800 skew    0 clock  31.47KHz
 >         v: height  480 start  490 end  492 total  525           clock  59.94Hz
+> ```
 
 ## Graphics card information
 
@@ -107,9 +113,12 @@ For graphics card there are also many ways to get the information but the most t
 update-pciids  # you might need to run this with sudo
 lspci | grep -i 'vga\|3d\|2d'
 ```
+
 The output would look like:
+> ```
 > 00:02.0 VGA compatible controller: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller (rev 06)
 > 01:00.0 VGA compatible controller: NVIDIA Corporation GP106 [GeForce GTX 1060 6GB] (rev a1)
+> ```
 
 and
 
@@ -119,6 +128,7 @@ lshw -class display
 ```
 
 The output would look like:
+> ```
 > WARNING: you should run this program as super-user.
 >   *-display
 >        description: VGA compatible controller
@@ -145,6 +155,7 @@ The output would look like:
 >        configuration: driver=i915 latency=0
 >        resources: irq:32 memory:d3400000-d37fffff memory:b0000000-bfffffff ioport:f000(size=64)
 > WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+> ```
 
 ## Operating system information
 
@@ -156,4 +167,6 @@ uname -a
 
 which give an out put similar to the following:
 
+> ```
 > Linux MyComputer 5.8.11-1-MANJARO #1 SMP PREEMPT Wed Sep 23 14:35:40 UTC 2020 x86_64 GNU/Linux
+> ```
