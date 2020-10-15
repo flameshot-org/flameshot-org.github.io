@@ -1,3 +1,20 @@
+## [v0.8.5](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.5)
+>2020.10.14
+
+### Fixes
+
+* Fixed Icon Regression
+* Staged documentation for signed windows binaries
+* Adjusted releasing info for flatpak, snapcraft, rpm, deb
+* Snaps are now available on snapcraft so not posted here: https://snapcraft.io/flameshot
+* Flatpak is hosted on flathub so not posted here: https://flathub.org/apps/details/org.flameshot.Flameshot
+* Current Windows Binaries are not signed but once they are available it will be uploaded here.
+
+
+
+
+--------------------------------------------------------------------------------
+
 ## [v0.8.4](https://github.com/flameshot-org/flameshot/releases/tag/v0.8.4)
 >2020.10.10
 
