@@ -1,4 +1,0 @@
-- Languages
-  - [:uk: English](/)
-  - [:es: Español](/es/)
-  - [:cn: 简体中文](/zh-cn/)

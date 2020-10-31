@@ -1,10 +1,10 @@
-# Flameshot
-
+# Flameshot <sub>0.8.5</sub> 
 > Powerful yet simple to use screenshot software.
 
-![ug](/_media/animatedUsage.gif)
+![Usage](/media/animatedUsage.gif)
 
 ## Features
+
 - Customizable appearance.
 - Easy to use.
 - In-app screenshot edition.
@@ -12,6 +12,7 @@
 - Upload to Imgur.
 
 ## Considerations
+
 - Experimentally **Gnome Wayland** and **Plasma Wayland** support.
 - If you are using Gnome you need to install the [TopIcons](https://extensions.gnome.org/extension/1031/topicons/) extension in order to see the systemtray icon.
 - In order to speed up the first launch of Flameshot (DBus init of the app can be slow), consider starting the application automatically on boot.
@@ -19,12 +20,14 @@
 - Execute the command `flameshot` without parameters or use the "Launch Flameshot" desktop entry to launch a running instance of the program without taking actions.
 
 ## License
+
 - The main code is licensed under [GPLv3](https://github.com/flameshot-org/flameshot/LICENSE)
 - The logo of Flameshot is licensed under [Free Art License v1.3](https://github.com/flameshot-org/flameshot/img/flameshotLogoLicense.txt)
 - The button icons are licensed under Apache License 2.0. See: https://github.com/google/material-design-icons
 - The code at capture/capturewidget.cpp is based on https://github.com/ckaiser/Lightscreen/blob/master/dialogs/areadialog.cpp (GPLv2)
 - The code at capture/capturewidget.h is based on https://github.com/ckaiser/Lightscreen/blob/master/dialogs/areadialog.h (GPLv2)
-- I copied a few lines of code from KSnapshot regiongrabber.cpp revision 796531 (LGPL)
+- Copied a few lines of code from [KSnapshot](https://github.com/KDE/ksnapshot) regiongrabber.cpp revision 796531 (LGPL)
 - Qt-Color-Widgets taken and modified from https://github.com/mbasaglia/Qt-Color-Widgets (see their license and exceptions in the project) (LGPL/GPL)
 
 Info: If I take code from your project and that implies a relicense to GPLv3, you can reuse my changes with the original previous license of your project applied.
+
