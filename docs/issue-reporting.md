@@ -1,4 +1,3 @@
-# Information required for issue reporting
 In this page we explain how to properly extract your system information so that you can report it in a [GitHub issue](https://github.com/flameshot-org/flameshot/issues/)
 Here we discuss commands to be used in a **GNU/Linux** system. We migh later add similar information for Windows users.
 
