@@ -1,22 +1,36 @@
 ## Installation
 There are packages available for a few distros:
+
 - [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/)
-  + Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
+  - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
+
 - [Debian 10+](https://tracker.debian.org/pkg/flameshot): `apt install flameshot`
+
 - [Ubuntu 18.04+](https://launchpad.net/ubuntu/+source/flameshot): `apt install flameshot`
+
 - Fedora: `dnf install flameshot`
+
 - [openSUSE](https://software.opensuse.org/package/flameshot)
+
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
+
 - [Docker](https://github.com/ManuelLR/docker-flameshot)
+
 - [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
 
 In addition, we also have continuous integration, it currently provides the following package:
-- Debian8 (jessie)
-- Debian9 (stretch)
-- Ubuntu16.04 (xenial)
-- Ubuntu17.10 (artful)
-- Fedora26
-- Fedora27
+
+- Debian10 (buster)
+
+- Ubuntu18.04 (bionic)
+
+- Ubuntu20.04 (focal)
+
+- Fedora31
+
+- Fedora32
+
+- OpenSUSE Leap 15.2
 
 General packages(AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives. 
 
