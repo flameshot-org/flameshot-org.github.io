@@ -3,7 +3,7 @@ site_url: 'https://flameshot.org'
 repo_url: 'https://github.com/flameshot-org/flameshot'
 site_description: 'The official flameshot site.'
 site_author: 'The flameshot org.'
-copyright: 'Copyright &copy; 2017 ~ 2020 The flameshot org.'
+copyright: 'Copyright &copy; 2017 ~ 2021 The flameshot org.'
 
 # NOTE. mkdocs will auto-generate navigation when here is no nav configuration.
 # https://squidfunk.github.io/mkdocs-material
