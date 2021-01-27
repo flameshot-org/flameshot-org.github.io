@@ -25,7 +25,7 @@ General packages(AppImage, snap, and Flatpak): they can run on common Linux-base
 
 You can always use the AppImage as it is distro agnostic:
 
-1. Naviaget to the folder you would like to store the software (the following is a suggestion):
+1. Navigate to the folder you would like to store the software (the following is a suggestion):
 
 ```sh
 mkdir -p ~/Applications/Flameshot
