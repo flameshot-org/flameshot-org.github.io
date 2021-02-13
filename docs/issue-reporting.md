@@ -6,13 +6,41 @@ Here we discuss commands to be used in a **GNU/Linux** system. We migh later add
 ```sh
 flameshot --version
 ```
+
 The output would look like:
+
 > ```
 > Flameshot v0.8.3
 > Compiled with Qt 5.15.0
 > ```
 
-## Display Server Protocol
+## Quick collection of the system information
+
+Providing the output of this command would usually be enough for a bug report. For much more detailed method, move on to the next section. This method uses a tool that is most probably installed on your computer names `inxi` and it can quickly collect the graphical information we need. We are only interested in the "systemS" and "Graphics" section:
+
+```sh
+inxi --width 80 --system --graphics
+```
+
+which should produce an output similar to the following:
+
+> ```
+> System:
+>   Host: MyBox Kernel: 5.10.15-1-MANJARO x86_64 bits: 64
+>   Desktop: KDE Plasma 5.20.5 Distro: Manjaro Linux
+> Graphics:
+>   Device-1: Intel Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics
+>   driver: i915 v: kernel
+>   Device-2: NVIDIA GP106 [GeForce GTX 1060 6GB] driver: nvidia v: 460.39
+>   Display: x11 server: X.Org 1.20.10 driver: loaded: modesetting,nvidia
+>   unloaded: nouveau resolution: 1: 1080x1920~60Hz 2: 1080x1920~60Hz
+>   3: 1920x1080~60Hz
+>   OpenGL: renderer: GeForce GTX 1060 6GB/PCIe/SSE2 v: 4.6.0 NVIDIA 460.39
+> ```
+
+## Detailed methods
+
+### Display Server Protocol
 
 Basically what we want to know is if you are using X or Wayland. If you want to know what they are and what they do You can read [this article](https://www.secjuice.com/wayland-vs-xorg/).
 
@@ -22,7 +50,7 @@ You can use the following command to determin which one do you use:
 loginctl show-session $(loginctl show-user $(whoami) -p Display --value) -p Type --value
 ```
 
-## Monitor(s) information
+### Monitor(s) information
 
 You can get lots of information about the monitors, but we are interested to see only those that are active and in use. You can use `xrandr` command to get the monitor information and here we presenta short version and a long version. The long version is more useful since it also contains information about the orientation of the monitor.
 
@@ -31,7 +59,9 @@ Short format:
 ```sh
 xrandr --listactivemonitors
 ```
+
 The output would look like:
+
 > ```
 > Monitors: 3
 > 0: +*HDMI-1-1 1920/509x1080/286+1080+0  HDMI-1-1
@@ -44,6 +74,7 @@ Long format:
 ```sh
 xrandr | grep -v " disconnected "
 ```
+
 The output would look like:
 > ```
 > Screen 0: minimum 8 x 8, current 4080 x 2000, maximum 32767 x 32767
@@ -104,7 +135,7 @@ The output would look like:
 >         v: height  480 start  490 end  492 total  525           clock  59.94Hz
 > ```
 
-## Graphics card information
+### Graphics card information
 
 For graphics card there are also many ways to get the information but the most two common routes are:
 
@@ -114,6 +145,7 @@ lspci | grep -i 'vga\|3d\|2d'
 ```
 
 The output would look like:
+
 > ```
 > 00:02.0 VGA compatible controller: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller (rev 06)
 > 01:00.0 VGA compatible controller: NVIDIA Corporation GP106 [GeForce GTX 1060 6GB] (rev a1)
@@ -127,6 +159,7 @@ lshw -class display
 ```
 
 The output would look like:
+
 > ```
 > WARNING: you should run this program as super-user.
 >   *-display
@@ -156,7 +189,7 @@ The output would look like:
 > WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
 > ```
 
-## Operating system information
+### Operating system information
 
 There are many ways to get such information. Perhaps the easiest one is via the following command:
 
