@@ -1,6 +1,7 @@
 site_name: Flameshot
 site_url: 'https://flameshot.org'
 repo_url: 'https://github.com/flameshot-org/flameshot'
+edit_uri: '' # hide edit button
 site_description: 'The official flameshot site.'
 site_author: 'The flameshot org.'
 copyright: 'Copyright &copy; 2017 ~ 2021 The flameshot org.'
