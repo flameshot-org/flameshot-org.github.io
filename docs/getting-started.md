@@ -180,6 +180,6 @@ openssl, ca-certificates
 
 ## Issue reporting
 
-To report a bug or suggest a new feature, you can go to [GitHub issues page](github.com/flameshot-org/flameshot/issues) and use the searchbox in the middle of the page to see if anyone else have already posted something similar. Sometimes you will find a quick solution just by reading the threads. In case of feature request, if you find someone with similar idea, just give that a thumbs-up to increase its priority/importance.
+To report a bug or suggest a new feature, you can go to [GitHub issues page](https://github.com/flameshot-org/flameshot/issues) and use the searchbox in the middle of the page to see if anyone else have already posted something similar. Sometimes you will find a quick solution just by reading the threads. In case of feature request, if you find someone with similar idea, just give that a thumbs-up to increase its priority/importance.
 
 In case you didn't find similar issue, create a new issue and explain in details what the issue is. If you can, add pictures or video recordings to clarify the situation. For bug reports, make sure to also visit [issue reporting page](/issue-reporting) in which we have explained how to get the information we need in each bug report.
