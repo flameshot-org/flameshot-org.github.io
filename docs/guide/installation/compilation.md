@@ -6,40 +6,58 @@ The compilation requires **Qt version 5.3 or higher** and **GCC 4.9.2 or higher*
 
 ### Debian/Ubuntu
 Compilation Dependencies:
-````
-apt install git g++ build-essential qt5-qmake qt5-default qttools5-dev-tools
-````
-
-Compilation: run `qmake && make` in the main directory.
+```sh
+apt install g++ cmake build-essential qt5-default qttools5-dev-tools libqt5svg5-dev qttools5-dev
+```
 
 ### Fedora
 Compilation Dependencies:
-````
-dnf install qt5-devel gcc-c++ git qt5-qtbase-devel qt5-linguist
-````
-
-Compilation:  run `qmake-qt5 && make` in the main directory.
+```sh
+dnf install gcc-c++ cmake qt5-devel qt5-qtbase-devel qt5-linguist
+```
 
 ### Arch
 Compilation Dependencies:
-````
-pacman -S git qt5-base base-devel qt5-tools
-````
+```sh
+pacman -S cmake base-devel git qt5-base qt5-tools
+```
+
+### OSX
+Compilation Dependencies:
+```sh
+brew install qt5
+brew install cmake
+```
+
 
 ## Compilation
 
-Compilation:  run `qmake && make` in the main directory.
+```sh
+mkdir build
+cd build
+cmake ../
+make
+```
+
+**NOTE:** for macOS you should replace command
+```sh
+cmake ../
+```
+to
+```sh
+cmake ../ -DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5
+```
 
 ## Install
 Simply use `make install` with privileges.
 
 ## Packaging
-In order to generate the makefile installing in `/usr` instead of in `/usr/local` you can use the `packaging` option to generate the proper makefile (`qmake CONFIG+=packaging` instead of just `qmake`).
+In order to generate the makefile installing in `/usr` instead of in `/usr/local` you can use the `packaging` option to generate the proper makefile (`cmake CONFIG+=packaging` instead of just `cmake`).
 
 If you want to install in a custom directory you can define the `BASEDIR` variable.
 
 **Example**:
 You want to install Flameshot in ~/myBuilds/test. You would execute the following to do so:
-`qmake CONFIG+=packaging BASEDIR=~/myBuilds/test && make install`
+`cmake CONFIG+=packaging BASEDIR=~/myBuilds/test && make install`
 
 
