@@ -108,7 +108,7 @@ to update the snap applications on your computer, you should run `snap refresh`.
 Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:
 
 ```sh
-flatpak install flathub flameshot
+flatpak install flathub org.flameshot.Flameshot
 ```
 
 Alternatively you can install from the github using Flatpak if you want a specific version. For example for getting the version 0.9.0:
@@ -120,7 +120,7 @@ flatpak install https://github.com/flameshot-org/flameshot/releases/download/v0.
 And for runing it you should do
 
 ```sh
-flatpak run org.flameshot.flameshot
+flatpak run org.flameshot.Flameshot
 ```
 
 -------------------------------------------------
