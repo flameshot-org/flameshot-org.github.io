@@ -18,7 +18,7 @@ winget install flameshot
 
 ### Scoop
 
-Flameshot can be installed using Scoop extras:
+Flameshot can be installed using Scoop extras bucket:
 
 ```powershell
 scoop bucket add extras
