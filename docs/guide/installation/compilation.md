@@ -7,7 +7,7 @@ The compilation requires **Qt version 5.3 or higher** and **GCC 4.9.2 or higher*
 ### Debian/Ubuntu
 Compilation Dependencies:
 ```sh
-apt install g++ cmake build-essential qt5-default qttools5-dev-tools libqt5svg5-dev qttools5-dev
+apt install g++ cmake extra-cmake-modules build-essential qt5-default qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
 ```
 
 ### Fedora
@@ -35,7 +35,7 @@ brew install cmake
 ```sh
 mkdir build
 cd build
-cmake ../
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
 make
 ```
 
@@ -52,12 +52,12 @@ cmake ../ -DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5
 Simply use `make install` with privileges.
 
 ## Packaging
-In order to generate the makefile installing in `/usr` instead of in `/usr/local` you can use the `packaging` option to generate the proper makefile (`cmake CONFIG+=packaging` instead of just `cmake`).
+In order to generate the makefile installing in `/usr` instead of in `/usr/local` you can use the `packaging` option to generate the proper makefile (`cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr` instead of just `cmake`).
 
 If you want to install in a custom directory you can define the `BASEDIR` variable.
 
 **Example**:
 You want to install Flameshot in ~/myBuilds/test. You would execute the following to do so:
-`cmake CONFIG+=packaging BASEDIR=~/myBuilds/test && make install`
+`cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr BASEDIR=~/myBuilds/test && make install`
 
 
