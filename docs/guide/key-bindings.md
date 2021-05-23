@@ -20,7 +20,7 @@ These shortcuts are available in GUI mode:
 If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prt Sc</kbd> key. Flameshot doesn't yet offer a fully-automated option to do so, but you can configure your system to do so.
 
 #### On KDE Plasma desktop
-To make configuration easier, there's a [file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
+To make configuration easier, there's [a file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
 
 |  Keys                                                           |  Description                                                                                |
 |---                                                              |---                                                                                          |
@@ -34,13 +34,13 @@ If you don't like the defaults, you can change them manually later.
 Steps for using the configuration:
 
 1. The configuration file configures shortcuts so that Flameshot automatically saves (without opening the save dialog) screenshots to _~/Pictures/Screenshots_ folder. Make sure you have that folder by running the following command:
-    ```
+    ```sh
     mkdir -p ~/Pictures/Screenshots
     ```
    (If you don't like the default location, you can skip this step and configure your preferred directory later.)
 
 2. Download the configuration file:
-    ```
+    ```sh
     cd ~/Desktop; wget https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde
     ```
 3. Go to _System Settings_ → _Shortcuts_ → _Custom Shortcuts_.
@@ -71,7 +71,7 @@ For defining multiple shortcuts you can repeat the process above, and just chang
 
 Some examples of commands are:
 
-```bash
+```sh
 # Capture a region using the GUI, and have it automatically saved to your pictures folder when clicking the save button in GUI
 flameshot gui -p /home/user/Pictures
 # Capture the active monitor and save it automatically to your pictures folder

@@ -11,17 +11,16 @@ copyright: 'Copyright &copy; 2017 ~ 2021 The flameshot org.'
 nav:
     - Overview: index.md
     - Guide: 
-      - Getting Started: getting-started.md
-      - Key Bindings: key-bindings.md
-      - Troubleshooting: troubleshooting.md
-      - FAQ: faq.md
-      - Issue Reporting: issue-reporting.md
+      - Installation: guide/installation/installation-index.md
+      - Key Bindings: guide/key-bindings.md
+      - Troubleshooting: guide/troubleshooting.md
+      - FAQ: guide/faq.md
+      - Issue Reporting: guide/issue-reporting.md
     - Advanced:
-      - Configuration: configuration.md
-      - Command Line Options: command-line-options.md
+      - Configuration: advanced/configuration.md
+      - Command Line Options: advanced/command-line-options.md
     - More:
-      - Download: download.md
-      - Translation:  translation.md
+      - Translation:  more/translation.md
     - Changelog: changelog.md
         
 theme:
@@ -87,3 +86,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/flameshot-org
       name: flameshot-org on Github
+    - icon: fontawesome/brands/slack
+      link: flameshotworkspace.slack.com/
+      name: Flameshot Slack Workspace
