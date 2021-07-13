@@ -28,6 +28,22 @@ In case you didn't find similar issue, create a new issue and explain in details
 
 https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
 
+-------
 
+## macOS
 
+### All opened applications go away and only the blank desktop is visible for selection
 
+As it has been reported multiple times already ([1](https://github.com/flameshot-org/flameshot/issues/1537), [2](https://github.com/flameshot-org/flameshot/issues/1571)), macOS restricts applications from accessing the screen. Therefore you have to give Flameshot security permissions to "record" your desktop.
+
+![A picture of the macOS Security & Privacy settings that shows the Flameshot should be added to the list in the "privacy" tab](/media/macos_permissions.png)
+
+If you were still getting the following message when restarting Flameshot, try removing (using the "-" button) and then adding flameshot to the list above.
+
+![A screenshot of a permission request window in macOS which says "Flameshot.app would like to record this computer's screen"](/media/macos_screenrecording_permission_request.png)
+
+### The command `flameshot` does not exist in my terminal
+
+- In general to have a command to your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`. You can either:
+                                                                                                                                1. create a symlink to flameshot binary in one of those folder listed (check out `man ln`)
+                                                                                                                                2. add the folder that contains Flameshot to your path (`export PATH="path/to/your/folder:$PATH"`). If you have installed Flameshot using the DMG we provid, Macports, or Homebrew, you most probably have it located in `/Applications/flameshot.app/`.
