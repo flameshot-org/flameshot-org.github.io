@@ -4,8 +4,6 @@
 
 There are packages available for a few distros:
 
-- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/)
-  - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 - [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman -S flameshot`
     - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
@@ -13,7 +11,6 @@ There are packages available for a few distros:
 
 - [Ubuntu 18.04+](https://launchpad.net/ubuntu/+source/flameshot): `apt install flameshot`
 
-- Fedora: `dnf install flameshot`
 - [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
 
 - [openSUSE](https://software.opensuse.org/package/flameshot)
@@ -125,6 +122,15 @@ And for runing it you should do
 ```sh
 flatpak run org.flameshot.Flameshot
 ```
+
+To update the flatpaks you can use `flatpak update`.
+
+
+### Docker
+
+There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
+
+https://github.com/ManuelLR/docker-flameshot
 
 -------------------------------------------------
 
