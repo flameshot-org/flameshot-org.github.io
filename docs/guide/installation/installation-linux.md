@@ -13,6 +13,7 @@ There are packages available for a few distros:
 
 - [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
 
+- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
 - [openSUSE](https://software.opensuse.org/package/flameshot)
 
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
