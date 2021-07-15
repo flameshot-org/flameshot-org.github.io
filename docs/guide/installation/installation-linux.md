@@ -1,6 +1,6 @@
 # Installation on Linux
 
-## Distro-specific
+## Distro-Specific
 
 There are packages available for a few distros:
 
@@ -14,6 +14,7 @@ There are packages available for a few distros:
 - [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
 
 - [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
+
 - [openSUSE](https://software.opensuse.org/package/flameshot)
 
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
@@ -22,7 +23,7 @@ There are packages available for a few distros:
 
 - [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
 
-In addition, we also have continuous integration, it currently provides the following package:
+In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
 
 - Debian10 (buster)
 
@@ -48,7 +49,7 @@ General packages(AppImage, snap, and Flatpak): they can run on common Linux-base
 
 -------------------------------------------------
 
-## Distro-agnostic
+## Distro-Agnostic
 
 ### AppImage
 
