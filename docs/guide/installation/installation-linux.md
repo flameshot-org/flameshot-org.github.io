@@ -38,6 +38,14 @@ In addition, we also have continuous integration, it currently provides the foll
 
 General packages(AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives. 
 
+<details>
+  <summary>Expand this section to see what distros are using an up to date version of flameshot</summary>
+  <a href="https://repology.org/metapackage/flameshot/versions">
+    <img src="https://repology.org/badge/vertical-allrepos/flameshot.svg" alt="Packaging status">
+  </a>
+</details>
+
+
 -------------------------------------------------
 
 ## Distro-agnostic
