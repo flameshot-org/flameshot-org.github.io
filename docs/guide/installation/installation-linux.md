@@ -2,7 +2,7 @@
 
 ## Distro-Specific
 
-There are packages available for a few distros:
+There are packages available for different distros:
 
 - [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman -S flameshot`
     - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
@@ -19,9 +19,14 @@ There are packages available for a few distros:
 
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
 
-- [Docker](https://github.com/ManuelLR/docker-flameshot)
-
 - [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
+
+
+*Important things to Know:*
+
+1. Other than AUR (Arch user Repository), All packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, Please directly contact the distribution.
+2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot withing the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably few version behind especially if your Linux release version is old (check [here]("https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
+
 
 In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
 
