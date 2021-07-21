@@ -1,27 +1,34 @@
 # Installation on Linux
 
-## Distro-specific
+## Distro-Specific
 
-There are packages available for a few distros:
+There are packages available for different distros:
 
-- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/)
-  - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
+- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman -S flameshot`
+    - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
 - [Debian 10+](https://tracker.debian.org/pkg/flameshot): `apt install flameshot`
 
 - [Ubuntu 18.04+](https://launchpad.net/ubuntu/+source/flameshot): `apt install flameshot`
 
-- Fedora: `dnf install flameshot`
+- [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
+
+- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
 
 - [openSUSE](https://software.opensuse.org/package/flameshot)
 
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
 
-- [Docker](https://github.com/ManuelLR/docker-flameshot)
-
 - [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
 
-In addition, we also have continuous integration, it currently provides the following package:
+
+*Important things to Know:*
+
+1. Other than AUR (Arch user Repository), All packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, Please directly contact the distribution.
+2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot withing the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably few version behind especially if your Linux release version is old (check [here]("https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
+
+
+In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
 
 - Debian10 (buster)
 
@@ -37,9 +44,17 @@ In addition, we also have continuous integration, it currently provides the foll
 
 General packages(AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives. 
 
+<details>
+  <summary>Expand this section to see what distros are using an up to date version of flameshot</summary>
+  <a href="https://repology.org/metapackage/flameshot/versions">
+    <img src="https://repology.org/badge/vertical-allrepos/flameshot.svg" alt="Packaging status">
+  </a>
+</details>
+
+
 -------------------------------------------------
 
-## Distro-agnostic
+## Distro-Agnostic
 
 ### AppImage
 
@@ -122,6 +137,15 @@ And for runing it you should do
 ```sh
 flatpak run org.flameshot.Flameshot
 ```
+
+To update the flatpaks you can use `flatpak update`.
+
+
+### Docker
+
+There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
+
+https://github.com/ManuelLR/docker-flameshot
 
 -------------------------------------------------
 
