@@ -1,4 +1,4 @@
-# Flameshot <sub>0.9.0</sub> 
+# Flameshot <sub>0.10.0</sub> 
 > Powerful yet simple to use screenshot software.
 
 ![Usage](/media/animatedUsage.gif)
