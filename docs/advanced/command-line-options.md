@@ -1,28 +1,54 @@
 ## Usage
+
+You can always use `--help` for all commands or subcommands of Flameshot.
+
+```sh
+#     ___ command  ____ Argument
+#     |            |
+# ,---^---,     ,--^--,
+  flameshot gui --help
+#           'v'
+#            |
+#            -- Subcommand
+```
+
 Example commands:
+
 - capture with GUI:
 
-   `flameshot gui`
+   ```sh
+   flameshot gui
+   ```
 
 - capture with GUI with custom save path:
 
-   `flameshot gui -p ~/myStuff/captures`
+   ```sh
+   flameshot gui --path ~/myStuff/captures
+   ```
 
 - open GUI with a delay of 2 seconds:
 
-   `flameshot gui -d 2000`
+   ```sh
+   flameshot gui --delay 2000
+   ```
 
 - fullscreen capture (asking savepath):
 
-   `flameshot full`
+   ```sh
+   flameshot full
+   ```
 
 - fullscreen capture with custom save path (no GUI) and delayed:
 
-   `flameshot full -p ~/myStuff/captures -d 5000`
+   ```sh
+   flameshot full --path ~/myStuff/captures --delay 5000
+   ```
 
 - fullscreen capture with custom save path copying to clipboard:
 
-   `flameshot full -c -p ~/myStuff/captures`
+   ```sh
+   flameshot full --clipboard --path ~/myStuff/captures
+   ```
 
 In case of doubt choose the first or the second command as shortcut in your favorite desktop environment.
 
@@ -32,16 +58,23 @@ Check out the information window to see all the available shortcuts in the graph
 
 
 ## CLI configuration
+
 You can use the graphical menu to configure Flameshot, but alternatively you can use your terminal or scripts to do so.
 
 - open the configuration menu:
 
-   `flameshot config`
+   ```sh
+   flameshot config
+   ```
 
 - show the initial help message in the capture mode:
 
-   `flameshot config --showhelp true`
+   ```sh
+   flameshot config --showhelp true
+   ```
 
 - for more information about the available options use the help flag:
 
-   `flameshot config -h`
+   ```sh
+   flameshot config --help
+   ```
