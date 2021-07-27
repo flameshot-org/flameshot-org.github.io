@@ -3,7 +3,7 @@ site_url: 'https://flameshot.org'
 repo_url: 'https://github.com/flameshot-org/flameshot'
 edit_uri: '' # hide edit button
 remote_branch: 'master'
-site_dir: 'guide'
+site_dir: 'manual'
 site_description: 'The official flameshot site.'
 site_author: 'The flameshot org.'
 copyright: 'Copyright &copy; 2017 ~ 2021 The flameshot org.'
