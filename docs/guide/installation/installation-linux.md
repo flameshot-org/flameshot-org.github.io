@@ -78,11 +78,11 @@ rm Flameshot-*-x86_64.AppImage
    OR
    2.2. use the following to automatically download the latest.
 
- ```sh
+```sh
 curl -O -J -L $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
                 | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
                 | uniq)
- ```
+```
 
 4. Set it to executable:
 
