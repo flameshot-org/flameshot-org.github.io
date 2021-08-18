@@ -155,7 +155,7 @@ https://github.com/ManuelLR/docker-flameshot
 
 ```sh
 libqt5dbus5, libqt5network5, libqt5core5a, libqt5widgets5, libqt5gui5
-````
+```
 Optional:
 
 ```sh
