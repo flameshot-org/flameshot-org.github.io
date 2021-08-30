@@ -18,6 +18,13 @@ body {
     max-height: 100%;
 }
 
+.linux-pckg-install pre {
+    padding: 1.2rem 1.4rem;
+    border-radius: 6px;
+    background-color: #e6e6e6;
+    color:#2b2b2b;
+}
+
 .section-divider {
     background: linear-gradient(to left, #FF0066 0% 50%, #FF6600 50% 100%);
     max-width: 10rem;
@@ -76,6 +83,28 @@ body {
     box-shadow: none;
 }
 
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: #808080;
+    background-color: transparent;
+}
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link svg {
+    fill: #808080;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: #FF0066;
+    background-color: transparent;
+    border-bottom: solid 4px #FF0066;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link svg {
+    fill: #FF0066;
+}
+
 .navbar .navbar-toggler {
     padding: 0.5rem 1rem;
     color: #8800AA;
@@ -87,11 +116,12 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(136, 0, 170, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+#features a,
 .navbar-light .navbar-nav .nav-link {
     color: #8800AA;
-    padding: 0rem 1rem;
 }
 
+#features a:hover,
 .navbar-light .navbar-nav .nav-link:hover {
     color: #5f0077;
 }
@@ -123,7 +153,6 @@ body {
 .footer-text a {
     color: #d6d6d6;
 }
-
 
 .footer-text a:hover {
     color: #fff;
