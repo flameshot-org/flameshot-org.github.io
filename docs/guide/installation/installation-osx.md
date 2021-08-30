@@ -5,7 +5,7 @@ You can install Flameshot on [macOS](https://en.wikipedia.org/wiki/MacOS) using 
 - [MacPorts](https://ports.macports.org/port/flameshot/summary): `sudo port selfupdate && sudo port install flameshot`
 - [Homebrew](https://formulae.brew.sh/cask/flameshot): `brew install --cask flameshot`
 - Download DMG file:
-    1. Navigate to [the release page on Github]((https://github.com/flameshot-org/flameshot/releases)
+    1. Navigate to [the release page on Github](https://github.com/flameshot-org/flameshot/releases)
     2. From the assets of the latest stable release, download the latest DMG file
     3. Double-click on the DMG file you downloaded
     4. Drag and drop the `flameshot.app` to your `/Applications` folder
