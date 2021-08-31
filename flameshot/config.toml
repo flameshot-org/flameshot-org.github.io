@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://flameshot.org"
+base_url = "https://correct-syntax.github.io/flameshot-org.github.io/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
