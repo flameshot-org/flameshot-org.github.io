@@ -3,11 +3,11 @@
 
 # [Flameshot.org](https://flameshot.org)
 
-![image](docs/media/flameshot.svg) 
+![image](docs/media/flameshot.svg)
 > Powerful yet simple to use screenshot software.
 
 This is the repository of [flameshot.org](https://flameshot.org). For the software code, you should go to [the main repository](https://github.com/flameshot-org/flameshot/).
 
 
 
-This static website is powered by [mkdocs](https://github.com/mkdocs/mkdocs).
+This static website is powered by [zola](https://www.getzola.org).
