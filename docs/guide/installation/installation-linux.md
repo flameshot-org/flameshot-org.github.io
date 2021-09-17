@@ -4,22 +4,37 @@
 
 There are packages available for different distros:
 
-- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman -S flameshot`
+=== "Arch"
+    - Package: [flameshot](https://www.archlinux.org/packages/community/x86_64/flameshot/)
+    - Install: `pacman -S flameshot`
     - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
-- [Debian 10+](https://tracker.debian.org/pkg/flameshot): `apt install flameshot`
+=== "Debian 10+"
+    - Package: [flameshot](https://tracker.debian.org/pkg/flameshot)
+    - Install: `apt install flameshot`
 
-- [Ubuntu 18.04+](https://launchpad.net/ubuntu/+source/flameshot): `apt install flameshot`
+=== "Ubuntu 18.04+"
+    - Package: [flameshot](https://launchpad.net/ubuntu/+source/flameshot)
+    - Install: `apt install flameshot`
 
-- [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
+=== "Fedora"
+    - Package: [flameshot](https://src.fedoraproject.org/rpms/flameshot)
+    - Install: `dnf install flameshot`
 
-- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
+=== "NixOS"
+    - Package: [flameshot](https://search.nixos.org/packages?query=flameshot)
+    - Install: `nix-env -iA nixos.flameshot`
 
-- [openSUSE](https://software.opensuse.org/package/flameshot)
+=== "openSUSE"
+    - Package: [flameshot](https://software.opensuse.org/package/flameshot)
 
-- [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
+=== "Void Linux"
+    - Package: [flameshot](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot)
+    - Install: `xbps-install flameshot`
 
-- [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
+=== "Solus"
+    - Package: [flameshot](https://dev.getsol.us/source/flameshot/)
+    - Install: `eopkg install flameshot`
 
 
 *Important things to Know:*
@@ -56,96 +71,93 @@ General packages(AppImage, snap, and Flatpak): they can run on common Linux-base
 
 ## Distro-Agnostic
 
-### AppImage
+=== "AppImage"
 
-You can always use the AppImage as it is distro agnostic:
+    You can always use the AppImage as it is distro agnostic:
 
-1. Navigate to the folder you would like to store the software (the following is a suggestion):
+    1. Navigate to the folder you would like to store the software (the following is a suggestion):
 
-```sh
-mkdir -p ~/Applications/Flameshot
-cd ~/Applications/Flameshot
-```
+    ```sh
+    mkdir -p ~/Applications/Flameshot
+    cd ~/Applications/Flameshot
+    ```
 
-2. Delete older versions of Flameshot AppImage:
+    2. Delete older versions of Flameshot AppImage:
 
-```sh
-rm Flameshot-*-x86_64.AppImage
-```
+    ```sh
+    rm Flameshot-*-x86_64.AppImage
+    ```
 
-3. Download the latest AppImage
-   2.1. Get it from [Release page](https://github.com/flameshot-org/flameshot/releases/latest)
-   OR
-   2.2. use the following to automatically download the latest.
+    3. Download the latest AppImage
+       2.1. Get it from [Release page](https://github.com/flameshot-org/flameshot/releases/latest)
+       OR
+       2.2. use the following to automatically download the latest.
 
-```sh
-curl -O -J -L $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
-                | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
-                | uniq)
-```
+    ```sh
+    curl -O -J -L $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
+                    | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
+                    | uniq)
+    ```
 
-4. Set it to executable:
+    4. Set it to executable:
 
-```sh
-chmod +x Flameshot-*-x86_64.AppImage
-```
+    ```sh
+    chmod +x Flameshot-*-x86_64.AppImage
+    ```
 
-5. Now you have the Flameshot ready and you can run the software:
+    5. Now you have the Flameshot ready and you can run the software:
 
-```sh
-./Flameshot-*-x86_64.AppImage
-```
+    ```sh
+    ./Flameshot-*-x86_64.AppImage
+    ```
 
-This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
+    This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
 
-6.1 click on the tray icon and select "Take screenshot"
+    6.1 click on the tray icon and select "Take screenshot"
 
-6.2 open terminal and use the following to run the application:
+    6.2 open terminal and use the following to run the application:
 
-```sh
-./Flameshot-*-x86_64.AppImage gui
-```
+    ```sh
+    ./Flameshot-*-x86_64.AppImage gui
+    ```
 
+=== "Snap"
 
-### Snap
+    Flameshot is not currently on snap, but when it gets available, you can install Flameshot through:
 
-Flameshot is not currently on snap, but when it gets available, you can install Flameshot through:
+    ```sh
+    snap install flameshot
+    ```
 
-```sh
-snap install flameshot
-```
+    to update the snap applications on your computer, you should run `snap refresh`.
 
-to update the snap applications on your computer, you should run `snap refresh`.
+=== "Flatpak"
 
+    Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:
 
-### Flatpak
+    ```sh
+    flatpak install flathub org.flameshot.Flameshot
+    ```
 
-Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:
+    Alternatively you can install from the github using Flatpak if you want a specific version. For example for getting the version 0.9.0:
 
-```sh
-flatpak install flathub org.flameshot.Flameshot
-```
+    ```sh
+    flatpak install https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/org.flameshot.Flameshot-0.9.0.x86_64.flatpak
+    ```
 
-Alternatively you can install from the github using Flatpak if you want a specific version. For example for getting the version 0.9.0:
+    And for runing it you should do
 
-```sh
-flatpak install https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/org.flameshot.Flameshot-0.9.0.x86_64.flatpak
-```
+    ```sh
+    flatpak run org.flameshot.Flameshot
+    ```
 
-And for runing it you should do
+    To update the flatpaks you can use `flatpak update`.
 
-```sh
-flatpak run org.flameshot.Flameshot
-```
+=== "Docker"
 
-To update the flatpaks you can use `flatpak update`.
+    There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
 
-
-### Docker
-
-There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
-
-https://github.com/ManuelLR/docker-flameshot
+    https://github.com/ManuelLR/docker-flameshot
 
 -------------------------------------------------
 
