@@ -12,3 +12,8 @@ You can install Flameshot on [macOS](https://en.wikipedia.org/wiki/MacOS) using 
     5. MacOS restricts applications from accessing the screen. Therefore you have to give Flameshot security permissions to "record" your desktop.
         ![A picture of the macOS Security & Privacy settings that shows the Flameshot should be added to the list in the "privacy" tab](/media/macos_permissions.png)
 
+!!! tip "Tip: Stay ahead of the curve"
+
+    If you want to run Flameshot with the most cutting edge features, you can
+    download a development version from [here](/nightly).
+
