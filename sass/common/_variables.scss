@@ -16,11 +16,10 @@ $yellow:   #ffe000;
 $black:    #1d2d35;
 $beige:    #fbf7f0;
 // $red:      #e55235;
-$purple:   #5d2f86;
-$brown:    #aa9c84;
+$purple:   #8800AA;
 
 $blue-300: #8ed6fb;
-$pink-500: #d32e9d;
+$pink-500: #FF0066;
 
 $primary: $purple;
 
@@ -100,7 +99,7 @@ $border-color:                $gray-200;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif:      "Inter", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-monospace:       sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case
