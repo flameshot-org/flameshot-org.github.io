@@ -22,6 +22,11 @@ There are packages available for different distros:
 - [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
 
 
+!!! tip "Tip: Stay ahead of the curve"
+
+    If you want to run Flameshot with the most cutting edge features, you can
+    download a development version from [here](/nightly).
+
 *Important things to Know:*
 
 1. Other than AUR (Arch user Repository), All packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, Please directly contact the distribution.

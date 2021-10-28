@@ -3,6 +3,11 @@
 ## Manual installation
 - Hosted on [Github](https://github.com). [64-bit](https://github.com/flameshot-org/flameshot/releases), [32-bit](https://github.com/flameshot-org/flameshot/releases)
 
+!!! tip "Tip: Stay ahead of the curve"
+
+    If you want to run Flameshot with the most cutting edge features, you can
+    download a development version from [here](/nightly).
+
 
 ## Using package managers
 
