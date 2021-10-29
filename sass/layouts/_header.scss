@@ -17,7 +17,7 @@
 .navbar-light .navbar-brand,
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:active {
-  color: $body-color;
+  color: $purple;
 }
 
 .navbar-light .navbar-nav .active .nav-link {
@@ -39,7 +39,9 @@
 }
 
 .nav-item {
+  font-weight: bold;
   margin-left: 1.25rem;
+  font-size: .9rem;
 }
 
 @include media-breakpoint-up(md) {
@@ -68,14 +70,7 @@
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid $gray-200;
-  margin-top: 4px;
-}
-
-.header-bar {
-  border-top: 4px solid;
-  border-image-source: $purple;
-  border-image-slice: 1;
+  border-bottom: 3px solid $purple;
 }
 
 .home .navbar {
@@ -109,15 +104,9 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .navbar-form {
-    margin-left: 15rem;
-  }
-}
-
 @include media-breakpoint-up(xl) {
   .navbar-form {
-    margin-left: 30rem;
+    margin-left: 16rem;
   }
 }
 

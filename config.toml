@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://adidoks.netlify.com"
-title = "AdiDoks"
+title = "Flameshot"
 description = "AdiDoks is a Zola theme helping you build modern documentation websites, which is a port of the Hugo theme Doks for Zola."
 
 # The default language; used in feeds and search index
@@ -99,15 +99,27 @@ site_links_search_box = false
 
 # Menu items
 [[extra.menu.main]]
-name = "Docs"
-section = "docs"
-url = "/docs/getting-started/introduction/"
-weight = 10
+name = "Features"
+section = ""
+url = "#features"
+weight = 0
 
 [[extra.menu.main]]
-name = "Blog"
-section = "blog"
-url = "/blog/"
+name = "Download"
+section = ""
+url = "#download"
+weight = 0
+
+[[extra.menu.main]]
+name = "Contribute"
+section = ""
+url = "#contribute"
+weight = 0
+
+[[extra.menu.main]]
+name = "Docs"
+section = "docs"
+url = "/docs/"
 weight = 20
 
 [[extra.menu.social]]
