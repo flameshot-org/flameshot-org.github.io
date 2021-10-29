@@ -5,3 +5,13 @@
 .bg-purple {
     background-color: #8800AA;
 }
+
+#flame {
+    max-width: 10rem;
+    max-height: 10rem;
+    z-index: 999;
+    position: relative;
+    top: -5.5rem;
+    left: 1.5rem;
+    right: 0rem;
+}
