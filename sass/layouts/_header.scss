@@ -69,12 +69,10 @@
 }
 
 .navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 3px solid $purple;
-}
-
-.home .navbar {
-  border-bottom: 0;
+  border-top: 4px solid $purple;
 }
 
 .navbar-form {
@@ -99,14 +97,14 @@
 
   .navbar-form {
     margin-top: 0;
-    margin-left: 6rem;
+    margin-left: 2rem;
     margin-right: 1.5rem;
   }
 }
 
 @include media-breakpoint-up(xl) {
-  .navbar-form {
-    margin-left: 16rem;
+  .main-nav {
+    margin-left: 20rem;
   }
 }
 
