@@ -10,6 +10,10 @@
     box-shadow: 0px 11px 50px rgba(43, 43, 43, 0.5);
 }
 
+.outer-border {
+    border: solid 3px #8800AA;
+}
+
 .section-divider {
     background: linear-gradient(to left, #FF0066 0% 50%, #FF6600 50% 100%);
     max-width: 10rem;
