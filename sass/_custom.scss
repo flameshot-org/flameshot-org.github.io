@@ -54,3 +54,26 @@
     border: 2px solid #FF0066;
     box-shadow: none;
 }
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: $gray-600;
+    background-color: transparent;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link svg {
+    fill: $gray-600;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: #FF0066;
+    background-color: transparent;
+    border-bottom: solid 4px #FF0066;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link svg {
+    fill: #FF0066;
+}

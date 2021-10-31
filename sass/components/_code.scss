@@ -8,13 +8,14 @@ samp {
 }
 
 code {
-  background: $beige;
-  color: $black;
+  background: $gray-100;
+  color: $dark;
   padding: 0.25rem 0.5rem;
+  border-radius: 1px;
 }
 
 pre {
-  margin: 2rem 0;
+  margin: 1.2rem 0;
 }
 
 pre code {
@@ -37,10 +38,6 @@ pre code {
   kbd,
   samp {
     border-radius: 0;
-  }
-
-  pre {
-    margin: 2rem -1.5rem;
   }
 }
 

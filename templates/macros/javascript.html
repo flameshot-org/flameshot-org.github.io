@@ -1,4 +1,5 @@
 {% macro javascript() %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@v5.0.0-beta3/dist/js/bootstrap.min.js" defer></script>
 <script src="{{ get_url(path="js/main.js") | safe }}" defer></script>
 {% if config.build_search_index %}
   <script src="{{ get_url(path="plugins/elasticlunr.min.js") | safe }}" defer></script>
