@@ -6,6 +6,10 @@
     background-color: #8800AA;
 }
 
+.box-shadow {
+    box-shadow: 0px 11px 50px rgba(43, 43, 43, 0.5);
+}
+
 #flame {
     max-width: 10rem;
     max-height: 10rem;
@@ -14,4 +18,21 @@
     top: -5.5rem;
     left: 1.5rem;
     right: 0rem;
+}
+
+.btn-cta-solid {
+    color: #FF0066;
+    background: transparent;
+    border: 2px solid #FF0066;
+    box-shadow: 4px 3px #ff0066;
+}
+
+.btn-cta-solid:hover, .btn-cta-solid:focus, .btn-cta-solid:active, .btn-cta-solid:active:focus,
+.btn-cta-solid.btn:not(:disabled):not(.disabled):active,
+.btn-cta-solid.btn:not(:disabled):not(.disabled):active:focus {
+    background: #FF0066;
+    outline: 0;
+    color: #fcfcfc;
+    border: 2px solid #FF0066;
+    box-shadow: none;
 }
