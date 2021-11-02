@@ -134,17 +134,3 @@ pre = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0
 url = "https://github.com/aaranxu/adidoks"
 post = "v0.1.0"
 weight = 20
-
-# Footer contents
-[extra.footer]
-info = 'Powered by <a href="https://www.netlify.com/">Netlify</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a>'
-
-[[extra.footer.nav]]
-name = "Privacy"
-url = "/privacy-policy/"
-weight = 10
-
-[[extra.footer.nav]]
-name = "Code of Conduct"
-url = "/docs/contributing/code-of-conduct/"
-weight = 20

@@ -53,10 +53,6 @@ body.dark .navbar {
   border-bottom: 1px solid $border-dark;
 }
 
-body.dark.home .navbar {
-  border-bottom: 0;
-}
-
 body.dark .navbar-light .navbar-brand {
   color: $navbar-dark-color !important;
 }
@@ -330,4 +326,46 @@ body.dark .copy-status:active::after {
   content: "Copied";
   display: block;
   color: $link-color-dark;
+}
+
+body.dark .text-purple {
+    color: $white;
+}
+
+body.dark .text-dark {
+    color: $white !important;
+}
+
+body.dark .outer-border {
+    border: solid 3px $border-dark;
+}
+
+body.dark .bg-purple {
+    background-color: $border-dark;
+}
+
+body.dark .h-angle-bottom-purple{
+    background-image:-o-linear-gradient(88deg, transparent 49%, $border-dark 50%);
+    background-image:linear-gradient(2deg,  transparent 49%, $border-dark 50%);
+}
+
+body.dark .btn-cta-solid {
+    color: $white;
+    background: $pink-500;
+    border: 2px solid $pink-500;
+    box-shadow: none;
+}
+
+body.dark .btn-cta-solid:hover, body.dark .btn-cta-solid:focus, body.dark .btn-cta-solid:active, body.dark .btn-cta-solid:active:focus,
+body.dark .btn-cta-solid.btn:not(:disabled):not(.disabled):active,
+body.dark .btn-cta-solid.btn:not(:disabled):not(.disabled):active:focus {
+    background: transparent;
+    outline: 0;
+    color: #fff;
+    border: 2px solid $pink-500;
+    box-shadow: 4px 3px $pink-500;
+}
+
+body.dark .footer-links li a:hover {
+    color: $pink-500;
 }

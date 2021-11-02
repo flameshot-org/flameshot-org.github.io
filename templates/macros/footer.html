@@ -1,26 +1,35 @@
 {% macro footer() %}
-<footer class="footer text-muted">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 order-last order-lg-first">
-				<ul class="list-inline">
-					{% if config.extra.footer.info %}
-						<li class="list-inline-item">{{ config.extra.footer.info | default(value="Powered by AdiDoks") | safe }}</li>
-					{% else %}
-						<li class="list-inline-item">Powered by <a href="https://www.netlify.com/">Netlify</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
-					{% endif %}
-				</ul>
-			</div>
-			<div class="col-lg-8 order-first order-lg-last text-lg-end">
-				<ul class="list-inline">
-					{% if config.extra.footer.nav %}
-						{% for val in config.extra.footer.nav %}
-							<li class="list-inline-item"><a href="{{ get_url(path=val.url, trailing_slash=true) | safe }}">{{ val.name }}</a></li>
-						{% endfor %}
-					{% endif %}
-				</ul>
-			</div>
-		</div>
-	</div>
+<footer class="footer container-fluid">
+    <div class="row">
+      <a class="navbar-brand text-center text-decoration-none" href="/">
+        <img class="d-block mx-auto" src="/flameshot-icon.svg" alt="logo" width="50" height="50">
+        <span class="text-white fs-3 fw-bold mx-auto mt-5">Flameshot</span>
+      </a>
+    </div>
+    <div class="row mx-auto text-center">
+      <ul class="footer-links mx-auto">
+        <li>
+          <a href="#features">Features</a>
+        </li>
+        <li>
+          <a href="#download">Download</a>
+        </li>
+        <li>
+          <a href="https://github.com/flameshot-org">Contribute</a>
+        </li>
+        <li>
+          <a href="/docs/">Docs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-auto text-center mt-4">
+      <div class="col-10 mx-auto">
+        <a class="d-inline-block mx-1" href="https://github.com/flameshot-org"><img class="footer-icon" src="/img/icons/github.svg" alt="github logo." width="26" height="26"></a>
+        <a class="d-inline-block mx-1" href="https://fosstodon.org/@flameshot"><img class="footer-icon" src="/img/icons/mastodon.svg" alt="mastodon logo." width="26" height="26"></a>
+        <a class="d-inline-block mx-1" href="https://matrix.to/#/#Flameshot:feneas.org"><img class="footer-icon" src="/img/icons/matrix.svg" alt="matrix logo." width="26" height="26"></a>
+        <a class="d-inline-block mx-1" href="https://flameshotworkspace.slack.com/"><img class="footer-icon" src="/img/icons/slack.svg" alt="slack logo." width="26" height="26"></a>
+      </div>
+      <small class="text-white mt-3">Copyright &copy; 2017-2021 Flameshot contributors &bullet; Page design by <a class="link" href="https://github.com/Correct-Syntax">Correct Syntax</a></small>
+    </div>
 </footer>
 {% endmacro %}

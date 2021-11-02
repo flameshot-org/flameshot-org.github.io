@@ -1,9 +1,9 @@
 .text-purple {
-    color: #8800AA;
+    color: $purple;
 }
 
 .bg-purple {
-    background-color: #8800AA;
+    background-color: $purple;
 }
 
 .box-shadow {
@@ -11,7 +11,7 @@
 }
 
 .outer-border {
-    border: solid 3px #8800AA;
+    border: solid 3px $purple;
 }
 
 .section-divider {

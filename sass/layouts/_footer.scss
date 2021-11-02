@@ -1,7 +1,7 @@
 .footer {
-  border-top: 1px solid $gray-200;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
+  background: $gray-900;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .footer ul {
@@ -11,6 +11,26 @@
 .footer li {
   font-size: $font-size-sm;
   margin-bottom: 0;
+}
+
+.footer-links {
+    font-weight: bold;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: .3rem .9rem;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color:#fff;
+}
+
+.footer-links li a:hover {
+    color: $purple;
 }
 
 @include media-breakpoint-up(md) {
