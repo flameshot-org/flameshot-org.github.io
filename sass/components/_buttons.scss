@@ -1,5 +1,5 @@
 .btn {
-    padding: .8rem 3.1rem;
+    padding: .8rem 1.1rem;
     border: 0;
     border-radius: 1px;
     font-size: 1.1rem;
@@ -32,6 +32,10 @@
 
   .navbar .btn-link {
     padding: 0.5625em 0.25rem 0.5rem 0.125rem;
+  }
+
+  .btn {
+    padding: .8rem 3.1rem;
   }
 }
 
