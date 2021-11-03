@@ -341,12 +341,16 @@ body.dark .outer-border {
 }
 
 body.dark .bg-purple {
-    background-color: $border-dark;
+    background-color: darken($primary, 9);
+}
+
+body.dark .version-text {
+    color: lighten($primary, 12);
 }
 
 body.dark .h-angle-bottom-purple{
-    background-image:-o-linear-gradient(88deg, transparent 49%, $border-dark 50%);
-    background-image:linear-gradient(2deg,  transparent 49%, $border-dark 50%);
+    background-image:-o-linear-gradient(88deg, transparent 49%, darken($primary, 9) 50%);
+    background-image:linear-gradient(2deg,  transparent 49%, darken($primary, 9) 50%);
 }
 
 body.dark .btn-cta-solid {
