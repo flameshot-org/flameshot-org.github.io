@@ -16,15 +16,15 @@ top = false
 
 ## Install on Linux
 
-Find out how to install on Linux [here →](../quick-start/)
+Find out how to install on Linux [here →](../install-linux/)
 
 ## Install on macOs
 
-Find out how to install on macOs [here →](../quick-start/)
+Find out how to install on macOs [here →](../install-macos/)
 
 ## Install on Windows
 
-Find out how to install on Windows [here →](../quick-start/)
+Find out how to install on Windows [here →](../install-windows/)
 
 ## Development Build
 
