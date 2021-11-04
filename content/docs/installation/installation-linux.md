@@ -39,10 +39,10 @@ There are packages available for different distros:
 - [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
 
 
-!!! tip "Tip: Stay ahead of the curve"
 
-    If you want to run Flameshot with the most cutting edge features, you can
-    download a development version from [here](/nightly).
+If you want to run Flameshot with the most cutting edge features, you can
+download a development version from [here](/development-build).
+
 
 *Important things to Know:*
 

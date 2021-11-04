@@ -15,6 +15,16 @@ top = true
 +++
 
 
-## Development Build
+If you want to run Flameshot with the most cutting edge features, you can download a packaged development version from the links below.
 
-If you want to run Flameshot with the most cutting edge features, you can download a packaged development version from [here](https://flameshot.org/nightly).
+### Linux
+
+Download the latest development packages from [here](https://nightly.link/flameshot-org/flameshot/workflows/Linux-pack/master/Linux-distribution-artifact.zip).
+
+### macOS
+
+Download the latest development packages from [here](https://nightly.link/flameshot-org/flameshot/workflows/MacOS-pack/master/MacOS-artifact.zip).
+
+### Windows
+
+Download the latest development packages from [here](https://nightly.link/flameshot-org/flameshot/workflows/Windows-pack/master/Windows-artifact.zip).

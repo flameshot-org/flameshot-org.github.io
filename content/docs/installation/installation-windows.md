@@ -23,7 +23,7 @@ top = true
 !!! tip "Tip: Stay ahead of the curve"
 
     If you want to run Flameshot with the most cutting edge features, you can
-    download a development version from [here](/nightly).
+    download a development version from [here](/development-build).
 
 
 ## Using package managers
