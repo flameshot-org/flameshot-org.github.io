@@ -3,7 +3,7 @@
 
 # [Flameshot.org](https://flameshot.org)
 
-![image](static/img/favicon.png)
+![image](static/favicon.png)
 > Powerful yet simple to use screenshot software.
 
 This is the repository of [flameshot.org](https://flameshot.org). For the software code, you should go to [the main repository](https://github.com/flameshot-org/flameshot/).
