@@ -365,7 +365,7 @@ body.dark .btn-cta-solid.btn:not(:disabled):not(.disabled):active,
 body.dark .btn-cta-solid.btn:not(:disabled):not(.disabled):active:focus {
     background: transparent;
     outline: 0;
-    color: #fff;
+    color: $gray-100;
     border: 2px solid $pink-500;
     box-shadow: 4px 3px $pink-500;
 }

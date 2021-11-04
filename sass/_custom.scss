@@ -51,19 +51,19 @@
 }
 
 .btn-cta-solid {
-    color: #FF0066;
+    color: $pink-500;
     background: transparent;
-    border: 2px solid #FF0066;
-    box-shadow: 4px 3px #ff0066;
+    border: 2px solid $pink-500;
+    box-shadow: 4px 3px $pink-500;
 }
 
 .btn-cta-solid:hover, .btn-cta-solid:focus, .btn-cta-solid:active, .btn-cta-solid:active:focus,
 .btn-cta-solid.btn:not(:disabled):not(.disabled):active,
 .btn-cta-solid.btn:not(:disabled):not(.disabled):active:focus {
-    background: #FF0066;
+    background: $pink-500;
     outline: 0;
-    color: #fcfcfc;
-    border: 2px solid #FF0066;
+    color: $gray-100;
+    border: 2px solid $pink-500;
     box-shadow: none;
 }
 
@@ -81,11 +81,11 @@
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     border-radius: 0;
-    color: #FF0066;
+    color: $pink-500;
     background-color: transparent;
-    border-bottom: solid 4px #FF0066;
+    border-bottom: solid 4px $pink-500;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link svg {
-    fill: #FF0066;
+    fill: $pink-500;
 }
