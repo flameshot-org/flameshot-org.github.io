@@ -12,6 +12,10 @@
   padding: 0.4375rem 0;
 }
 
+.nav-link, .banner .nav a {
+    padding: .2rem .4rem;
+}
+
 #mode {
   margin-right: 1.25rem;
 }
@@ -36,6 +40,10 @@
 
   .btn {
     padding: .8rem 3.1rem;
+  }
+
+  .nav-link, .banner .nav a {
+    padding: .5rem 1rem;
   }
 }
 
