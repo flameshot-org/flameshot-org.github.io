@@ -155,3 +155,67 @@ HDMI-1-1 connected primary 1920x1080+1080+0 (normal left inverted right x axis y
 ### Graphics card information
 
 For graphics card there are also many ways to get the information but the most two common routes are:
+
+```bash
+update-pciids  # you might need to run this with sudo
+lspci | grep -i 'vga\|3d\|2d'
+```
+
+The output would look like:
+
+```bash
+00:02.0 VGA compatible controller: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller (rev 06)
+01:00.0 VGA compatible controller: NVIDIA Corporation GP106 [GeForce GTX 1060 6GB] (rev a1)
+```
+
+and
+
+```bash
+# in some systems lshw is not installed by default
+lshw -class display
+```
+
+The output would look like:
+
+```bash
+WARNING: you should run this program as super-user.
+  *-display
+       description: VGA compatible controller
+       product: GP106 [GeForce GTX 1060 6GB]
+       vendor: NVIDIA Corporation
+       physical id: 0
+       bus info: pci@0000:01:00.0
+       version: a1
+       width: 64 bits
+       clock: 33MHz
+       capabilities: vga_controller bus_master cap_list rom
+       configuration: driver=nvidia latency=0
+       resources: irq:35 memory:d2000000-d2ffffff memory:c0000000-cfffffff memory:d0000000-d1ffffff ioport:e000(size=128) memory:c0000-dffff
+  *-display
+       description: VGA compatible controller
+       product: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+       vendor: Intel Corporation
+       physical id: 2
+       bus info: pci@0000:00:02.0
+       version: 06
+       width: 64 bits
+       clock: 33MHz
+       capabilities: vga_controller bus_master cap_list
+       configuration: driver=i915 latency=0
+       resources: irq:32 memory:d3400000-d37fffff memory:b0000000-bfffffff ioport:f000(size=64)
+WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+```
+
+### Operating system information
+
+There are many ways to get such information. Perhaps the easiest one is via the following command:
+
+```bash
+uname -a
+```
+
+which gives an output similar to the following:
+
+```bash
+Linux MyComputer 5.8.11-1-MANJARO #1 SMP PREEMPT Wed Sep 23 14:35:40 UTC 2020 x86_64 GNU/Linux
+```
