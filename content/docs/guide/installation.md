@@ -14,15 +14,15 @@ toc = true
 top = false
 +++
 
-## Linux
+## Install on Linux
 
 Find out how to install on Linux [here →](../quick-start/)
 
-## macOs
+## Install on macOs
 
 Find out how to install on macOs [here →](../quick-start/)
 
-## Windows
+## Install on Windows
 
 Find out how to install on Windows [here →](../quick-start/)
 
