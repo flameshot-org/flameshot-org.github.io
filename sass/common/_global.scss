@@ -61,6 +61,14 @@ a.btn:focus {
   text-decoration: none;
 }
 
+img {
+  transition: all .2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
 .section {
   padding-top: 5rem;
   padding-bottom: 5rem;
