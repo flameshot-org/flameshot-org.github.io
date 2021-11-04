@@ -52,7 +52,7 @@ is_netlify = false
 language_code = "en-US"
 
 # Set theme-color meta tag for Chrome browser
-theme_color = "#fff"
+theme_color = "#8800AA"
 
 # More about site's title
 title_separator = "|"  # set as |, -, _, etc
