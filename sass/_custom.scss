@@ -1,0 +1,96 @@
+.text-purple {
+    color: $purple;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-orange {
+    color: $orange;
+}
+
+.bg-purple {
+    background-color: $purple;
+}
+
+.box-shadow {
+    box-shadow: 0px 11px 50px rgba(43, 43, 43, 0.5);
+}
+
+.outer-border {
+    border: solid 3px $purple;
+}
+
+.cs-link,
+.cs-link:hover {
+    color: $pink-500;
+}
+
+.section-divider {
+    background: linear-gradient(to left, $pink-500 0% 50%, $orange 50% 100%);
+    max-width: 10rem;
+    margin-top: .8rem;
+    padding-top: 5px;
+    opacity: 100;
+}
+
+.h-angle-bottom-purple{
+    background-image:-o-linear-gradient(88deg, transparent 49%, $primary 50%);
+    background-image:linear-gradient(2deg,  transparent 49%, $primary 50%);
+    height:55px;
+}
+
+.version-text {
+    color: $primary;
+}
+
+#flame {
+    max-width: 10rem;
+    max-height: 10rem;
+    z-index: 999;
+    position: relative;
+    top: -5.5rem;
+    left: 1.5rem;
+    right: 0rem;
+}
+
+.btn-cta-solid {
+    color: $pink-500;
+    background: transparent;
+    border: 2px solid $pink-500;
+    box-shadow: 4px 3px $pink-500;
+}
+
+.btn-cta-solid:hover, .btn-cta-solid:focus, .btn-cta-solid:active, .btn-cta-solid:active:focus,
+.btn-cta-solid.btn:not(:disabled):not(.disabled):active,
+.btn-cta-solid.btn:not(:disabled):not(.disabled):active:focus {
+    background: $pink-500;
+    outline: 0;
+    color: $gray-100;
+    border: 2px solid $pink-500;
+    box-shadow: none;
+}
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: $gray-600;
+    background-color: transparent;
+    padding-bottom: .5rem;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link svg {
+    fill: $gray-600;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: $pink-500;
+    background-color: transparent;
+    border-bottom: solid 4px $pink-500;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link svg {
+    fill: $pink-500;
+}
