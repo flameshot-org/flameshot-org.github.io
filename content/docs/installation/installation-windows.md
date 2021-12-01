@@ -18,12 +18,9 @@ top = true
 # Installation on Windows
 
 ## Manual installation
-- Hosted on [Github](https://github.com). [64-bit](https://github.com/flameshot-org/flameshot/releases), [32-bit](https://github.com/flameshot-org/flameshot/releases)
+- Hosted on [Github](https://github.com/flameshot-org/flameshot/releases). [64-bit 32-bit]
 
-!!! tip "Tip: Stay ahead of the curve"
-
-    If you want to run Flameshot with the most cutting edge features, you can
-    download a development version from [here](/development-build).
+If you want to run Flameshot with the most cutting edge features, you can download a development version from [here](../development-build).
 
 
 ## Using package managers
