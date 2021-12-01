@@ -13,6 +13,6 @@ This static website is powered by [zola](https://www.getzola.org).
 # Development
 
 - Navigate to the root directory
-- Run ``zola serve`` to start a local server for development.
+- Run `zola serve` to start a local server for development.
 
 The browser will automatically refresh on any changes made. Sass is setup to auto compile when the scss is edited.

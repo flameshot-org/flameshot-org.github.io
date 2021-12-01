@@ -20,7 +20,7 @@ By default Flameshot requires a notification manager. Notifications are sent to 
 
 Fix 1: Install a notification manager
 
-Fix 2: Manually edit the config file at ``~/.config/flameshot/flameshot.ini`` and add the following line: ``showDesktopNotification=false``
+Fix 2: Manually edit the config file at `~/.config/flameshot/flameshot.ini` and add the following line: `showDesktopNotification=false`
 
 ## Flameshot doesn't start / no tray icon
 
