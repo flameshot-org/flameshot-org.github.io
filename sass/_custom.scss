@@ -94,3 +94,13 @@
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link svg {
     fill: $pink-500;
 }
+
+.sponsor {
+    width: 100%;
+    text-align: center;
+}
+
+.sponsor img {
+    padding: 35px;
+    filter: drop-shadow(0 0 1.25rem #8500a6);
+}
