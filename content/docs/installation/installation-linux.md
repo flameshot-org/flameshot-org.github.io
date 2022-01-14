@@ -41,7 +41,7 @@ There are packages available for different distros:
 
 
 If you want to run Flameshot with the most cutting edge features, you can
-download a development version from [here](/development-build).
+download a development version from [here](../development-build).
 
 
 *Important things to Know:*
