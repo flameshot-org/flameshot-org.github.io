@@ -32,7 +32,7 @@ There are packages available for different distros:
 
 - [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
 
-- [openSUSE](https://software.opensuse.org/package/flameshot)
+- [openSUSE](https://software.opensuse.org/package/flameshot): `zypper install flameshot`
 
 - [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
 
