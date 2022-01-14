@@ -163,6 +163,9 @@ body {
 .docs-content {
   padding-bottom: 3rem;
   order: 1;
+  a {
+    text-decoration: underline;
+  }
 }
 
 .docs-navigation, .blog-navigation {
