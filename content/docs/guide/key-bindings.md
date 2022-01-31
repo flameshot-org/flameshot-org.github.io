@@ -32,11 +32,17 @@ These shortcuts are available in GUI mode:
 
 ## Global
 
+### macOS
 
+By default you can start taking a screenshot using <kbd>Shift</kbd>+<kbd>CMD</kbd>+<kbd>x</kbd>. To know all the shortcuts, right-click on the tray icon, select the Configurations and go to Shortcuts tab.
 
+--------------------------------------------------------------------------------
 
+### Windows
 
+Typically in windows installations the <kbd>Prnt scr</kbd> should work out of the box.
 
+--------------------------------------------------------------------------------
 
 ### Linux
 

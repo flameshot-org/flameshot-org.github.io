@@ -14,7 +14,18 @@ toc = true
 top = false
 +++
 
-## Flameshot freezes after capturing an image
+## macOS
+
+### I don't have PrintScreen key, how to take screenshot?
+
+Checkout our [keyboard shortcut page](../key-bindings) for more information.
+
+### On macOs Flameshot only captures a blank desktop
+
+When running Flameshot on MacOs, you must grant it permission to screen record. See [troubleshooting](../troubleshooting#macos) for more information.
+
+--------------------------------------------------------------------------------
+
 ## Linux
 
 ### Flameshot freezes after capturing an image
