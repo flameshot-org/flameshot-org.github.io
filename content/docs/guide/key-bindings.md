@@ -14,7 +14,7 @@ toc = true
 top = false
 +++
 
-### Local
+## Local
 These shortcuts are available in GUI mode:
 
 |  Keys                                                                                         |  Description                         |
@@ -26,12 +26,27 @@ These shortcuts are available in GUI mode:
 | <kbd>Ctrl</kbd> + <kbd>S</kbd>                                                                | Save selection as a file             |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd>                                                                | Undo the last modification           |
 | Right Click                                                                                   | Show color picker                    |
-| Mouse Wheel                                                                                   | Change the tool's thickness          |
+| Mouse Wheel (scroll)                                                                          | Change the tool's thickness          |
 
 <kbd>Shift</kbd> + drag a handler of the selection area: mirror redimension in the opposite handler.
 
-### Global
-If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prt Sc</kbd> key. Flameshot doesn't yet offer a fully-automated option to do so, but you can configure your system to do so.
+## Global
+
+### macOS
+
+By default you can start taking a screenshot using <kbd>Shift</kbd>+<kbd>CMD</kbd>+<kbd>x</kbd>. To know all the shortcuts, right-click on the tray icon, select the Configurations and go to Shortcuts tab.
+
+--------------------------------------------------------------------------------
+
+### Windows
+
+Typically in windows installations the <kbd>Prnt scr</kbd> should work out of the box.
+
+--------------------------------------------------------------------------------
+
+### Linux
+
+If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prnt Scr</kbd> key. Flameshot doesn't yet offer a fully-automated option to do so, but you can configure your system to do so.
 
 #### On KDE Plasma desktop
 To make configuration easier, there's [a file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
@@ -77,7 +92,7 @@ You can easily configure your 'print' keyboard shortcut to be assigned to Flames
 
 5. Define the command as 'flameshot gui'.
 
-6. Select 'Define shortcut...'and click your keyboard <kbd>Prt Sc</kbd> key.
+6. Select 'Define shortcut...'and click your keyboard <kbd>Prnt Scr</kbd> key.
 
 Now you can use your default keyboard key to launch Flameshot.
 

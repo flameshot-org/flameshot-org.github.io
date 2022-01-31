@@ -23,6 +23,8 @@ To report a bug or suggest a new feature, you can go to [GitHub issues page](htt
 
 In case you didn't find similar issue, create a new issue and explain in details what the issue is. If you can, add pictures or video recordings to clarify the situation. For bug reports, make sure to also visit the [issue reporting page](../issue-reporting) in which we have explained how to get the information we need in each bug report.
 
+--------------------------------------------------------------------------------
+
 ## Linux
 
 ### In the System tray area, flameshot appears to have duplicate icons/indicator
@@ -54,6 +56,8 @@ https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
     7. Post the link in the [issue on Github](https://github.com/flameshot-org/flameshot/issues)
 
 
+--------------------------------------------------------------------------------
+
 ## macOS
 
 ### All opened applications go away and only the blank desktop is visible for selection
@@ -68,6 +72,11 @@ If you were still getting the following message when restarting Flameshot, try r
 
 ### The command `flameshot` does not exist in my terminal
 
-- In general to have a command to your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`. You can either:
+- In general to have a command to your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`). You can either:
                                                                                                                                 1. create a symlink to flameshot binary in one of those folder listed (check out `man ln`)
                                                                                                                                 2. add the folder that contains Flameshot to your path (`export PATH="path/to/your/folder:$PATH"`). If you have installed Flameshot using the DMG we provide, Macports, or Homebrew, you most probably have it located in `/Applications/flameshot.app/`.
+
+### Flameshot only works on the primary screen
+
+depending on how you have Spaces configured in Mission Control you may only be able to activate flameshot on a particular external display by using the `shift+alt+cmd+4` hotkey. Otherwise, flameshot will only activate on the main display if you click "Take Screenshot" from the application menu. Fix it by uninstalling, installing again and selecting flameshot again in the `Screen Recording` section. (reported to work [here](https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496))
+                                                                                                                                
