@@ -75,3 +75,8 @@ If you were still getting the following message when restarting Flameshot, try r
 - In general to have a command to your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`). You can either:
                                                                                                                                 1. create a symlink to flameshot binary in one of those folder listed (check out `man ln`)
                                                                                                                                 2. add the folder that contains Flameshot to your path (`export PATH="path/to/your/folder:$PATH"`). If you have installed Flameshot using the DMG we provide, Macports, or Homebrew, you most probably have it located in `/Applications/flameshot.app/`.
+
+### Flameshot only works on the primary screen
+
+depending on how you have Spaces configured in Mission Control you may only be able to activate flameshot on a particular external display by using the `shift+alt+cmd+4` hotkey. Otherwise, flameshot will only activate on the main display if you click "Take Screenshot" from the application menu. Fix it by uninstalling, installing again and selecting flameshot again in the `Screen Recording` section. (reported to work [here](https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496))
+                                                                                                                                
