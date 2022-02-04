@@ -87,6 +87,13 @@ You can use the graphical menu to configure Flameshot, but alternatively you can
 
     ```sh
     flameshot config --showhelp true
+    ```
+
+- to check mistakes and issues in the configuration file:
+
+    ```sh
+    flameshot config --check
+    ```
 
 - for more information about the available options use the help flag:
 
