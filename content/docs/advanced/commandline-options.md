@@ -73,6 +73,32 @@ Do a right click on the tray icon and you'll see some menu items to open the con
 Check out the information window to see all the available shortcuts in the graphical capture mode.
 
 
+### Final Actions
+
+In Flameshot (version 11.0.0 or later) we now have the concept of "final actions". These are things you would like to do after you have done with annotating your screenshot. The final actions are:
+
+- `--path <path>`: Where the screenshot should be stored (can be path to the folder or the file)
+- `--clipboard`: Whether the screenshot should be copied to cliboard
+- `--raw`: Sending the screeenshot to stdout
+- `--upload`: Uploading the screenshot
+- `--pin`: Pinning the screenshot
+- `--print-geometry`: Write the position and dimension of the screenshot to stdout
+
+The benefit of having the concept of Final Actions is that you can use more than one of them at the same time. For instance you can pin, copy to clipboard, save to a file, and get the geometry of the screenshot using this:
+
+```sh
+flameshot gui --pin --clipboard --path "~/Pictures" --print--geometry
+```
+
+These Final Acrtions can be used with `--accept-on-select` to immediately capture the selected area immediately after the mouse release.
+
+**Note** that when you provide one or more Final Actions, the
+"Copy" <img width="24" class="gui-button" src="https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/material/black/content-copy.svg" />,
+"Save" <img width="24" class="gui-button" src="https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/material/black/content-save.svg" />,
+"Image Upload" <img width="24" class="gui-button" src="https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/material/black/cloud-upload.svg" />,
+and "Pin Tool" <img width="24" class="gui-button" src="https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/material/black/pin.svg" /> buttons will be removed from the buttons in `flameshot gui` and instead you will see a "Accept" <img width="24" class="gui-button" src="https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/material/black/accept.svg"></img> button.
+
+
 ## CLI configuration
 
 You can use the graphical menu to configure Flameshot, but alternatively you can use your terminal or scripts to do so.
