@@ -79,18 +79,17 @@ You can use the graphical menu to configure Flameshot, but alternatively you can
 
 - open the configuration menu:
 
-   ```sh
-   flameshot config
-   ```
+    ```sh
+    flameshot config
+    ```
 
 - show the initial help message in the capture mode:
 
-   ```sh
-   flameshot config --showhelp true
-   ```
+    ```sh
+    flameshot config --showhelp true
 
 - for more information about the available options use the help flag:
 
-   ```sh
-   flameshot config --help
-   ```
+    ```sh
+    flameshot config --help
+    ```
