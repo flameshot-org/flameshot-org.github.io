@@ -162,6 +162,14 @@ flatpak run org.flameshot.Flameshot
 
 To update the flatpaks you can use `flatpak update`.
 
+You may also add a symlink to the Flatpak command in your PATH. For example:
+
+```sh
+ln -s /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
+```
+
+This can help when creating custom keyboard shortcuts.
+
 
 ### Docker
 
