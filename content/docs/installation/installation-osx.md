@@ -1,5 +1,5 @@
 +++
-title = "Install on macOs"
+title = "Install on macOS"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
 updated = 2021-05-01T08:00:00+00:00
@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = 'How to install Flameshot on macOs.'
+lead = 'How to install Flameshot on macOS.'
 toc = true
 top = true
 +++
