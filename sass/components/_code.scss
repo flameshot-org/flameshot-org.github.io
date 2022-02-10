@@ -14,15 +14,21 @@ code {
   border-radius: 1px;
 }
 
-p code {
+code:not([class]){
   border-radius: 4px;
   background-color: #ffefef;
 }
 
-// li code {
+// p code {
+//   border-radius: 4px;
+//   background-color: #ffefef;
+// }
+//
+// li code:not([class]) {
 //  border-radius: 4px;
 //  background-color: #ffefef;
 // }
+
 
 
 pre {
@@ -67,4 +73,8 @@ pre code:hover {
 
 pre code::-webkit-scrollbar-thumb:hover {
   background: $gray-200;
+}
+
+kbd {
+  background: #323435;
 }
