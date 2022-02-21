@@ -70,6 +70,8 @@ If you were still getting the following message when restarting Flameshot, try r
 
 ![A screenshot of a permission request window in macOS which says "Flameshot.app would like to record this computer's screen"](/media/macos_screenrecording_permission_request.png)
 
+When this step is done you have to restart your macOS to make the permissions get working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple, but until that day, the only easy solution is rebooting.
+
 ### The command `flameshot` does not exist in my terminal
 
 - In general to have a command to your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`). You can either:
