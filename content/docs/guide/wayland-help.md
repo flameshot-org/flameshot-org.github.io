@@ -27,7 +27,7 @@ If you are a Gnome 41 (or later) user, know that you are not alone in this as ma
 - https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970
 - https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895
 
-Therefore please do not waste your time complaining to Flameshot developers as we cannot do anything about it. If you want this issue to change, please take your complaints to [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970) and [here]https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895). Thank you!
+Therefore please do not waste your time complaining to Flameshot developers as we cannot do anything about it. If you want this issue to change, please take your complaints to [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970) and [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895). Thank you!
 
 
 # KDE
