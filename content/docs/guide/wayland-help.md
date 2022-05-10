@@ -19,13 +19,14 @@ In this page you can find possible solutions for issues on Wayland. This page pr
 
 # Gnome
 
-## I am asked to "share" my screen every time
+## I am asked to "Share" my screen every time
 
 If you are a Gnome 41 (or later) user, know that you are not alone in this as many have brought up this issue ([example](https://github.com/flameshot-org/flameshot/issues/2186)). This is **NOT** a Flameshot bug nor it was our decision. This is something that Gnome developers unilaterally and suddenly implemented and this is affecting **ALL** screenshot tools other than the Gnome default screenshot tool (they have white-listed their own software). For more information please read the following:
 
-- https://github.com/flameshot-org/flameshot/issues/2186
-- https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970
-- https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895
+- [https://github.com/flameshot-org/flameshot/issues/2186](https://github.com/flameshot-org/flameshot/issues/2186S
+- [https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970S
+- [https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895](https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895)
+- [https://github.com/flatpak/xdg-desktop-portal/issues/649](https://github.com/flatpak/xdg-desktop-portal/issues/649)
 
 Therefore please do not waste your time complaining to Flameshot developers as we cannot do anything about it. If you want this issue to change, please take your complaints to [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970) and [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895). Thank you!
 
