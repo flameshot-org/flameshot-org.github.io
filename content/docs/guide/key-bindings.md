@@ -15,7 +15,7 @@ top = false
 +++
 
 ## Local
-These shortcuts are available in GUI mode:
+These shortcuts are available in GUI mode, meaning for example when you have ran `flameshot gui` command. In other words, these are the shortcuts that work *inside* the flameshot application:
 
 |  Keys                                                                                         |  Description                         |
 |---                                                                                            |---                                   |
@@ -28,9 +28,16 @@ These shortcuts are available in GUI mode:
 | Right Click                                                                                   | Show color picker                    |
 | Mouse Wheel (scroll)                                                                          | Change the tool's thickness          |
 
-<kbd>Shift</kbd> + drag a handler of the selection area: mirror redimension in the opposite handler.
+<kbd>Shift</kbd> + drag a handler of the selection area: mirror re-dimension in the opposite handler.
 
-## Global
+You can change these default keybindings and more by opening the configuration, either by right-clicking on the tray icon or by running `flameshot config`, and navigating to **Shortcuts** tab:
+
+![Flameshot configuration window and Shortcuts tab](/media/configuration_window/flameshot_config_shortcuts.png)
+
+-------
+-------
+
+## Global Shortcuts for Operating Systems
 
 ### macOS
 
