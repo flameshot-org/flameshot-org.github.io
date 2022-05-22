@@ -2,7 +2,7 @@
 title = "Install on Linux"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2021-05-01T08:00:00+00:00
+updated = 2022-05-22T08:00:00+00:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -53,15 +53,10 @@ download a development version from [here](../development-build).
 In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
 
 - Debian10 (buster)
-
 - Ubuntu18.04 (bionic)
-
 - Ubuntu20.04 (focal)
-
 - Fedora31
-
 - Fedora32
-
 - OpenSUSE Leap 15.2
 
 General packages(AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
@@ -92,7 +87,7 @@ cd ~/Applications/Flameshot
 2. Delete older versions of Flameshot AppImage:
 
 ```sh
-rm Flameshot-*-x86_64.AppImage
+rm Flameshot-*x86_64.AppImage
 ```
 
 3. Download the latest AppImage
@@ -111,13 +106,13 @@ curl --remote-name \
 4. Set it to executable:
 
 ```sh
-chmod +x Flameshot-*-x86_64.AppImage
+chmod +x Flameshot-*.x86_64.AppImage
 ```
 
 5. Now you have the Flameshot ready and you can run the software:
 
 ```sh
-./Flameshot-*-x86_64.AppImage
+./Flameshot-*.x86_64.AppImage
 ```
 
 This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
@@ -127,9 +122,16 @@ This will create an icon in your system tray area. (usually in the bottom-right 
 6.2 open terminal and use the following to run the application:
 
 ```sh
-./Flameshot-*-x86_64.AppImage gui
+./Flameshot-*.x86_64.AppImage gui
 ```
+You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and will automatically run the AppImage. For example:
 
+```sh
+ln --symbolic ~/Applications/Flameshot/Flameshot-11.0.0.x86_64.AppImage ~/.local/bin/flameshot
+
+# and now you can simply run
+flameshot
+```
 
 ### Snap
 
