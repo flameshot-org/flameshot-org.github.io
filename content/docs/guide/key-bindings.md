@@ -71,13 +71,14 @@ Steps for using the configuration:
 
 1. The configuration file configures shortcuts so that Flameshot automatically saves (without opening the save dialog) screenshots to _~/Pictures/Screenshots_ folder. Make sure you have that folder by running the following command:
     ```sh
-    mkdir -p ~/Pictures/Screenshots
+    mkdir --parents ~/Pictures/Screenshots
     ```
    (If you don't like the default location, you can skip this step and configure your preferred directory later.)
 
 2. Download the configuration file:
     ```sh
-    cd ~/Desktop; wget https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys
+    cd ~/Desktop
+    wget https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys
     ```
 3. Go to _System Settings_ → _Shortcuts_ → _Custom Shortcuts_.
 4. If there's one, you'll need to disable an entry for Spectacle, the default KDE screenshot utility first because its shortcuts might collide with Flameshot's ones; so, just uncheck the _Spectacle_ entry.
@@ -109,9 +110,14 @@ Some examples of commands are:
 
 ```sh
 # Capture a region using the GUI, and have it automatically saved to your pictures folder when clicking the save button in GUI
-flameshot gui -p /home/user/Pictures
+flameshot gui --path /home/user/Pictures
+
 # Capture the active monitor and save it automatically to your pictures folder
-flameshot screen -p /home/user/Pictures
+flameshot screen --path /home/user/Pictures
+
 # Capture the full desktop (all monitors) and save it automatically to your pictures folder
-flameshot full -p /home/user/Pictures
+flameshot full --path /home/user/Pictures
+
+# Capture the region, copy to clipboard and at the same time write to file and pin the image
+flameshot gui --clipboard --pin --path ~/Pictures
 ```

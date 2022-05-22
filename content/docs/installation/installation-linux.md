@@ -2,7 +2,7 @@
 title = "Install on Linux"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2021-05-01T08:00:00+00:00
+updated = 2022-05-22T08:00:00+00:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -21,7 +21,7 @@ top = true
 
 There are packages available for different distros:
 
-- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman -S flameshot`
+- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman --sync flameshot`
     - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
 - [Debian 10+](https://tracker.debian.org/pkg/flameshot): `apt install flameshot`
@@ -30,7 +30,7 @@ There are packages available for different distros:
 
 - [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
 
-- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
+- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env --install --attr nixos.flameshot`
 
 - [openSUSE](https://software.opensuse.org/package/flameshot): `zypper install flameshot`
 
@@ -53,15 +53,10 @@ download a development version from [here](../development-build).
 In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
 
 - Debian10 (buster)
-
 - Ubuntu18.04 (bionic)
-
 - Ubuntu20.04 (focal)
-
 - Fedora31
-
 - Fedora32
-
 - OpenSUSE Leap 15.2
 
 General packages(AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
@@ -85,14 +80,14 @@ You can always use the AppImage as it is distro agnostic:
 1. Navigate to the folder you would like to store the software (the following is a suggestion):
 
 ```sh
-mkdir -p ~/Applications/Flameshot
+mkdir --parents ~/Applications/Flameshot
 cd ~/Applications/Flameshot
 ```
 
 2. Delete older versions of Flameshot AppImage:
 
 ```sh
-rm Flameshot-*-x86_64.AppImage
+rm Flameshot-*x86_64.AppImage
 ```
 
 3. Download the latest AppImage
@@ -101,7 +96,9 @@ rm Flameshot-*-x86_64.AppImage
    2.2. use the following to automatically download the latest.
 
 ```sh
-curl -O -J -L $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
+curl --remote-name \
+     --remote-header-name \
+     --location $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
                 | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
                 | uniq)
 ```
@@ -109,13 +106,13 @@ curl -O -J -L $(curl -s https://api.github.com/repos/flameshot-org/flameshot/rel
 4. Set it to executable:
 
 ```sh
-chmod +x Flameshot-*-x86_64.AppImage
+chmod +x Flameshot-*.x86_64.AppImage
 ```
 
 5. Now you have the Flameshot ready and you can run the software:
 
 ```sh
-./Flameshot-*-x86_64.AppImage
+./Flameshot-*.x86_64.AppImage
 ```
 
 This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
@@ -125,9 +122,16 @@ This will create an icon in your system tray area. (usually in the bottom-right 
 6.2 open terminal and use the following to run the application:
 
 ```sh
-./Flameshot-*-x86_64.AppImage gui
+./Flameshot-*.x86_64.AppImage gui
 ```
+You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and will automatically run the AppImage. For example:
 
+```sh
+ln --symbolic ~/Applications/Flameshot/Flameshot-11.0.0.x86_64.AppImage ~/.local/bin/flameshot
+
+# and now you can simply run
+flameshot
+```
 
 ### Snap
 
@@ -165,7 +169,7 @@ To update the flatpaks you can use `flatpak update`.
 You may also add a symlink to the Flatpak command in your PATH. For example:
 
 ```sh
-ln -s /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
+ln --symbolic /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
 ```
 
 This can help when creating custom keyboard shortcuts.
@@ -175,7 +179,7 @@ This can help when creating custom keyboard shortcuts.
 
 There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
 
-https://github.com/ManuelLR/docker-flameshot
+<https://github.com/ManuelLR/docker-flameshot>
 
 -------------------------------------------------
 
