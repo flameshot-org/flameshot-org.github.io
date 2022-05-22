@@ -21,7 +21,7 @@ top = true
 
 There are packages available for different distros:
 
-- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman -S flameshot`
+- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman --sync flameshot`
     - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
 - [Debian 10+](https://tracker.debian.org/pkg/flameshot): `apt install flameshot`
@@ -30,7 +30,7 @@ There are packages available for different distros:
 
 - [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
 
-- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env -iA nixos.flameshot`
+- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env --install --attr nixos.flameshot`
 
 - [openSUSE](https://software.opensuse.org/package/flameshot): `zypper install flameshot`
 
@@ -85,7 +85,7 @@ You can always use the AppImage as it is distro agnostic:
 1. Navigate to the folder you would like to store the software (the following is a suggestion):
 
 ```sh
-mkdir -p ~/Applications/Flameshot
+mkdir --parents ~/Applications/Flameshot
 cd ~/Applications/Flameshot
 ```
 
@@ -101,7 +101,9 @@ rm Flameshot-*-x86_64.AppImage
    2.2. use the following to automatically download the latest.
 
 ```sh
-curl -O -J -L $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
+curl --remote-name \
+     --remote-header-name \
+     --location $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
                 | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
                 | uniq)
 ```
@@ -165,7 +167,7 @@ To update the flatpaks you can use `flatpak update`.
 You may also add a symlink to the Flatpak command in your PATH. For example:
 
 ```sh
-ln -s /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
+ln --symbolic /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
 ```
 
 This can help when creating custom keyboard shortcuts.
