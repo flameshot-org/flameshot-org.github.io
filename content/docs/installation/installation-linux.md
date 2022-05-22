@@ -179,7 +179,7 @@ This can help when creating custom keyboard shortcuts.
 
 There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
 
-https://github.com/ManuelLR/docker-flameshot
+<https://github.com/ManuelLR/docker-flameshot>
 
 -------------------------------------------------
 
