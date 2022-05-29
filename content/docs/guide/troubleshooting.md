@@ -2,7 +2,7 @@
 title = "Troubleshooting"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:20:00+00:00
-updated = 2021-05-01T08:20:00+00:00
+updated = 2022-05-29T08:20:00+00:00
 draft = false
 weight = 3
 sort_by = "weight"
@@ -31,15 +31,19 @@ In case you didn't find similar issue, create a new issue and explain in details
 
 It is currently found in Ubuntu 14.04 and 16.04 Unity environment, such problems occur. This problem does not occur with Ubuntu 17.10 Unity. [#92](https://github.com/flameshot-org/flameshot/issues/92)
 
-### In Gnome the flameshot icon does not appear in the tray
+### In **Gnome** the flameshot icon does not appear in the tray
 
 * Gnome does not have a systray, therefore in Gnome you should install the gnome [Tray icons](https://extensions.gnome.org/extension/1503/tray-icons/) extension. For more information, read the [Tary icon](https://github.com/flameshot-org/flameshot#tray-icon) section of the github repository.
 
-### In tiling window managers (e.g i3wm, dwm, bspwm) flameshot crashes when taking the screenshot
+### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot crashes when taking the screenshot
 
 * most tiling window managers dows not come with a nitification daemon, and Flameshot communicates with user through notifications. This means that Flameshot is dependent on notification manager to be installed and running. Easy way to test if you have a notification manager is to try `notify-send "test"` in your terminal. If you see the notification, you have it, otherwise we suggest you to install a notification manager such as `dunst`:
 
 https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
+
+### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot
+
+This is simply because you have not started the DBus. Either run `dbus-launch dwm` (or any other window manager/desktop environment) at startup, or run Flameshot daemon (`flameshot`) before taking the screenshot.
 
 ### Flameshot icon is visible in tray area but when I click on it nothing happens
 
@@ -55,6 +59,9 @@ https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
     - ![image](https://user-images.githubusercontent.com/390889/116671105-3b09d780-a9a9-11eb-8941-df52c9802c85.png)
     7. Post the link in the [issue on Github](https://github.com/flameshot-org/flameshot/issues)
 
+## In **Xfce** sometimes it doesn't let me to select area
+
+It has been confirmed by multiple users that the compositor is at fault [#629](https://github.com/flameshot-org/flameshot/issues/629#issuecomment-989136575). It has been suggested to disable "Display fullscreen overlay windows directly". You just need to open "Window Manager Tweaks" in your Xfce, go to the "Compositor" tab and remove the checkmark from "Display fullscreen overlay windows directly".
 
 --------------------------------------------------------------------------------
 
@@ -81,4 +88,12 @@ When this step is done you have to restart your macOS to make the permissions ge
 ### Flameshot only works on the primary screen
 
 depending on how you have Spaces configured in Mission Control you may only be able to activate flameshot on a particular external display by using the `shift+alt+cmd+4` hotkey. Otherwise, flameshot will only activate on the main display if you click "Take Screenshot" from the application menu. Fix it by uninstalling, installing again and selecting flameshot again in the `Screen Recording` section. (reported to work [here](https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496))
-                                                                                                                                
+                                                                                                                             --------------------------------------------------------------------------------
+
+## Windows
+
+### Commandline arguments does not work
+
+At the time of writing this (version 11.0.0), the commandline is not implemented for Windows. We might add it in future versions. You can follow the discussions/development of this feature in [#2118](https://github.com/flameshot-org/flameshot/issues/2118).
+
+In the meanshile you can use [AutoHotKey](https://www.autohotkey.com/) as [explained here](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1126669379).
