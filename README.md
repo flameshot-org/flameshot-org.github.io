@@ -12,7 +12,14 @@ This static website is powered by [zola](https://www.getzola.org).
 
 # Development
 
-- Navigate to the root directory
-- Run `zola serve` to start a local server for development.
+## building the website locally
+
+It is essential that you buil the website locally on your computer (it would take about 1 second) to check if the changes you have made are correctly getting converted to HTML. Typically typos can mess things up.
+To build the website, you first need to install [zola](https://www.getzola.org/) (the static website generator that we use for this website), and then follow these steps:
+
+- Navigate to the root directory of the cloned repository
+- Run `zola serve` to start a local server for development
+    - look for possible errors or messages
+- Open `127.0.0.1:1111` in your browser to see the website
 
 The browser will automatically refresh on any changes made. Sass is setup to auto compile when the scss is edited.
