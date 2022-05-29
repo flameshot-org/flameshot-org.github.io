@@ -41,6 +41,10 @@ It is currently found in Ubuntu 14.04 and 16.04 Unity environment, such problems
 
 https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
 
+### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot
+
+This is simply because you have not started the DBus. Either run `dbus-launch dwm` (or any other window manager/desktop environment) at startup, or run Flameshot daemon (`flameshot`) before taking the screenshot.
+
 ### Flameshot icon is visible in tray area but when I click on it nothing happens
 
 * First try the using the command `flameshot gui` in terminal. This does exactly what clicking on the tray icon does. (make sure can you see Flameshot icon in the tray area)
@@ -55,6 +59,9 @@ https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
     - ![image](https://user-images.githubusercontent.com/390889/116671105-3b09d780-a9a9-11eb-8941-df52c9802c85.png)
     7. Post the link in the [issue on Github](https://github.com/flameshot-org/flameshot/issues)
 
+## In **Xfce** sometimes it doesn't let me to select area
+
+It has been confirmed by multiple users that the compositor is at fault [#629](https://github.com/flameshot-org/flameshot/issues/629#issuecomment-989136575). It has been suggested to disable "Display fullscreen overlay windows directly". You just need to open "Window Manager Tweaks" in your Xfce, go to the "Compositor" tab and remove the checkmark from "Display fullscreen overlay windows directly".
 
 --------------------------------------------------------------------------------
 
@@ -81,4 +88,12 @@ When this step is done you have to restart your macOS to make the permissions ge
 ### Flameshot only works on the primary screen
 
 depending on how you have Spaces configured in Mission Control you may only be able to activate flameshot on a particular external display by using the `shift+alt+cmd+4` hotkey. Otherwise, flameshot will only activate on the main display if you click "Take Screenshot" from the application menu. Fix it by uninstalling, installing again and selecting flameshot again in the `Screen Recording` section. (reported to work [here](https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496))
-                                                                                                                                
+                                                                                                                             --------------------------------------------------------------------------------
+
+## Windows
+
+### Commandline arguments does not work
+
+At the time of writing this (version 11.0.0), the commandline is not implemented for Windows. We might add it in future versions. You can follow the discussions/development of this feature in [#2118](https://github.com/flameshot-org/flameshot/issues/2118).
+
+In the meanshile you can use [AutoHotKey](https://www.autohotkey.com/) as [explained here](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1126669379).
