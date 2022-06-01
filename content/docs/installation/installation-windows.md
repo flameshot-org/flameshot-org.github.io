@@ -2,7 +2,7 @@
 title = "Install on Windows"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2021-05-01T08:00:00+00:00
+updated = 2022-06-01T08:00:00+00:00
 draft = false
 weight = 3
 sort_by = "weight"
@@ -25,7 +25,8 @@ If you want to run Flameshot with the most cutting edge features, you can downlo
 
 ## Using package managers
 
-Windows has few package managers which you can use to easily install and update applications. here we list those that have Flameshot in their repository:
+Windows has few package managers which you can use to easily install and update applications.
+Here we list those that have Flameshot in their repository:
 
 ### Winget
 
@@ -37,7 +38,7 @@ winget install flameshot
 
 ### Scoop
 
-Flameshot can be installed using Scoop extras bucket:
+Flameshot can be installed using [Scoop extras bucket](https://scoop.sh/#/apps?q=flameshot&s=0&d=1&o=true):
 
 ```powershell
 scoop bucket add extras
@@ -47,7 +48,7 @@ scoop install flameshot
 
 ### Chocolatey
 
-Flameshot [has been submitted](https://github.com/chocolatey-community/chocolatey-package-requests/issues/973) to Chocolatey Community Repository and it is waiting for approval. When approved, you can install it via:
+Flameshot is also [available on Chocolatey](https://community.chocolatey.org/packages/flameshot), and can be installed using: 
 
 ```powershell
 choco install flameshot
