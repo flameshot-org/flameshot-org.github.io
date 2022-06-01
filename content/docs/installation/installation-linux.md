@@ -2,7 +2,7 @@
 title = "Install on Linux"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2022-05-22T08:00:00+00:00
+updated = 2022-06-01T08:00:00+00:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -21,33 +21,33 @@ top = true
 
 There are packages available for different distros:
 
-- [Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/) `pacman --sync flameshot`
-    - Snapshot also available via AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
+- **[Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/):** `pacman --sync flameshot`
+    - Official AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
-- [Debian 10+](https://tracker.debian.org/pkg/flameshot): `apt install flameshot`
+- **[Debian 10+](https://tracker.debian.org/pkg/flameshot):** `apt install flameshot`
 
-- [Ubuntu 18.04+](https://launchpad.net/ubuntu/+source/flameshot): `apt install flameshot`
+- **[Ubuntu 18.04+](https://launchpad.net/ubuntu/+source/flameshot):** `apt install flameshot`
 
-- [Fedora](https://src.fedoraproject.org/rpms/flameshot): `dnf install flameshot`
+- **[Fedora](https://src.fedoraproject.org/rpms/flameshot):** `dnf install flameshot`
 
-- [NixOS](https://search.nixos.org/packages?query=flameshot): `nix-env --install --attr nixos.flameshot`
+- **[NixOS](https://search.nixos.org/packages?query=flameshot):** `nix-env --install --attr nixos.flameshot`
 
-- [openSUSE](https://software.opensuse.org/package/flameshot): `zypper install flameshot`
+- **[openSUSE](https://software.opensuse.org/package/flameshot):** `zypper install flameshot`
 
-- [Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot): `xbps-install flameshot`
+- **[Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot):** `xbps-install flameshot`
 
-- [Solus](https://dev.getsol.us/source/flameshot/): `eopkg install flameshot`
+- **[Solus](https://dev.getsol.us/source/flameshot/):** `eopkg install flameshot`
 
 
 
 If you want to run Flameshot with the most cutting edge features, you can
-download a development version from [here](../development-build).
+download a development version from [here](../development-build) or use AUR if you are on an [Arch-based distro](https://wiki.archlinux.org/title/Arch-based_distributions).
 
 
-*Important things to Know:*
+**Important things to Know:**
 
-1. Other than AUR (Arch user Repository), All packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, Please directly contact the distribution.
-2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot withing the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably few version behind especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
+1. Other than AUR (Arch user Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, Please directly contact the distribution.
+2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay few version behind especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
 
 
 In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
@@ -59,7 +59,7 @@ In addition, we also have continuous integration, it currently provides the foll
 - Fedora32
 - OpenSUSE Leap 15.2
 
-General packages(AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
+General packages (AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
 
 <details>
   <summary>Expand this section to see what distros are using an up to date version of flameshot</summary>
