@@ -97,3 +97,17 @@ depending on how you have Spaces configured in Mission Control you may only be a
 At the time of writing this (version 11.0.0), the commandline is not implemented for Windows. We might add it in future versions. You can follow the discussions/development of this feature in [#2118](https://github.com/flameshot-org/flameshot/issues/2118).
 
 In the meanshile you can use [AutoHotKey](https://www.autohotkey.com/) as [explained here](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1126669379).
+
+
+### Does not launch at startup even when the settings is set
+
+As [explained by @HoshyarKarimi](https://github.com/flameshot-org/flameshot/issues/2422#issuecomment-1140393544) (this should only be done once):
+
+
+1. From the configuration uncheck Launch at startup
+2. Quit Flameshot from system tray
+3. Now run Flameshot _as administrator_
+4. Open the configuration and check the Launch at startup box
+
+The settings should now be set. You can close Flameshot from the system tray and use it normally from here after.
+
