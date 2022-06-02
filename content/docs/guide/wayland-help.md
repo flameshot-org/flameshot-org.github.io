@@ -2,7 +2,7 @@
 title = "Wayland Help"
 description = "A page to help Wayland users sort out some Wayland-specific issues"
 date = 2022-01-28T16:31:10+00:00
-updated = 2022-01-28T16:31:10+00:00
+updated = 2022-06-02T16:31:10+00:00
 draft = false
 weight = 3
 sort_by = "weight"
@@ -17,7 +17,7 @@ top = false
 
 In this page you can find possible solutions for issues on Wayland. This page probably needs frequent update, so if something was outdate, please [report it here](https://github.com/flameshot-org/flameshot-org.github.io/issues/new).
 
-# Gnome
+# Gnome Wayland
 
 ## I am asked to "Share" my screen every time
 
@@ -32,7 +32,7 @@ Therefore please do not waste your time complaining to Flameshot developers as w
 
 --------------------------------------------------------------------------------
 
-# KDE
+# KDE Wayland
 
 ## 4k displayed and fractional scaling
 
@@ -44,3 +44,8 @@ export QT_SCREEN_SCALE_FACTORS="1;1"
 
 and then you can normally use Flameshot (e.g `flameshot gui`)
 
+## Can't screen anything on Wayland KDE
+
+**Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
+
+You install `xdg-desktop-portal-kde` and `xdg-desktop-portal`.
