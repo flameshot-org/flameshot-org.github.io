@@ -30,7 +30,7 @@ The compilation requires **Qt version 5.3 or higher** and **GCC 4.9.2 or higher*
 Compilation Dependencies:
 
 ```sh
-apt install g++ cmake extra-cmake-modules build-essential qt5-default qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
+apt install g++ cmake extra-cmake-modules build-essential qtbase5-dev qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
 ```
 
 
