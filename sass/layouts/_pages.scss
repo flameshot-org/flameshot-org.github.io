@@ -12,6 +12,21 @@
   padding-left: 0.5rem;
 }
 
+.zola-anchor {
+  font-size: 1.1rem;
+  text-decoration: none !important;
+  cursor: pointer;
+  vertical-align: middle;
+  opacity: 0.33;
+  color: transparent !important;        // a hack to recolor the emoji
+  text-shadow: 0 0 1.5px gray;   // a hack to recolor emoji
+  &:hover {
+    opacity: 1;
+    color: blue !important;        // reverse the hack
+    text-shadow: none;             // reverse the hack
+  }
+}
+
 h1:hover a,
 h2:hover a,
 h3:hover a,
