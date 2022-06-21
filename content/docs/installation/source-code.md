@@ -20,7 +20,7 @@ top = true
 Alternatively, you can always compile from the source code.
 
 
-## Dependencies
+## OS Dependencies
 
 The compilation requires **Qt version 5.3 or higher** and **GCC 4.9.2 or higher**.
 
@@ -33,24 +33,21 @@ Compilation Dependencies:
 apt install g++ cmake extra-cmake-modules build-essential qtbase5-dev qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
 ```
 
-
 ### Fedora
 
 Compilation Dependencies:
 
 ```sh
-dnf install gcc-c++ cmake qt5-devel qt5-qtbase-devel qt5-linguist
+dnf install gcc-c++ cmake qt5-qtbase-devel qt5-linguist qt5-qtsvg-devel
 ```
-
 
 ### Arch
 
 Compilation Dependencies:
 
 ```sh
-pacman -S cmake base-devel git qt5-base qt5-tools
+pacman -S cmake base-devel git qt5-base qt5-tools hicolor-icon-theme qt5-svg
 ```
-
 
 ### OSX
 
@@ -60,6 +57,36 @@ Compilation Dependencies:
 brew install qt5
 brew install cmake
 ```
+
+--------------------------------------------------------------------------------
+
+## DE/WM dependencies
+
+### Gnome
+
+### KDE
+
+On Fedora:
+
+```sh
+dnf install kf5-kguiaddons-devel
+```
+
+On Arch:
+
+```sh
+pacman -S kguiaddons
+```
+
+### Sway
+
+On Arch:
+
+```sh
+pacman -S xdg-desktop-portal xdg-desktop-portal-wlr grim
+```
+
+--------------------------------------------------------------------------------
 
 ## Getting the Source Code
 

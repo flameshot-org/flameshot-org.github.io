@@ -144,7 +144,7 @@ snap install flameshot
 to update the snap applications on your computer, you should run `snap refresh`.
 
 
-### Flatpak
+### Flatpak  <img src="https://img.shields.io/flathub/downloads/org.flameshot.Flameshot">
 
 Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:
 
@@ -175,7 +175,7 @@ ln --symbolic /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/
 This can help when creating custom keyboard shortcuts.
 
 
-### Docker
+### Docker  <img src="https://img.shields.io/docker/pulls/manuellr/flameshot">  <img src="https://img.shields.io/docker/image-size/manuellr/flameshot?sort=date">
 
 There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
 
