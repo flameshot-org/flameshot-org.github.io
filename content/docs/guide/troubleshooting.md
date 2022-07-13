@@ -43,13 +43,20 @@ https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
 
 ### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot
 
-This is simply because you have not started the DBus. Either run `dbus-launch dwm` (or any other window manager/desktop environment) at startup, or run Flameshot daemon (`flameshot`) before taking the screenshot.
+This is simply because you have not started the DBus. Either run `dbus-launch dwm` (or any other window manager/desktop environment) at startup, or run Flameshot daemon (`flameshot`) before taking the screenshot. For example:
+
+```sh
+# this will start the daemon
+flameshot &
+# this will select a 300 by 200 pixel area, and immediately pin it
+flameshot gui --region 300x200+300+300 --pin --accept-on-select 
+```
 
 ### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot only appears on a single monitor
 
 This can be because the window manager is forcing to tile FLameshot. This can be solved by defining window rule. For example for Sway the following rule is suggested in [#2364](https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1086129055):
 
-```
+```py
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
 ```
 
