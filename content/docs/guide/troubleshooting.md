@@ -45,6 +45,14 @@ https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
 
 This is simply because you have not started the DBus. Either run `dbus-launch dwm` (or any other window manager/desktop environment) at startup, or run Flameshot daemon (`flameshot`) before taking the screenshot.
 
+### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot only appears on a single monitor
+
+This can be because the window manager is forcing to tile FLameshot. This can be solved by defining window rule. For example for Sway the following rule is suggested in [#2364](https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1086129055):
+
+```
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+```
+
 ### Flameshot icon is visible in tray area but when I click on it nothing happens
 
 * First try the using the command `flameshot gui` in terminal. This does exactly what clicking on the tray icon does. (make sure can you see Flameshot icon in the tray area)
