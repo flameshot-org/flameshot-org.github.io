@@ -14,7 +14,7 @@ This static website is powered by [zola](https://www.getzola.org).
 
 ## building the website locally
 
-It is essential that you buil the website locally on your computer (it would take about 1 second) to check if the changes you have made are correctly getting converted to HTML. Typically typos can mess things up.
+It is essential that you build the website locally on your computer (it would take about 1 second) to check if the changes you have made are correctly getting converted to HTML. Typically typos can mess things up.
 To build the website, you first need to install [zola](https://www.getzola.org/) (the static website generator that we use for this website), and then follow these steps:
 
 - Navigate to the root directory of the cloned repository
