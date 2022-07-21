@@ -29,7 +29,9 @@ code:not([class]){
 //  background-color: #ffefef;
 // }
 
-
+blockquote pre code{
+  color: #76585a;
+}
 
 pre {
   margin: 1.2rem 0;
