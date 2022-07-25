@@ -96,13 +96,13 @@ rm Flameshot-*x86_64.AppImage
 
    3.2. Use the following to automatically download the latest.
 
-```sh
-curl --remote-name \
-     --remote-header-name \
-     --location $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
-                | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
-                | uniq)
-```
+    ```sh
+    curl --remote-name \
+        --remote-header-name \
+        --location $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
+                    | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
+                    | uniq)
+    ```
 
 4. Set it to executable:
 
@@ -116,16 +116,18 @@ chmod +x Flameshot-*.x86_64.AppImage
 ./Flameshot-*.x86_64.AppImage
 ```
 
-This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
+This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). 
 
-6.1. Click on the tray icon and select "Take screenshot"
+6. Now, you can launch the application. You can either:
 
-6.2. Open terminal and use the following to run the application:
+    6.1. Click on the tray icon and select "Take screenshot"
 
-```sh
-./Flameshot-*.x86_64.AppImage gui
-```
-You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and will automatically run the AppImage. For example:
+    6.2. Open terminal and use the following to run the application:
+
+    ```sh
+    ./Flameshot-*.x86_64.AppImage gui
+    ```
+7. You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and will automatically run the AppImage. For example:
 
 ```sh
 ln --symbolic ~/Applications/Flameshot/Flameshot-11.0.0.x86_64.AppImage ~/.local/bin/flameshot
