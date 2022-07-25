@@ -31,3 +31,13 @@ _This might change in future as the project grows along with its potential costs
 
 All these said, if you would like to financially contribute to the Flameshot project, we suggest you to use [Rysolv](https://rysolv.com/issues/search/Flameshot) to put bounty on the issues (bugs or feature requests). This way your money and contribution goes directly towards improving Flameshot as you see it fit and would immediately benefit you and other users. This is also a good way to get the features implemented that you want, or get the bugs that annoys you fixed. The beautiful part of this approach is that multiple people can put bounty on the same issue which would increase the chance of getting it addressed by one of the developers that is registered in [Rysolv.com](https://rysolv.com/stats).
 
+## Other form of donation
+
+The best donation would be your time! With it you can
+
+- tell others about flameshot
+- help us improve the documentation and the website
+- help us by trying to reproduce [unconfirmed bug reports](https://github.com/flameshot-org/flameshot/issues?q=is%3Aopen+is%3Aissue+label%3A%22Unconfirmed+Bug%22), especially in a clean virtual machine
+- do graphic design for the software, website, and even our [social media](https://fosstodon.org/@flameshot) 
+- help us address bugs if you know C++
+- suggest new ideas and elegant ways to make Flameshot better
