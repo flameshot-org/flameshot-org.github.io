@@ -37,7 +37,7 @@ Gnome does not have a systray, therefore in Gnome you should install the gnome [
 
 ### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot crashes when taking the screenshot
 
-Most tiling window managers dows not come with a notification daemon, and Flameshot communicates with user through notifications. This means that Flameshot is dependent on notification manager to be installed and running. Easy way to test if you have a notification manager is to try `notify-send "test"` in your terminal. If you see the notification, you have it, otherwise we suggest you to install a notification manager such as `dunst`:
+Most tiling window managers do not come with a notification daemon, and Flameshot communicates with the user through notifications. This means that Flameshot is dependent on a notification manager to be installed and running. Easy way to test if you have a notification manager is to try `notify-send "test"` in your terminal. If you see the notification, you have it, otherwise we suggest you to install a notification manager such as `dunst`:
 
 https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
 
@@ -62,7 +62,7 @@ for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disa
 
 ### Flameshot icon is visible in tray area but when I click on it nothing happens
 
-* First try the using the command `flameshot gui` in terminal. This does exactly what clicking on the tray icon does. (make sure can you see Flameshot icon in the tray area)
+* First try the using the command `flameshot gui` in terminal. This does exactly what clicking on the tray icon does (make sure can you see Flameshot icon in the tray area).
 
 * If the step above didn't work:
     1. Open 3 terminals
@@ -96,8 +96,8 @@ When this step is done you have to restart your macOS to make the permissions ge
 
 ### The command `flameshot` does not exist in my terminal
 
-In general to have a command to your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`). You can either:
-1. create a symlink to Flameshot binary in one of those folder listed (check out `man ln`)
+In general to have a command in your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`). You can either:
+1. create a symlink to Flameshot binary in one of those folders listed (check out `man ln`)
 2. add the folder that contains Flameshot to your path (`export PATH="path/to/your/folder:$PATH"`). If you have installed Flameshot using the DMG we provide, Macports, or Homebrew, you most probably have it located in `/Applications/flameshot.app/`.
 
 ### Flameshot only works on the primary screen
@@ -108,7 +108,7 @@ Depending on how you have Spaces configured in Mission Control you may only be a
 
 ## Windows
 
-### Command line arguments does not work
+### Command line arguments do not work
 
 At the time of writing this (version 11.0.0), the command line is not implemented for Windows. We might add it in future versions. You can follow the discussions/development of this feature in [#2118](https://github.com/flameshot-org/flameshot/issues/2118).
 

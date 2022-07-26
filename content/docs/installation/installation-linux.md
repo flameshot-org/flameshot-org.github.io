@@ -46,8 +46,8 @@ download a development version from [here](../development-build) or use AUR if y
 
 **Important things to Know:**
 
-1. Other than AUR (Arch user Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, please directly contact the distribution.
-2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay few version behind especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
+1. Other than AUR (Arch User Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problems installing Flameshot from the commands above, please directly contact the distribution.
+2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay a few versions behind, especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
 
 
 In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
@@ -116,7 +116,7 @@ chmod +x Flameshot-*.x86_64.AppImage
 ./Flameshot-*.x86_64.AppImage
 ```
 
-This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). 
+This will create an icon in your system tray area (usually in the bottom-right ot top-right of the screen). 
 
 6. Now, you can launch the application. You can either:
 
@@ -127,7 +127,7 @@ This will create an icon in your system tray area. (usually in the bottom-right 
     ```sh
     ./Flameshot-*.x86_64.AppImage gui
     ```
-7. You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and will automatically run the AppImage. For example:
+7. You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and it will automatically run the AppImage. For example:
 
 ```sh
 ln --symbolic ~/Applications/Flameshot/Flameshot-11.0.0.x86_64.AppImage ~/.local/bin/flameshot
