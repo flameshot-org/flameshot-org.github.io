@@ -116,7 +116,7 @@ chmod +x Flameshot-*.x86_64.AppImage
 ./Flameshot-*.x86_64.AppImage
 ```
 
-This will create an icon in your system tray area (usually in the bottom-right ot top-right of the screen). 
+This will create an icon in your system tray area (usually in the bottom-right or top-right of the screen). 
 
 6. Now, you can launch the application. You can either:
 
