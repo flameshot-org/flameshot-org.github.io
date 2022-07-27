@@ -117,6 +117,12 @@ url = "#contribute"
 weight = 0
 
 [[extra.menu.main]]
+name = "Donate"
+section = ""
+url = "/donate/"
+weight = 0
+
+[[extra.menu.main]]
 name = "Docs"
 section = "docs"
 url = "/docs/"
