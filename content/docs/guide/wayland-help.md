@@ -4,7 +4,7 @@ description = "A page to help Wayland users sort out some Wayland-specific issue
 date = 2022-01-28T16:31:10+00:00
 updated = 2022-06-02T16:31:10+00:00
 draft = false
-weight = 3
+weight = 1
 sort_by = "weight"
 template = "docs/page.html"
 
