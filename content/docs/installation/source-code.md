@@ -90,17 +90,17 @@ pacman -S xdg-desktop-portal xdg-desktop-portal-wlr grim
 
 ## Getting the Source Code
 
-You can get the gource code from [our Github repository](https://github.com/flameshot-org/flameshot). Either clone the repository or download a ZIP file. We suggest downloading the ZIP file if you want to build on specific version, but if you want to build different commits and versions, using `git` makes it much easier.
+You can get the source code from [our Github repository](https://github.com/flameshot-org/flameshot). Either clone the repository or download a ZIP file. We suggest downloading the ZIP file if you want to build on specific version, but if you want to build different commits and versions, using `git` makes it much easier.
 Please note that in this page we explain how to download the [master branch](https://github.com/flameshot-org/flameshot/tree/master), but you can get the source code for every [Pull Request](https://github.com/flameshot-org/flameshot/pulls) and compile them if you like to.
 
-In general we suggest you to create a temprory directory to download the file and do compiling there:
+In general we suggest you to create a temporary directory to download the file and do the compiling there:
 
 ```sh
 # create the folder
-mkdir --parents ~/tmp/flamshot_source/
+mkdir --parents ~/tmp/flameshot_source/
 
 # go inside the new foldr
-cd ~/tmp/flamshot_source/
+cd ~/tmp/flameshot_source/
 ```
 
 To download [the ZIP file from the master branch](https://github.com/flameshot-org/flameshot/archive/refs/heads/master.zip) you can run:

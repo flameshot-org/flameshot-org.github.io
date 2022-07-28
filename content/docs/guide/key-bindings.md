@@ -15,27 +15,25 @@ top = false
 +++
 
 ## Local
-These shortcuts are available in GUI mode, meaning for example when you have ran `flameshot gui` command. In other words, these are the shortcuts that work *inside* the flameshot application:
+These shortcuts are available in GUI mode, meaning for example when you have ran `flameshot gui` command. In other words, these are the shortcuts that work *inside* the Flameshot application:
 
-|  Keys                                                                                         |  Description                         |
-|---                                                                                            |---                                   |
-| <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                                        | Move selection 1px                   |
-| <kbd>Shift</kbd> + <kbd><kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd></kbd>          | Resize selection 1px                 |
-| <kbd>Esc</kbd>                                                                                | Quit capture                         |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd>                                                                | Copy to clipboard                    |
-| <kbd>Ctrl</kbd> + <kbd>S</kbd>                                                                | Save selection as a file             |
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd>                                                                | Undo the last modification           |
-| Right Click                                                                                   | Show color picker                    |
-| Mouse Wheel (scroll)                                                                          | Change the tool's thickness          |
-
-<kbd>Shift</kbd> + drag a handler of the selection area: mirror re-dimension in the opposite handler.
+|  Keys                                                                                         |  Description                                  |
+|---                                                                                            |---                                            |
+| <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                                        | Move selection 1px                            |
+| <kbd>Shift</kbd> + <kbd><kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd></kbd>          | Resize selection 1px                          |
+| <kbd>Esc</kbd>                                                                                | Quit capture                                  |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd>                                                                | Copy to clipboard                             |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd>                                                                | Save selection as a file                      |
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd>                                                                | Undo the last modification                    |
+| Right Click                                                                                   | Show color picker                             |
+| Mouse Wheel (scroll)                                                                          | Change the tool's thickness                   |
+| <kbd>Shift</kbd> + drag a handler of the selection area                                       | Mirror re-dimension in the opposite handler.  |
 
 You can change these default keybindings and more by opening the configuration, either by right-clicking on the tray icon or by running `flameshot config`, and navigating to **Shortcuts** tab:
 
 ![Flameshot configuration window and Shortcuts tab](/media/configuration_window/flameshot_config_shortcuts.png)
 
--------
--------
+--------------------------------------------------------------------------------
 
 ## Global Shortcuts for Operating Systems
 
@@ -47,13 +45,13 @@ By default you can start taking a screenshot using <kbd>Shift</kbd>+<kbd>CMD</kb
 
 ### Windows
 
-Typically in windows installations the <kbd>Prnt scr</kbd> should work out of the box.
+Typically in Windows installations the <kbd>Prnt Scr</kbd> should work out of the box.
 
 --------------------------------------------------------------------------------
 
 ### Linux
 
-If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prnt Scr</kbd> key. Flameshot doesn't yet offer a fully-automated option to do so, but you can configure your system to do so.
+If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prnt Scr</kbd> key. Flameshot doesn't yet offer a fully-automated option to do it, but you can configure your system to do so.
 
 #### On KDE Plasma desktop
 To make configuration easier, there's [a file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
