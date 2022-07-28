@@ -46,8 +46,8 @@ download a development version from [here](../development-build) or use AUR if y
 
 **Important things to Know:**
 
-1. Other than AUR (Arch user Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problem installing Flameshot from the commands above, Please directly contact the distribution.
-2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay few version behind especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
+1. Other than AUR (Arch User Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problems installing Flameshot from the commands above, please directly contact the distribution.
+2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay a few versions behind, especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
 
 
 In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
@@ -59,10 +59,10 @@ In addition, we also have continuous integration, it currently provides the foll
 - Fedora32
 - OpenSUSE Leap 15.2
 
-General packages (AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, debian and derivatives.
+General packages (AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, Debian and derivatives.
 
 <details>
-  <summary>Expand this section to see what distros are using an up to date version of flameshot</summary>
+  <summary>Expand this section to see what distros are using an up to date version of Flameshot</summary>
   <a href="https://repology.org/metapackage/flameshot/versions">
     <img src="https://repology.org/badge/vertical-allrepos/flameshot.svg" alt="Packaging status">
   </a>
@@ -91,17 +91,18 @@ rm Flameshot-*x86_64.AppImage
 ```
 
 3. Download the latest AppImage
-   2.1. Get it from [Release page](https://github.com/flameshot-org/flameshot/releases/latest)
-   OR
-   2.2. use the following to automatically download the latest.
 
-```sh
-curl --remote-name \
-     --remote-header-name \
-     --location $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
-                | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
-                | uniq)
-```
+   3.1. Get it from [Release page](https://github.com/flameshot-org/flameshot/releases/latest), OR
+
+   3.2. Use the following to automatically download the latest.
+
+    ```sh
+    curl --remote-name \
+        --remote-header-name \
+        --location $(curl -s https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
+                    | grep -Po 'https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage' \
+                    | uniq)
+    ```
 
 4. Set it to executable:
 
@@ -115,16 +116,18 @@ chmod +x Flameshot-*.x86_64.AppImage
 ./Flameshot-*.x86_64.AppImage
 ```
 
-This will create an icon in your system tray area. (usually in the bottom-right ot top-right of the screen). You can now either:
+This will create an icon in your system tray area (usually in the bottom-right or top-right of the screen). 
 
-6.1 click on the tray icon and select "Take screenshot"
+6. Now, you can launch the application. You can either:
 
-6.2 open terminal and use the following to run the application:
+    6.1. Click on the tray icon and select "Take screenshot"
 
-```sh
-./Flameshot-*.x86_64.AppImage gui
-```
-You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and will automatically run the AppImage. For example:
+    6.2. Open terminal and use the following to run the application:
+
+    ```sh
+    ./Flameshot-*.x86_64.AppImage gui
+    ```
+7. You may also add a symlink to the AppImage executable in your PATH. This way you can just run `flameshot` in your terminal and it will automatically run the AppImage. For example:
 
 ```sh
 ln --symbolic ~/Applications/Flameshot/Flameshot-11.0.0.x86_64.AppImage ~/.local/bin/flameshot
@@ -141,7 +144,7 @@ Flameshot is not currently on snap, but when it gets available, you can install 
 snap install flameshot
 ```
 
-to update the snap applications on your computer, you should run `snap refresh`.
+To update the snap applications on your computer, you should run `snap refresh`.
 
 
 ### Flatpak  <img src="https://img.shields.io/flathub/downloads/org.flameshot.Flameshot">
@@ -158,7 +161,7 @@ Alternatively you can install from the github using Flatpak if you want a specif
 flatpak install https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/org.flameshot.Flameshot-0.9.0.x86_64.flatpak
 ```
 
-And for runing it you should do
+And for running it you should do
 
 ```sh
 flatpak run org.flameshot.Flameshot
@@ -177,7 +180,7 @@ This can help when creating custom keyboard shortcuts.
 
 ### Docker  <img src="https://img.shields.io/docker/pulls/manuellr/flameshot">  <img src="https://img.shields.io/docker/image-size/manuellr/flameshot?sort=date">
 
-There is also a docker image available for those who want (**not** maintained by Flameshot maintainers):
+There is also a docker image available for those who want it (**not** maintained by Flameshot maintainers):
 
 <https://github.com/ManuelLR/docker-flameshot>
 
