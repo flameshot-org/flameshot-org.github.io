@@ -19,14 +19,31 @@ These shortcuts are available in GUI mode, meaning for example when you have ran
 
 |  Keys                                                                                         |  Description                                  |
 |---                                                                                            |---                                            |
+| <kbd>P</kbd>                                                                                  | Set the Pencil as paint tool                  |
+| <kbd>D</kbd>                                                                                  | Set the Line as paint tool                    |
+| <kbd>A</kbd>                                                                                  | Set the Arrow as paint tool                   |
+| <kbd>S</kbd>                                                                                  | Set Selection as paint tool                   |
+| <kbd>R</kbd>                                                                                  | Set the Rectangle as paint tool               |
+| <kbd>C</kbd>                                                                                  | Set the Circle as paint tool                  |
+| <kbd>M</kbd>                                                                                  | Set the Marker as paint tool                  |
+| <kbd>T</kbd>                                                                                  | Add text to your capture                      |
+| <kbd>B</kbd>                                                                                  | Set Pixalate as the paint tool                |
 | <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                                        | Move selection 1px                            |
-| <kbd>Shift</kbd> + <kbd><kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd></kbd>          | Resize selection 1px                          |
+| <kbd>Shift</kbd> + <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                     | Resize selection 1px                          |
 | <kbd>Esc</kbd>                                                                                | Quit capture                                  |
+| <kbd>Ctrl</kbd> + <kbd>M</kbd>                                                                | Move the selection area                       |
 | <kbd>Ctrl</kbd> + <kbd>C</kbd>                                                                | Copy to clipboard                             |
 | <kbd>Ctrl</kbd> + <kbd>S</kbd>                                                                | Save selection as a file                      |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd>                                                                | Undo the last modification                    |
-| Right Click                                                                                   | Show color picker                             |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd>                                             | Redo the next modification                    |
+| <kbd>Ctrl</kbd> + <kbd>Q</kbd>                                                                | Leave the capture screen                      |
+| <kbd>Ctrl</kbd> + <kbd>O</kbd>                                                                | Choose an app to open the capture             |
+| <kbd>Return</kbd>                                                                             | Upload the selection to Imgur                 |
+| <kbd>Spacebar</kbd>                                                                           | Toggle visibility of sidebar with options of the selected tool, color picker for the drawing color and history menu |
+| Right Click                                                                                   | Show the color wheel                          |
 | Mouse Wheel (scroll)                                                                          | Change the tool's thickness                   |
+| <kbd>Print screen</kbd>                                                                       | Capture Screen                                |
+| <kbd>Shift</kbd> + <kbd>Print</kbd>                                                           | Screenshot History                            |
 | <kbd>Shift</kbd> + drag a handler of the selection area                                       | Mirror re-dimension in the opposite handler.  |
 
 You can change these default keybindings and more by opening the configuration, either by right-clicking on the tray icon or by running `flameshot config`, and navigating to **Shortcuts** tab:
@@ -51,7 +68,9 @@ Typically in Windows installations the <kbd>Prnt Scr</kbd> should work out of th
 
 ### Linux
 
-If you want use Flameshot as a default screenshot utility, chances are you want to launch it using the <kbd>Prnt Scr</kbd> key. Flameshot doesn't yet offer a fully-automated option to do it, but you can configure your system to do so.
+Flameshot uses <kbd>Print screen</kbd> (Windows) and <kbd>cmd</kbd>-<kbd>option</kbd>-<kbd>shift</kbd>-<kbd>4</kbd> (macOS) as default global hotkeys.
+
+On Linux, Flameshot doesn't yet support <kbd>Pr Scr</kbd> out of the box, but with a bit of configuration you can set this up:
 
 #### On KDE Plasma desktop
 To make configuration easier, there's [a file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
