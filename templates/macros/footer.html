@@ -15,7 +15,10 @@
           <a href="{{ config.base_url | safe }}#download">Download</a>
         </li>
         <li>
-          <a href="https://github.com/flameshot-org">Contribute</a>
+          <a href="{{ config.base_url | safe }}#contribute">Contribute</a>
+        </li>
+        <li>
+          <a href="{{ config.base_url | safe }}donate/">Donate</a>
         </li>
         <li>
           <a href="{{ get_url(path='/docs/', trailing_slash=true) | safe }}">Docs</a>
