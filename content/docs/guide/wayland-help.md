@@ -21,6 +21,8 @@ In this page you can find possible solutions for issues on Wayland. This page pr
 
 ## I am asked to "Share" my screen every time
 
+![gnome permission window](/media/content/docs/guide/wayland-help/2022-08-04_11-39_gnome_share_permission_indow.png "Screenshot of the Gnome permission window which has a Share button at the top right corner")
+
 If you are a Gnome 41 (or later) user, know that you are not alone in this as many have brought up this issue ([example](https://github.com/flameshot-org/flameshot/issues/2186)). This is **NOT** a Flameshot bug nor it was our decision. This is something that Gnome developers unilaterally and suddenly implemented and this is affecting **ALL** screenshot tools other than the Gnome default screenshot tool (they have white-listed their own software). For more information please read the following:
 
 - <https://github.com/flameshot-org/flameshot/issues/2186>
@@ -28,7 +30,9 @@ If you are a Gnome 41 (or later) user, know that you are not alone in this as ma
 - <https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895>
 - <https://github.com/flatpak/xdg-desktop-portal/issues/649>
 
-Therefore please do not waste your time complaining to Flameshot developers as we cannot do anything about it. If you want this issue to change, please take your complaints to [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970) and [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895). Thank you!
+Therefore please **do not** waste your time ([like many have](https://github.com/flameshot-org/flameshot/issues?q=is%3Aissue+is%3Aclosed+label%3ADuplicate+label%3A%22Won%27t+Fix%22+gnome+)) by complaining to Flameshot developers. We cannot do anything about it! If you want this issue to change, please take your complaints to [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970) and [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895).
+
+Thank you!
 
 --------------------------------------------------------------------------------
 
