@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://flameshot.org/"
 title = "Flameshot"
-description = ""
+description = "Flameshot is a free and open-source, cross-platform tool to take screenshots with many built-in features to save you time."
 
 # The default language; used in feeds and search index
 # Note: the search index doesn't support Chinese/Japanese/Korean Languages
