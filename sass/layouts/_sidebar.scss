@@ -62,16 +62,17 @@ a.docs-link {
   font-size: $font-size-base;
 }
 
-.page-links li {
+.page-links ul li {
   margin-top: 0.375rem;
   padding-top: 0.375rem;
 }
 
-.page-links li ul li {
+.page-links nav ul ul li {
   border-top: none;
-  padding-left: 1rem;
+  padding-left: 0rem;
   margin-top: 0.125rem;
   padding-top: 0.125rem;
+  list-style: disclosure-closed;
 }
 
 .page-links li:not(:first-child) {
