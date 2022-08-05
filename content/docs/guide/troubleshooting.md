@@ -31,15 +31,18 @@ In case you didn't find similar issue, create a new issue and explain in detail 
 
 It is currently known that in Ubuntu 14.04 and 16.04 Unity environments such problems occur. This problem does not occur with Ubuntu 17.10 Unity. [#92](https://github.com/flameshot-org/flameshot/issues/92)
 
+
 ### In **Gnome** the Flameshot icon does not appear in the tray
 
 Gnome does not have a systray, therefore in Gnome you should install the gnome [Tray icons](https://extensions.gnome.org/extension/1503/tray-icons/) extension. For more information, read the [Tray icon](https://github.com/flameshot-org/flameshot#tray-icon) section of the github repository.
+
 
 ### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot crashes when taking the screenshot
 
 Most tiling window managers do not come with a notification daemon, and Flameshot communicates with the user through notifications. This means that Flameshot is dependent on a notification manager to be installed and running. Easy way to test if you have a notification manager is to try `notify-send "test"` in your terminal. If you see the notification, you have it, otherwise we suggest you to install a notification manager such as `dunst`:
 
 https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326
+
 
 ### In **tiling window managers** (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot
 
@@ -74,6 +77,7 @@ for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disa
     - ![image](https://user-images.githubusercontent.com/390889/116671105-3b09d780-a9a9-11eb-8941-df52c9802c85.png)
     7. Post the link in the [issue on Github](https://github.com/flameshot-org/flameshot/issues)
 
+
 ## In **Xfce** sometimes Flameshot does not let me select screenshot area
 
 It has been confirmed by multiple users that the compositor is at fault [#629](https://github.com/flameshot-org/flameshot/issues/629#issuecomment-989136575). It has been suggested to disable "Display fullscreen overlay windows directly". You just need to open "Window Manager Tweaks" in your Xfce, go to the "Compositor" tab and remove the checkmark from "Display fullscreen overlay windows directly".
@@ -94,11 +98,13 @@ If you were still getting the following message when restarting Flameshot, try r
 
 When this step is done you have to restart your macOS to make the permissions get working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple, but until that day, the only easy solution is rebooting.
 
+
 ### The command `flameshot` does not exist in my terminal
 
 In general to have a command in your shell (e.g zsh) you should put the binary in your path. You can see your paths by `echo $PATH` (note that they are separated by `:`). You can either:
 1. create a symlink to Flameshot binary in one of those folders listed (check out `man ln`)
 2. add the folder that contains Flameshot to your path (`export PATH="path/to/your/folder:$PATH"`). If you have installed Flameshot using the DMG we provide, Macports, or Homebrew, you most probably have it located in `/Applications/flameshot.app/`.
+
 
 ### Flameshot only works on the primary screen
 
@@ -127,3 +133,11 @@ As [explained by @HoshyarKarimi](https://github.com/flameshot-org/flameshot/issu
 
 The settings should now be set. You can close Flameshot from the system tray and use it normally from here after.
 
+
+### PrintScreen key opens Snip tool instead of Flameshot
+
+The following solution [was provided](https://github.com/flameshot-org/flameshot/issues/1551#issuecomment-1166317630) by a member of our community:
+
+1. set `Computer\HKEY_CURRENT_USER\Control Panel\Keyboard\PrintScreenKeyForSnippingEnabled` to 0
+2. set `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TabletPC\DisableSnippingTool` to 1 (skip this step if you don't have the `\TabletPC\`)
+3. uninstall "Snip and Sketch" via the Microsoft Store
