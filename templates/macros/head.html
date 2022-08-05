@@ -102,8 +102,12 @@
       <meta property="og:video" content="{{ get_url(path=video) }}">
     {% endfor %}
   {% endif %}
-  <meta property="article:publisher" content="https://www.facebook.com/{{ config.extra.open.facebook_publisher }}">
-  <meta property="article:author" content="https://www.facebook.com/{{ config.extra.open.facebook_author }}">
+  {% if config.extra.open.facebook_publisher %}
+    <meta property="article:publisher" content="https://www.facebook.com/{{ config.extra.open.facebook_publisher }}">
+  {% endif %}
+  {% if config.extra.open.facebook_author %}
+    <meta property="article:author" content="https://www.facebook.com/{{ config.extra.open.facebook_author }}">
+  {% endif %}
   <meta property="og:locale" content="{{ config.extra.open.og_locale }}">
 {% endif %}
 
