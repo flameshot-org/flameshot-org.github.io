@@ -78,7 +78,7 @@ for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disa
     7. Post the link in the [issue on Github](https://github.com/flameshot-org/flameshot/issues)
 
 
-## In **Xfce** sometimes Flameshot does not let me select screenshot area
+### In **Xfce** sometimes Flameshot does not let me select screenshot area
 
 It has been confirmed by multiple users that the compositor is at fault [#629](https://github.com/flameshot-org/flameshot/issues/629#issuecomment-989136575). It has been suggested to disable "Display fullscreen overlay windows directly". You just need to open "Window Manager Tweaks" in your Xfce, go to the "Compositor" tab and remove the checkmark from "Display fullscreen overlay windows directly".
 
