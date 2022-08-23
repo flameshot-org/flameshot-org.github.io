@@ -90,7 +90,7 @@ The benefit of having the concept of Final Actions is that you can use more than
 flameshot gui --pin --clipboard --path "~/Pictures" --print--geometry
 ```
 
-These Final Acrtions can be used with `--accept-on-select` to immediately capture the selected area immediately after the mouse release.
+These Final Actions can be used with `--accept-on-select` to immediately capture the selected area immediately after the mouse release.
 
 **Note** that when you provide one or more Final Actions, the
 "Copy" <img width="24" class="gui-button" src="https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/material/black/content-copy.svg" />,
