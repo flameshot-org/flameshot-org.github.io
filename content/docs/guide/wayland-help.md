@@ -2,7 +2,7 @@
 title = "Wayland Help"
 description = "A page to help Wayland users sort out some Wayland-specific issues"
 date = 2022-01-28T16:31:10+00:00
-updated = 2022-06-02T16:31:10+00:00
+updated = 2022-09-13T17:58:00+00:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -33,6 +33,12 @@ If you are a Gnome 41 (or later) user, know that you are not alone in this as ma
 Therefore please **do not** waste your time ([like many have](https://github.com/flameshot-org/flameshot/issues?q=is%3Aissue+is%3Aclosed+label%3ADuplicate+label%3A%22Won%27t+Fix%22+gnome+)) by complaining to Flameshot developers. We cannot do anything about it! If you want this issue to change, please take your complaints to [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/merge_requests/1970) and [here](https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/4895).
 
 Thank you!
+
+## Can't screen anything on Wayland Gnome
+
+**Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
+
+You install `xdg-desktop-portal-gnome` and `xdg-desktop-portal`.
 
 --------------------------------------------------------------------------------
 
