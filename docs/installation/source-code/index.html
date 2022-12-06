@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://flameshot.org/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>From Source Code | Flameshot</title>
+<meta name="description" content="Flameshot is a powerful yet simple to use screenshot software.">
+<link rel="canonical" href="https://flameshot.org/docs/installation/source-code/">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="img&#x2F;flameshot-hero.jpg">
+  <meta name="twitter:title" content="From Source Code">
+  <meta name="twitter:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="og:title" content="From Source Code">
+  <meta property="og:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://flameshot.org/docs/installation/source-code/">
+
+  
+    <meta property="og:image" content="img&#x2F;flameshot-hero.jpg">
+  
+
+  <meta property="og:updated_time" content="2022-06-01T08:00:00+00:00">
+  <meta property="og:site_name" content="From Source Code">
+
+  
+
+  
+
+  
+  
+  
+  <meta property="og:locale" content="en_US">
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://flameshot.org/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://flameshot.org/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Installation",
+            "item": "https://flameshot.org/docs/installation/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Source Code",
+            "item": "https://flameshot.org/docs/installation/source-code/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+  <meta name="theme-color" content="#8800AA">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flameshot.org/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://flameshot.org/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://flameshot.org/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://flameshot.org/site.webmanifest">
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<header class="navbar fixed-top navbar-expand-lg navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-lg-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-lg-0 me-auto text-purple" href="https://flameshot.org/"><img class="d-inline-block my-auto mr-2" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="32" height="32"> Flameshot</a>
+		<button id="mode" class="btn p-0 order-2 order-lg-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<div class="collapse navbar-collapse order-4 order-lg-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2 d-flex justify-content-center">
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#features">Features</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#download">Download</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#contribute">Contribute</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/donate">Donate</a>
+						</li>
+					
+						<li class="nav-item docs active">
+							<a class="nav-link" href="https://flameshot.org/docs">Docs</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-lg-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-lg-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Overview</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/overview/overview/">Overview</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Installation</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-linux/">Install on Linux</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-osx/">Install on macOS</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-windows/">Install on Windows</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/development-build/">Development Build</a></li>
+							                           
+									<li><a class="docs-link active" href="https://flameshot.org/docs/installation/source-code/">From Source Code</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Guide</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/faq/">FAQ</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/key-bindings/">Key Bindings</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/troubleshooting/">Troubleshooting</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/wayland-help/">Wayland Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/windows-help/">Microsoft Windows Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/imgur-help/">Imgur help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/issue-reporting/">Issue Reporting</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Advanced</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/configuration/">Configuration</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/commandline-options/">Command Line Options</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>More</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/more/translations/">Translations</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#from-source">From Source</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#os-dependencies">OS Dependencies</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#debian-ubuntu">Debian&#x2F;Ubuntu</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#fedora">Fedora</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#arch">Arch</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#osx">OSX</a></li>
+  											
+  									</ul>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#de-wm-dependencies">DE&#x2F;WM dependencies</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#gnome">Gnome</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#kde">KDE</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/source-code/#sway">Sway</a></li>
+  											
+  									</ul>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#getting-the-source-code">Getting the Source Code</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#compilation">Compilation</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#install">Install</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/source-code/#packaging">Packaging</a></strong></li>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>From Source Code</h1>
+        <p class="lead">Build Flameshot from source.</p>
+        <h2 id="from-source"><a class="zola-anchor" href="#from-source" aria-label="Anchor link for: from-source">🔗</a>
+From Source</h2>
+<p>Alternatively, you can always compile from the source code.</p>
+<h2 id="os-dependencies"><a class="zola-anchor" href="#os-dependencies" aria-label="Anchor link for: os-dependencies">🔗</a>
+OS Dependencies</h2>
+<p>The compilation requires <strong>Qt version 5.3 or higher</strong> and <strong>GCC 4.9.2 or higher</strong>.</p>
+<h3 id="debian-ubuntu"><a class="zola-anchor" href="#debian-ubuntu" aria-label="Anchor link for: debian-ubuntu">🔗</a>
+Debian/Ubuntu</h3>
+<p>Compilation Dependencies:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">apt</span><span> install g++ cmake extra-cmake-modules build-essential qtbase5-dev qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
+</span></code></pre>
+<h3 id="fedora"><a class="zola-anchor" href="#fedora" aria-label="Anchor link for: fedora">🔗</a>
+Fedora</h3>
+<p>Compilation Dependencies:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">dnf</span><span> install gcc-c++ cmake qt5-qtbase-devel qt5-linguist qt5-qtsvg-devel
+</span></code></pre>
+<h3 id="arch"><a class="zola-anchor" href="#arch" aria-label="Anchor link for: arch">🔗</a>
+Arch</h3>
+<p>Compilation Dependencies:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">pacman</span><span style="font-style:italic;color:#ffb86c;"> -S</span><span> cmake base-devel git qt5-base qt5-tools hicolor-icon-theme qt5-svg
+</span></code></pre>
+<h3 id="osx"><a class="zola-anchor" href="#osx" aria-label="Anchor link for: osx">🔗</a>
+OSX</h3>
+<p>Compilation Dependencies:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">brew</span><span> install qt5
+</span><span style="color:#50fa7b;">brew</span><span> install cmake
+</span></code></pre>
+<hr />
+<h2 id="de-wm-dependencies"><a class="zola-anchor" href="#de-wm-dependencies" aria-label="Anchor link for: de-wm-dependencies">🔗</a>
+DE/WM dependencies</h2>
+<h3 id="gnome"><a class="zola-anchor" href="#gnome" aria-label="Anchor link for: gnome">🔗</a>
+Gnome</h3>
+<h3 id="kde"><a class="zola-anchor" href="#kde" aria-label="Anchor link for: kde">🔗</a>
+KDE</h3>
+<p>On Fedora:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">dnf</span><span> install kf5-kguiaddons-devel
+</span></code></pre>
+<p>On Arch:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">pacman</span><span style="font-style:italic;color:#ffb86c;"> -S</span><span> kguiaddons
+</span></code></pre>
+<h3 id="sway"><a class="zola-anchor" href="#sway" aria-label="Anchor link for: sway">🔗</a>
+Sway</h3>
+<p>On Arch:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">pacman</span><span style="font-style:italic;color:#ffb86c;"> -S</span><span> xdg-desktop-portal xdg-desktop-portal-wlr grim
+</span></code></pre>
+<hr />
+<h2 id="getting-the-source-code"><a class="zola-anchor" href="#getting-the-source-code" aria-label="Anchor link for: getting-the-source-code">🔗</a>
+Getting the Source Code</h2>
+<p>You can get the source code from <a href="https://github.com/flameshot-org/flameshot">our Github repository</a>. Either clone the repository or download a ZIP file. We suggest downloading the ZIP file if you want to build on specific version, but if you want to build different commits and versions, using <code>git</code> makes it much easier.
+Please note that in this page we explain how to download the <a href="https://github.com/flameshot-org/flameshot/tree/master">master branch</a>, but you can get the source code for every <a href="https://github.com/flameshot-org/flameshot/pulls">Pull Request</a> and compile them if you like to.</p>
+<p>In general we suggest you to create a temporary directory to download the file and do the compiling there:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#6272a4;"># create the folder
+</span><span style="color:#50fa7b;">mkdir</span><span style="font-style:italic;color:#ffb86c;"> --parents </span><span style="color:#bd93f9;">~</span><span>/tmp/flameshot_source/
+</span><span>
+</span><span style="color:#6272a4;"># go inside the new foldr
+</span><span style="color:#8be9fd;">cd </span><span style="color:#bd93f9;">~</span><span>/tmp/flameshot_source/
+</span></code></pre>
+<p>To download <a href="https://github.com/flameshot-org/flameshot/archive/refs/heads/master.zip">the ZIP file from the master branch</a> you can run:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">curl</span><span style="font-style:italic;color:#ffb86c;"> --remote-name</span><span> https://github.com/flameshot-org/flameshot/archive/refs/heads/master.zip
+</span></code></pre>
+<p>Alternatively, to clone the Git repository:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">git</span><span> clone https://github.com/flameshot-org/flameshot.git
+</span></code></pre>
+<hr />
+<h2 id="compilation"><a class="zola-anchor" href="#compilation" aria-label="Anchor link for: compilation">🔗</a>
+Compilation</h2>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">mkdir</span><span> build
+</span><span style="color:#8be9fd;">cd</span><span> build
+</span><span style="color:#50fa7b;">cmake</span><span style="font-style:italic;color:#ffb86c;"> -DCMAKE_BUILD_TYPE</span><span style="color:#ff79c6;">=</span><span>Release</span><span style="font-style:italic;color:#ffb86c;"> -DCMAKE_INSTALL_PREFIX</span><span style="color:#ff79c6;">=</span><span>/usr/local ../
+</span><span style="color:#50fa7b;">make
+</span></code></pre>
+<p><strong>NOTE #1:</strong> for macOS you should replace command</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">cmake</span><span> ../
+</span></code></pre>
+<p><strong>NOTE #2:</strong> you can speed up the compilation by using the <code>-j</code> argument for <code>make</code> and specify the number of cores you would like to use.
+You can read more about the <code>make</code> arguments by <code>man make</code> in terminal or <a href="https://linux.die.net/man/1/make">clicking here</a>.
+For example the following would use all CPU cores except 1:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">make</span><span style="font-style:italic;color:#ffb86c;"> -j$(</span><span style="color:#50fa7b;">nproc</span><span style="font-style:italic;color:#ffb86c;"> --ignore 1)
+</span></code></pre>
+<p>to</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">cmake</span><span> ../</span><span style="font-style:italic;color:#ffb86c;"> -DQt5_DIR</span><span style="color:#ff79c6;">=</span><span>$(</span><span style="color:#50fa7b;">brew</span><span style="font-style:italic;color:#ffb86c;"> --prefix</span><span> qt5)/lib/cmake/Qt5
+</span></code></pre>
+<p>At this point, you can use Flameshot even <em>without installing</em> it as you have already compiled the code into a binary file.
+The file is stored in <code>src/flameshot</code> inside the <code>build/</code> directory (which you are already there).
+So you can just run it directly by <code>./src/flameshot</code>.</p>
+<hr />
+<h2 id="install"><a class="zola-anchor" href="#install" aria-label="Anchor link for: install">🔗</a>
+Install</h2>
+<p>But to install it, simply run <code>make install</code> with privileges.</p>
+<hr />
+<h2 id="packaging"><a class="zola-anchor" href="#packaging" aria-label="Anchor link for: packaging">🔗</a>
+Packaging</h2>
+<p>In order to generate the makefile installing in <code>/usr</code> instead of in <code>/usr/local</code> you can use the <code>packaging</code> option to generate the proper makefile (<code>cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr</code> instead of just <code>cmake</code>).</p>
+<p>If you want to install in a custom directory you can define the <code>BASEDIR</code> variable.</p>
+<p><strong>Example</strong>:
+You want to install Flameshot in ~/myBuilds/test. You would execute the following to do so:
+<code>cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr BASEDIR=~/myBuilds/test &amp;&amp; make install</code></p>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      <a class="ms-auto" href="https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;overview&#x2F;overview&#x2F;">
+        <div class="card my-1">
+          <div class="card-body py-2">
+            Overview &rarr;
+          </div>
+        </div>
+      </a>
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer container-fluid">
+    <div class="row">
+      <a class="navbar-brand text-center text-decoration-none" href="https://flameshot.org/">
+        <img class="d-block mx-auto" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="50" height="50">
+        <span class="text-white fs-3 fw-bold mx-auto mt-5">Flameshot</span>
+      </a>
+    </div>
+    <div class="row mx-auto text-center">
+      <ul class="footer-links mx-auto">
+        <li>
+          <a href="https://flameshot.org/#features">Features</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#download">Download</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#contribute">Contribute</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/donate/">Donate</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/docs/">Docs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-auto text-center mt-4">
+      <div class="col-10 mx-auto">
+        <a class="d-inline-block m-1" href="https://github.com/flameshot-org"><img class="footer-icon" src="https://flameshot.org/img/icons/github.svg" alt="github logo." width="26" height="26"></a>
+        <a rel="me" class="d-inline-block m-1" href="https://fosstodon.org/@flameshot"><img class="footer-icon" src="https://flameshot.org/img/icons/mastodon.svg" alt="mastodon logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://matrix.to/#/#flameshot-org:matrix.org"><img class="footer-icon" src="https://flameshot.org/img/icons/matrix.svg" alt="matrix logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://flameshotworkspace.slack.com/"><img class="footer-icon" src="https://flameshot.org/img/icons/slack.svg" alt="slack logo." width="26" height="26"></a>
+      </div>
+      <small class="text-white mt-3">Copyright &copy; 2017-2022 Flameshot contributors &bullet; Site design by <a class="cs-link" href="https://github.com/Correct-Syntax">Correct Syntax</a></small>
+    </div>
+</footer>
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@v5.0.0-beta3/dist/js/bootstrap.min.js" defer></script>
+<script src="https://flameshot.org/js/main.js" defer></script>
+
+  <script src="https://flameshot.org/plugins/elasticlunr.min.js" defer></script>
+  <script src="https://flameshot.org/search_index.en.js" defer></script>
+  <script src="https://flameshot.org/js/search.js" defer></script>
+
+  
+</body>
+</html>

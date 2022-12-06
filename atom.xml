@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Flameshot</title>
+	<subtitle>Flameshot is a free and open-source, cross-platform tool to take screenshots with many built-in features to save you time.</subtitle>
+	<link href="https://flameshot.org/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://flameshot.org/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-09-13T17:58:00+00:00</updated>
+	<id>https://flameshot.org/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Microsoft Windows Help</title>
+		<published>2022-08-31T12:30:37+03:00</published>
+		<updated>2022-08-31T12:30:46+03:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/windows-help/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/windows-help/</id>
+		<content type="html">&lt;p&gt;In this page you can find possible solutions for issues on Windows. This page probably needs frequent update, so if something was outdate, please &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot-org.github.io&#x2F;issues&#x2F;new&quot;&gt;report it here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;keyboard-shortcuts&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#keyboard-shortcuts&quot; aria-label=&quot;Anchor link for: keyboard-shortcuts&quot;&gt;🔗&lt;&#x2F;a&gt;
+Keyboard shortcuts&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;how-to-disable-windows-snipping-tool-when-i-press-printscreen&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to-disable-windows-snipping-tool-when-i-press-printscreen&quot; aria-label=&quot;Anchor link for: how-to-disable-windows-snipping-tool-when-i-press-printscreen&quot;&gt;🔗&lt;&#x2F;a&gt;
+How to disable Windows Snipping tool when I press PrintScreen&lt;&#x2F;h2&gt;
+&lt;p&gt;As kindly &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1551#issuecomment-1232164940&quot;&gt;explained by one of our users&lt;&#x2F;a&gt;, you can disable the built-in snipping tool by going to Windows Settings -&amp;gt; Ease of Access -&amp;gt; Keyboard -&amp;gt; Scroll down to &amp;quot;Print Screen Shortcut&amp;quot; and turn off the &amp;quot;Use the Prtscn button to open screen snipping&amp;quot;:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;media&#x2F;content&#x2F;docs&#x2F;guide&#x2F;windows-help&#x2F;disable-windows-snipping-tool.png&quot; alt=&quot;Windows settings screenshot&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;setting-up-custom-shortcut-to-start-flameshot&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#setting-up-custom-shortcut-to-start-flameshot&quot; aria-label=&quot;Anchor link for: setting-up-custom-shortcut-to-start-flameshot&quot;&gt;🔗&lt;&#x2F;a&gt;
+Setting up custom shortcut to start Flameshot&lt;&#x2F;h2&gt;
+&lt;p&gt;Windows is pretty limitted, but there is a way to make windows to run a software based on a keybinding. To do this, you have to:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;create a shortcut file (right-click on Desktop &amp;gt; New &amp;gt; Shortcut)&lt;&#x2F;li&gt;
+&lt;li&gt;in the &amp;quot;Target&amp;quot; field, add the software you want to run with keybinding (in this case the path to the &lt;code&gt;flameshot.exe&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;in the &amp;quot;Shortcut key&amp;quot; field, type the keybinding you want (e.g &lt;code&gt;Ctrl + Alt + p&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;For a more detailed instruction, visit &lt;a href=&quot;https:&#x2F;&#x2F;www.digitalcitizen.life&#x2F;start-windows-apps-keyboard-shortcut&#x2F;&quot;&gt;this article from the Digital Citizen&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;commandline-interface&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#commandline-interface&quot; aria-label=&quot;Anchor link for: commandline-interface&quot;&gt;🔗&lt;&#x2F;a&gt;
+CommandLine Interface&lt;&#x2F;h1&gt;
+&lt;p&gt;For the time being, the Commandline Interface (CLI) is &lt;strong&gt;not&lt;&#x2F;strong&gt; implemented for Windows. you can follow the progress in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2118&quot;&gt;the dedicated feature request&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Imgur help</title>
+		<published>2022-07-29T00:26:24+03:00</published>
+		<updated>2022-07-29T00:26:24+03:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/imgur-help/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/imgur-help/</id>
+		<content type="html">&lt;h2 id=&quot;creating-your-own-custom-client-id&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#creating-your-own-custom-client-id&quot; aria-label=&quot;Anchor link for: creating-your-own-custom-client-id&quot;&gt;🔗&lt;&#x2F;a&gt;
+Creating your own custom Client ID&lt;&#x2F;h2&gt;
+&lt;p&gt;In Flameshot we have provided our uses a common Client ID with which they can upload their screenshot without creating their own accounts on Imgur, but considering the sheer volume of our ever growing users it can happen more often that the users get an error similar to the following from Imgur which indicates that our hourly quota is full:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Error transferring https:&#x2F;&#x2F;api.imgur.com&#x2F;3&#x2F;image?title=&amp;amp;description=2022-07-12_12-26 - server replied: nginx&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;To mittigate that, since version 11.0.0, users can use their own Client ID. This way their quota would be independent of other FLamehsot users. To create your own Client ID, lyou can follow the following steps:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Login to your Imgur account&lt;&#x2F;li&gt;
+&lt;li&gt;go to &lt;a href=&quot;https:&#x2F;&#x2F;api.imgur.com&#x2F;oauth2&#x2F;addclient&quot;&gt;https:&#x2F;&#x2F;api.imgur.com&#x2F;oauth2&#x2F;addclient&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;register a new application with the following settings:
+&lt;img src=&quot;&#x2F;media&#x2F;content&#x2F;docs&#x2F;guide&#x2F;imgur_help&#x2F;2022-07-27_20-33_create_client_id_01.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Copy the &amp;quot;Client ID&amp;quot; of the application you created:
+&lt;img src=&quot;&#x2F;media&#x2F;content&#x2F;docs&#x2F;guide&#x2F;imgur_help&#x2F;2022-07-27_20-36_create_client_id_02.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;paste it in the correct place in the Flameshot config:
+&lt;img src=&quot;&#x2F;media&#x2F;content&#x2F;docs&#x2F;guide&#x2F;imgur_help&#x2F;2022-07-27_20-37_create_client_id_03.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;In case you ever forget your Client ID, you can always find it in &lt;a href=&quot;https:&#x2F;&#x2F;imgur.com&#x2F;account&#x2F;settings&#x2F;apps&quot;&gt;https:&#x2F;&#x2F;imgur.com&#x2F;account&#x2F;settings&#x2F;apps&lt;&#x2F;a&gt;
+&lt;img src=&quot;&#x2F;media&#x2F;content&#x2F;docs&#x2F;guide&#x2F;imgur_help&#x2F;2022-07-27_20-39_create_client_id_04.png&quot; alt=&quot;&quot; &#x2F;&gt;
+More information available in &lt;a href=&quot;https:&#x2F;&#x2F;api.imgur.com&quot;&gt;https:&#x2F;&#x2F;api.imgur.com&lt;&#x2F;a&gt; .&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Wayland Help</title>
+		<published>2022-01-28T16:31:10+00:00</published>
+		<updated>2022-09-13T17:58:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/wayland-help/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/wayland-help/</id>
+		<content type="html">&lt;p&gt;In this page you can find possible solutions for issues on Wayland. This page probably needs frequent update, so if something was outdate, please &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot-org.github.io&#x2F;issues&#x2F;new&quot;&gt;report it here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;gnome-wayland&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#gnome-wayland&quot; aria-label=&quot;Anchor link for: gnome-wayland&quot;&gt;🔗&lt;&#x2F;a&gt;
+Gnome Wayland&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;i-am-asked-to-share-my-screen-every-time&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#i-am-asked-to-share-my-screen-every-time&quot; aria-label=&quot;Anchor link for: i-am-asked-to-share-my-screen-every-time&quot;&gt;🔗&lt;&#x2F;a&gt;
+I am asked to &amp;quot;Share&amp;quot; my screen every time&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;media&#x2F;content&#x2F;docs&#x2F;guide&#x2F;wayland-help&#x2F;2022-08-04_11-39_gnome_share_permission_indow.png&quot; alt=&quot;gnome permission window&quot; title=&quot;Screenshot of the Gnome permission window which has a Share button at the top right corner&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you are a Gnome 41 (or later) user, know that you are not alone in this as many have brought up this issue (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2186&quot;&gt;example&lt;&#x2F;a&gt;). This is &lt;strong&gt;NOT&lt;&#x2F;strong&gt; a Flameshot bug nor it was our decision. This is something that Gnome developers unilaterally and suddenly implemented and this is affecting &lt;strong&gt;ALL&lt;&#x2F;strong&gt; screenshot tools other than the Gnome default screenshot tool (they have white-listed their own software). For more information please read the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2186&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2186&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;GNOME&#x2F;gnome-shell&#x2F;-&#x2F;merge_requests&#x2F;1970&quot;&gt;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;GNOME&#x2F;gnome-shell&#x2F;-&#x2F;merge_requests&#x2F;1970&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;GNOME&#x2F;gnome-shell&#x2F;-&#x2F;issues&#x2F;4895&quot;&gt;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;GNOME&#x2F;gnome-shell&#x2F;-&#x2F;issues&#x2F;4895&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flatpak&#x2F;xdg-desktop-portal&#x2F;issues&#x2F;649&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;flatpak&#x2F;xdg-desktop-portal&#x2F;issues&#x2F;649&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Therefore please &lt;strong&gt;do not&lt;&#x2F;strong&gt; waste your time (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues?q=is%3Aissue+is%3Aclosed+label%3ADuplicate+label%3A%22Won%27t+Fix%22+gnome+&quot;&gt;like many have&lt;&#x2F;a&gt;) by complaining to Flameshot developers. We cannot do anything about it! If you want this issue to change, please take your complaints to &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;GNOME&#x2F;gnome-shell&#x2F;-&#x2F;merge_requests&#x2F;1970&quot;&gt;here&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.gnome.org&#x2F;GNOME&#x2F;gnome-shell&#x2F;-&#x2F;issues&#x2F;4895&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;can-t-screen-anything-on-wayland-gnome&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#can-t-screen-anything-on-wayland-gnome&quot; aria-label=&quot;Anchor link for: can-t-screen-anything-on-wayland-gnome&quot;&gt;🔗&lt;&#x2F;a&gt;
+Can&#x27;t screen anything on Wayland Gnome&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Symptom:&lt;&#x2F;strong&gt; Launcher (right-click on tray icon, then &amp;quot;Open Launcher&amp;quot;) does not show anything in the preview section (left-side of the window)&lt;&#x2F;p&gt;
+&lt;p&gt;You install &lt;code&gt;xdg-desktop-portal-gnome&lt;&#x2F;code&gt; and &lt;code&gt;xdg-desktop-portal&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;kde-wayland&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#kde-wayland&quot; aria-label=&quot;Anchor link for: kde-wayland&quot;&gt;🔗&lt;&#x2F;a&gt;
+KDE Wayland&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;4k-displayed-and-fractional-scaling&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#4k-displayed-and-fractional-scaling&quot; aria-label=&quot;Anchor link for: 4k-displayed-and-fractional-scaling&quot;&gt;🔗&lt;&#x2F;a&gt;
+4k displayed and fractional scaling&lt;&#x2F;h2&gt;
+&lt;p&gt;It has been &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;227#issuecomment-1002696986&quot;&gt;reported&lt;&#x2F;a&gt; that setting the environmental variable &lt;code&gt;QT_SCREEN_SCALE_FACTORS&lt;&#x2F;code&gt; to &lt;code&gt;1;1&lt;&#x2F;code&gt; can solve the issue. You can do the following every time your computer boots:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;export &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;QT_SCREEN_SCALE_FACTORS&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;&amp;quot;1;1&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and then you can normally use Flameshot (e.g &lt;code&gt;flameshot gui&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;can-t-screen-anything-on-wayland-kde&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#can-t-screen-anything-on-wayland-kde&quot; aria-label=&quot;Anchor link for: can-t-screen-anything-on-wayland-kde&quot;&gt;🔗&lt;&#x2F;a&gt;
+Can&#x27;t screen anything on Wayland KDE&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Symptom:&lt;&#x2F;strong&gt; Launcher (right-click on tray icon, then &amp;quot;Open Launcher&amp;quot;) does not show anything in the preview section (left-side of the window)&lt;&#x2F;p&gt;
+&lt;p&gt;You install &lt;code&gt;xdg-desktop-portal-kde&lt;&#x2F;code&gt; and &lt;code&gt;xdg-desktop-portal&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Translations</title>
+		<published>2021-05-01T19:30:00+00:00</published>
+		<updated>2021-05-01T19:30:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/more/translations/" type="text/html"/>
+		<id>https://flameshot.org/docs/more/translations/</id>
+		<content type="html">&lt;h2 id=&quot;translation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#translation&quot; aria-label=&quot;Anchor link for: translation&quot;&gt;🔗&lt;&#x2F;a&gt;
+Translation&lt;&#x2F;h2&gt;
+&lt;p&gt;Flameshot supports internationalization of language. You can help translate Flameshot into your language or improve the existing translations. Please see &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;translation-instruction&quot;&gt;Flameshot&#x2F;translation-instruction
+&lt;&#x2F;a&gt; for instructions.&lt;&#x2F;p&gt;
+&lt;p&gt;You can also help us improve the documentation of Flameshot. Just pull requests at  this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot-org.github.io&quot;&gt;repo&lt;&#x2F;a&gt; and the changes will be synced to &lt;a href=&quot;https:&#x2F;&#x2F;flameshot.org&quot;&gt;https:&#x2F;&#x2F;flameshot.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you need any help, feel free to submit &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;translation-instruction&#x2F;issues&quot;&gt;issues&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Overview</title>
+		<published>2021-05-01T19:30:00+00:00</published>
+		<updated>2022-05-22T19:30:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/overview/overview/" type="text/html"/>
+		<id>https://flameshot.org/docs/overview/overview/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Powerful yet simple to use screenshot software.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Customizable appearance.&lt;&#x2F;li&gt;
+&lt;li&gt;Easy to use.&lt;&#x2F;li&gt;
+&lt;li&gt;In-app screenshot edition.&lt;&#x2F;li&gt;
+&lt;li&gt;DBus interface.&lt;&#x2F;li&gt;
+&lt;li&gt;Upload to Imgur.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;considerations&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#considerations&quot; aria-label=&quot;Anchor link for: considerations&quot;&gt;🔗&lt;&#x2F;a&gt;
+Considerations&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Experimentally &lt;strong&gt;Gnome Wayland&lt;&#x2F;strong&gt; and &lt;strong&gt;Plasma Wayland&lt;&#x2F;strong&gt; support.&lt;&#x2F;li&gt;
+&lt;li&gt;If you are using Gnome you need to install the &lt;a href=&quot;https:&#x2F;&#x2F;extensions.gnome.org&#x2F;extension&#x2F;1031&#x2F;topicons&#x2F;&quot;&gt;TopIcons&lt;&#x2F;a&gt; extension in order to see the systemtray icon.&lt;&#x2F;li&gt;
+&lt;li&gt;In order to speed up the first launch of Flameshot (DBus init of the app can be slow), consider starting the application automatically on boot.&lt;&#x2F;li&gt;
+&lt;li&gt;Press &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;c&lt;&#x2F;kbd&gt; when you are in a capture mode and you don&#x27;t have an active selection and the whole desktop will be copied to your clipboard! Pressing &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;s&lt;&#x2F;kbd&gt; will save your capture in a file! Check the &lt;a href=&quot;&#x2F;guide&#x2F;key-bindings&#x2F;#keyboard-shortcuts&quot;&gt;Shortcuts&lt;&#x2F;a&gt; for more information.&lt;&#x2F;li&gt;
+&lt;li&gt;Execute the command &lt;code&gt;flameshot&lt;&#x2F;code&gt; without parameters or use the &amp;quot;Launch Flameshot&amp;quot; desktop entry to launch a running instance of the program without taking actions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;license&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#license&quot; aria-label=&quot;Anchor link for: license&quot;&gt;🔗&lt;&#x2F;a&gt;
+License&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The main code is licensed under &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;LICENSE&quot;&gt;GPLv3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The logo of Flameshot is licensed under &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;img&#x2F;flameshotLogoLicense.txt&quot;&gt;Free Art License v1.3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The button icons are licensed under Apache License 2.0. See: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;material-design-icons&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;material-design-icons&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The code at &lt;code&gt;capture&#x2F;capturewidget.cpp&lt;&#x2F;code&gt; is based on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ckaiser&#x2F;Lightscreen&#x2F;blob&#x2F;master&#x2F;dialogs&#x2F;areadialog.cpp&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;ckaiser&#x2F;Lightscreen&#x2F;blob&#x2F;master&#x2F;dialogs&#x2F;areadialog.cpp&lt;&#x2F;a&gt; (GPLv2)&lt;&#x2F;li&gt;
+&lt;li&gt;The code at &lt;code&gt;capture&#x2F;capturewidget.h&lt;&#x2F;code&gt; is based on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ckaiser&#x2F;Lightscreen&#x2F;blob&#x2F;master&#x2F;dialogs&#x2F;areadialog.h&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;ckaiser&#x2F;Lightscreen&#x2F;blob&#x2F;master&#x2F;dialogs&#x2F;areadialog.h&lt;&#x2F;a&gt; (GPLv2)&lt;&#x2F;li&gt;
+&lt;li&gt;Copied a few lines of code from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;KDE&#x2F;ksnapshot&quot;&gt;KSnapshot&lt;&#x2F;a&gt; &lt;code&gt;regiongrabber.cpp&lt;&#x2F;code&gt; revision &lt;code&gt;796531&lt;&#x2F;code&gt; (LGPL)&lt;&#x2F;li&gt;
+&lt;li&gt;Qt-Color-Widgets taken and modified from https:&#x2F;&#x2F;github.com&#x2F;mbasaglia&#x2F;Qt-Color-Widgets (see their license and exceptions in the project) (LGPL&#x2F;GPL)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Info: If I take code from your project and that implies a relicense to GPLv3, you can reuse my changes with the original previous license of your project applied.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Command Line Options</title>
+		<published>2021-05-01T18:20:00+00:00</published>
+		<updated>2021-05-01T18:20:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/advanced/commandline-options/" type="text/html"/>
+		<id>https://flameshot.org/docs/advanced/commandline-options/</id>
+		<content type="html">&lt;h2 id=&quot;usage&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#usage&quot; aria-label=&quot;Anchor link for: usage&quot;&gt;🔗&lt;&#x2F;a&gt;
+Usage&lt;&#x2F;h2&gt;
+&lt;p&gt;You can always use &lt;code&gt;--help&lt;&#x2F;code&gt; for all commands or subcommands of Flameshot.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#     ___ command  ____ Argument
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#     |            |
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# ,---^---,     ,--^--,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --help
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#           &amp;#39;v&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#            |
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;#            -- Subcommand
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Example commands:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;capture with GUI:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;capture with GUI with custom save path:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;myStuff&#x2F;captures
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;open GUI with a delay of 2 seconds:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --delay&lt;&#x2F;span&gt;&lt;span&gt; 2000
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;fullscreen capture (asking savepath):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; full
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;fullscreen capture with custom save path (no GUI) and delayed:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; full&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;myStuff&#x2F;captures&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --delay&lt;&#x2F;span&gt;&lt;span&gt; 5000
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;fullscreen capture with custom save path copying to clipboard:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; full&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --clipboard --path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;myStuff&#x2F;captures
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In case of doubt choose the first or the second command as shortcut in your favorite desktop environment.&lt;&#x2F;p&gt;
+&lt;p&gt;A systray icon will be in your system&#x27;s panel while Flameshot is running.
+Do a right click on the tray icon and you&#x27;ll see some menu items to open the configuration window and the information window.
+Check out the information window to see all the available shortcuts in the graphical capture mode.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;final-actions&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#final-actions&quot; aria-label=&quot;Anchor link for: final-actions&quot;&gt;🔗&lt;&#x2F;a&gt;
+Final Actions&lt;&#x2F;h3&gt;
+&lt;p&gt;In Flameshot (version 11.0.0 or later) we now have the concept of &amp;quot;final actions&amp;quot;. These are things you would like to do after you have done with annotating your screenshot. The final actions are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--path &amp;lt;path&amp;gt;&lt;&#x2F;code&gt;: Where the screenshot should be stored (can be path to the folder or the file)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--clipboard&lt;&#x2F;code&gt;: Whether the screenshot should be copied to cliboard&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--raw&lt;&#x2F;code&gt;: Sending the screeenshot to stdout&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--upload&lt;&#x2F;code&gt;: Uploading the screenshot&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--pin&lt;&#x2F;code&gt;: Pinning the screenshot&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--print-geometry&lt;&#x2F;code&gt;: Write the position and dimension of the screenshot to stdout&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The benefit of having the concept of Final Actions is that you can use more than one of them at the same time. For instance you can pin, copy to clipboard, save to a file, and get the geometry of the screenshot using this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --pin --clipboard --path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;&amp;quot;~&#x2F;Pictures&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --print--geometry
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;These Final Actions can be used with &lt;code&gt;--accept-on-select&lt;&#x2F;code&gt; to immediately capture the selected area immediately after the mouse release.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt; that when you provide one or more Final Actions, the
+&amp;quot;Copy&amp;quot; &lt;img width=&quot;24&quot; class=&quot;gui-button&quot; src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;master&#x2F;data&#x2F;img&#x2F;material&#x2F;black&#x2F;content-copy.svg&quot; &#x2F;&gt;,
+&amp;quot;Save&amp;quot; &lt;img width=&quot;24&quot; class=&quot;gui-button&quot; src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;master&#x2F;data&#x2F;img&#x2F;material&#x2F;black&#x2F;content-save.svg&quot; &#x2F;&gt;,
+&amp;quot;Image Upload&amp;quot; &lt;img width=&quot;24&quot; class=&quot;gui-button&quot; src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;master&#x2F;data&#x2F;img&#x2F;material&#x2F;black&#x2F;cloud-upload.svg&quot; &#x2F;&gt;,
+and &amp;quot;Pin Tool&amp;quot; &lt;img width=&quot;24&quot; class=&quot;gui-button&quot; src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;master&#x2F;data&#x2F;img&#x2F;material&#x2F;black&#x2F;pin.svg&quot; &#x2F;&gt; buttons will be removed from the buttons in &lt;code&gt;flameshot gui&lt;&#x2F;code&gt; and instead you will see a &amp;quot;Accept&amp;quot; &lt;img width=&quot;24&quot; class=&quot;gui-button&quot; src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;master&#x2F;data&#x2F;img&#x2F;material&#x2F;black&#x2F;accept.svg&quot;&gt;&lt;&#x2F;img&gt; button.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;cli-configuration&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#cli-configuration&quot; aria-label=&quot;Anchor link for: cli-configuration&quot;&gt;🔗&lt;&#x2F;a&gt;
+CLI configuration&lt;&#x2F;h2&gt;
+&lt;p&gt;You can use the graphical menu to configure Flameshot, but alternatively you can use your terminal or scripts to do so.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;open the configuration menu:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; config
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;show the initial help message in the capture mode:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; config&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --showhelp&lt;&#x2F;span&gt;&lt;span&gt; true
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;to check mistakes and issues in the configuration file:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; config&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --check
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;for more information about the available options use the help flag:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; config&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --help
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Configuration</title>
+		<published>2021-05-01T18:20:00+00:00</published>
+		<updated>2021-05-01T18:20:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/advanced/configuration/" type="text/html"/>
+		<id>https://flameshot.org/docs/advanced/configuration/</id>
+		<content type="html">&lt;h2 id=&quot;gui-mode&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#gui-mode&quot; aria-label=&quot;Anchor link for: gui-mode&quot;&gt;🔗&lt;&#x2F;a&gt;
+GUI mode&lt;&#x2F;h2&gt;
+&lt;p&gt;Right-click the system tray icon and select Configuration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;cli-mode&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#cli-mode&quot; aria-label=&quot;Anchor link for: cli-mode&quot;&gt;🔗&lt;&#x2F;a&gt;
+CLI mode&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;linux&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#linux&quot; aria-label=&quot;Anchor link for: linux&quot;&gt;🔗&lt;&#x2F;a&gt;
+Linux&lt;&#x2F;h3&gt;
+&lt;p&gt;You can modify the configuration file located at &lt;code&gt;~&#x2F;.config&#x2F;flameshot&#x2F;flameshot.ini&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Troubleshooting</title>
+		<published>2021-05-01T08:20:00+00:00</published>
+		<updated>2022-05-29T08:20:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/troubleshooting/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/troubleshooting/</id>
+		<content type="html">&lt;p&gt;Please first read the troubleshooting steps for your operating system in this page and then if it was not solved, report the issue after reading the &lt;a href=&quot;https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;guide&#x2F;troubleshooting&#x2F;#issue-reporting&quot;&gt;Issue reporting section&lt;&#x2F;a&gt; down below.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;issue-reporting&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#issue-reporting&quot; aria-label=&quot;Anchor link for: issue-reporting&quot;&gt;🔗&lt;&#x2F;a&gt;
+Issue reporting&lt;&#x2F;h2&gt;
+&lt;p&gt;To report a bug or suggest a new feature, you can go to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&quot;&gt;GitHub issues page&lt;&#x2F;a&gt; and use the searchbox in the middle of the page to see if anyone else have already posted something similar. Sometimes you will find a quick solution just by reading the threads. In case of feature request, if you find someone with similar idea, just give that a thumbs-up to increase its priority&#x2F;importance.&lt;&#x2F;p&gt;
+&lt;p&gt;In case you didn&#x27;t find similar issue, create a new issue and explain in detail what the issue is. If you can, add pictures or video recordings to clarify the situation. For bug reports, make sure to also visit the &lt;a href=&quot;..&#x2F;issue-reporting&quot;&gt;issue reporting page&lt;&#x2F;a&gt; in which we have explained how to get the information we need in each bug report.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;linux&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#linux&quot; aria-label=&quot;Anchor link for: linux&quot;&gt;🔗&lt;&#x2F;a&gt;
+Linux&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator&quot; aria-label=&quot;Anchor link for: in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator&quot;&gt;🔗&lt;&#x2F;a&gt;
+In the System tray area, Flameshot appears to have duplicate icons&#x2F;indicator&lt;&#x2F;h3&gt;
+&lt;p&gt;It is currently known that in Ubuntu 14.04 and 16.04 Unity environments such problems occur. This problem does not occur with Ubuntu 17.10 Unity. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;92&quot;&gt;#92&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;in-gnome-the-flameshot-icon-does-not-appear-in-the-tray&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#in-gnome-the-flameshot-icon-does-not-appear-in-the-tray&quot; aria-label=&quot;Anchor link for: in-gnome-the-flameshot-icon-does-not-appear-in-the-tray&quot;&gt;🔗&lt;&#x2F;a&gt;
+In &lt;strong&gt;Gnome&lt;&#x2F;strong&gt; the Flameshot icon does not appear in the tray&lt;&#x2F;h3&gt;
+&lt;p&gt;Gnome does not have a systray, therefore in Gnome you should install the gnome &lt;a href=&quot;https:&#x2F;&#x2F;extensions.gnome.org&#x2F;extension&#x2F;1503&#x2F;tray-icons&#x2F;&quot;&gt;Tray icons&lt;&#x2F;a&gt; extension. For more information, read the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot#tray-icon&quot;&gt;Tray icon&lt;&#x2F;a&gt; section of the github repository.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot&quot; aria-label=&quot;Anchor link for: in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot&quot;&gt;🔗&lt;&#x2F;a&gt;
+In &lt;strong&gt;tiling window managers&lt;&#x2F;strong&gt; (e.g i3wm, dwm, bspwm) Flameshot crashes when taking the screenshot&lt;&#x2F;h3&gt;
+&lt;p&gt;Most tiling window managers do not come with a notification daemon, and Flameshot communicates with the user through notifications. This means that Flameshot is dependent on a notification manager to be installed and running. Easy way to test if you have a notification manager is to try &lt;code&gt;notify-send &amp;quot;test&amp;quot;&lt;&#x2F;code&gt; in your terminal. If you see the notification, you have it, otherwise we suggest you to install a notification manager such as &lt;code&gt;dunst&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1179#issuecomment-757544326&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot&quot; aria-label=&quot;Anchor link for: in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot&quot;&gt;🔗&lt;&#x2F;a&gt;
+In &lt;strong&gt;tiling window managers&lt;&#x2F;strong&gt; (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot&lt;&#x2F;h3&gt;
+&lt;p&gt;This is simply because you have not started the DBus. Either run &lt;code&gt;dbus-launch dwm&lt;&#x2F;code&gt; (or any other window manager&#x2F;desktop environment) at startup, or run Flameshot daemon (&lt;code&gt;flameshot&lt;&#x2F;code&gt;) before taking the screenshot. For example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# this will start the daemon
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;&amp;amp;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# this will select a 300 by 200 pixel area, and immediately pin it
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --region&lt;&#x2F;span&gt;&lt;span&gt; 300x200+300+300&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --pin --accept-on-select 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor&quot; aria-label=&quot;Anchor link for: in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor&quot;&gt;🔗&lt;&#x2F;a&gt;
+In &lt;strong&gt;tiling window managers&lt;&#x2F;strong&gt; (e.g i3wm, dwm, bspwm) Flameshot only appears on a single monitor&lt;&#x2F;h3&gt;
+&lt;p&gt;This can be because the window manager is forcing to tile Flameshot. This can be solved by defining window rule. For example for Sway the following rule is suggested in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2364#issuecomment-1086129055&quot;&gt;#2364&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;py&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-py &quot;&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span&gt;for_window [app_id=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;&amp;quot;flameshot&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;] border pixel &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, floating enable, fullscreen disable, move absolute position &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;0 0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens&quot; aria-label=&quot;Anchor link for: flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flameshot icon is visible in tray area but when I click on it nothing happens&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First try the using the command &lt;code&gt;flameshot gui&lt;&#x2F;code&gt; in terminal. This does exactly what clicking on the tray icon does (make sure can you see Flameshot icon in the tray area).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;If the step above didn&#x27;t work:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open 3 terminals&lt;&#x2F;li&gt;
+&lt;li&gt;Kill Flameshot if it is already open using &lt;code&gt;pkill flameshot&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;In the first terminal run &lt;code&gt;dbus-monitor --session sender=org.flameshot.Flameshot&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;In the second terminal run &lt;code&gt;flameshot&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;In the third terminal run &lt;code&gt;flameshot gui&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Copy the content of the first terminal in pastebin: https:&#x2F;&#x2F;bin.snopyta.org&#x2F;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&quot;https:&#x2F;&#x2F;user-images.githubusercontent.com&#x2F;390889&#x2F;116671105-3b09d780-a9a9-11eb-8941-df52c9802c85.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;Post the link in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&quot;&gt;issue on Github&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area&quot; aria-label=&quot;Anchor link for: in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area&quot;&gt;🔗&lt;&#x2F;a&gt;
+In &lt;strong&gt;Xfce&lt;&#x2F;strong&gt; sometimes Flameshot does not let me select screenshot area&lt;&#x2F;h3&gt;
+&lt;p&gt;It has been confirmed by multiple users that the compositor is at fault &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;629#issuecomment-989136575&quot;&gt;#629&lt;&#x2F;a&gt;. It has been suggested to disable &amp;quot;Display fullscreen overlay windows directly&amp;quot;. You just need to open &amp;quot;Window Manager Tweaks&amp;quot; in your Xfce, go to the &amp;quot;Compositor&amp;quot; tab and remove the checkmark from &amp;quot;Display fullscreen overlay windows directly&amp;quot;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;macos&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#macos&quot; aria-label=&quot;Anchor link for: macos&quot;&gt;🔗&lt;&#x2F;a&gt;
+macOS&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection&quot; aria-label=&quot;Anchor link for: all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection&quot;&gt;🔗&lt;&#x2F;a&gt;
+All opened applications go away and only the blank desktop is visible for selection&lt;&#x2F;h3&gt;
+&lt;p&gt;As it has been reported multiple times already (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1537&quot;&gt;1&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1571&quot;&gt;2&lt;&#x2F;a&gt;), macOS restricts applications from accessing the screen. Therefore you have to give Flameshot security permissions to &amp;quot;record&amp;quot; your desktop.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;media&#x2F;macos_permissions.png&quot; alt=&quot;A picture of the macOS Security &amp;amp; Privacy settings that shows the Flameshot should be added to the list in the &amp;quot;privacy&amp;quot; tab&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you were still getting the following message when restarting Flameshot, try removing (using the &amp;quot;-&amp;quot; button) and then adding Flameshot to the list above.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;media&#x2F;macos_screenrecording_permission_request.png&quot; alt=&quot;A screenshot of a permission request window in macOS which says &amp;quot;Flameshot.app would like to record this computer&#x27;s screen&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;When this step is done you have to restart your macOS to make the permissions get working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple, but until that day, the only easy solution is rebooting.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-command-flameshot-does-not-exist-in-my-terminal&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-command-flameshot-does-not-exist-in-my-terminal&quot; aria-label=&quot;Anchor link for: the-command-flameshot-does-not-exist-in-my-terminal&quot;&gt;🔗&lt;&#x2F;a&gt;
+The command &lt;code&gt;flameshot&lt;&#x2F;code&gt; does not exist in my terminal&lt;&#x2F;h3&gt;
+&lt;p&gt;In general to have a command in your shell (e.g zsh) you should put the binary in your path. You can see your paths by &lt;code&gt;echo $PATH&lt;&#x2F;code&gt; (note that they are separated by &lt;code&gt;:&lt;&#x2F;code&gt;). You can either:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;create a symlink to Flameshot binary in one of those folders listed (check out &lt;code&gt;man ln&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;add the folder that contains Flameshot to your path (&lt;code&gt;export PATH=&amp;quot;path&#x2F;to&#x2F;your&#x2F;folder:$PATH&amp;quot;&lt;&#x2F;code&gt;). If you have installed Flameshot using the DMG we provide, Macports, or Homebrew, you most probably have it located in &lt;code&gt;&#x2F;Applications&#x2F;flameshot.app&#x2F;&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;flameshot-only-works-on-the-primary-screen&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flameshot-only-works-on-the-primary-screen&quot; aria-label=&quot;Anchor link for: flameshot-only-works-on-the-primary-screen&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flameshot only works on the primary screen&lt;&#x2F;h3&gt;
+&lt;p&gt;Depending on how you have Spaces configured in Mission Control you may only be able to activate Flameshot on a particular external display by using the &lt;code&gt;shift+alt+cmd+4&lt;&#x2F;code&gt; hotkey. Otherwise, Flameshot will only activate on the main display if you click &amp;quot;Take Screenshot&amp;quot; from the application menu. Fix it by uninstalling, installing again and selecting Flameshot again in the &lt;code&gt;Screen Recording&lt;&#x2F;code&gt; section. (reported to work &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1258#issuecomment-1004297496&quot;&gt;here&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;windows&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#windows&quot; aria-label=&quot;Anchor link for: windows&quot;&gt;🔗&lt;&#x2F;a&gt;
+Windows&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;command-line-arguments-do-not-work&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#command-line-arguments-do-not-work&quot; aria-label=&quot;Anchor link for: command-line-arguments-do-not-work&quot;&gt;🔗&lt;&#x2F;a&gt;
+Command line arguments do not work&lt;&#x2F;h3&gt;
+&lt;p&gt;At the time of writing this (version 11.0.0), the command line is not implemented for Windows. We might add it in future versions. You can follow the discussions&#x2F;development of this feature in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2118&quot;&gt;#2118&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;In the meanwhile you can use &lt;a href=&quot;https:&#x2F;&#x2F;www.autohotkey.com&#x2F;&quot;&gt;AutoHotKey&lt;&#x2F;a&gt; as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1341#issuecomment-1126669379&quot;&gt;explained here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;flameshot-does-not-launch-at-startup-even-when-the-settings-are-set&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flameshot-does-not-launch-at-startup-even-when-the-settings-are-set&quot; aria-label=&quot;Anchor link for: flameshot-does-not-launch-at-startup-even-when-the-settings-are-set&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flameshot does not launch at startup even when the settings are set&lt;&#x2F;h3&gt;
+&lt;p&gt;As &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;2422#issuecomment-1140393544&quot;&gt;explained by @HoshyarKarimi&lt;&#x2F;a&gt; (this should only be done once):&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;From the configuration uncheck &amp;quot;Launch at startup&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;Quit Flameshot from system tray&lt;&#x2F;li&gt;
+&lt;li&gt;Now run Flameshot &lt;em&gt;as administrator&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Open the configuration and check the &amp;quot;Launch at startup&amp;quot; box&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The settings should now be set. You can close Flameshot from the system tray and use it normally from here after.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;printscreen-key-opens-snip-tool-instead-of-flameshot&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#printscreen-key-opens-snip-tool-instead-of-flameshot&quot; aria-label=&quot;Anchor link for: printscreen-key-opens-snip-tool-instead-of-flameshot&quot;&gt;🔗&lt;&#x2F;a&gt;
+PrintScreen key opens Snip tool instead of Flameshot&lt;&#x2F;h3&gt;
+&lt;p&gt;The following solution &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1551#issuecomment-1166317630&quot;&gt;was provided&lt;&#x2F;a&gt; by a member of our community:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;set &lt;code&gt;Computer\HKEY_CURRENT_USER\Control Panel\Keyboard\PrintScreenKeyForSnippingEnabled&lt;&#x2F;code&gt; to 0&lt;&#x2F;li&gt;
+&lt;li&gt;set &lt;code&gt;Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TabletPC\DisableSnippingTool&lt;&#x2F;code&gt; to 1 (skip this step if you don&#x27;t have the &lt;code&gt;\TabletPC\&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;uninstall &amp;quot;Snip and Sketch&amp;quot; via the Microsoft Store&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>FAQ</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/faq/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/faq/</id>
+		<content type="html">&lt;h2 id=&quot;macos&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#macos&quot; aria-label=&quot;Anchor link for: macos&quot;&gt;🔗&lt;&#x2F;a&gt;
+macOS&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;i-don-t-have-printscreen-key-how-to-take-screenshot&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#i-don-t-have-printscreen-key-how-to-take-screenshot&quot; aria-label=&quot;Anchor link for: i-don-t-have-printscreen-key-how-to-take-screenshot&quot;&gt;🔗&lt;&#x2F;a&gt;
+I don&#x27;t have PrintScreen key, how to take screenshot?&lt;&#x2F;h3&gt;
+&lt;p&gt;Checkout our &lt;a href=&quot;..&#x2F;key-bindings&quot;&gt;keyboard shortcut page&lt;&#x2F;a&gt; for more information.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;on-macos-flameshot-only-captures-a-blank-desktop&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#on-macos-flameshot-only-captures-a-blank-desktop&quot; aria-label=&quot;Anchor link for: on-macos-flameshot-only-captures-a-blank-desktop&quot;&gt;🔗&lt;&#x2F;a&gt;
+On macOS Flameshot only captures a blank desktop&lt;&#x2F;h3&gt;
+&lt;p&gt;When running Flameshot on MacOs, you must grant it permission to screen record. See &lt;a href=&quot;..&#x2F;troubleshooting#macos&quot;&gt;troubleshooting&lt;&#x2F;a&gt; for more information.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;linux&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#linux&quot; aria-label=&quot;Anchor link for: linux&quot;&gt;🔗&lt;&#x2F;a&gt;
+Linux&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;flameshot-freezes-after-capturing-an-image&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flameshot-freezes-after-capturing-an-image&quot; aria-label=&quot;Anchor link for: flameshot-freezes-after-capturing-an-image&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flameshot freezes after capturing an image&lt;&#x2F;h3&gt;
+&lt;p&gt;By default Flameshot requires a notification manager. Notifications are sent to the notification manager via d-bus. If either d-bus or the notification manager is not properly configured, Flameshot will freeze for 30 seconds.&lt;&#x2F;p&gt;
+&lt;p&gt;Fix 1: Install a notification manager&lt;&#x2F;p&gt;
+&lt;p&gt;Fix 2: Manually edit the config file at &lt;code&gt;~&#x2F;.config&#x2F;flameshot&#x2F;flameshot.ini&lt;&#x2F;code&gt; and add the following line: &lt;code&gt;showDesktopNotification=false&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;flameshot-doesn-t-start-no-tray-icon&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flameshot-doesn-t-start-no-tray-icon&quot; aria-label=&quot;Anchor link for: flameshot-doesn-t-start-no-tray-icon&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flameshot doesn&#x27;t start &#x2F; no tray icon&lt;&#x2F;h3&gt;
+&lt;p&gt;When Flameshot is started with a system launcher or from the CLI it starts a daemon in the background. To interact with this daemon through a graphical client your desktop environment &lt;strong&gt;must support a system tray&lt;&#x2F;strong&gt;. See the README for tips on setting up a system tray.&lt;&#x2F;p&gt;
+&lt;p&gt;This sometimes causes pain for Arch users running Gnome, because the system tray extension becomes out of sync with gnome upon a new gnome release. &lt;strong&gt;Please do not report this as a bug in Flameshot.&lt;&#x2F;strong&gt; We are reliant on a system tray and have no intention to change this.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;with-fractional-scaling-my-screen-appears-shifted&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#with-fractional-scaling-my-screen-appears-shifted&quot; aria-label=&quot;Anchor link for: with-fractional-scaling-my-screen-appears-shifted&quot;&gt;🔗&lt;&#x2F;a&gt;
+With fractional scaling my screen appears shifted&lt;&#x2F;h3&gt;
+&lt;p&gt;There is a known issue in Qt related to fractional scaling and full screen applications. We are hoping this is resolved in Qt6. See &lt;a href=&quot;https:&#x2F;&#x2F;forum.qt.io&#x2F;topic&#x2F;121111&#x2F;position-of-widget-with-fractional-scaling&quot;&gt;this post&lt;&#x2F;a&gt; for more details.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;on-linux-using-cinnamon-the-tray-icon-does-not-show&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#on-linux-using-cinnamon-the-tray-icon-does-not-show&quot; aria-label=&quot;Anchor link for: on-linux-using-cinnamon-the-tray-icon-does-not-show&quot;&gt;🔗&lt;&#x2F;a&gt;
+On Linux using Cinnamon, the tray icon does not show&lt;&#x2F;h3&gt;
+&lt;p&gt;It seems there is a bug in Cinnamon that creates a loading race which will cause some software to load before the tray area is loaded. The solution &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;issues&#x2F;1648#issuecomment-891612360&quot;&gt;as proposed by a Cinnamon user&lt;&#x2F;a&gt; is to create a loading delay for all the applications that are affected by this bug: for all the &lt;code&gt;.desktop&lt;&#x2F;code&gt; files in &lt;code&gt;~&#x2F;.config&#x2F;autostart&lt;&#x2F;code&gt; in the &lt;code&gt;&amp;quot;[Desktop Entry]&lt;&#x2F;code&gt; section add the following line (you can try reducing the delay and check what is the optimal value for your computer as it can depend on the load, computational power and disk IO):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;X-GNOME-Autostart-Delay&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;3
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Issue Reporting</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/issue-reporting/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/issue-reporting/</id>
+		<content type="html">&lt;p&gt;In this page we explain how to properly extract your system information so that you can report it in a GitHub issue Here we discuss commands to be used in a &lt;strong&gt;GNU&#x2F;Linux system&lt;&#x2F;strong&gt;. We might later add similar information for Windows users.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;flameshot-version&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flameshot-version&quot; aria-label=&quot;Anchor link for: flameshot-version&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flameshot version&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --version
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The output would look like:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Flameshot v0.8.3
+&lt;&#x2F;span&gt;&lt;span&gt;Compiled with Qt 5.15.0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;quick-collection-of-the-system-information&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#quick-collection-of-the-system-information&quot; aria-label=&quot;Anchor link for: quick-collection-of-the-system-information&quot;&gt;🔗&lt;&#x2F;a&gt;
+Quick collection of the system information&lt;&#x2F;h2&gt;
+&lt;p&gt;Providing the output of this command would usually be enough for a bug report. For much more detailed method, move on to the next section. This method uses a tool that is most probably installed on your computer names &lt;code&gt;inxi&lt;&#x2F;code&gt; and it can quickly collect the graphical information we need. We are only interested in the &amp;quot;systemS&amp;quot; and &amp;quot;Graphics&amp;quot; section:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;inxi&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --width&lt;&#x2F;span&gt;&lt;span&gt; 80&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --system --graphics
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;which should produce an output similar to the following:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;System:
+&lt;&#x2F;span&gt;&lt;span&gt; Host: MyBox Kernel: 5.10.15-1-MANJARO x86_64 bits: 64
+&lt;&#x2F;span&gt;&lt;span&gt; Desktop: KDE Plasma 5.20.5 Distro: Manjaro Linux
+&lt;&#x2F;span&gt;&lt;span&gt;Graphics:
+&lt;&#x2F;span&gt;&lt;span&gt; Device-1: Intel Xeon E3-1200 v3&#x2F;4th Gen Core Processor Integrated Graphics
+&lt;&#x2F;span&gt;&lt;span&gt; driver: i915 v: kernel
+&lt;&#x2F;span&gt;&lt;span&gt; Device-2: NVIDIA GP106 [GeForce GTX 1060 6GB] driver: nvidia v: 460.39
+&lt;&#x2F;span&gt;&lt;span&gt; Display: x11 server: X.Org 1.20.10 driver: loaded: modesetting,nvidia
+&lt;&#x2F;span&gt;&lt;span&gt; unloaded: nouveau resolution: 1: 1080x1920~60Hz 2: 1080x1920~60Hz
+&lt;&#x2F;span&gt;&lt;span&gt; 3: 1920x1080~60Hz
+&lt;&#x2F;span&gt;&lt;span&gt; OpenGL: renderer: GeForce GTX 1060 6GB&#x2F;PCIe&#x2F;SSE2 v: 4.6.0 NVIDIA 460.39
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;detailed-methods&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#detailed-methods&quot; aria-label=&quot;Anchor link for: detailed-methods&quot;&gt;🔗&lt;&#x2F;a&gt;
+Detailed methods&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;display-server-protocol&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#display-server-protocol&quot; aria-label=&quot;Anchor link for: display-server-protocol&quot;&gt;🔗&lt;&#x2F;a&gt;
+Display Server Protocol&lt;&#x2F;h3&gt;
+&lt;p&gt;Basically what we want to know is if you are using X or Wayland. If you want to know what they are and what they do You can read &lt;a href=&quot;https:&#x2F;&#x2F;www.secjuice.com&#x2F;wayland-vs-xorg&#x2F;&quot;&gt;this article&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;You can use the following command to determine which one do you use:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;loginctl&lt;&#x2F;span&gt;&lt;span&gt; show-session $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;loginctl&lt;&#x2F;span&gt;&lt;span&gt; show-user $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;whoami&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; Display&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --value&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; Type&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --value
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;monitor-s-information&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#monitor-s-information&quot; aria-label=&quot;Anchor link for: monitor-s-information&quot;&gt;🔗&lt;&#x2F;a&gt;
+Monitor(s) information&lt;&#x2F;h3&gt;
+&lt;p&gt;You can get lots of information about the monitors, but we are interested to see only those that are active and in use. You can use &lt;code&gt;xrandr&lt;&#x2F;code&gt; command to get the monitor information and here we presenta short version and a long version. The long version is more useful since it also contains information about the orientation of the monitor.&lt;&#x2F;p&gt;
+&lt;p&gt;Short format:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;xrandr&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --listactivemonitors
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The output would look like:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Monitors: 3
+&lt;&#x2F;span&gt;&lt;span&gt;0: +*HDMI-1-1 1920&#x2F;509x1080&#x2F;286+1080+0  HDMI-1-1
+&lt;&#x2F;span&gt;&lt;span&gt;1: +HDMI-0 1080&#x2F;509x1920&#x2F;286+3000+0  HDMI-0
+&lt;&#x2F;span&gt;&lt;span&gt;2: +HDMI-1 1080&#x2F;509x1920&#x2F;286+0+80  HDMI-1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Long format:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;xrandr &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;grep&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -v &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;&amp;quot; disconnected &amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The output would look like:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Screen 0: minimum 8 x 8, current 4080 x 2000, maximum 32767 x 32767
+&lt;&#x2F;span&gt;&lt;span&gt;HDMI-0 connected 1080x1920+3000+0 left (normal left inverted right x axis y axis) 509mm x 286mm
+&lt;&#x2F;span&gt;&lt;span&gt;  1920x1080     60.00*+  59.94    50.00    60.00    50.04
+&lt;&#x2F;span&gt;&lt;span&gt;  1680x1050     59.95
+&lt;&#x2F;span&gt;&lt;span&gt;  1440x900      74.98    59.89
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x1024     75.02    60.02
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x800      59.81
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x720      60.00    59.94    50.00
+&lt;&#x2F;span&gt;&lt;span&gt;  1152x864      75.00
+&lt;&#x2F;span&gt;&lt;span&gt;  1024x768      75.03    70.07    60.00
+&lt;&#x2F;span&gt;&lt;span&gt;  800x600       75.00    72.19    60.32
+&lt;&#x2F;span&gt;&lt;span&gt;  720x576       50.00
+&lt;&#x2F;span&gt;&lt;span&gt;  720x480       59.94
+&lt;&#x2F;span&gt;&lt;span&gt;  640x480       75.00    72.81    59.93    59.94
+&lt;&#x2F;span&gt;&lt;span&gt;HDMI-1 connected 1080x1920+0+80 left (normal left inverted right x axis y axis) 509mm x 286mm
+&lt;&#x2F;span&gt;&lt;span&gt;  1920x1080     60.00*+  59.94    50.00    60.00    50.04
+&lt;&#x2F;span&gt;&lt;span&gt;  1680x1050     59.95
+&lt;&#x2F;span&gt;&lt;span&gt;  1440x900      74.98    59.89
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x1024     75.02    60.02
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x800      59.81
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x720      60.00    59.94    50.00
+&lt;&#x2F;span&gt;&lt;span&gt;  1152x864      75.00
+&lt;&#x2F;span&gt;&lt;span&gt;  1024x768      75.03    70.07    60.00
+&lt;&#x2F;span&gt;&lt;span&gt;  800x600       75.00    72.19    60.32
+&lt;&#x2F;span&gt;&lt;span&gt;  720x576       50.00
+&lt;&#x2F;span&gt;&lt;span&gt;  720x480       59.94
+&lt;&#x2F;span&gt;&lt;span&gt;  640x480       75.00    72.81    59.93    59.94
+&lt;&#x2F;span&gt;&lt;span&gt;HDMI-1-1 connected primary 1920x1080+1080+0 (normal left inverted right x axis y axis) 509mm x 286mm
+&lt;&#x2F;span&gt;&lt;span&gt;  1920x1080     60.00*+
+&lt;&#x2F;span&gt;&lt;span&gt;  1680x1050     59.88
+&lt;&#x2F;span&gt;&lt;span&gt;  1600x900      60.00
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x1024     60.02
+&lt;&#x2F;span&gt;&lt;span&gt;  1440x900      59.90
+&lt;&#x2F;span&gt;&lt;span&gt;  1280x720      60.00
+&lt;&#x2F;span&gt;&lt;span&gt;  1024x768      60.00
+&lt;&#x2F;span&gt;&lt;span&gt;  800x600       60.32
+&lt;&#x2F;span&gt;&lt;span&gt;  640x480       59.94
+&lt;&#x2F;span&gt;&lt;span&gt;  720x400       70.08
+&lt;&#x2F;span&gt;&lt;span&gt; 1920x1080 (0x1bf) 148.500MHz +HSync +VSync
+&lt;&#x2F;span&gt;&lt;span&gt;       h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  67.50KHz
+&lt;&#x2F;span&gt;&lt;span&gt;       v: height 1080 start 1084 end 1089 total 1125           clock  60.00Hz
+&lt;&#x2F;span&gt;&lt;span&gt; 1280x1024 (0x1c8) 108.000MHz +HSync +VSync
+&lt;&#x2F;span&gt;&lt;span&gt;       h: width  1280 start 1328 end 1440 total 1688 skew    0 clock  63.98KHz
+&lt;&#x2F;span&gt;&lt;span&gt;       v: height 1024 start 1025 end 1028 total 1066           clock  60.02Hz
+&lt;&#x2F;span&gt;&lt;span&gt; 1280x720 (0x1ca) 74.250MHz +HSync +VSync
+&lt;&#x2F;span&gt;&lt;span&gt;       h: width  1280 start 1390 end 1430 total 1650 skew    0 clock  45.00KHz
+&lt;&#x2F;span&gt;&lt;span&gt;       v: height  720 start  725 end  730 total  750           clock  60.00Hz
+&lt;&#x2F;span&gt;&lt;span&gt; 1024x768 (0x1d0) 65.000MHz -HSync -VSync
+&lt;&#x2F;span&gt;&lt;span&gt;       h: width  1024 start 1048 end 1184 total 1344 skew    0 clock  48.36KHz
+&lt;&#x2F;span&gt;&lt;span&gt;       v: height  768 start  771 end  777 total  806           clock  60.00Hz
+&lt;&#x2F;span&gt;&lt;span&gt; 800x600 (0x1d3) 40.000MHz +HSync +VSync
+&lt;&#x2F;span&gt;&lt;span&gt;       h: width   800 start  840 end  968 total 1056 skew    0 clock  37.88KHz
+&lt;&#x2F;span&gt;&lt;span&gt;       v: height  600 start  601 end  605 total  628           clock  60.32Hz
+&lt;&#x2F;span&gt;&lt;span&gt; 640x480 (0x1d9) 25.175MHz -HSync -VSync
+&lt;&#x2F;span&gt;&lt;span&gt;       h: width   640 start  656 end  752 total  800 skew    0 clock  31.47KHz
+&lt;&#x2F;span&gt;&lt;span&gt;       v: height  480 start  490 end  492 total  525           clock  59.94Hz
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;graphics-card-information&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#graphics-card-information&quot; aria-label=&quot;Anchor link for: graphics-card-information&quot;&gt;🔗&lt;&#x2F;a&gt;
+Graphics card information&lt;&#x2F;h3&gt;
+&lt;p&gt;For graphics card there are also many ways to get the information but the most two common routes are:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;update-pciids  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# you might need to run this with sudo
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;lspci &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;grep&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;&amp;#39;vga\|3d\|2d&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The output would look like:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;00:02.0 VGA compatible controller: Intel Corporation Xeon E3-1200 v3&#x2F;4th Gen Core Processor Integrated Graphics Controller (rev 06)
+&lt;&#x2F;span&gt;&lt;span&gt;01:00.0 VGA compatible controller: NVIDIA Corporation GP106 [GeForce GTX 1060 6GB] (rev a1)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;and&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# in some systems lshw is not installed by default
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;lshw&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -class&lt;&#x2F;span&gt;&lt;span&gt; display
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The output would look like:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;WARNING: you should run this program as super-user.
+&lt;&#x2F;span&gt;&lt;span&gt; *-display
+&lt;&#x2F;span&gt;&lt;span&gt;      description: VGA compatible controller
+&lt;&#x2F;span&gt;&lt;span&gt;      product: GP106 [GeForce GTX 1060 6GB]
+&lt;&#x2F;span&gt;&lt;span&gt;      vendor: NVIDIA Corporation
+&lt;&#x2F;span&gt;&lt;span&gt;      physical id: 0
+&lt;&#x2F;span&gt;&lt;span&gt;      bus info: pci@0000:01:00.0
+&lt;&#x2F;span&gt;&lt;span&gt;      version: a1
+&lt;&#x2F;span&gt;&lt;span&gt;      width: 64 bits
+&lt;&#x2F;span&gt;&lt;span&gt;      clock: 33MHz
+&lt;&#x2F;span&gt;&lt;span&gt;      capabilities: vga_controller bus_master cap_list rom
+&lt;&#x2F;span&gt;&lt;span&gt;      configuration: driver=nvidia latency=0
+&lt;&#x2F;span&gt;&lt;span&gt;      resources: irq:35 memory:d2000000-d2ffffff memory:c0000000-cfffffff memory:d0000000-d1ffffff ioport:e000(size=128) memory:c0000-dffff
+&lt;&#x2F;span&gt;&lt;span&gt; *-display
+&lt;&#x2F;span&gt;&lt;span&gt;      description: VGA compatible controller
+&lt;&#x2F;span&gt;&lt;span&gt;      product: Xeon E3-1200 v3&#x2F;4th Gen Core Processor Integrated Graphics Controller
+&lt;&#x2F;span&gt;&lt;span&gt;      vendor: Intel Corporation
+&lt;&#x2F;span&gt;&lt;span&gt;      physical id: 2
+&lt;&#x2F;span&gt;&lt;span&gt;      bus info: pci@0000:00:02.0
+&lt;&#x2F;span&gt;&lt;span&gt;      version: 06
+&lt;&#x2F;span&gt;&lt;span&gt;      width: 64 bits
+&lt;&#x2F;span&gt;&lt;span&gt;      clock: 33MHz
+&lt;&#x2F;span&gt;&lt;span&gt;      capabilities: vga_controller bus_master cap_list
+&lt;&#x2F;span&gt;&lt;span&gt;      configuration: driver=i915 latency=0
+&lt;&#x2F;span&gt;&lt;span&gt;      resources: irq:32 memory:d3400000-d37fffff memory:b0000000-bfffffff ioport:f000(size=64)
+&lt;&#x2F;span&gt;&lt;span&gt;WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;operating-system-information&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#operating-system-information&quot; aria-label=&quot;Anchor link for: operating-system-information&quot;&gt;🔗&lt;&#x2F;a&gt;
+Operating system information&lt;&#x2F;h3&gt;
+&lt;p&gt;There are many ways to get such information. Perhaps the easiest one is via the following command:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;uname&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -a
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;which gives an output similar to the following:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre style=&quot;background-color:#282a36;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Linux MyComputer 5.8.11-1-MANJARO #1 SMP PREEMPT Wed Sep 23 14:35:40 UTC 2020 x86_64 GNU&#x2F;Linux
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Key Bindings</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/guide/key-bindings/" type="text/html"/>
+		<id>https://flameshot.org/docs/guide/key-bindings/</id>
+		<content type="html">&lt;h2 id=&quot;local&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#local&quot; aria-label=&quot;Anchor link for: local&quot;&gt;🔗&lt;&#x2F;a&gt;
+Local&lt;&#x2F;h2&gt;
+&lt;p&gt;These shortcuts are available in GUI mode, meaning for example when you have ran &lt;code&gt;flameshot gui&lt;&#x2F;code&gt; command. In other words, these are the shortcuts that work &lt;em&gt;inside&lt;&#x2F;em&gt; the Flameshot application.&lt;&#x2F;p&gt;
+&lt;p&gt;These shortcuts are the default keybindings, and can be changed by the user.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Keys&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;p&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set the Pencil as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;d&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set the Line as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;a&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set the Arrow as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;s&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set Selection as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;r&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set the Rectangle as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;c&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set the Circle as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;m&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set the Marker as paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;t&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Add text to your capture&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;b&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Set Pixalate as the paint tool&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;←&lt;&#x2F;kbd&gt;, &lt;kbd&gt;↓&lt;&#x2F;kbd&gt;, &lt;kbd&gt;↑&lt;&#x2F;kbd&gt;, &lt;kbd&gt;→&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Move selection 1px&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Shift&lt;&#x2F;kbd&gt; + &lt;kbd&gt;←&lt;&#x2F;kbd&gt;, &lt;kbd&gt;↓&lt;&#x2F;kbd&gt;, &lt;kbd&gt;↑&lt;&#x2F;kbd&gt;, &lt;kbd&gt;→&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Resize selection 1px&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Esc&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Quit capture&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;m&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Move the selection area&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;c&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Copy to clipboard&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;s&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Save selection as a file&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;z&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Undo the last modification&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;Shift&lt;&#x2F;kbd&gt; + &lt;kbd&gt;z&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Redo the next modification&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;q&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Leave the capture screen&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;o&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Choose an app to open the capture&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Return&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Upload the selection to Imgur&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Spacebar&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Toggle visibility of sidebar with options of the selected tool, color picker for the drawing color and history menu&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Right Click&lt;&#x2F;td&gt;&lt;td&gt;Show the color wheel&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Mouse Wheel (scroll)&lt;&#x2F;td&gt;&lt;td&gt;Change the tool&#x27;s thickness&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Print screen&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Capture Screen&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Shift&lt;&#x2F;kbd&gt; + &lt;kbd&gt;Print&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Screenshot History&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Shift&lt;&#x2F;kbd&gt; + drag a handler of the selection area&lt;&#x2F;td&gt;&lt;td&gt;Mirror re-dimension in the opposite handler.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;You can change these default keybindings and more by opening the configuration, either by right-clicking on the tray icon or by running &lt;code&gt;flameshot config&lt;&#x2F;code&gt;, and navigating to &lt;strong&gt;Shortcuts&lt;&#x2F;strong&gt; tab:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;media&#x2F;configuration_window&#x2F;flameshot_config_shortcuts.png&quot; alt=&quot;Flameshot configuration window and Shortcuts tab&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;global-shortcuts-for-operating-systems&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#global-shortcuts-for-operating-systems&quot; aria-label=&quot;Anchor link for: global-shortcuts-for-operating-systems&quot;&gt;🔗&lt;&#x2F;a&gt;
+Global Shortcuts for Operating Systems&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;macos&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#macos&quot; aria-label=&quot;Anchor link for: macos&quot;&gt;🔗&lt;&#x2F;a&gt;
+macOS&lt;&#x2F;h3&gt;
+&lt;p&gt;By default you can start taking a screenshot using &lt;kbd&gt;Shift&lt;&#x2F;kbd&gt;+&lt;kbd&gt;CMD&lt;&#x2F;kbd&gt;+&lt;kbd&gt;x&lt;&#x2F;kbd&gt;. To know all the shortcuts, right-click on the tray icon, select the Configurations and go to Shortcuts tab.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;windows&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#windows&quot; aria-label=&quot;Anchor link for: windows&quot;&gt;🔗&lt;&#x2F;a&gt;
+Windows&lt;&#x2F;h3&gt;
+&lt;p&gt;Typically in Windows installations the &lt;kbd&gt;Prnt Scr&lt;&#x2F;kbd&gt; should work out of the box.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;linux&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#linux&quot; aria-label=&quot;Anchor link for: linux&quot;&gt;🔗&lt;&#x2F;a&gt;
+Linux&lt;&#x2F;h3&gt;
+&lt;p&gt;Flameshot uses &lt;kbd&gt;Print screen&lt;&#x2F;kbd&gt; (Windows) and &lt;kbd&gt;cmd&lt;&#x2F;kbd&gt;-&lt;kbd&gt;option&lt;&#x2F;kbd&gt;-&lt;kbd&gt;shift&lt;&#x2F;kbd&gt;-&lt;kbd&gt;4&lt;&#x2F;kbd&gt; (macOS) as default global hotkeys.&lt;&#x2F;p&gt;
+&lt;p&gt;On Linux, Flameshot doesn&#x27;t yet support &lt;kbd&gt;Pr Scr&lt;&#x2F;kbd&gt; out of the box, but with a bit of configuration you can set this up:&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;on-kde-plasma-desktop&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#on-kde-plasma-desktop&quot; aria-label=&quot;Anchor link for: on-kde-plasma-desktop&quot;&gt;🔗&lt;&#x2F;a&gt;
+On KDE Plasma desktop&lt;&#x2F;h4&gt;
+&lt;p&gt;To make configuration easier, there&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;blob&#x2F;master&#x2F;docs&#x2F;shortcuts-config&#x2F;flameshot-shortcuts-kde.khotkeys&quot;&gt;a file&lt;&#x2F;a&gt; in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Keys&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Prt Sc&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Start the Flameshot screenshot tool and take a screenshot&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;Prt Sc&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Wait for 3 seconds, then start the Flameshot screenshot tool and take a screenshot&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Shift&lt;&#x2F;kbd&gt; + &lt;kbd&gt;Prt Sc&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Take a full-screen (all monitors) screenshot and save it&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt; + &lt;kbd&gt;Shift&lt;&#x2F;kbd&gt; + &lt;kbd&gt;Prt Sc&lt;&#x2F;kbd&gt;&lt;&#x2F;td&gt;&lt;td&gt;Take a full-screen (all monitors) screenshot and copy it to the clipboard&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;If you don&#x27;t like the defaults, you can change them manually later.&lt;&#x2F;p&gt;
+&lt;p&gt;Steps for using the configuration:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The configuration file configures shortcuts so that Flameshot automatically saves (without opening the save dialog) screenshots to &lt;em&gt;~&#x2F;Pictures&#x2F;Screenshots&lt;&#x2F;em&gt; folder. Make sure you have that folder by running the following command:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --parents &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Pictures&#x2F;Screenshots
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;(If you don&#x27;t like the default location, you can skip this step and configure your preferred directory later.)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Download the configuration file:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#8be9fd;&quot;&gt;cd &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Desktop
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;wget&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;master&#x2F;docs&#x2F;shortcuts-config&#x2F;flameshot-shortcuts-kde.khotkeys
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;em&gt;System Settings&lt;&#x2F;em&gt; → &lt;em&gt;Shortcuts&lt;&#x2F;em&gt; → &lt;em&gt;Custom Shortcuts&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;If there&#x27;s one, you&#x27;ll need to disable an entry for Spectacle, the default KDE screenshot utility first because its shortcuts might collide with Flameshot&#x27;s ones; so, just uncheck the &lt;em&gt;Spectacle&lt;&#x2F;em&gt; entry.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;em&gt;Edit&lt;&#x2F;em&gt; → &lt;em&gt;Import...&lt;&#x2F;em&gt;, navigate to the Desktop folder (or wherever you saved the configuration file) and open the configuration file.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Now the Flameshot entry should appear in the list. Click &lt;em&gt;Apply&lt;&#x2F;em&gt; to apply the changes.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;If you want to change the defaults, you can expand the entry, select the appropriate action and modify it as you wish; the process is pretty mush self-explanatory.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;on-ubuntu-and-other-gnome-based-distros&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#on-ubuntu-and-other-gnome-based-distros&quot; aria-label=&quot;Anchor link for: on-ubuntu-and-other-gnome-based-distros&quot;&gt;🔗&lt;&#x2F;a&gt;
+On Ubuntu and other Gnome based distros&lt;&#x2F;h4&gt;
+&lt;p&gt;You can easily configure your &#x27;print&#x27; keyboard shortcut to be assigned to Flameshot. Below an example to open Flameshot in GUI mode:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;em&gt;Settings&lt;&#x2F;em&gt; → &lt;em&gt;Devices&lt;&#x2F;em&gt; → &lt;em&gt;Keyboard&lt;&#x2F;em&gt;  → &lt;em&gt;Shortcuts&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Search for &#x27;print&#x27;, and unbind the screen capture function by selecting it, and clicking &lt;em&gt;backspace&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Scroll down and click on the &#x27;+&#x27;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;On &#x27;Name&#x27;, name it &#x27;Flameshot&#x27; or &#x27;PrintScreen&#x27;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Define the command as &#x27;flameshot gui&#x27;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &#x27;Define shortcut...&#x27;and click your keyboard &lt;kbd&gt;Prnt Scr&lt;&#x2F;kbd&gt; key.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Now you can use your default keyboard key to launch Flameshot.&lt;&#x2F;p&gt;
+&lt;p&gt;For defining multiple shortcuts you can repeat the process above, and just change the command.&lt;&#x2F;p&gt;
+&lt;p&gt;Some examples of commands are:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Capture a region using the GUI, and have it automatically saved to your pictures folder when clicking the save button in GUI
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --path&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;home&#x2F;user&#x2F;Pictures
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Capture the active monitor and save it automatically to your pictures folder
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; screen&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --path&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;home&#x2F;user&#x2F;Pictures
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Capture the full desktop (all monitors) and save it automatically to your pictures folder
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; full&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --path&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;home&#x2F;user&#x2F;Pictures
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# Capture the region, copy to clipboard and at the same time write to file and pin the image
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot&lt;&#x2F;span&gt;&lt;span&gt; gui&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --clipboard --pin --path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Pictures
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Development Build</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/installation/development-build/" type="text/html"/>
+		<id>https://flameshot.org/docs/installation/development-build/</id>
+		<content type="html">&lt;p&gt;If you want to run Flameshot with the most cutting edge features, you can download a packaged development version from the links below.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;linux&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#linux&quot; aria-label=&quot;Anchor link for: linux&quot;&gt;🔗&lt;&#x2F;a&gt;
+Linux&lt;&#x2F;h3&gt;
+&lt;p&gt;Download the latest development packages from &lt;a href=&quot;https:&#x2F;&#x2F;nightly.link&#x2F;flameshot-org&#x2F;flameshot&#x2F;workflows&#x2F;Linux-pack&#x2F;master&#x2F;Linux-distribution-artifact.zip&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;macos&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#macos&quot; aria-label=&quot;Anchor link for: macos&quot;&gt;🔗&lt;&#x2F;a&gt;
+macOS&lt;&#x2F;h3&gt;
+&lt;p&gt;Download the latest development packages from &lt;a href=&quot;https:&#x2F;&#x2F;nightly.link&#x2F;flameshot-org&#x2F;flameshot&#x2F;workflows&#x2F;MacOS-pack&#x2F;master&#x2F;MacOS-artifact.zip&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;windows&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#windows&quot; aria-label=&quot;Anchor link for: windows&quot;&gt;🔗&lt;&#x2F;a&gt;
+Windows&lt;&#x2F;h3&gt;
+&lt;p&gt;Download the latest development packages from &lt;a href=&quot;https:&#x2F;&#x2F;nightly.link&#x2F;flameshot-org&#x2F;flameshot&#x2F;workflows&#x2F;Windows-pack&#x2F;master&#x2F;Windows-artifact.zip&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Install on Linux</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2022-06-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/installation/installation-linux/" type="text/html"/>
+		<id>https://flameshot.org/docs/installation/installation-linux/</id>
+		<content type="html">&lt;h1 id=&quot;installation-on-linux&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#installation-on-linux&quot; aria-label=&quot;Anchor link for: installation-on-linux&quot;&gt;🔗&lt;&#x2F;a&gt;
+Installation on Linux&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;distro-specific&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#distro-specific&quot; aria-label=&quot;Anchor link for: distro-specific&quot;&gt;🔗&lt;&#x2F;a&gt;
+Distro-Specific&lt;&#x2F;h2&gt;
+&lt;p&gt;There are packages available for different distros:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.archlinux.org&#x2F;packages&#x2F;community&#x2F;x86_64&#x2F;flameshot&#x2F;&quot;&gt;Arch&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;pacman --sync flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Official AUR: &lt;a href=&quot;https:&#x2F;&#x2F;aur.archlinux.org&#x2F;packages&#x2F;flameshot-git&quot;&gt;flameshot-git&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;flameshot&quot;&gt;Debian 10+&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;apt install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;launchpad.net&#x2F;ubuntu&#x2F;+source&#x2F;flameshot&quot;&gt;Ubuntu 18.04+&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;apt install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;src.fedoraproject.org&#x2F;rpms&#x2F;flameshot&quot;&gt;Fedora&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;dnf install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;search.nixos.org&#x2F;packages?query=flameshot&quot;&gt;NixOS&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;nix-env --install --attr nixos.flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;software.opensuse.org&#x2F;package&#x2F;flameshot&quot;&gt;openSUSE&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;zypper install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;voidlinux&#x2F;void-packages&#x2F;tree&#x2F;master&#x2F;srcpkgs&#x2F;flameshot&quot;&gt;Void Linux&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;xbps-install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.getsol.us&#x2F;source&#x2F;flameshot&#x2F;&quot;&gt;Solus&lt;&#x2F;a&gt;:&lt;&#x2F;strong&gt; &lt;code&gt;eopkg install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you want to run Flameshot with the most cutting edge features, you can
+download a development version from &lt;a href=&quot;..&#x2F;development-build&quot;&gt;here&lt;&#x2F;a&gt; or use AUR if you are on an &lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Arch-based_distributions&quot;&gt;Arch-based distro&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Important things to Know:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Other than AUR (Arch User Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problems installing Flameshot from the commands above, please directly contact the distribution.&lt;&#x2F;li&gt;
+&lt;li&gt;In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay a few versions behind, especially if your Linux release version is old (check &lt;a href=&quot;https:&#x2F;&#x2F;repology.org&#x2F;metapackage&#x2F;flameshot&#x2F;versions&quot;&gt;here&lt;&#x2F;a&gt;). In these cases you might want to either go for the packages we provide on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&quot;&gt;Flameshot release page&lt;&#x2F;a&gt; or go with distro-agnostic solutions which are explained &lt;a href=&quot;https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;installation&#x2F;installation-linux&#x2F;#distro-agnostic&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&quot;&gt;Github release page&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian10 (buster)&lt;&#x2F;li&gt;
+&lt;li&gt;Ubuntu18.04 (bionic)&lt;&#x2F;li&gt;
+&lt;li&gt;Ubuntu20.04 (focal)&lt;&#x2F;li&gt;
+&lt;li&gt;Fedora31&lt;&#x2F;li&gt;
+&lt;li&gt;Fedora32&lt;&#x2F;li&gt;
+&lt;li&gt;OpenSUSE Leap 15.2&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;General packages (AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, Debian and derivatives.&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;Expand this section to see what distros are using an up to date version of Flameshot&lt;&#x2F;summary&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;repology.org&#x2F;metapackage&#x2F;flameshot&#x2F;versions&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;repology.org&#x2F;badge&#x2F;vertical-allrepos&#x2F;flameshot.svg&quot; alt=&quot;Packaging status&quot;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;details&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;distro-agnostic&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#distro-agnostic&quot; aria-label=&quot;Anchor link for: distro-agnostic&quot;&gt;🔗&lt;&#x2F;a&gt;
+Distro-Agnostic&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;appimage&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#appimage&quot; aria-label=&quot;Anchor link for: appimage&quot;&gt;🔗&lt;&#x2F;a&gt;
+AppImage&lt;&#x2F;h3&gt;
+&lt;p&gt;You can always use the AppImage as it is distro agnostic:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the folder you would like to store the software (the following is a suggestion):&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --parents &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Applications&#x2F;Flameshot
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8be9fd;&quot;&gt;cd &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Applications&#x2F;Flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Delete older versions of Flameshot AppImage:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; Flameshot-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;x86_64.AppImage
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Download the latest AppImage&lt;&#x2F;p&gt;
+&lt;p&gt;3.1. Get it from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&#x2F;latest&quot;&gt;Release page&lt;&#x2F;a&gt;, OR&lt;&#x2F;p&gt;
+&lt;p&gt;3.2. Use the following to automatically download the latest.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --remote-name &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt;    --remote-header-name &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt;    --location &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -s&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;api.github.com&#x2F;repos&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&#x2F;latest \
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;grep&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -Po &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f1fa8c;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&#x2F;download&#x2F;[^}]*\.AppImage&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;uniq&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Set it to executable:&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;chmod&lt;&#x2F;span&gt;&lt;span&gt; +x Flameshot-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;.x86_64.AppImage
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;Now you have the Flameshot ready and you can run the software:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;.&#x2F;Flameshot-*.x86_64.AppImage
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This will create an icon in your system tray area (usually in the bottom-right or top-right of the screen). &lt;&#x2F;p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Now, you can launch the application. You can either:&lt;&#x2F;p&gt;
+&lt;p&gt;6.1. Click on the tray icon and select &amp;quot;Take screenshot&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;6.2. Open terminal and use the following to run the application:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;.&#x2F;Flameshot-*.x86_64.AppImage&lt;&#x2F;span&gt;&lt;span&gt; gui
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;You may also add a symlink to the AppImage executable in your PATH. This way you can just run &lt;code&gt;flameshot&lt;&#x2F;code&gt; in your terminal and it will automatically run the AppImage. For example:&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;ln&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --symbolic &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Applications&#x2F;Flameshot&#x2F;Flameshot-11.0.0.x86_64.AppImage &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;.local&#x2F;bin&#x2F;flameshot
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# and now you can simply run
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;snap&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#snap&quot; aria-label=&quot;Anchor link for: snap&quot;&gt;🔗&lt;&#x2F;a&gt;
+Snap&lt;&#x2F;h3&gt;
+&lt;p&gt;Flameshot is not currently on snap, but when it gets available, you can install Flameshot through:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;snap&lt;&#x2F;span&gt;&lt;span&gt; install flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To update the snap applications on your computer, you should run &lt;code&gt;snap refresh&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;flatpak&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#flatpak&quot; aria-label=&quot;Anchor link for: flatpak&quot;&gt;🔗&lt;&#x2F;a&gt;
+Flatpak  &lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;flathub&#x2F;downloads&#x2F;org.flameshot.Flameshot&quot;&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flatpak&lt;&#x2F;span&gt;&lt;span&gt; install flathub org.flameshot.Flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Alternatively you can install from the github using Flatpak if you want a specific version. For example for getting the version 0.9.0:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flatpak&lt;&#x2F;span&gt;&lt;span&gt; install https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&#x2F;download&#x2F;v0.9.0&#x2F;org.flameshot.Flameshot-0.9.0.x86_64.flatpak
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And for running it you should do&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;flatpak&lt;&#x2F;span&gt;&lt;span&gt; run org.flameshot.Flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To update the flatpaks you can use &lt;code&gt;flatpak update&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;You may also add a symlink to the Flatpak command in your PATH. For example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;ln&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --symbolic&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;var&#x2F;lib&#x2F;flatpak&#x2F;exports&#x2F;bin&#x2F;org.flameshot.Flameshot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;.local&#x2F;bin&#x2F;flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This can help when creating custom keyboard shortcuts.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;docker&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#docker&quot; aria-label=&quot;Anchor link for: docker&quot;&gt;🔗&lt;&#x2F;a&gt;
+Docker  &lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;docker&#x2F;pulls&#x2F;manuellr&#x2F;flameshot&quot;&gt;  &lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;docker&#x2F;image-size&#x2F;manuellr&#x2F;flameshot?sort=date&quot;&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;There is also a docker image available for those who want it (&lt;strong&gt;not&lt;&#x2F;strong&gt; maintained by Flameshot maintainers):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ManuelLR&#x2F;docker-flameshot&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;ManuelLR&#x2F;docker-flameshot&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;runtime-dependencies&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#runtime-dependencies&quot; aria-label=&quot;Anchor link for: runtime-dependencies&quot;&gt;🔗&lt;&#x2F;a&gt;
+Runtime Dependencies&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;debian&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#debian&quot; aria-label=&quot;Anchor link for: debian&quot;&gt;🔗&lt;&#x2F;a&gt;
+Debian&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;libqt5dbus5,&lt;&#x2F;span&gt;&lt;span&gt; libqt5network5, libqt5core5a, libqt5widgets5, libqt5gui5
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Optional:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;openssl,&lt;&#x2F;span&gt;&lt;span&gt; ca-certificates
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;fedora&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#fedora&quot; aria-label=&quot;Anchor link for: fedora&quot;&gt;🔗&lt;&#x2F;a&gt;
+Fedora&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;qt5-qtbase
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Optional:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;openssl,&lt;&#x2F;span&gt;&lt;span&gt; ca-certificates
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;arch&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#arch&quot; aria-label=&quot;Anchor link for: arch&quot;&gt;🔗&lt;&#x2F;a&gt;
+Arch&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;qt5-base
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Optional:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;openssl,&lt;&#x2F;span&gt;&lt;span&gt; ca-certificates
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Install on macOS</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2021-05-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/installation/installation-osx/" type="text/html"/>
+		<id>https://flameshot.org/docs/installation/installation-osx/</id>
+		<content type="html">&lt;h2 id=&quot;installation-on-macos-osxi&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#installation-on-macos-osxi&quot; aria-label=&quot;Anchor link for: installation-on-macos-osxi&quot;&gt;🔗&lt;&#x2F;a&gt;
+Installation on macOS (OSXI)&lt;&#x2F;h2&gt;
+&lt;p&gt;You can install Flameshot on &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;MacOS&quot;&gt;macOS&lt;&#x2F;a&gt; using the either of the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ports.macports.org&#x2F;port&#x2F;flameshot&#x2F;summary&quot;&gt;MacPorts&lt;&#x2F;a&gt;: &lt;code&gt;sudo port selfupdate &amp;amp;&amp;amp; sudo port install flameshot&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;formulae.brew.sh&#x2F;cask&#x2F;flameshot&quot;&gt;Homebrew&lt;&#x2F;a&gt;: &lt;code&gt;brew install --cask flameshot&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Download DMG file:
+&lt;ol&gt;
+&lt;li&gt;Navigate to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&quot;&gt;the release page on Github&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;From the assets of the latest stable release, download the latest DMG file&lt;&#x2F;li&gt;
+&lt;li&gt;Double-click on the DMG file you downloaded&lt;&#x2F;li&gt;
+&lt;li&gt;Drag and drop the &lt;code&gt;flameshot.app&lt;&#x2F;code&gt; to your &lt;code&gt;&#x2F;Applications&lt;&#x2F;code&gt; folder&lt;&#x2F;li&gt;
+&lt;li&gt;macOS restricts applications from accessing the screen. Therefore you have to give Flameshot security permissions to &amp;quot;record&amp;quot; your desktop.
+&lt;img src=&quot;&#x2F;media&#x2F;macos_permissions.png&quot; alt=&quot;A picture of the macOS Security &amp;amp; Privacy settings that shows the Flameshot should be added to the list in the &amp;quot;privacy&amp;quot; tab&quot; &#x2F;&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Install on Windows</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2022-06-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/installation/installation-windows/" type="text/html"/>
+		<id>https://flameshot.org/docs/installation/installation-windows/</id>
+		<content type="html">&lt;h1 id=&quot;installation-on-windows&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#installation-on-windows&quot; aria-label=&quot;Anchor link for: installation-on-windows&quot;&gt;🔗&lt;&#x2F;a&gt;
+Installation on Windows&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;manual-installation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#manual-installation&quot; aria-label=&quot;Anchor link for: manual-installation&quot;&gt;🔗&lt;&#x2F;a&gt;
+Manual installation&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hosted on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;releases&quot;&gt;Github&lt;&#x2F;a&gt;. [64-bit 32-bit]&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you want to run Flameshot with the most cutting edge features, you can download a development version from &lt;a href=&quot;..&#x2F;development-build&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;using-package-managers&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#using-package-managers&quot; aria-label=&quot;Anchor link for: using-package-managers&quot;&gt;🔗&lt;&#x2F;a&gt;
+Using package managers&lt;&#x2F;h2&gt;
+&lt;p&gt;Windows has few package managers which you can use to easily install and update applications.
+Here we list those that have Flameshot in their repository:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;winget&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#winget&quot; aria-label=&quot;Anchor link for: winget&quot;&gt;🔗&lt;&#x2F;a&gt;
+Winget&lt;&#x2F;h3&gt;
+&lt;p&gt;A quick introduction to WinGet can be found on &lt;a href=&quot;https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;package-manager&#x2F;winget&#x2F;&quot;&gt;Microsoft Documentations&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;powershell&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-powershell &quot;&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span&gt;winget install flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;scoop&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#scoop&quot; aria-label=&quot;Anchor link for: scoop&quot;&gt;🔗&lt;&#x2F;a&gt;
+Scoop&lt;&#x2F;h3&gt;
+&lt;p&gt;Flameshot can be installed using &lt;a href=&quot;https:&#x2F;&#x2F;scoop.sh&#x2F;#&#x2F;apps?q=flameshot&amp;amp;s=0&amp;amp;d=1&amp;amp;o=true&quot;&gt;Scoop extras bucket&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;powershell&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-powershell &quot;&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span&gt;scoop bucket add extras
+&lt;&#x2F;span&gt;&lt;span&gt;scoop update
+&lt;&#x2F;span&gt;&lt;span&gt;scoop install flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;chocolatey&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#chocolatey&quot; aria-label=&quot;Anchor link for: chocolatey&quot;&gt;🔗&lt;&#x2F;a&gt;
+Chocolatey&lt;&#x2F;h3&gt;
+&lt;p&gt;Flameshot is also &lt;a href=&quot;https:&#x2F;&#x2F;community.chocolatey.org&#x2F;packages&#x2F;flameshot&quot;&gt;available on Chocolatey&lt;&#x2F;a&gt;, and can be installed using: &lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;powershell&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-powershell &quot;&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span&gt;choco install flameshot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>From Source Code</title>
+		<published>2021-05-01T08:00:00+00:00</published>
+		<updated>2022-06-01T08:00:00+00:00</updated>
+		<link rel="alternate" href="https://flameshot.org/docs/installation/source-code/" type="text/html"/>
+		<id>https://flameshot.org/docs/installation/source-code/</id>
+		<content type="html">&lt;h2 id=&quot;from-source&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#from-source&quot; aria-label=&quot;Anchor link for: from-source&quot;&gt;🔗&lt;&#x2F;a&gt;
+From Source&lt;&#x2F;h2&gt;
+&lt;p&gt;Alternatively, you can always compile from the source code.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;os-dependencies&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#os-dependencies&quot; aria-label=&quot;Anchor link for: os-dependencies&quot;&gt;🔗&lt;&#x2F;a&gt;
+OS Dependencies&lt;&#x2F;h2&gt;
+&lt;p&gt;The compilation requires &lt;strong&gt;Qt version 5.3 or higher&lt;&#x2F;strong&gt; and &lt;strong&gt;GCC 4.9.2 or higher&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;debian-ubuntu&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#debian-ubuntu&quot; aria-label=&quot;Anchor link for: debian-ubuntu&quot;&gt;🔗&lt;&#x2F;a&gt;
+Debian&#x2F;Ubuntu&lt;&#x2F;h3&gt;
+&lt;p&gt;Compilation Dependencies:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span&gt; install g++ cmake extra-cmake-modules build-essential qtbase5-dev qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;fedora&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#fedora&quot; aria-label=&quot;Anchor link for: fedora&quot;&gt;🔗&lt;&#x2F;a&gt;
+Fedora&lt;&#x2F;h3&gt;
+&lt;p&gt;Compilation Dependencies:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;dnf&lt;&#x2F;span&gt;&lt;span&gt; install gcc-c++ cmake qt5-qtbase-devel qt5-linguist qt5-qtsvg-devel
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;arch&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#arch&quot; aria-label=&quot;Anchor link for: arch&quot;&gt;🔗&lt;&#x2F;a&gt;
+Arch&lt;&#x2F;h3&gt;
+&lt;p&gt;Compilation Dependencies:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;pacman&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span&gt; cmake base-devel git qt5-base qt5-tools hicolor-icon-theme qt5-svg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;osx&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#osx&quot; aria-label=&quot;Anchor link for: osx&quot;&gt;🔗&lt;&#x2F;a&gt;
+OSX&lt;&#x2F;h3&gt;
+&lt;p&gt;Compilation Dependencies:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install qt5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install cmake
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;de-wm-dependencies&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#de-wm-dependencies&quot; aria-label=&quot;Anchor link for: de-wm-dependencies&quot;&gt;🔗&lt;&#x2F;a&gt;
+DE&#x2F;WM dependencies&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;gnome&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#gnome&quot; aria-label=&quot;Anchor link for: gnome&quot;&gt;🔗&lt;&#x2F;a&gt;
+Gnome&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;kde&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#kde&quot; aria-label=&quot;Anchor link for: kde&quot;&gt;🔗&lt;&#x2F;a&gt;
+KDE&lt;&#x2F;h3&gt;
+&lt;p&gt;On Fedora:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;dnf&lt;&#x2F;span&gt;&lt;span&gt; install kf5-kguiaddons-devel
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;On Arch:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;pacman&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span&gt; kguiaddons
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;sway&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#sway&quot; aria-label=&quot;Anchor link for: sway&quot;&gt;🔗&lt;&#x2F;a&gt;
+Sway&lt;&#x2F;h3&gt;
+&lt;p&gt;On Arch:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;pacman&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span&gt; xdg-desktop-portal xdg-desktop-portal-wlr grim
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;getting-the-source-code&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#getting-the-source-code&quot; aria-label=&quot;Anchor link for: getting-the-source-code&quot;&gt;🔗&lt;&#x2F;a&gt;
+Getting the Source Code&lt;&#x2F;h2&gt;
+&lt;p&gt;You can get the source code from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&quot;&gt;our Github repository&lt;&#x2F;a&gt;. Either clone the repository or download a ZIP file. We suggest downloading the ZIP file if you want to build on specific version, but if you want to build different commits and versions, using &lt;code&gt;git&lt;&#x2F;code&gt; makes it much easier.
+Please note that in this page we explain how to download the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;tree&#x2F;master&quot;&gt;master branch&lt;&#x2F;a&gt;, but you can get the source code for every &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;pulls&quot;&gt;Pull Request&lt;&#x2F;a&gt; and compile them if you like to.&lt;&#x2F;p&gt;
+&lt;p&gt;In general we suggest you to create a temporary directory to download the file and do the compiling there:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# create the folder
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --parents &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;tmp&#x2F;flameshot_source&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6272a4;&quot;&gt;# go inside the new foldr
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8be9fd;&quot;&gt;cd &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bd93f9;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;tmp&#x2F;flameshot_source&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To download &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;archive&#x2F;refs&#x2F;heads&#x2F;master.zip&quot;&gt;the ZIP file from the master branch&lt;&#x2F;a&gt; you can run:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --remote-name&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot&#x2F;archive&#x2F;refs&#x2F;heads&#x2F;master.zip
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Alternatively, to clone the Git repository:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone https:&#x2F;&#x2F;github.com&#x2F;flameshot-org&#x2F;flameshot.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;compilation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#compilation&quot; aria-label=&quot;Anchor link for: compilation&quot;&gt;🔗&lt;&#x2F;a&gt;
+Compilation&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; build
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8be9fd;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; build
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;cmake&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -DCMAKE_BUILD_TYPE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;Release&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -DCMAKE_INSTALL_PREFIX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;usr&#x2F;local ..&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;make
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;NOTE #1:&lt;&#x2F;strong&gt; for macOS you should replace command&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;cmake&lt;&#x2F;span&gt;&lt;span&gt; ..&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;NOTE #2:&lt;&#x2F;strong&gt; you can speed up the compilation by using the &lt;code&gt;-j&lt;&#x2F;code&gt; argument for &lt;code&gt;make&lt;&#x2F;code&gt; and specify the number of cores you would like to use.
+You can read more about the &lt;code&gt;make&lt;&#x2F;code&gt; arguments by &lt;code&gt;man make&lt;&#x2F;code&gt; in terminal or &lt;a href=&quot;https:&#x2F;&#x2F;linux.die.net&#x2F;man&#x2F;1&#x2F;make&quot;&gt;clicking here&lt;&#x2F;a&gt;.
+For example the following would use all CPU cores except 1:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;make&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -j$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;nproc&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --ignore 1)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;to&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282a36;color:#f8f8f2;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;cmake&lt;&#x2F;span&gt;&lt;span&gt; ..&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; -DQt5_DIR&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff79c6;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#50fa7b;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#ffb86c;&quot;&gt; --prefix&lt;&#x2F;span&gt;&lt;span&gt; qt5)&#x2F;lib&#x2F;cmake&#x2F;Qt5
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;At this point, you can use Flameshot even &lt;em&gt;without installing&lt;&#x2F;em&gt; it as you have already compiled the code into a binary file.
+The file is stored in &lt;code&gt;src&#x2F;flameshot&lt;&#x2F;code&gt; inside the &lt;code&gt;build&#x2F;&lt;&#x2F;code&gt; directory (which you are already there).
+So you can just run it directly by &lt;code&gt;.&#x2F;src&#x2F;flameshot&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;install&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#install&quot; aria-label=&quot;Anchor link for: install&quot;&gt;🔗&lt;&#x2F;a&gt;
+Install&lt;&#x2F;h2&gt;
+&lt;p&gt;But to install it, simply run &lt;code&gt;make install&lt;&#x2F;code&gt; with privileges.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;packaging&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#packaging&quot; aria-label=&quot;Anchor link for: packaging&quot;&gt;🔗&lt;&#x2F;a&gt;
+Packaging&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to generate the makefile installing in &lt;code&gt;&#x2F;usr&lt;&#x2F;code&gt; instead of in &lt;code&gt;&#x2F;usr&#x2F;local&lt;&#x2F;code&gt; you can use the &lt;code&gt;packaging&lt;&#x2F;code&gt; option to generate the proper makefile (&lt;code&gt;cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=&#x2F;usr&lt;&#x2F;code&gt; instead of just &lt;code&gt;cmake&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;If you want to install in a custom directory you can define the &lt;code&gt;BASEDIR&lt;&#x2F;code&gt; variable.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;&#x2F;strong&gt;:
+You want to install Flameshot in ~&#x2F;myBuilds&#x2F;test. You would execute the following to do so:
+&lt;code&gt;cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=&#x2F;usr BASEDIR=~&#x2F;myBuilds&#x2F;test &amp;amp;&amp;amp; make install&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

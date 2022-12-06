@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://flameshot.org/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Install on Linux | Flameshot</title>
+<meta name="description" content="Flameshot is a powerful yet simple to use screenshot software.">
+<link rel="canonical" href="https://flameshot.org/docs/installation/installation-linux/">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="img&#x2F;flameshot-hero.jpg">
+  <meta name="twitter:title" content="Install on Linux">
+  <meta name="twitter:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="og:title" content="Install on Linux">
+  <meta property="og:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://flameshot.org/docs/installation/installation-linux/">
+
+  
+    <meta property="og:image" content="img&#x2F;flameshot-hero.jpg">
+  
+
+  <meta property="og:updated_time" content="2022-06-01T08:00:00+00:00">
+  <meta property="og:site_name" content="Install on Linux">
+
+  
+
+  
+
+  
+  
+  
+  <meta property="og:locale" content="en_US">
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://flameshot.org/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://flameshot.org/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Installation",
+            "item": "https://flameshot.org/docs/installation/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Installation Linux",
+            "item": "https://flameshot.org/docs/installation/installation-linux/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+  <meta name="theme-color" content="#8800AA">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flameshot.org/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://flameshot.org/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://flameshot.org/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://flameshot.org/site.webmanifest">
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<header class="navbar fixed-top navbar-expand-lg navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-lg-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-lg-0 me-auto text-purple" href="https://flameshot.org/"><img class="d-inline-block my-auto mr-2" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="32" height="32"> Flameshot</a>
+		<button id="mode" class="btn p-0 order-2 order-lg-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<div class="collapse navbar-collapse order-4 order-lg-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2 d-flex justify-content-center">
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#features">Features</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#download">Download</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#contribute">Contribute</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/donate">Donate</a>
+						</li>
+					
+						<li class="nav-item docs active">
+							<a class="nav-link" href="https://flameshot.org/docs">Docs</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-lg-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-lg-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Overview</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/overview/overview/">Overview</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Installation</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link active" href="https://flameshot.org/docs/installation/installation-linux/">Install on Linux</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-osx/">Install on macOS</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-windows/">Install on Windows</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/development-build/">Development Build</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/source-code/">From Source Code</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Guide</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/faq/">FAQ</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/key-bindings/">Key Bindings</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/troubleshooting/">Troubleshooting</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/wayland-help/">Wayland Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/windows-help/">Microsoft Windows Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/imgur-help/">Imgur help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/issue-reporting/">Issue Reporting</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Advanced</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/configuration/">Configuration</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/commandline-options/">Command Line Options</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>More</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/more/translations/">Translations</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><strong><a href="https://flameshot.org/docs/installation/installation-linux/#installation-on-linux">Installation on Linux</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/installation-linux/#distro-specific">Distro-Specific</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/installation-linux/#distro-agnostic">Distro-Agnostic</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/installation/installation-linux/#runtime-dependencies">Runtime Dependencies</a></li>
+  											
+  									</ul>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Install on Linux</h1>
+        <p class="lead">How to install Flameshot on Linux systems.</p>
+        <h1 id="installation-on-linux"><a class="zola-anchor" href="#installation-on-linux" aria-label="Anchor link for: installation-on-linux">🔗</a>
+Installation on Linux</h1>
+<h2 id="distro-specific"><a class="zola-anchor" href="#distro-specific" aria-label="Anchor link for: distro-specific">🔗</a>
+Distro-Specific</h2>
+<p>There are packages available for different distros:</p>
+<ul>
+<li>
+<p><strong><a href="https://www.archlinux.org/packages/community/x86_64/flameshot/">Arch</a>:</strong> <code>pacman --sync flameshot</code></p>
+<ul>
+<li>Official AUR: <a href="https://aur.archlinux.org/packages/flameshot-git">flameshot-git</a>.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://tracker.debian.org/pkg/flameshot">Debian 10+</a>:</strong> <code>apt install flameshot</code></p>
+</li>
+<li>
+<p><strong><a href="https://launchpad.net/ubuntu/+source/flameshot">Ubuntu 18.04+</a>:</strong> <code>apt install flameshot</code></p>
+</li>
+<li>
+<p><strong><a href="https://src.fedoraproject.org/rpms/flameshot">Fedora</a>:</strong> <code>dnf install flameshot</code></p>
+</li>
+<li>
+<p><strong><a href="https://search.nixos.org/packages?query=flameshot">NixOS</a>:</strong> <code>nix-env --install --attr nixos.flameshot</code></p>
+</li>
+<li>
+<p><strong><a href="https://software.opensuse.org/package/flameshot">openSUSE</a>:</strong> <code>zypper install flameshot</code></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot">Void Linux</a>:</strong> <code>xbps-install flameshot</code></p>
+</li>
+<li>
+<p><strong><a href="https://dev.getsol.us/source/flameshot/">Solus</a>:</strong> <code>eopkg install flameshot</code></p>
+</li>
+</ul>
+<p>If you want to run Flameshot with the most cutting edge features, you can
+download a development version from <a href="../development-build">here</a> or use AUR if you are on an <a href="https://wiki.archlinux.org/title/Arch-based_distributions">Arch-based distro</a>.</p>
+<p><strong>Important things to Know:</strong></p>
+<ol>
+<li>Other than AUR (Arch User Repository) that is officially maintained by Flameshot developers, all packages listed above are maintained by the respective Linux distribution. Therefore, if the version is very old or you have problems installing Flameshot from the commands above, please directly contact the distribution.</li>
+<li>In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay a few versions behind, especially if your Linux release version is old (check <a href="https://repology.org/metapackage/flameshot/versions">here</a>). In these cases you might want to either go for the packages we provide on <a href="https://github.com/flameshot-org/flameshot/releases">Flameshot release page</a> or go with distro-agnostic solutions which are explained <a href="https://flameshot.org/docs/installation/installation-linux/#distro-agnostic">here</a>.</li>
+</ol>
+<p>In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our <a href="https://github.com/flameshot-org/flameshot/releases">Github release page</a>:</p>
+<ul>
+<li>Debian10 (buster)</li>
+<li>Ubuntu18.04 (bionic)</li>
+<li>Ubuntu20.04 (focal)</li>
+<li>Fedora31</li>
+<li>Fedora32</li>
+<li>OpenSUSE Leap 15.2</li>
+</ul>
+<p>General packages (AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, Debian and derivatives.</p>
+<details>
+  <summary>Expand this section to see what distros are using an up to date version of Flameshot</summary>
+  <a href="https://repology.org/metapackage/flameshot/versions">
+    <img src="https://repology.org/badge/vertical-allrepos/flameshot.svg" alt="Packaging status">
+  </a>
+</details>
+<hr />
+<h2 id="distro-agnostic"><a class="zola-anchor" href="#distro-agnostic" aria-label="Anchor link for: distro-agnostic">🔗</a>
+Distro-Agnostic</h2>
+<h3 id="appimage"><a class="zola-anchor" href="#appimage" aria-label="Anchor link for: appimage">🔗</a>
+AppImage</h3>
+<p>You can always use the AppImage as it is distro agnostic:</p>
+<ol>
+<li>Navigate to the folder you would like to store the software (the following is a suggestion):</li>
+</ol>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">mkdir</span><span style="font-style:italic;color:#ffb86c;"> --parents </span><span style="color:#bd93f9;">~</span><span>/Applications/Flameshot
+</span><span style="color:#8be9fd;">cd </span><span style="color:#bd93f9;">~</span><span>/Applications/Flameshot
+</span></code></pre>
+<ol start="2">
+<li>Delete older versions of Flameshot AppImage:</li>
+</ol>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">rm</span><span> Flameshot-</span><span style="color:#ff79c6;">*</span><span>x86_64.AppImage
+</span></code></pre>
+<ol start="3">
+<li>
+<p>Download the latest AppImage</p>
+<p>3.1. Get it from <a href="https://github.com/flameshot-org/flameshot/releases/latest">Release page</a>, OR</p>
+<p>3.2. Use the following to automatically download the latest.</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">curl</span><span style="font-style:italic;color:#ffb86c;"> --remote-name </span><span>\
+</span><span style="font-style:italic;color:#ffb86c;">    --remote-header-name </span><span>\
+</span><span style="font-style:italic;color:#ffb86c;">    --location </span><span>$(</span><span style="color:#50fa7b;">curl</span><span style="font-style:italic;color:#ffb86c;"> -s</span><span> https://api.github.com/repos/flameshot-org/flameshot/releases/latest \
+</span><span>                </span><span style="color:#ff79c6;">| </span><span style="color:#50fa7b;">grep</span><span style="font-style:italic;color:#ffb86c;"> -Po </span><span style="color:#f1fa8c;">&#39;https://github.com/flameshot-org/flameshot/releases/download/[^}]*\.AppImage&#39; </span><span>\
+</span><span>                </span><span style="color:#ff79c6;">| </span><span style="color:#50fa7b;">uniq</span><span>)
+</span></code></pre>
+</li>
+<li>
+<p>Set it to executable:</p>
+</li>
+</ol>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">chmod</span><span> +x Flameshot-</span><span style="color:#ff79c6;">*</span><span>.x86_64.AppImage
+</span></code></pre>
+<ol start="5">
+<li>Now you have the Flameshot ready and you can run the software:</li>
+</ol>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">./Flameshot-*.x86_64.AppImage
+</span></code></pre>
+<p>This will create an icon in your system tray area (usually in the bottom-right or top-right of the screen). </p>
+<ol start="6">
+<li>
+<p>Now, you can launch the application. You can either:</p>
+<p>6.1. Click on the tray icon and select &quot;Take screenshot&quot;</p>
+<p>6.2. Open terminal and use the following to run the application:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">./Flameshot-*.x86_64.AppImage</span><span> gui
+</span></code></pre>
+</li>
+<li>
+<p>You may also add a symlink to the AppImage executable in your PATH. This way you can just run <code>flameshot</code> in your terminal and it will automatically run the AppImage. For example:</p>
+</li>
+</ol>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">ln</span><span style="font-style:italic;color:#ffb86c;"> --symbolic </span><span style="color:#bd93f9;">~</span><span>/Applications/Flameshot/Flameshot-11.0.0.x86_64.AppImage </span><span style="color:#bd93f9;">~</span><span>/.local/bin/flameshot
+</span><span>
+</span><span style="color:#6272a4;"># and now you can simply run
+</span><span style="color:#50fa7b;">flameshot
+</span></code></pre>
+<h3 id="snap"><a class="zola-anchor" href="#snap" aria-label="Anchor link for: snap">🔗</a>
+Snap</h3>
+<p>Flameshot is not currently on snap, but when it gets available, you can install Flameshot through:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">snap</span><span> install flameshot
+</span></code></pre>
+<p>To update the snap applications on your computer, you should run <code>snap refresh</code>.</p>
+<h3 id="flatpak"><a class="zola-anchor" href="#flatpak" aria-label="Anchor link for: flatpak">🔗</a>
+Flatpak  <img src="https://img.shields.io/flathub/downloads/org.flameshot.Flameshot"></h3>
+<p>Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">flatpak</span><span> install flathub org.flameshot.Flameshot
+</span></code></pre>
+<p>Alternatively you can install from the github using Flatpak if you want a specific version. For example for getting the version 0.9.0:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">flatpak</span><span> install https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/org.flameshot.Flameshot-0.9.0.x86_64.flatpak
+</span></code></pre>
+<p>And for running it you should do</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">flatpak</span><span> run org.flameshot.Flameshot
+</span></code></pre>
+<p>To update the flatpaks you can use <code>flatpak update</code>.</p>
+<p>You may also add a symlink to the Flatpak command in your PATH. For example:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">ln</span><span style="font-style:italic;color:#ffb86c;"> --symbolic</span><span> /var/lib/flatpak/exports/bin/org.flameshot.Flameshot </span><span style="color:#bd93f9;">~</span><span>/.local/bin/flameshot
+</span></code></pre>
+<p>This can help when creating custom keyboard shortcuts.</p>
+<h3 id="docker"><a class="zola-anchor" href="#docker" aria-label="Anchor link for: docker">🔗</a>
+Docker  <img src="https://img.shields.io/docker/pulls/manuellr/flameshot">  <img src="https://img.shields.io/docker/image-size/manuellr/flameshot?sort=date"></h3>
+<p>There is also a docker image available for those who want it (<strong>not</strong> maintained by Flameshot maintainers):</p>
+<p><a href="https://github.com/ManuelLR/docker-flameshot">https://github.com/ManuelLR/docker-flameshot</a></p>
+<hr />
+<h2 id="runtime-dependencies"><a class="zola-anchor" href="#runtime-dependencies" aria-label="Anchor link for: runtime-dependencies">🔗</a>
+Runtime Dependencies</h2>
+<h3 id="debian"><a class="zola-anchor" href="#debian" aria-label="Anchor link for: debian">🔗</a>
+Debian</h3>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">libqt5dbus5,</span><span> libqt5network5, libqt5core5a, libqt5widgets5, libqt5gui5
+</span></code></pre>
+<p>Optional:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">openssl,</span><span> ca-certificates
+</span></code></pre>
+<h3 id="fedora"><a class="zola-anchor" href="#fedora" aria-label="Anchor link for: fedora">🔗</a>
+Fedora</h3>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">qt5-qtbase
+</span></code></pre>
+<p>Optional:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">openssl,</span><span> ca-certificates
+</span></code></pre>
+<h3 id="arch"><a class="zola-anchor" href="#arch" aria-label="Anchor link for: arch">🔗</a>
+Arch</h3>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">qt5-base
+</span></code></pre>
+<p>Optional:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">openssl,</span><span> ca-certificates
+</span></code></pre>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      <a class="ms-auto" href="https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;overview&#x2F;overview&#x2F;">
+        <div class="card my-1">
+          <div class="card-body py-2">
+            Overview &rarr;
+          </div>
+        </div>
+      </a>
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer container-fluid">
+    <div class="row">
+      <a class="navbar-brand text-center text-decoration-none" href="https://flameshot.org/">
+        <img class="d-block mx-auto" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="50" height="50">
+        <span class="text-white fs-3 fw-bold mx-auto mt-5">Flameshot</span>
+      </a>
+    </div>
+    <div class="row mx-auto text-center">
+      <ul class="footer-links mx-auto">
+        <li>
+          <a href="https://flameshot.org/#features">Features</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#download">Download</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#contribute">Contribute</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/donate/">Donate</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/docs/">Docs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-auto text-center mt-4">
+      <div class="col-10 mx-auto">
+        <a class="d-inline-block m-1" href="https://github.com/flameshot-org"><img class="footer-icon" src="https://flameshot.org/img/icons/github.svg" alt="github logo." width="26" height="26"></a>
+        <a rel="me" class="d-inline-block m-1" href="https://fosstodon.org/@flameshot"><img class="footer-icon" src="https://flameshot.org/img/icons/mastodon.svg" alt="mastodon logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://matrix.to/#/#flameshot-org:matrix.org"><img class="footer-icon" src="https://flameshot.org/img/icons/matrix.svg" alt="matrix logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://flameshotworkspace.slack.com/"><img class="footer-icon" src="https://flameshot.org/img/icons/slack.svg" alt="slack logo." width="26" height="26"></a>
+      </div>
+      <small class="text-white mt-3">Copyright &copy; 2017-2022 Flameshot contributors &bullet; Site design by <a class="cs-link" href="https://github.com/Correct-Syntax">Correct Syntax</a></small>
+    </div>
+</footer>
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@v5.0.0-beta3/dist/js/bootstrap.min.js" defer></script>
+<script src="https://flameshot.org/js/main.js" defer></script>
+
+  <script src="https://flameshot.org/plugins/elasticlunr.min.js" defer></script>
+  <script src="https://flameshot.org/search_index.en.js" defer></script>
+  <script src="https://flameshot.org/js/search.js" defer></script>
+
+  
+</body>
+</html>

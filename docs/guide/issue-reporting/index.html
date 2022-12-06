@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://flameshot.org/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Issue Reporting | Flameshot</title>
+<meta name="description" content="Flameshot is a powerful yet simple to use screenshot software.">
+<link rel="canonical" href="https://flameshot.org/docs/guide/issue-reporting/">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="img&#x2F;flameshot-hero.jpg">
+  <meta name="twitter:title" content="Issue Reporting">
+  <meta name="twitter:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="og:title" content="Issue Reporting">
+  <meta property="og:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://flameshot.org/docs/guide/issue-reporting/">
+
+  
+    <meta property="og:image" content="img&#x2F;flameshot-hero.jpg">
+  
+
+  <meta property="og:updated_time" content="2021-05-01T08:00:00+00:00">
+  <meta property="og:site_name" content="Issue Reporting">
+
+  
+
+  
+
+  
+  
+  
+  <meta property="og:locale" content="en_US">
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://flameshot.org/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://flameshot.org/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Guide",
+            "item": "https://flameshot.org/docs/guide/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Issue Reporting",
+            "item": "https://flameshot.org/docs/guide/issue-reporting/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+  <meta name="theme-color" content="#8800AA">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flameshot.org/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://flameshot.org/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://flameshot.org/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://flameshot.org/site.webmanifest">
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<header class="navbar fixed-top navbar-expand-lg navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-lg-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-lg-0 me-auto text-purple" href="https://flameshot.org/"><img class="d-inline-block my-auto mr-2" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="32" height="32"> Flameshot</a>
+		<button id="mode" class="btn p-0 order-2 order-lg-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<div class="collapse navbar-collapse order-4 order-lg-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2 d-flex justify-content-center">
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#features">Features</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#download">Download</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#contribute">Contribute</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/donate">Donate</a>
+						</li>
+					
+						<li class="nav-item docs active">
+							<a class="nav-link" href="https://flameshot.org/docs">Docs</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-lg-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-lg-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Overview</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/overview/overview/">Overview</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Installation</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-linux/">Install on Linux</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-osx/">Install on macOS</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-windows/">Install on Windows</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/development-build/">Development Build</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/source-code/">From Source Code</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Guide</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/faq/">FAQ</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/key-bindings/">Key Bindings</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/troubleshooting/">Troubleshooting</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/wayland-help/">Wayland Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/windows-help/">Microsoft Windows Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/imgur-help/">Imgur help</a></li>
+							                           
+									<li><a class="docs-link active" href="https://flameshot.org/docs/guide/issue-reporting/">Issue Reporting</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Advanced</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/configuration/">Configuration</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/commandline-options/">Command Line Options</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>More</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/more/translations/">Translations</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/issue-reporting/#flameshot-version">Flameshot version</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/issue-reporting/#quick-collection-of-the-system-information">Quick collection of the system information</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/issue-reporting/#detailed-methods">Detailed methods</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/issue-reporting/#display-server-protocol">Display Server Protocol</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/issue-reporting/#monitor-s-information">Monitor(s) information</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/issue-reporting/#graphics-card-information">Graphics card information</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/issue-reporting/#operating-system-information">Operating system information</a></li>
+  											
+  									</ul>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Issue Reporting</h1>
+        <p class="lead">Reporting your issues with Flameshot.</p>
+        <p>In this page we explain how to properly extract your system information so that you can report it in a GitHub issue Here we discuss commands to be used in a <strong>GNU/Linux system</strong>. We might later add similar information for Windows users.</p>
+<h2 id="flameshot-version"><a class="zola-anchor" href="#flameshot-version" aria-label="Anchor link for: flameshot-version">🔗</a>
+Flameshot version</h2>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">flameshot</span><span style="font-style:italic;color:#ffb86c;"> --version
+</span></code></pre>
+<p>The output would look like:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>Flameshot v0.8.3
+</span><span>Compiled with Qt 5.15.0
+</span></code></pre>
+</blockquote>
+<h2 id="quick-collection-of-the-system-information"><a class="zola-anchor" href="#quick-collection-of-the-system-information" aria-label="Anchor link for: quick-collection-of-the-system-information">🔗</a>
+Quick collection of the system information</h2>
+<p>Providing the output of this command would usually be enough for a bug report. For much more detailed method, move on to the next section. This method uses a tool that is most probably installed on your computer names <code>inxi</code> and it can quickly collect the graphical information we need. We are only interested in the &quot;systemS&quot; and &quot;Graphics&quot; section:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">inxi</span><span style="font-style:italic;color:#ffb86c;"> --width</span><span> 80</span><span style="font-style:italic;color:#ffb86c;"> --system --graphics
+</span></code></pre>
+<p>which should produce an output similar to the following:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>System:
+</span><span> Host: MyBox Kernel: 5.10.15-1-MANJARO x86_64 bits: 64
+</span><span> Desktop: KDE Plasma 5.20.5 Distro: Manjaro Linux
+</span><span>Graphics:
+</span><span> Device-1: Intel Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics
+</span><span> driver: i915 v: kernel
+</span><span> Device-2: NVIDIA GP106 [GeForce GTX 1060 6GB] driver: nvidia v: 460.39
+</span><span> Display: x11 server: X.Org 1.20.10 driver: loaded: modesetting,nvidia
+</span><span> unloaded: nouveau resolution: 1: 1080x1920~60Hz 2: 1080x1920~60Hz
+</span><span> 3: 1920x1080~60Hz
+</span><span> OpenGL: renderer: GeForce GTX 1060 6GB/PCIe/SSE2 v: 4.6.0 NVIDIA 460.39
+</span></code></pre>
+</blockquote>
+<h2 id="detailed-methods"><a class="zola-anchor" href="#detailed-methods" aria-label="Anchor link for: detailed-methods">🔗</a>
+Detailed methods</h2>
+<h3 id="display-server-protocol"><a class="zola-anchor" href="#display-server-protocol" aria-label="Anchor link for: display-server-protocol">🔗</a>
+Display Server Protocol</h3>
+<p>Basically what we want to know is if you are using X or Wayland. If you want to know what they are and what they do You can read <a href="https://www.secjuice.com/wayland-vs-xorg/">this article</a>.</p>
+<p>You can use the following command to determine which one do you use:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">loginctl</span><span> show-session $(</span><span style="color:#50fa7b;">loginctl</span><span> show-user $(</span><span style="color:#50fa7b;">whoami</span><span>)</span><span style="font-style:italic;color:#ffb86c;"> -p</span><span> Display</span><span style="font-style:italic;color:#ffb86c;"> --value</span><span>)</span><span style="font-style:italic;color:#ffb86c;"> -p</span><span> Type</span><span style="font-style:italic;color:#ffb86c;"> --value
+</span></code></pre>
+<h3 id="monitor-s-information"><a class="zola-anchor" href="#monitor-s-information" aria-label="Anchor link for: monitor-s-information">🔗</a>
+Monitor(s) information</h3>
+<p>You can get lots of information about the monitors, but we are interested to see only those that are active and in use. You can use <code>xrandr</code> command to get the monitor information and here we presenta short version and a long version. The long version is more useful since it also contains information about the orientation of the monitor.</p>
+<p>Short format:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">xrandr</span><span style="font-style:italic;color:#ffb86c;"> --listactivemonitors
+</span></code></pre>
+<p>The output would look like:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>Monitors: 3
+</span><span>0: +*HDMI-1-1 1920/509x1080/286+1080+0  HDMI-1-1
+</span><span>1: +HDMI-0 1080/509x1920/286+3000+0  HDMI-0
+</span><span>2: +HDMI-1 1080/509x1920/286+0+80  HDMI-1
+</span></code></pre>
+</blockquote>
+<p>Long format:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">xrandr </span><span style="color:#ff79c6;">| </span><span style="color:#50fa7b;">grep</span><span style="font-style:italic;color:#ffb86c;"> -v </span><span style="color:#f1fa8c;">&quot; disconnected &quot;
+</span></code></pre>
+<p>The output would look like:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>Screen 0: minimum 8 x 8, current 4080 x 2000, maximum 32767 x 32767
+</span><span>HDMI-0 connected 1080x1920+3000+0 left (normal left inverted right x axis y axis) 509mm x 286mm
+</span><span>  1920x1080     60.00*+  59.94    50.00    60.00    50.04
+</span><span>  1680x1050     59.95
+</span><span>  1440x900      74.98    59.89
+</span><span>  1280x1024     75.02    60.02
+</span><span>  1280x800      59.81
+</span><span>  1280x720      60.00    59.94    50.00
+</span><span>  1152x864      75.00
+</span><span>  1024x768      75.03    70.07    60.00
+</span><span>  800x600       75.00    72.19    60.32
+</span><span>  720x576       50.00
+</span><span>  720x480       59.94
+</span><span>  640x480       75.00    72.81    59.93    59.94
+</span><span>HDMI-1 connected 1080x1920+0+80 left (normal left inverted right x axis y axis) 509mm x 286mm
+</span><span>  1920x1080     60.00*+  59.94    50.00    60.00    50.04
+</span><span>  1680x1050     59.95
+</span><span>  1440x900      74.98    59.89
+</span><span>  1280x1024     75.02    60.02
+</span><span>  1280x800      59.81
+</span><span>  1280x720      60.00    59.94    50.00
+</span><span>  1152x864      75.00
+</span><span>  1024x768      75.03    70.07    60.00
+</span><span>  800x600       75.00    72.19    60.32
+</span><span>  720x576       50.00
+</span><span>  720x480       59.94
+</span><span>  640x480       75.00    72.81    59.93    59.94
+</span><span>HDMI-1-1 connected primary 1920x1080+1080+0 (normal left inverted right x axis y axis) 509mm x 286mm
+</span><span>  1920x1080     60.00*+
+</span><span>  1680x1050     59.88
+</span><span>  1600x900      60.00
+</span><span>  1280x1024     60.02
+</span><span>  1440x900      59.90
+</span><span>  1280x720      60.00
+</span><span>  1024x768      60.00
+</span><span>  800x600       60.32
+</span><span>  640x480       59.94
+</span><span>  720x400       70.08
+</span><span> 1920x1080 (0x1bf) 148.500MHz +HSync +VSync
+</span><span>       h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  67.50KHz
+</span><span>       v: height 1080 start 1084 end 1089 total 1125           clock  60.00Hz
+</span><span> 1280x1024 (0x1c8) 108.000MHz +HSync +VSync
+</span><span>       h: width  1280 start 1328 end 1440 total 1688 skew    0 clock  63.98KHz
+</span><span>       v: height 1024 start 1025 end 1028 total 1066           clock  60.02Hz
+</span><span> 1280x720 (0x1ca) 74.250MHz +HSync +VSync
+</span><span>       h: width  1280 start 1390 end 1430 total 1650 skew    0 clock  45.00KHz
+</span><span>       v: height  720 start  725 end  730 total  750           clock  60.00Hz
+</span><span> 1024x768 (0x1d0) 65.000MHz -HSync -VSync
+</span><span>       h: width  1024 start 1048 end 1184 total 1344 skew    0 clock  48.36KHz
+</span><span>       v: height  768 start  771 end  777 total  806           clock  60.00Hz
+</span><span> 800x600 (0x1d3) 40.000MHz +HSync +VSync
+</span><span>       h: width   800 start  840 end  968 total 1056 skew    0 clock  37.88KHz
+</span><span>       v: height  600 start  601 end  605 total  628           clock  60.32Hz
+</span><span> 640x480 (0x1d9) 25.175MHz -HSync -VSync
+</span><span>       h: width   640 start  656 end  752 total  800 skew    0 clock  31.47KHz
+</span><span>       v: height  480 start  490 end  492 total  525           clock  59.94Hz
+</span></code></pre>
+</blockquote>
+<h3 id="graphics-card-information"><a class="zola-anchor" href="#graphics-card-information" aria-label="Anchor link for: graphics-card-information">🔗</a>
+Graphics card information</h3>
+<p>For graphics card there are also many ways to get the information but the most two common routes are:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">update-pciids  </span><span style="color:#6272a4;"># you might need to run this with sudo
+</span><span style="color:#50fa7b;">lspci </span><span style="color:#ff79c6;">| </span><span style="color:#50fa7b;">grep</span><span style="font-style:italic;color:#ffb86c;"> -i </span><span style="color:#f1fa8c;">&#39;vga\|3d\|2d&#39;
+</span></code></pre>
+<p>The output would look like:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>00:02.0 VGA compatible controller: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller (rev 06)
+</span><span>01:00.0 VGA compatible controller: NVIDIA Corporation GP106 [GeForce GTX 1060 6GB] (rev a1)
+</span></code></pre>
+</blockquote>
+<p>and</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#6272a4;"># in some systems lshw is not installed by default
+</span><span style="color:#50fa7b;">lshw</span><span style="font-style:italic;color:#ffb86c;"> -class</span><span> display
+</span></code></pre>
+<p>The output would look like:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>WARNING: you should run this program as super-user.
+</span><span> *-display
+</span><span>      description: VGA compatible controller
+</span><span>      product: GP106 [GeForce GTX 1060 6GB]
+</span><span>      vendor: NVIDIA Corporation
+</span><span>      physical id: 0
+</span><span>      bus info: pci@0000:01:00.0
+</span><span>      version: a1
+</span><span>      width: 64 bits
+</span><span>      clock: 33MHz
+</span><span>      capabilities: vga_controller bus_master cap_list rom
+</span><span>      configuration: driver=nvidia latency=0
+</span><span>      resources: irq:35 memory:d2000000-d2ffffff memory:c0000000-cfffffff memory:d0000000-d1ffffff ioport:e000(size=128) memory:c0000-dffff
+</span><span> *-display
+</span><span>      description: VGA compatible controller
+</span><span>      product: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+</span><span>      vendor: Intel Corporation
+</span><span>      physical id: 2
+</span><span>      bus info: pci@0000:00:02.0
+</span><span>      version: 06
+</span><span>      width: 64 bits
+</span><span>      clock: 33MHz
+</span><span>      capabilities: vga_controller bus_master cap_list
+</span><span>      configuration: driver=i915 latency=0
+</span><span>      resources: irq:32 memory:d3400000-d37fffff memory:b0000000-bfffffff ioport:f000(size=64)
+</span><span>WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+</span></code></pre>
+</blockquote>
+<h3 id="operating-system-information"><a class="zola-anchor" href="#operating-system-information" aria-label="Anchor link for: operating-system-information">🔗</a>
+Operating system information</h3>
+<p>There are many ways to get such information. Perhaps the easiest one is via the following command:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#50fa7b;">uname</span><span style="font-style:italic;color:#ffb86c;"> -a
+</span></code></pre>
+<p>which gives an output similar to the following:</p>
+<blockquote>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>Linux MyComputer 5.8.11-1-MANJARO #1 SMP PREEMPT Wed Sep 23 14:35:40 UTC 2020 x86_64 GNU/Linux
+</span></code></pre>
+</blockquote>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+            
+              
+              <a href="https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;installation&#x2F;source-code&#x2F;">
+                <div class="card my-1">
+                  <div class="card-body py-2">
+                    &larr; From Source Code
+                  </div>
+                </div>
+              </a>
+            
+            
+            
+          
+        
+      
+        
+        
+          
+        
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+          
+          
+          <a class="ms-auto" href="https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;advanced&#x2F;configuration&#x2F;">
+            <div class="card my-1">
+              <div class="card-body py-2">
+                Configuration &rarr;
+              </div>
+            </div>
+          </a>
+          
+          
+          
+        
+      
+    
+      
+      
+        
+      
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer container-fluid">
+    <div class="row">
+      <a class="navbar-brand text-center text-decoration-none" href="https://flameshot.org/">
+        <img class="d-block mx-auto" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="50" height="50">
+        <span class="text-white fs-3 fw-bold mx-auto mt-5">Flameshot</span>
+      </a>
+    </div>
+    <div class="row mx-auto text-center">
+      <ul class="footer-links mx-auto">
+        <li>
+          <a href="https://flameshot.org/#features">Features</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#download">Download</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#contribute">Contribute</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/donate/">Donate</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/docs/">Docs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-auto text-center mt-4">
+      <div class="col-10 mx-auto">
+        <a class="d-inline-block m-1" href="https://github.com/flameshot-org"><img class="footer-icon" src="https://flameshot.org/img/icons/github.svg" alt="github logo." width="26" height="26"></a>
+        <a rel="me" class="d-inline-block m-1" href="https://fosstodon.org/@flameshot"><img class="footer-icon" src="https://flameshot.org/img/icons/mastodon.svg" alt="mastodon logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://matrix.to/#/#flameshot-org:matrix.org"><img class="footer-icon" src="https://flameshot.org/img/icons/matrix.svg" alt="matrix logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://flameshotworkspace.slack.com/"><img class="footer-icon" src="https://flameshot.org/img/icons/slack.svg" alt="slack logo." width="26" height="26"></a>
+      </div>
+      <small class="text-white mt-3">Copyright &copy; 2017-2022 Flameshot contributors &bullet; Site design by <a class="cs-link" href="https://github.com/Correct-Syntax">Correct Syntax</a></small>
+    </div>
+</footer>
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@v5.0.0-beta3/dist/js/bootstrap.min.js" defer></script>
+<script src="https://flameshot.org/js/main.js" defer></script>
+
+  <script src="https://flameshot.org/plugins/elasticlunr.min.js" defer></script>
+  <script src="https://flameshot.org/search_index.en.js" defer></script>
+  <script src="https://flameshot.org/js/search.js" defer></script>
+
+  
+</body>
+</html>

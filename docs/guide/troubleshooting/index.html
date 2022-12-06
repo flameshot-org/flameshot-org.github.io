@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://flameshot.org/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Troubleshooting | Flameshot</title>
+<meta name="description" content="Flameshot is a powerful yet simple to use screenshot software.">
+<link rel="canonical" href="https://flameshot.org/docs/guide/troubleshooting/">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="img&#x2F;flameshot-hero.jpg">
+  <meta name="twitter:title" content="Troubleshooting">
+  <meta name="twitter:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="og:title" content="Troubleshooting">
+  <meta property="og:description" content="Flameshot is a powerful yet simple to use screenshot software.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://flameshot.org/docs/guide/troubleshooting/">
+
+  
+    <meta property="og:image" content="img&#x2F;flameshot-hero.jpg">
+  
+
+  <meta property="og:updated_time" content="2022-05-29T08:20:00+00:00">
+  <meta property="og:site_name" content="Troubleshooting">
+
+  
+
+  
+
+  
+  
+  
+  <meta property="og:locale" content="en_US">
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://flameshot.org/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://flameshot.org/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Guide",
+            "item": "https://flameshot.org/docs/guide/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Troubleshooting",
+            "item": "https://flameshot.org/docs/guide/troubleshooting/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+  <meta name="theme-color" content="#8800AA">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flameshot.org/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://flameshot.org/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://flameshot.org/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://flameshot.org/site.webmanifest">
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<header class="navbar fixed-top navbar-expand-lg navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-lg-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-lg-0 me-auto text-purple" href="https://flameshot.org/"><img class="d-inline-block my-auto mr-2" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="32" height="32"> Flameshot</a>
+		<button id="mode" class="btn p-0 order-2 order-lg-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<div class="collapse navbar-collapse order-4 order-lg-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2 d-flex justify-content-center">
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#features">Features</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#download">Download</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/#contribute">Contribute</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://flameshot.org/donate">Donate</a>
+						</li>
+					
+						<li class="nav-item docs active">
+							<a class="nav-link" href="https://flameshot.org/docs">Docs</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-lg-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-lg-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Overview</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/overview/overview/">Overview</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Installation</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-linux/">Install on Linux</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-osx/">Install on macOS</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/installation-windows/">Install on Windows</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/development-build/">Development Build</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/installation/source-code/">From Source Code</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Guide</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/faq/">FAQ</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/key-bindings/">Key Bindings</a></li>
+							                           
+									<li><a class="docs-link active" href="https://flameshot.org/docs/guide/troubleshooting/">Troubleshooting</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/wayland-help/">Wayland Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/windows-help/">Microsoft Windows Help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/imgur-help/">Imgur help</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/guide/issue-reporting/">Issue Reporting</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Advanced</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/configuration/">Configuration</a></li>
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/advanced/commandline-options/">Command Line Options</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>More</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://flameshot.org/docs/more/translations/">Translations</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/troubleshooting/#issue-reporting">Issue reporting</a></strong></li>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/troubleshooting/#linux">Linux</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator">In the System tray area, Flameshot appears to have duplicate icons&#x2F;indicator</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#in-gnome-the-flameshot-icon-does-not-appear-in-the-tray">In Gnome the Flameshot icon does not appear in the tray</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot">In tiling window managers (e.g i3wm, dwm, bspwm) Flameshot crashes when taking the screenshot</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot">In tiling window managers (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor">In tiling window managers (e.g i3wm, dwm, bspwm) Flameshot only appears on a single monitor</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens">Flameshot icon is visible in tray area but when I click on it nothing happens</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area">In Xfce sometimes Flameshot does not let me select screenshot area</a></li>
+  											
+  									</ul>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/troubleshooting/#macos">macOS</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection">All opened applications go away and only the blank desktop is visible for selection</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#the-command-flameshot-does-not-exist-in-my-terminal">The command flameshot does not exist in my terminal</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#flameshot-only-works-on-the-primary-screen">Flameshot only works on the primary screen</a></li>
+  											
+  									</ul>
+  							
+  							
+  							<li><strong><a href="https://flameshot.org/docs/guide/troubleshooting/#windows">Windows</a></strong></li>
+  							
+  									<ul>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#command-line-arguments-do-not-work">Command line arguments do not work</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#flameshot-does-not-launch-at-startup-even-when-the-settings-are-set">Flameshot does not launch at startup even when the settings are set</a></li>
+  											
+  											<li><a href="https://flameshot.org/docs/guide/troubleshooting/#printscreen-key-opens-snip-tool-instead-of-flameshot">PrintScreen key opens Snip tool instead of Flameshot</a></li>
+  											
+  									</ul>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Troubleshooting</h1>
+        <p class="lead">Troubleshooting Flameshot.</p>
+        <p>Please first read the troubleshooting steps for your operating system in this page and then if it was not solved, report the issue after reading the <a href="https://flameshot.org/docs/guide/troubleshooting/#issue-reporting">Issue reporting section</a> down below.</p>
+<h2 id="issue-reporting"><a class="zola-anchor" href="#issue-reporting" aria-label="Anchor link for: issue-reporting">🔗</a>
+Issue reporting</h2>
+<p>To report a bug or suggest a new feature, you can go to <a href="https://github.com/flameshot-org/flameshot/issues">GitHub issues page</a> and use the searchbox in the middle of the page to see if anyone else have already posted something similar. Sometimes you will find a quick solution just by reading the threads. In case of feature request, if you find someone with similar idea, just give that a thumbs-up to increase its priority/importance.</p>
+<p>In case you didn't find similar issue, create a new issue and explain in detail what the issue is. If you can, add pictures or video recordings to clarify the situation. For bug reports, make sure to also visit the <a href="../issue-reporting">issue reporting page</a> in which we have explained how to get the information we need in each bug report.</p>
+<hr />
+<h2 id="linux"><a class="zola-anchor" href="#linux" aria-label="Anchor link for: linux">🔗</a>
+Linux</h2>
+<h3 id="in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator"><a class="zola-anchor" href="#in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator" aria-label="Anchor link for: in-the-system-tray-area-flameshot-appears-to-have-duplicate-icons-indicator">🔗</a>
+In the System tray area, Flameshot appears to have duplicate icons/indicator</h3>
+<p>It is currently known that in Ubuntu 14.04 and 16.04 Unity environments such problems occur. This problem does not occur with Ubuntu 17.10 Unity. <a href="https://github.com/flameshot-org/flameshot/issues/92">#92</a></p>
+<h3 id="in-gnome-the-flameshot-icon-does-not-appear-in-the-tray"><a class="zola-anchor" href="#in-gnome-the-flameshot-icon-does-not-appear-in-the-tray" aria-label="Anchor link for: in-gnome-the-flameshot-icon-does-not-appear-in-the-tray">🔗</a>
+In <strong>Gnome</strong> the Flameshot icon does not appear in the tray</h3>
+<p>Gnome does not have a systray, therefore in Gnome you should install the gnome <a href="https://extensions.gnome.org/extension/1503/tray-icons/">Tray icons</a> extension. For more information, read the <a href="https://github.com/flameshot-org/flameshot#tray-icon">Tray icon</a> section of the github repository.</p>
+<h3 id="in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot"><a class="zola-anchor" href="#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot" aria-label="Anchor link for: in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-crashes-when-taking-the-screenshot">🔗</a>
+In <strong>tiling window managers</strong> (e.g i3wm, dwm, bspwm) Flameshot crashes when taking the screenshot</h3>
+<p>Most tiling window managers do not come with a notification daemon, and Flameshot communicates with the user through notifications. This means that Flameshot is dependent on a notification manager to be installed and running. Easy way to test if you have a notification manager is to try <code>notify-send &quot;test&quot;</code> in your terminal. If you see the notification, you have it, otherwise we suggest you to install a notification manager such as <code>dunst</code>:</p>
+<p>https://github.com/flameshot-org/flameshot/issues/1179#issuecomment-757544326</p>
+<h3 id="in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot"><a class="zola-anchor" href="#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot" aria-label="Anchor link for: in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-does-not-pin-the-screenshot">🔗</a>
+In <strong>tiling window managers</strong> (e.g i3wm, dwm, bspwm) Flameshot does not pin the screenshot</h3>
+<p>This is simply because you have not started the DBus. Either run <code>dbus-launch dwm</code> (or any other window manager/desktop environment) at startup, or run Flameshot daemon (<code>flameshot</code>) before taking the screenshot. For example:</p>
+<pre data-lang="sh" style="background-color:#282a36;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#6272a4;"># this will start the daemon
+</span><span style="color:#50fa7b;">flameshot </span><span style="color:#ff79c6;">&amp;
+</span><span style="color:#6272a4;"># this will select a 300 by 200 pixel area, and immediately pin it
+</span><span style="color:#50fa7b;">flameshot</span><span> gui</span><span style="font-style:italic;color:#ffb86c;"> --region</span><span> 300x200+300+300</span><span style="font-style:italic;color:#ffb86c;"> --pin --accept-on-select 
+</span></code></pre>
+<h3 id="in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor"><a class="zola-anchor" href="#in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor" aria-label="Anchor link for: in-tiling-window-managers-e-g-i3wm-dwm-bspwm-flameshot-only-appears-on-a-single-monitor">🔗</a>
+In <strong>tiling window managers</strong> (e.g i3wm, dwm, bspwm) Flameshot only appears on a single monitor</h3>
+<p>This can be because the window manager is forcing to tile Flameshot. This can be solved by defining window rule. For example for Sway the following rule is suggested in <a href="https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1086129055">#2364</a>:</p>
+<pre data-lang="py" style="background-color:#282a36;color:#f8f8f2;" class="language-py "><code class="language-py" data-lang="py"><span>for_window [app_id=</span><span style="color:#f1fa8c;">&quot;flameshot&quot;</span><span>] border pixel </span><span style="color:#bd93f9;">0</span><span>, floating enable, fullscreen disable, move absolute position </span><span style="color:#bd93f9;">0 0
+</span></code></pre>
+<h3 id="flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens"><a class="zola-anchor" href="#flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens" aria-label="Anchor link for: flameshot-icon-is-visible-in-tray-area-but-when-i-click-on-it-nothing-happens">🔗</a>
+Flameshot icon is visible in tray area but when I click on it nothing happens</h3>
+<ul>
+<li>
+<p>First try the using the command <code>flameshot gui</code> in terminal. This does exactly what clicking on the tray icon does (make sure can you see Flameshot icon in the tray area).</p>
+</li>
+<li>
+<p>If the step above didn't work:</p>
+<ol>
+<li>Open 3 terminals</li>
+<li>Kill Flameshot if it is already open using <code>pkill flameshot</code></li>
+<li>In the first terminal run <code>dbus-monitor --session sender=org.flameshot.Flameshot</code></li>
+<li>In the second terminal run <code>flameshot</code></li>
+<li>In the third terminal run <code>flameshot gui</code></li>
+<li>Copy the content of the first terminal in pastebin: https://bin.snopyta.org/</li>
+</ol>
+<ul>
+<li><img src="https://user-images.githubusercontent.com/390889/116671105-3b09d780-a9a9-11eb-8941-df52c9802c85.png" alt="image" /></li>
+</ul>
+<ol start="7">
+<li>Post the link in the <a href="https://github.com/flameshot-org/flameshot/issues">issue on Github</a></li>
+</ol>
+</li>
+</ul>
+<h3 id="in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area"><a class="zola-anchor" href="#in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area" aria-label="Anchor link for: in-xfce-sometimes-flameshot-does-not-let-me-select-screenshot-area">🔗</a>
+In <strong>Xfce</strong> sometimes Flameshot does not let me select screenshot area</h3>
+<p>It has been confirmed by multiple users that the compositor is at fault <a href="https://github.com/flameshot-org/flameshot/issues/629#issuecomment-989136575">#629</a>. It has been suggested to disable &quot;Display fullscreen overlay windows directly&quot;. You just need to open &quot;Window Manager Tweaks&quot; in your Xfce, go to the &quot;Compositor&quot; tab and remove the checkmark from &quot;Display fullscreen overlay windows directly&quot;.</p>
+<hr />
+<h2 id="macos"><a class="zola-anchor" href="#macos" aria-label="Anchor link for: macos">🔗</a>
+macOS</h2>
+<h3 id="all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection"><a class="zola-anchor" href="#all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection" aria-label="Anchor link for: all-opened-applications-go-away-and-only-the-blank-desktop-is-visible-for-selection">🔗</a>
+All opened applications go away and only the blank desktop is visible for selection</h3>
+<p>As it has been reported multiple times already (<a href="https://github.com/flameshot-org/flameshot/issues/1537">1</a>, <a href="https://github.com/flameshot-org/flameshot/issues/1571">2</a>), macOS restricts applications from accessing the screen. Therefore you have to give Flameshot security permissions to &quot;record&quot; your desktop.</p>
+<p><img src="/media/macos_permissions.png" alt="A picture of the macOS Security &amp; Privacy settings that shows the Flameshot should be added to the list in the &quot;privacy&quot; tab" /></p>
+<p>If you were still getting the following message when restarting Flameshot, try removing (using the &quot;-&quot; button) and then adding Flameshot to the list above.</p>
+<p><img src="/media/macos_screenrecording_permission_request.png" alt="A screenshot of a permission request window in macOS which says &quot;Flameshot.app would like to record this computer's screen&quot;" /></p>
+<p>When this step is done you have to restart your macOS to make the permissions get working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple, but until that day, the only easy solution is rebooting.</p>
+<h3 id="the-command-flameshot-does-not-exist-in-my-terminal"><a class="zola-anchor" href="#the-command-flameshot-does-not-exist-in-my-terminal" aria-label="Anchor link for: the-command-flameshot-does-not-exist-in-my-terminal">🔗</a>
+The command <code>flameshot</code> does not exist in my terminal</h3>
+<p>In general to have a command in your shell (e.g zsh) you should put the binary in your path. You can see your paths by <code>echo $PATH</code> (note that they are separated by <code>:</code>). You can either:</p>
+<ol>
+<li>create a symlink to Flameshot binary in one of those folders listed (check out <code>man ln</code>)</li>
+<li>add the folder that contains Flameshot to your path (<code>export PATH=&quot;path/to/your/folder:$PATH&quot;</code>). If you have installed Flameshot using the DMG we provide, Macports, or Homebrew, you most probably have it located in <code>/Applications/flameshot.app/</code>.</li>
+</ol>
+<h3 id="flameshot-only-works-on-the-primary-screen"><a class="zola-anchor" href="#flameshot-only-works-on-the-primary-screen" aria-label="Anchor link for: flameshot-only-works-on-the-primary-screen">🔗</a>
+Flameshot only works on the primary screen</h3>
+<p>Depending on how you have Spaces configured in Mission Control you may only be able to activate Flameshot on a particular external display by using the <code>shift+alt+cmd+4</code> hotkey. Otherwise, Flameshot will only activate on the main display if you click &quot;Take Screenshot&quot; from the application menu. Fix it by uninstalling, installing again and selecting Flameshot again in the <code>Screen Recording</code> section. (reported to work <a href="https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496">here</a>)</p>
+<hr />
+<h2 id="windows"><a class="zola-anchor" href="#windows" aria-label="Anchor link for: windows">🔗</a>
+Windows</h2>
+<h3 id="command-line-arguments-do-not-work"><a class="zola-anchor" href="#command-line-arguments-do-not-work" aria-label="Anchor link for: command-line-arguments-do-not-work">🔗</a>
+Command line arguments do not work</h3>
+<p>At the time of writing this (version 11.0.0), the command line is not implemented for Windows. We might add it in future versions. You can follow the discussions/development of this feature in <a href="https://github.com/flameshot-org/flameshot/issues/2118">#2118</a>.</p>
+<p>In the meanwhile you can use <a href="https://www.autohotkey.com/">AutoHotKey</a> as <a href="https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1126669379">explained here</a>.</p>
+<h3 id="flameshot-does-not-launch-at-startup-even-when-the-settings-are-set"><a class="zola-anchor" href="#flameshot-does-not-launch-at-startup-even-when-the-settings-are-set" aria-label="Anchor link for: flameshot-does-not-launch-at-startup-even-when-the-settings-are-set">🔗</a>
+Flameshot does not launch at startup even when the settings are set</h3>
+<p>As <a href="https://github.com/flameshot-org/flameshot/issues/2422#issuecomment-1140393544">explained by @HoshyarKarimi</a> (this should only be done once):</p>
+<ol>
+<li>From the configuration uncheck &quot;Launch at startup&quot;</li>
+<li>Quit Flameshot from system tray</li>
+<li>Now run Flameshot <em>as administrator</em></li>
+<li>Open the configuration and check the &quot;Launch at startup&quot; box</li>
+</ol>
+<p>The settings should now be set. You can close Flameshot from the system tray and use it normally from here after.</p>
+<h3 id="printscreen-key-opens-snip-tool-instead-of-flameshot"><a class="zola-anchor" href="#printscreen-key-opens-snip-tool-instead-of-flameshot" aria-label="Anchor link for: printscreen-key-opens-snip-tool-instead-of-flameshot">🔗</a>
+PrintScreen key opens Snip tool instead of Flameshot</h3>
+<p>The following solution <a href="https://github.com/flameshot-org/flameshot/issues/1551#issuecomment-1166317630">was provided</a> by a member of our community:</p>
+<ol>
+<li>set <code>Computer\HKEY_CURRENT_USER\Control Panel\Keyboard\PrintScreenKeyForSnippingEnabled</code> to 0</li>
+<li>set <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TabletPC\DisableSnippingTool</code> to 1 (skip this step if you don't have the <code>\TabletPC\</code>)</li>
+<li>uninstall &quot;Snip and Sketch&quot; via the Microsoft Store</li>
+</ol>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+            
+              
+              <a href="https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;installation&#x2F;source-code&#x2F;">
+                <div class="card my-1">
+                  <div class="card-body py-2">
+                    &larr; From Source Code
+                  </div>
+                </div>
+              </a>
+            
+            
+            
+          
+        
+      
+        
+        
+          
+        
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+          
+          
+          <a class="ms-auto" href="https:&#x2F;&#x2F;flameshot.org&#x2F;docs&#x2F;advanced&#x2F;configuration&#x2F;">
+            <div class="card my-1">
+              <div class="card-body py-2">
+                Configuration &rarr;
+              </div>
+            </div>
+          </a>
+          
+          
+          
+        
+      
+    
+      
+      
+        
+      
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer container-fluid">
+    <div class="row">
+      <a class="navbar-brand text-center text-decoration-none" href="https://flameshot.org/">
+        <img class="d-block mx-auto" src="https://flameshot.org/flameshot-icon.svg" alt="logo" width="50" height="50">
+        <span class="text-white fs-3 fw-bold mx-auto mt-5">Flameshot</span>
+      </a>
+    </div>
+    <div class="row mx-auto text-center">
+      <ul class="footer-links mx-auto">
+        <li>
+          <a href="https://flameshot.org/#features">Features</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#download">Download</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/#contribute">Contribute</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/donate/">Donate</a>
+        </li>
+        <li>
+          <a href="https://flameshot.org/docs/">Docs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-auto text-center mt-4">
+      <div class="col-10 mx-auto">
+        <a class="d-inline-block m-1" href="https://github.com/flameshot-org"><img class="footer-icon" src="https://flameshot.org/img/icons/github.svg" alt="github logo." width="26" height="26"></a>
+        <a rel="me" class="d-inline-block m-1" href="https://fosstodon.org/@flameshot"><img class="footer-icon" src="https://flameshot.org/img/icons/mastodon.svg" alt="mastodon logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://matrix.to/#/#flameshot-org:matrix.org"><img class="footer-icon" src="https://flameshot.org/img/icons/matrix.svg" alt="matrix logo." width="26" height="26"></a>
+        <a class="d-inline-block m-1" href="https://flameshotworkspace.slack.com/"><img class="footer-icon" src="https://flameshot.org/img/icons/slack.svg" alt="slack logo." width="26" height="26"></a>
+      </div>
+      <small class="text-white mt-3">Copyright &copy; 2017-2022 Flameshot contributors &bullet; Site design by <a class="cs-link" href="https://github.com/Correct-Syntax">Correct Syntax</a></small>
+    </div>
+</footer>
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@v5.0.0-beta3/dist/js/bootstrap.min.js" defer></script>
+<script src="https://flameshot.org/js/main.js" defer></script>
+
+  <script src="https://flameshot.org/plugins/elasticlunr.min.js" defer></script>
+  <script src="https://flameshot.org/search_index.en.js" defer></script>
+  <script src="https://flameshot.org/js/search.js" defer></script>
+
+  
+</body>
+</html>
