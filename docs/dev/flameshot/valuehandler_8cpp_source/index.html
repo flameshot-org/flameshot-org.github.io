@@ -1,0 +1,994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/valuehandler_8cpp_source/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>File valuehandler.cpp - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-valuehandlercpp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File valuehandler.cpp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/valuehandler_8cpp_source.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="file-valuehandlercpp">File valuehandler.cpp<a class="headerlink" href="#file-valuehandlercpp" title="Permanent link">#</a></h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_68267d1309a1af8e8297ef4c3efbcdba/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_313caf1132e152dd9b58bea13a4052ca/"><strong>utils</strong></a> <strong>&gt;</strong> <a href="../valuehandler_8cpp/"><strong>valuehandler.cpp</strong></a></p>
+<p><a href="../valuehandler_8cpp/">Go to the documentation of this file.</a> </p>
+<pre><code class="language-C++">
+#include &quot;valuehandler.h&quot;
+#include &quot;capturetool.h&quot;
+#include &quot;colorpickerwidget.h&quot;
+#include &quot;confighandler.h&quot;
+#include &quot;screengrabber.h&quot;
+#include &lt;QColor&gt;
+#include &lt;QFileInfo&gt;
+#include &lt;QImageWriter&gt;
+#include &lt;QKeySequence&gt;
+#include &lt;QStandardPaths&gt;
+#include &lt;QVariant&gt;
+
+// VALUE HANDLER
+
+QVariant ValueHandler::value(const QVariant&amp; val)
+{
+    if (!val.isValid() || !check(val)) {
+        return fallback();
+    } else {
+        return process(val);
+    }
+}
+
+QVariant ValueHandler::fallback()
+{
+    return {};
+}
+
+QVariant ValueHandler::representation(const QVariant&amp; val)
+{
+    return val.toString();
+}
+
+QString ValueHandler::expected()
+{
+    return {};
+}
+
+QVariant ValueHandler::process(const QVariant&amp; val)
+{
+    return val;
+}
+
+// BOOL
+
+Bool::Bool(bool def)
+  : m_def(def)
+{}
+
+bool Bool::check(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    if (str != &quot;true&quot; &amp;&amp; str != &quot;false&quot;) {
+        return false;
+    }
+    return true;
+}
+
+QVariant Bool::fallback()
+{
+    return m_def;
+}
+
+QString Bool::expected()
+{
+    return QStringLiteral(&quot;true or false&quot;);
+}
+
+// STRING
+
+String::String(QString def)
+  : m_def(std::move(def))
+{}
+
+bool String::check(const QVariant&amp;)
+{
+    return true;
+}
+
+QVariant String::fallback()
+{
+    return m_def;
+}
+
+QString String::expected()
+{
+    return QStringLiteral(&quot;string&quot;);
+}
+
+// COLOR
+
+Color::Color(QColor def)
+  : m_def(std::move(def))
+{}
+
+bool Color::check(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    // Disable #RGB, #RRRGGGBBB and #RRRRGGGGBBBB formats that QColor supports
+    return QColor::isValidColor(str) &amp;&amp;
+           (str[0] != '#' ||
+            (str.length() != 4 &amp;&amp; str.length() != 10 &amp;&amp; str.length() != 13));
+}
+
+QVariant Color::process(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    QColor color(str);
+    if (str.length() == 9 &amp;&amp; str[0] == '#') {
+        // Convert #RRGGBBAA (flameshot) to #AARRGGBB (QColor)
+        int blue = color.blue();
+        color.setBlue(color.green());
+        color.setGreen(color.red());
+        color.setRed(color.alpha());
+        color.setAlpha(blue);
+    }
+    return color;
+}
+
+QVariant Color::fallback()
+{
+    return m_def;
+}
+
+QVariant Color::representation(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    QColor color(str);
+    if (str.length() == 9 &amp;&amp; str[0] == '#') {
+        // Convert #AARRGGBB (QColor) to #RRGGBBAA (flameshot)
+        int alpha = color.alpha();
+        color.setAlpha(color.red());
+        color.setRed(color.green());
+        color.setGreen(color.blue());
+        color.setBlue(alpha);
+    }
+    return color.name();
+}
+
+QString Color::expected()
+{
+    return QStringLiteral(&quot;color name or hex value&quot;);
+}
+
+// BOUNDED INT
+
+BoundedInt::BoundedInt(int min, int max, int def)
+  : m_min(min)
+  , m_max(max)
+  , m_def(def)
+{}
+
+bool BoundedInt::check(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    bool conversionOk;
+    int num = str.toInt(&amp;conversionOk);
+    return conversionOk &amp;&amp; m_min &lt;= num &amp;&amp; num &lt;= m_max;
+}
+
+QVariant BoundedInt::fallback()
+{
+    return m_def;
+}
+
+QString BoundedInt::expected()
+{
+    return QStringLiteral(&quot;number between %1 and %2&quot;).arg(m_min).arg(m_max);
+}
+
+// LOWER BOUNDED INT
+
+LowerBoundedInt::LowerBoundedInt(int min, int def)
+  : m_min(min)
+  , m_def(def)
+{}
+
+bool LowerBoundedInt::check(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    bool conversionOk;
+    int num = str.toInt(&amp;conversionOk);
+    return conversionOk &amp;&amp; num &gt;= m_min;
+}
+
+QVariant LowerBoundedInt::fallback()
+{
+    return m_def;
+}
+
+QString LowerBoundedInt::expected()
+{
+    return QStringLiteral(&quot;number &gt;= %1&quot;).arg(m_min);
+}
+
+// KEY SEQUENCE
+
+KeySequence::KeySequence(const QKeySequence&amp; fallback)
+  : m_fallback(fallback)
+{}
+
+bool KeySequence::check(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    if (!str.isEmpty() &amp;&amp; QKeySequence(str).toString().isEmpty()) {
+        return false;
+    }
+    return true;
+}
+
+QVariant KeySequence::fallback()
+{
+    return process(m_fallback);
+}
+
+QString KeySequence::expected()
+{
+    return QStringLiteral(&quot;keyboard shortcut&quot;);
+}
+
+QVariant KeySequence::representation(const QVariant&amp; val)
+{
+    QString str(val.toString());
+    if (QKeySequence(str) == QKeySequence(Qt::Key_Return)) {
+        return QStringLiteral(&quot;Enter&quot;);
+    }
+    return str;
+}
+
+QVariant KeySequence::process(const QVariant&amp; val)
+{
+    QString str(val.toString());
+    if (str == &quot;Enter&quot;) {
+        return QKeySequence(Qt::Key_Return).toString();
+    }
+    if (str.length() &gt; 0) {
+        // Make the &quot;main&quot; key in sequence (last one) lower-case.
+        const QCharRef&amp; lastChar = str[str.length() - 1];
+        str.replace(str.length() - 1, 1, lastChar.toLower());
+    }
+    return str;
+}
+
+// EXISTING DIR
+
+bool ExistingDir::check(const QVariant&amp; val)
+{
+    if (!val.canConvert(QVariant::String) || val.toString().isEmpty()) {
+        return false;
+    }
+    QFileInfo info(val.toString());
+    return info.isDir() &amp;&amp; info.exists();
+}
+
+QVariant ExistingDir::fallback()
+{
+    using SP = QStandardPaths;
+    for (auto location :
+         { SP::PicturesLocation, SP::HomeLocation, SP::TempLocation }) {
+        QString path = SP::writableLocation(location);
+        if (QFileInfo(path).isDir()) {
+            return path;
+        }
+    }
+    return {};
+}
+
+QString ExistingDir::expected()
+{
+    return QStringLiteral(&quot;existing directory&quot;);
+}
+
+// FILENAME PATTERN
+
+bool FilenamePattern::check(const QVariant&amp;)
+{
+    return true;
+}
+
+QVariant FilenamePattern::fallback()
+{
+    return ConfigHandler().filenamePatternDefault();
+}
+
+QVariant FilenamePattern::process(const QVariant&amp; val)
+{
+    QString str = val.toString();
+    return !str.isEmpty() ? val : fallback();
+}
+
+QString FilenamePattern::expected()
+{
+    return QStringLiteral(&quot;please edit using the GUI&quot;);
+}
+
+// BUTTON LIST
+
+using BType = CaptureTool::Type;
+using BList = QList&lt;CaptureTool::Type&gt;;
+
+bool ButtonList::check(const QVariant&amp; val)
+{
+    // TODO stop using CTB
+    using CTB = CaptureToolButton;
+    auto allButtons = CTB::getIterableButtonTypes();
+    for (int btn : val.value&lt;QList&lt;int&gt;&gt;()) {
+        if (!allButtons.contains(static_cast&lt;BType&gt;(btn))) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Helper
+void sortButtons(BList&amp; buttons)
+{
+    std::sort(buttons.begin(), buttons.end(), [](BType a, BType b) {
+        return CaptureToolButton::getPriorityByButton(a) &lt;
+               CaptureToolButton::getPriorityByButton(b);
+    });
+}
+
+QVariant ButtonList::process(const QVariant&amp; val)
+{
+    auto intButtons = val.value&lt;QList&lt;int&gt;&gt;();
+    auto buttons = ButtonList::fromIntList(intButtons);
+    sortButtons(buttons);
+    return QVariant::fromValue(buttons);
+}
+
+QVariant ButtonList::fallback()
+{
+    auto buttons = CaptureToolButton::getIterableButtonTypes();
+    buttons.removeOne(CaptureTool::TYPE_SIZEDECREASE);
+    buttons.removeOne(CaptureTool::TYPE_SIZEINCREASE);
+    sortButtons(buttons);
+    return QVariant::fromValue(buttons);
+}
+
+QVariant ButtonList::representation(const QVariant&amp; val)
+{
+    auto intList = toIntList(val.value&lt;BList&gt;());
+    normalizeButtons(intList);
+    return QVariant::fromValue(intList);
+}
+
+QString ButtonList::expected()
+{
+    return QStringLiteral(&quot;please don't edit by hand&quot;);
+}
+
+QList&lt;CaptureTool::Type&gt; ButtonList::fromIntList(const QList&lt;int&gt;&amp; l)
+{
+    QList&lt;CaptureTool::Type&gt; buttons;
+    buttons.reserve(l.size());
+    for (auto const i : l) {
+        buttons &lt;&lt; static_cast&lt;CaptureTool::Type&gt;(i);
+    }
+    return buttons;
+}
+
+QList&lt;int&gt; ButtonList::toIntList(const QList&lt;CaptureTool::Type&gt;&amp; l)
+{
+    QList&lt;int&gt; buttons;
+    buttons.reserve(l.size());
+    for (auto const i : l) {
+        buttons &lt;&lt; static_cast&lt;int&gt;(i);
+    }
+    return buttons;
+}
+
+bool ButtonList::normalizeButtons(QList&lt;int&gt;&amp; buttons)
+{
+    QList&lt;int&gt; listTypesInt =
+      toIntList(CaptureToolButton::getIterableButtonTypes());
+
+    bool hasChanged = false;
+    for (int i = 0; i &lt; buttons.size(); i++) {
+        if (!listTypesInt.contains(buttons.at(i))) {
+            buttons.removeAt(i);
+            hasChanged = true;
+        }
+    }
+    return hasChanged;
+}
+
+// USER COLORS
+
+UserColors::UserColors(int min, int max)
+  : m_min(min)
+  , m_max(max)
+{}
+
+bool UserColors::check(const QVariant&amp; val)
+{
+    if (!val.isValid()) {
+        return false;
+    }
+    if (!val.canConvert(QVariant::StringList)) {
+        return false;
+    }
+    for (const QString&amp; str : val.toStringList()) {
+        if (!QColor::isValidColor(str) &amp;&amp; str != &quot;picker&quot;) {
+            return false;
+        }
+    }
+
+    int sz = val.toStringList().size();
+
+    return sz &gt;= m_min &amp;&amp; sz &lt;= m_max;
+}
+
+QVariant UserColors::process(const QVariant&amp; val)
+{
+    QStringList strColors = val.toStringList();
+    if (strColors.isEmpty()) {
+        return fallback();
+    }
+
+    QVector&lt;QColor&gt; colors;
+    colors.reserve(strColors.size());
+
+    for (const QString&amp; str : strColors) {
+        if (str != &quot;picker&quot;) {
+            colors.append(QColor(str));
+        } else {
+            colors.append(QColor());
+        }
+    }
+
+    return QVariant::fromValue(colors);
+}
+
+QVariant UserColors::fallback()
+{
+    if (ConfigHandler().predefinedColorPaletteLarge()) {
+        return QVariant::fromValue(
+          ColorPickerWidget::getDefaultLargeColorPalette());
+    } else {
+        return QVariant::fromValue(
+          ColorPickerWidget::getDefaultSmallColorPalette());
+    }
+}
+
+QString UserColors::expected()
+{
+    return QStringLiteral(
+             &quot;list of colors(min %1 and max %2) separated by comma&quot;)
+      .arg(m_min - 1)
+      .arg(m_max - 1);
+}
+
+QVariant UserColors::representation(const QVariant&amp; val)
+{
+    auto colors = val.value&lt;QVector&lt;QColor&gt;&gt;();
+
+    QStringList strColors;
+
+    for (const auto&amp; col : colors) {
+        if (col.isValid()) {
+            strColors.append(col.name(QColor::HexRgb));
+        } else {
+            strColors.append(QStringLiteral(&quot;picker&quot;));
+        }
+    }
+
+    return QVariant::fromValue(strColors);
+}
+
+// SET SAVE FILE AS EXTENSION
+
+bool SaveFileExtension::check(const QVariant&amp; val)
+{
+    if (!val.canConvert(QVariant::String) || val.toString().isEmpty()) {
+        return false;
+    }
+
+    QString extension = val.toString();
+
+    if (extension.startsWith(&quot;.&quot;)) {
+        extension.remove(0, 1);
+    }
+
+    QStringList imageFormatList;
+    foreach (auto imageFormat, QImageWriter::supportedImageFormats())
+        imageFormatList.append(imageFormat);
+
+    if (!imageFormatList.contains(extension)) {
+        return false;
+    }
+
+    return true;
+}
+
+QVariant SaveFileExtension::process(const QVariant&amp; val)
+{
+    QString extension = val.toString();
+
+    if (extension.startsWith(&quot;.&quot;)) {
+        extension.remove(0, 1);
+    }
+
+    return QVariant::fromValue(extension);
+}
+
+QString SaveFileExtension::expected()
+{
+    return QStringLiteral(&quot;supported image extension&quot;);
+}
+
+// REGION
+
+bool Region::check(const QVariant&amp; val)
+{
+    QVariant region = process(val);
+    return process(val).isValid();
+}
+
+#include &lt;QApplication&gt; // TODO remove after FIXME (see below)
+#include &lt;utility&gt;
+
+QVariant Region::process(const QVariant&amp; val)
+{
+    // FIXME: This is temporary, just before D-Bus is removed
+    char** argv = new char*[1];
+    int* argc = new int{ 0 };
+    if (QGuiApplication::screens().empty()) {
+        new QApplication(*argc, argv);
+    }
+
+    QString str = val.toString();
+
+    if (str == &quot;all&quot;) {
+        return ScreenGrabber().desktopGeometry();
+    } else if (str.startsWith(&quot;screen&quot;)) {
+        bool ok;
+        int number = str.midRef(6).toInt(&amp;ok);
+        if (!ok || number &lt; 0) {
+            return {};
+        }
+        return ScreenGrabber().screenGeometry(qApp-&gt;screens()[number]);
+    }
+
+    QRegExp regex(&quot;(-{,1}\\d+)&quot;   // number (any sign)
+                  &quot;[x,\\.\\s]&quot;    // separator ('x', ',', '.', or whitespace)
+                  &quot;(-{,1}\\d+)&quot;   // number (any sign)
+                  &quot;[\\+,\\.\\s]*&quot; // separator ('+',',', '.', or whitespace)
+                  &quot;(-{,1}\\d+)&quot;   // number (non-negative)
+                  &quot;[\\+,\\.\\s]*&quot; // separator ('+', ',', '.', or whitespace)
+                  &quot;(-{,1}\\d+)&quot;   // number (non-negative)
+    );
+
+    if (!regex.exactMatch(str)) {
+        return {};
+    }
+
+    int w, h, x, y;
+    bool w_ok, h_ok, x_ok, y_ok;
+    w = regex.cap(1).toInt(&amp;w_ok);
+    h = regex.cap(2).toInt(&amp;h_ok);
+    x = regex.cap(3).toInt(&amp;x_ok);
+    y = regex.cap(4).toInt(&amp;y_ok);
+
+    if (!(w_ok &amp;&amp; h_ok &amp;&amp; x_ok &amp;&amp; y_ok)) {
+        return {};
+    }
+
+    return QRect(x, y, w, h).normalized();
+}
+
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

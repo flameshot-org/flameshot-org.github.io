@@ -1,0 +1,1149 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/confighandler_8cpp_source/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>File confighandler.cpp - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-confighandlercpp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File confighandler.cpp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/confighandler_8cpp_source.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="file-confighandlercpp">File confighandler.cpp<a class="headerlink" href="#file-confighandlercpp" title="Permanent link">#</a></h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_68267d1309a1af8e8297ef4c3efbcdba/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_313caf1132e152dd9b58bea13a4052ca/"><strong>utils</strong></a> <strong>&gt;</strong> <a href="../confighandler_8cpp/"><strong>confighandler.cpp</strong></a></p>
+<p><a href="../confighandler_8cpp/">Go to the documentation of this file.</a> </p>
+<pre><code class="language-C++">
+// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-FileCopyrightText: 2017-2019 Alejandro Sirgo Rica &amp; Contributors
+
+#include &quot;confighandler.h&quot;
+#include &quot;abstractlogger.h&quot;
+#include &quot;src/tools/capturetool.h&quot;
+#include &quot;valuehandler.h&quot;
+#include &lt;QCoreApplication&gt;
+#include &lt;QDebug&gt;
+#include &lt;QDir&gt;
+#include &lt;QFile&gt;
+#include &lt;QFileSystemWatcher&gt;
+#include &lt;QKeySequence&gt;
+#include &lt;QMap&gt;
+#include &lt;QSharedPointer&gt;
+#include &lt;QStandardPaths&gt;
+#include &lt;QVector&gt;
+#include &lt;algorithm&gt;
+#include &lt;stdexcept&gt;
+
+#if defined(Q_OS_MACOS)
+#include &lt;QProcess&gt;
+#endif
+
+// HELPER FUNCTIONS
+
+bool verifyLaunchFile()
+{
+#if defined(Q_OS_LINUX) || defined(Q_OS_UNIX)
+    QString path = QStandardPaths::locate(QStandardPaths::GenericConfigLocation,
+                                          &quot;autostart/&quot;,
+                                          QStandardPaths::LocateDirectory) +
+                   &quot;Flameshot.desktop&quot;;
+    bool res = QFile(path).exists();
+#elif defined(Q_OS_WIN)
+    QSettings bootUpSettings(
+      &quot;HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run&quot;,
+      QSettings::NativeFormat);
+    bool res =
+      bootUpSettings.value(&quot;Flameshot&quot;).toString() ==
+      QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
+#endif
+    return res;
+}
+
+// VALUE HANDLING
+
+#define OPTION(KEY, TYPE)                                                      \
+    {                                                                          \
+        QStringLiteral(KEY), QSharedPointer&lt;ValueHandler&gt;(new TYPE)            \
+    }
+
+#define SHORTCUT(NAME, DEFAULT_VALUE)                                          \
+    {                                                                          \
+        QStringLiteral(NAME), QSharedPointer&lt;KeySequence&gt;(new KeySequence(     \
+                                QKeySequence(QLatin1String(DEFAULT_VALUE))))   \
+    }
+
+// clang-format off
+static QMap&lt;class QString, QSharedPointer&lt;ValueHandler&gt;&gt;
+        recognizedGeneralOptions = {
+//         KEY                            TYPE                 DEFAULT_VALUE
+    OPTION(&quot;showHelp&quot;                    ,Bool               ( true          )),
+    OPTION(&quot;showSidePanelButton&quot;         ,Bool               ( true          )),
+    OPTION(&quot;showDesktopNotification&quot;     ,Bool               ( true          )),
+    OPTION(&quot;disabledTrayIcon&quot;            ,Bool               ( false         )),
+    OPTION(&quot;historyConfirmationToDelete&quot; ,Bool               ( true          )),
+#if !defined(DISABLE_UPDATE_CHECKER)
+    OPTION(&quot;checkForUpdates&quot;             ,Bool               ( true          )),
+#endif
+    OPTION(&quot;allowMultipleGuiInstances&quot;   ,Bool               ( false         )),
+    OPTION(&quot;showMagnifier&quot;               ,Bool               ( false         )),
+    OPTION(&quot;squareMagnifier&quot;             ,Bool               ( false         )),
+#if !defined(Q_OS_WIN)
+    OPTION(&quot;autoCloseIdleDaemon&quot;         ,Bool               ( false         )),
+#endif
+    OPTION(&quot;startupLaunch&quot;               ,Bool               ( false         )),
+    OPTION(&quot;showStartupLaunchMessage&quot;    ,Bool               ( true          )),
+    OPTION(&quot;copyURLAfterUpload&quot;          ,Bool               ( true          )),
+    OPTION(&quot;copyPathAfterSave&quot;           ,Bool               ( false         )),
+    OPTION(&quot;antialiasingPinZoom&quot;         ,Bool               ( true          )),
+    OPTION(&quot;useJpgForClipboard&quot;          ,Bool               ( false         )),
+    OPTION(&quot;uploadWithoutConfirmation&quot;   ,Bool               ( false         )),
+    OPTION(&quot;saveAfterCopy&quot;               ,Bool               ( false         )),
+    OPTION(&quot;savePath&quot;                    ,ExistingDir        (                   )),
+    OPTION(&quot;savePathFixed&quot;               ,Bool               ( false         )),
+    OPTION(&quot;saveAsFileExtension&quot;         ,SaveFileExtension  (                   )),
+    OPTION(&quot;saveLastRegion&quot;              ,Bool               (false          )),
+    OPTION(&quot;uploadHistoryMax&quot;            ,LowerBoundedInt    (0, 25               )),
+    OPTION(&quot;undoLimit&quot;                   ,BoundedInt         (0, 999, 100    )),
+  // Interface tab
+    OPTION(&quot;uiColor&quot;                     ,Color              ( {116, 0, 150}   )),
+    OPTION(&quot;contrastUiColor&quot;             ,Color              ( {39, 0, 50}     )),
+    OPTION(&quot;contrastOpacity&quot;             ,BoundedInt         ( 0, 255, 190    )),
+    OPTION(&quot;buttons&quot;                     ,ButtonList         ( {}            )),
+    // Filename Editor tab
+    OPTION(&quot;filenamePattern&quot;             ,FilenamePattern    ( {}            )),
+    // Others
+    OPTION(&quot;drawThickness&quot;               ,LowerBoundedInt    (1  , 3             )),
+    OPTION(&quot;drawFontSize&quot;                ,LowerBoundedInt    (1  , 8             )),
+    OPTION(&quot;drawColor&quot;                   ,Color              ( Qt::red       )),
+    OPTION(&quot;userColors&quot;                  ,UserColors(3,        17            )),
+    OPTION(&quot;ignoreUpdateToVersion&quot;       ,String             ( &quot;&quot;            )),
+    OPTION(&quot;keepOpenAppLauncher&quot;         ,Bool               ( false         )),
+    OPTION(&quot;fontFamily&quot;                  ,String             ( &quot;&quot;            )),
+    // PREDEFINED_COLOR_PALETTE_LARGE is defined in src/CMakeList.txt file and can be overwritten in GitHub actions
+    OPTION(&quot;predefinedColorPaletteLarge&quot;, Bool               ( PREDEFINED_COLOR_PALETTE_LARGE )),
+    // NOTE: If another tool size is added besides drawThickness and
+    // drawFontSize, remember to update ConfigHandler::toolSize
+    OPTION(&quot;copyOnDoubleClick&quot;           ,Bool               ( false         )),
+    OPTION(&quot;uploadClientSecret&quot;          ,String             ( &quot;313baf0c7b4d3ff&quot;            )),
+    OPTION(&quot;showSelectionGeometry&quot;  , BoundedInt               (0,5,4)),
+    OPTION(&quot;showSelectionGeometryHideTime&quot;, LowerBoundedInt       (0, 3000))
+};
+
+static QMap&lt;QString, QSharedPointer&lt;KeySequence&gt;&gt; recognizedShortcuts = {
+//           NAME                           DEFAULT_SHORTCUT
+    SHORTCUT(&quot;TYPE_PENCIL&quot;              ,   &quot;P&quot;                     ),
+    SHORTCUT(&quot;TYPE_DRAWER&quot;              ,   &quot;D&quot;                     ),
+    SHORTCUT(&quot;TYPE_ARROW&quot;               ,   &quot;A&quot;                     ),
+    SHORTCUT(&quot;TYPE_SELECTION&quot;           ,   &quot;S&quot;                     ),
+    SHORTCUT(&quot;TYPE_RECTANGLE&quot;           ,   &quot;R&quot;                     ),
+    SHORTCUT(&quot;TYPE_CIRCLE&quot;              ,   &quot;C&quot;                     ),
+    SHORTCUT(&quot;TYPE_MARKER&quot;              ,   &quot;M&quot;                     ),
+    SHORTCUT(&quot;TYPE_MOVESELECTION&quot;       ,   &quot;Ctrl+M&quot;                ),
+    SHORTCUT(&quot;TYPE_UNDO&quot;                ,   &quot;Ctrl+Z&quot;                ),
+    SHORTCUT(&quot;TYPE_COPY&quot;                ,   &quot;Ctrl+C&quot;                ),
+    SHORTCUT(&quot;TYPE_SAVE&quot;                ,   &quot;Ctrl+S&quot;                ),
+    SHORTCUT(&quot;TYPE_ACCEPT&quot;              ,   &quot;Return&quot;                ),
+    SHORTCUT(&quot;TYPE_EXIT&quot;                ,   &quot;Ctrl+Q&quot;                ),
+    SHORTCUT(&quot;TYPE_IMAGEUPLOADER&quot;       ,                           ),
+#if !defined(Q_OS_MACOS)
+    SHORTCUT(&quot;TYPE_OPEN_APP&quot;            ,   &quot;Ctrl+O&quot;                ),
+#endif
+    SHORTCUT(&quot;TYPE_PIXELATE&quot;            ,   &quot;B&quot;                     ),
+    SHORTCUT(&quot;TYPE_INVERT&quot;              ,   &quot;I&quot;                     ),
+    SHORTCUT(&quot;TYPE_REDO&quot;                ,   &quot;Ctrl+Shift+Z&quot;          ),
+    SHORTCUT(&quot;TYPE_TEXT&quot;                ,   &quot;T&quot;                     ),
+    SHORTCUT(&quot;TYPE_TOGGLE_PANEL&quot;        ,   &quot;Space&quot;                 ),
+    SHORTCUT(&quot;TYPE_RESIZE_LEFT&quot;         ,   &quot;Shift+Left&quot;            ),
+    SHORTCUT(&quot;TYPE_RESIZE_RIGHT&quot;        ,   &quot;Shift+Right&quot;           ),
+    SHORTCUT(&quot;TYPE_RESIZE_UP&quot;           ,   &quot;Shift+Up&quot;              ),
+    SHORTCUT(&quot;TYPE_RESIZE_DOWN&quot;         ,   &quot;Shift+Down&quot;            ),
+    SHORTCUT(&quot;TYPE_SYM_RESIZE_LEFT&quot;     ,   &quot;Ctrl+Shift+Left&quot;       ),
+    SHORTCUT(&quot;TYPE_SYM_RESIZE_RIGHT&quot;    ,   &quot;Ctrl+Shift+Right&quot;      ),
+    SHORTCUT(&quot;TYPE_SYM_RESIZE_UP&quot;       ,   &quot;Ctrl+Shift+Up&quot;         ),
+    SHORTCUT(&quot;TYPE_SYM_RESIZE_DOWN&quot;     ,   &quot;Ctrl+Shift+Down&quot;       ),
+    SHORTCUT(&quot;TYPE_SELECT_ALL&quot;          ,   &quot;Ctrl+A&quot;                ),
+    SHORTCUT(&quot;TYPE_MOVE_LEFT&quot;           ,   &quot;Left&quot;                  ),
+    SHORTCUT(&quot;TYPE_MOVE_RIGHT&quot;          ,   &quot;Right&quot;                 ),
+    SHORTCUT(&quot;TYPE_MOVE_UP&quot;             ,   &quot;Up&quot;                    ),
+    SHORTCUT(&quot;TYPE_MOVE_DOWN&quot;           ,   &quot;Down&quot;                  ),
+    SHORTCUT(&quot;TYPE_COMMIT_CURRENT_TOOL&quot; ,   &quot;Ctrl+Return&quot;           ),
+#if defined(Q_OS_MACOS)
+    SHORTCUT(&quot;TYPE_DELETE_CURRENT_TOOL&quot; ,   &quot;Backspace&quot;             ),
+    SHORTCUT(&quot;TAKE_SCREENSHOT&quot;          ,   &quot;Ctrl+Shift+X&quot;          ),
+    SHORTCUT(&quot;SCREENSHOT_HISTORY&quot;       ,   &quot;Alt+Shift+X&quot;           ),
+#else
+    SHORTCUT(&quot;TYPE_DELETE_CURRENT_TOOL&quot; ,   &quot;Delete&quot;                ),
+#endif
+    SHORTCUT(&quot;TYPE_PIN&quot;                 ,                           ),
+    SHORTCUT(&quot;TYPE_SELECTIONINDICATOR&quot;  ,                           ),
+    SHORTCUT(&quot;TYPE_SIZEINCREASE&quot;        ,                           ),
+    SHORTCUT(&quot;TYPE_SIZEDECREASE&quot;        ,                           ),
+    SHORTCUT(&quot;TYPE_CIRCLECOUNT&quot;         ,                           ),
+};
+// clang-format on
+
+// CLASS CONFIGHANDLER
+
+ConfigHandler::ConfigHandler()
+  : m_settings(QSettings::IniFormat,
+               QSettings::UserScope,
+               qApp-&gt;organizationName(),
+               qApp-&gt;applicationName())
+{
+    static bool firstInitialization = true;
+    if (firstInitialization) {
+        // check for error every time the file changes
+        m_configWatcher.reset(new QFileSystemWatcher());
+        ensureFileWatched();
+        QObject::connect(m_configWatcher.data(),
+                         &amp;QFileSystemWatcher::fileChanged,
+                         [](const QString&amp; fileName) {
+                             emit getInstance()-&gt;fileChanged();
+
+                             if (QFile(fileName).exists()) {
+                                 m_configWatcher-&gt;addPath(fileName);
+                             }
+                             if (m_skipNextErrorCheck) {
+                                 m_skipNextErrorCheck = false;
+                                 return;
+                             }
+                             ConfigHandler().checkAndHandleError();
+                             if (!QFile(fileName).exists()) {
+                                 // File watcher stops watching a deleted file.
+                                 // Next time the config is accessed, force it
+                                 // to check for errors (and watch again).
+                                 m_errorCheckPending = true;
+                             }
+                         });
+    }
+    firstInitialization = false;
+}
+
+ConfigHandler* ConfigHandler::getInstance()
+{
+    static ConfigHandler config;
+    return &amp;config;
+}
+
+// SPECIAL CASES
+
+bool ConfigHandler::startupLaunch()
+{
+    bool res = value(QStringLiteral(&quot;startupLaunch&quot;)).toBool();
+    if (res != verifyLaunchFile()) {
+        setStartupLaunch(res);
+    }
+    return res;
+}
+
+void ConfigHandler::setStartupLaunch(const bool start)
+{
+    if (start == value(QStringLiteral(&quot;startupLaunch&quot;)).toBool()) {
+        return;
+    }
+    setValue(QStringLiteral(&quot;startupLaunch&quot;), start);
+#if defined(Q_OS_MACOS)
+    /* TODO - there should be more correct way via API, but didn't find it
+     without extra dependencies, there should be something like that:
+     https://stackoverflow.com/questions/3358410/programmatically-run-at-startup-on-mac-os-x
+     But files with this features differs on different MacOS versions and it
+     doesn't work not on a BigSur at lease.
+     */
+    QProcess process;
+    if (start) {
+        process.start(&quot;osascript&quot;,
+                      QStringList()
+                        &lt;&lt; &quot;-e&quot;
+                        &lt;&lt; &quot;tell application \&quot;System Events\&quot; to make login &quot;
+                           &quot;item at end with properties {name: &quot;
+                           &quot;\&quot;Flameshot\&quot;,path:\&quot;/Applications/&quot;
+                           &quot;flameshot.app\&quot;, hidden:false}&quot;);
+    } else {
+        process.start(&quot;osascript&quot;,
+                      QStringList() &lt;&lt; &quot;-e&quot;
+                                    &lt;&lt; &quot;tell application \&quot;System Events\&quot; to &quot;
+                                       &quot;delete login item \&quot;Flameshot\&quot;&quot;);
+    }
+    if (!process.waitForFinished()) {
+        qWarning() &lt;&lt; &quot;Login items is changed. &quot; &lt;&lt; process.errorString();
+    } else {
+        qWarning() &lt;&lt; &quot;Unable to change login items, error:&quot;
+                   &lt;&lt; process.readAll();
+    }
+#elif defined(Q_OS_LINUX) || defined(Q_OS_UNIX)
+    QString path =
+      QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) +
+      &quot;/autostart/&quot;;
+    QDir autostartDir(path);
+    if (!autostartDir.exists()) {
+        autostartDir.mkpath(&quot;.&quot;);
+    }
+
+    QFile file(path + &quot;Flameshot.desktop&quot;);
+    if (start) {
+        if (file.open(QIODevice::WriteOnly)) {
+            QByteArray data(&quot;[Desktop Entry]\nName=flameshot\nIcon=flameshot&quot;
+                            &quot;\nExec=flameshot\nTerminal=false\nType=Application&quot;
+                            &quot;\nX-GNOME-Autostart-enabled=true\n&quot;);
+            file.write(data);
+        }
+    } else {
+        file.remove();
+    }
+#elif defined(Q_OS_WIN)
+    QSettings bootUpSettings(
+      &quot;HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run&quot;,
+      QSettings::NativeFormat);
+    // set workdir for flameshot on startup
+    QSettings bootUpPath(
+      &quot;HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App &quot;
+      &quot;Paths&quot;,
+      QSettings::NativeFormat);
+    if (start) {
+        QString app_path =
+          QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
+        bootUpSettings.setValue(&quot;Flameshot&quot;, app_path);
+
+        // set application workdir
+        bootUpPath.beginGroup(&quot;flameshot.exe&quot;);
+        bootUpPath.setValue(&quot;Path&quot;, QCoreApplication::applicationDirPath());
+        bootUpPath.endGroup();
+
+    } else {
+        bootUpSettings.remove(&quot;Flameshot&quot;);
+
+        // remove application workdir
+        bootUpPath.beginGroup(&quot;flameshot.exe&quot;);
+        bootUpPath.remove(&quot;&quot;);
+        bootUpPath.endGroup();
+    }
+#endif
+}
+
+void ConfigHandler::setAllTheButtons()
+{
+    QList&lt;CaptureTool::Type&gt; buttons =
+      CaptureToolButton::getIterableButtonTypes();
+    setValue(QStringLiteral(&quot;buttons&quot;), QVariant::fromValue(buttons));
+}
+
+void ConfigHandler::setToolSize(CaptureTool::Type toolType, int size)
+{
+    if (toolType == CaptureTool::TYPE_TEXT) {
+        setDrawFontSize(size);
+    } else if (toolType != CaptureTool::NONE) {
+        setDrawThickness(size);
+    }
+}
+
+int ConfigHandler::toolSize(CaptureTool::Type toolType)
+{
+    if (toolType == CaptureTool::TYPE_TEXT) {
+        return drawFontSize();
+    } else {
+        return drawThickness();
+    }
+}
+
+// DEFAULTS
+
+QString ConfigHandler::filenamePatternDefault()
+{
+    return QStringLiteral(&quot;%F_%H-%M&quot;);
+}
+
+void ConfigHandler::setDefaultSettings()
+{
+    foreach (const QString&amp; key, m_settings.allKeys()) {
+        if (isShortcut(key)) {
+            // Do not reset Shortcuts
+            continue;
+        }
+        m_settings.remove(key);
+    }
+    m_settings.sync();
+}
+
+QString ConfigHandler::configFilePath() const
+{
+    return m_settings.fileName();
+}
+
+// GENERIC GETTERS AND SETTERS
+
+bool ConfigHandler::setShortcut(const QString&amp; actionName,
+                                const QString&amp; shortcut)
+{
+    qDebug() &lt;&lt; actionName;
+    static QVector&lt;QKeySequence&gt; reservedShortcuts = {
+#if defined(Q_OS_MACOS)
+        Qt::CTRL + Qt::Key_Backspace,
+        Qt::Key_Escape,
+#else
+        Qt::Key_Backspace,
+        Qt::Key_Escape,
+#endif
+    };
+
+    if (hasError()) {
+        return false;
+    }
+
+    bool error = false;
+
+    m_settings.beginGroup(CONFIG_GROUP_SHORTCUTS);
+    if (shortcut.isEmpty()) {
+        setValue(actionName, &quot;&quot;);
+    } else if (reservedShortcuts.contains(QKeySequence(shortcut))) {
+        // do not allow to set reserved shortcuts
+        error = true;
+    } else {
+        error = false;
+        // Make no difference for Return and Enter keys
+        QString newShortcut = KeySequence().value(shortcut).toString();
+        for (auto&amp; otherAction : m_settings.allKeys()) {
+            if (actionName == otherAction) {
+                continue;
+            }
+            QString existingShortcut =
+              KeySequence().value(m_settings.value(otherAction)).toString();
+            if (newShortcut == existingShortcut) {
+                error = true;
+                goto done;
+            }
+        }
+        m_settings.setValue(actionName, KeySequence().value(shortcut));
+    }
+done:
+    m_settings.endGroup();
+    return !error;
+}
+
+QString ConfigHandler::shortcut(const QString&amp; actionName)
+{
+    QString setting = CONFIG_GROUP_SHORTCUTS &quot;/&quot; + actionName;
+    QString shortcut = value(setting).toString();
+    if (!m_settings.contains(setting)) {
+        // The action uses a shortcut that is a flameshot default
+        // (not set explicitly by user)
+        m_settings.beginGroup(CONFIG_GROUP_SHORTCUTS);
+        for (auto&amp; otherAction : m_settings.allKeys()) {
+            if (m_settings.value(otherAction) == shortcut) {
+                // We found an explicit shortcut - it will take precedence
+                m_settings.endGroup();
+                return {};
+            }
+        }
+        m_settings.endGroup();
+    }
+    return shortcut;
+}
+
+void ConfigHandler::setValue(const QString&amp; key, const QVariant&amp; value)
+{
+    assertKeyRecognized(key);
+    if (!hasError()) {
+        // don't let the file watcher initiate another error check
+        m_skipNextErrorCheck = true;
+        auto val = valueHandler(key)-&gt;representation(value);
+        m_settings.setValue(key, val);
+    }
+}
+
+QVariant ConfigHandler::value(const QString&amp; key) const
+{
+    assertKeyRecognized(key);
+
+    auto val = m_settings.value(key);
+
+    auto handler = valueHandler(key);
+
+    // Check the value for semantic errors
+    if (val.isValid() &amp;&amp; !handler-&gt;check(val)) {
+        setErrorState(true);
+    }
+    if (m_hasError) {
+        return handler-&gt;fallback();
+    }
+
+    return handler-&gt;value(val);
+}
+
+void ConfigHandler::remove(const QString&amp; key)
+{
+    m_settings.remove(key);
+}
+
+void ConfigHandler::resetValue(const QString&amp; key)
+{
+    m_settings.setValue(key, valueHandler(key)-&gt;fallback());
+}
+
+QSet&lt;QString&gt;&amp; ConfigHandler::recognizedGeneralOptions()
+{
+#if QT_VERSION &gt;= QT_VERSION_CHECK(5, 14, 0)
+    auto keys = ::recognizedGeneralOptions.keys();
+    static QSet&lt;QString&gt; options = QSet&lt;QString&gt;(keys.begin(), keys.end());
+#else
+    static QSet&lt;QString&gt; options =
+      QSet&lt;QString&gt;::fromList(::recognizedGeneralOptions.keys());
+#endif
+    return options;
+}
+
+QSet&lt;QString&gt;&amp; ConfigHandler::recognizedShortcutNames()
+{
+#if QT_VERSION &gt;= QT_VERSION_CHECK(5, 14, 0)
+    auto keys = recognizedShortcuts.keys();
+    static QSet&lt;QString&gt; names = QSet&lt;QString&gt;(keys.begin(), keys.end());
+#else
+    static QSet&lt;QString&gt; names =
+      QSet&lt;QString&gt;::fromList(recognizedShortcuts.keys());
+#endif
+    return names;
+}
+
+QSet&lt;QString&gt; ConfigHandler::keysFromGroup(const QString&amp; group) const
+{
+    QSet&lt;QString&gt; keys;
+    for (const QString&amp; key : m_settings.allKeys()) {
+        if (group == CONFIG_GROUP_GENERAL &amp;&amp; !key.contains('/')) {
+            keys.insert(key);
+        } else if (key.startsWith(group + &quot;/&quot;)) {
+            keys.insert(baseName(key));
+        }
+    }
+    return keys;
+}
+
+// ERROR HANDLING
+
+bool ConfigHandler::checkForErrors(AbstractLogger* log) const
+{
+    return checkUnrecognizedSettings(log) &amp;&amp; checkShortcutConflicts(log) &amp;&amp;
+           checkSemantics(log);
+}
+
+bool ConfigHandler::checkUnrecognizedSettings(AbstractLogger* log,
+                                              QList&lt;QString&gt;* offenders) const
+{
+    // sort the config keys by group
+    QSet&lt;QString&gt; generalKeys = keysFromGroup(CONFIG_GROUP_GENERAL),
+                  shortcutKeys = keysFromGroup(CONFIG_GROUP_SHORTCUTS),
+                  recognizedGeneralKeys = recognizedGeneralOptions(),
+                  recognizedShortcutKeys = recognizedShortcutNames();
+
+    // subtract recognized keys
+    generalKeys.subtract(recognizedGeneralKeys);
+    shortcutKeys.subtract(recognizedShortcutKeys);
+
+    // what is left are the unrecognized keys - hopefully empty
+    bool ok = generalKeys.isEmpty() &amp;&amp; shortcutKeys.isEmpty();
+    if (log != nullptr || offenders != nullptr) {
+        for (const QString&amp; key : generalKeys) {
+            if (log) {
+                *log &lt;&lt; tr(&quot;Unrecognized setting: '%1'\n&quot;).arg(key);
+            }
+            if (offenders) {
+                offenders-&gt;append(key);
+            }
+        }
+        for (const QString&amp; key : shortcutKeys) {
+            if (log) {
+                *log &lt;&lt; tr(&quot;Unrecognized shortcut name: '%1'.\n&quot;).arg(key);
+            }
+            if (offenders) {
+                offenders-&gt;append(CONFIG_GROUP_SHORTCUTS &quot;/&quot; + key);
+            }
+        }
+    }
+    return ok;
+}
+
+bool ConfigHandler::checkShortcutConflicts(AbstractLogger* log) const
+{
+    bool ok = true;
+    m_settings.beginGroup(CONFIG_GROUP_SHORTCUTS);
+    QStringList shortcuts = m_settings.allKeys();
+    QStringList reportedInLog;
+    for (auto key1 = shortcuts.begin(); key1 != shortcuts.end(); ++key1) {
+        for (auto key2 = key1 + 1; key2 != shortcuts.end(); ++key2) {
+            // values stored in variables are useful when running debugger
+            QString value1 = m_settings.value(*key1).toString(),
+                    value2 = m_settings.value(*key2).toString();
+            // The check will pass if:
+            // - one shortcut is empty (the action doesn't use a shortcut)
+            // - or one of the settings is not found in m_settings, i.e.
+            //   user wants to use flameshot's default shortcut for the action
+            // - or the shortcuts for both actions are different
+            if (!(value1.isEmpty() || !m_settings.contains(*key1) ||
+                  !m_settings.contains(*key2) || value1 != value2)) {
+                ok = false;
+                if (log == nullptr) {
+                    break;
+                } else if (!reportedInLog.contains(*key1) &amp;&amp; // No duplicate
+                           !reportedInLog.contains(*key2)) { // log entries
+                    reportedInLog.append(*key1);
+                    reportedInLog.append(*key2);
+                    *log &lt;&lt; tr(&quot;Shortcut conflict: '%1' and '%2' &quot;
+                               &quot;have the same shortcut: %3\n&quot;)
+                              .arg(*key1)
+                              .arg(*key2)
+                              .arg(value1);
+                }
+            }
+        }
+    }
+    m_settings.endGroup();
+    return ok;
+}
+
+bool ConfigHandler::checkSemantics(AbstractLogger* log,
+                                   QList&lt;QString&gt;* offenders) const
+{
+    QStringList allKeys = m_settings.allKeys();
+    bool ok = true;
+    for (const QString&amp; key : allKeys) {
+        // Test if the key is recognized
+        if (!recognizedGeneralOptions().contains(key) &amp;&amp;
+            (!isShortcut(key) ||
+             !recognizedShortcutNames().contains(baseName(key)))) {
+            continue;
+        }
+        QVariant val = m_settings.value(key);
+        auto valueHandler = this-&gt;valueHandler(key);
+        if (val.isValid() &amp;&amp; !valueHandler-&gt;check(val)) {
+            // Key does not pass the check
+            ok = false;
+            if (log == nullptr &amp;&amp; offenders == nullptr) {
+                break;
+            }
+            if (log != nullptr) {
+                *log &lt;&lt; tr(&quot;Bad value in '%1'. Expected: %2\n&quot;)
+                          .arg(key)
+                          .arg(valueHandler-&gt;expected());
+            }
+            if (offenders != nullptr) {
+                offenders-&gt;append(key);
+            }
+        }
+    }
+    return ok;
+}
+
+void ConfigHandler::checkAndHandleError() const
+{
+    if (!QFile(m_settings.fileName()).exists()) {
+        setErrorState(false);
+    } else {
+        setErrorState(!checkForErrors());
+    }
+
+    ensureFileWatched();
+}
+
+void ConfigHandler::setErrorState(bool error) const
+{
+    bool hadError = m_hasError;
+    m_hasError = error;
+    // Notify user every time m_hasError changes
+    if (!hadError &amp;&amp; m_hasError) {
+        QString msg = errorMessage();
+        AbstractLogger::error() &lt;&lt; msg;
+        emit getInstance()-&gt;error();
+    } else if (hadError &amp;&amp; !m_hasError) {
+        auto msg =
+          tr(&quot;You have successfully resolved the configuration error.&quot;);
+        AbstractLogger::info() &lt;&lt; msg;
+        emit getInstance()-&gt;errorResolved();
+    }
+}
+
+bool ConfigHandler::hasError() const
+{
+    if (m_errorCheckPending) {
+        checkAndHandleError();
+        m_errorCheckPending = false;
+    }
+    return m_hasError;
+}
+
+QString ConfigHandler::errorMessage() const
+{
+    return tr(
+      &quot;The configuration contains an error. Open configuration to resolve.&quot;);
+}
+
+void ConfigHandler::ensureFileWatched() const
+{
+    QFile file(m_settings.fileName());
+    if (!file.exists()) {
+        file.open(QFileDevice::WriteOnly);
+        file.close();
+    }
+    if (m_configWatcher != nullptr &amp;&amp; m_configWatcher-&gt;files().isEmpty() &amp;&amp;
+        qApp != nullptr // ensures that the organization name can be accessed
+    ) {
+        m_configWatcher-&gt;addPath(m_settings.fileName());
+    }
+}
+
+QSharedPointer&lt;ValueHandler&gt; ConfigHandler::valueHandler(
+  const QString&amp; key) const
+{
+    QSharedPointer&lt;ValueHandler&gt; handler;
+    if (isShortcut(key)) {
+        handler = recognizedShortcuts.value(
+          baseName(key), QSharedPointer&lt;KeySequence&gt;(new KeySequence()));
+    } else { // General group
+        handler = ::recognizedGeneralOptions.value(key);
+    }
+    return handler;
+}
+
+void ConfigHandler::assertKeyRecognized(const QString&amp; key) const
+{
+    bool recognized = isShortcut(key)
+                        ? recognizedShortcutNames().contains(baseName(key))
+                        : ::recognizedGeneralOptions.contains(key);
+    if (!recognized) {
+#if defined(QT_DEBUG)
+        // This should never happen, but just in case
+        throw std::logic_error(
+          tr(&quot;Bad config key '%1' in ConfigHandler. Please report &quot;
+             &quot;this as a bug.&quot;)
+            .arg(key)
+            .toStdString());
+#else
+        setErrorState(true);
+#endif
+    }
+}
+
+bool ConfigHandler::isShortcut(const QString&amp; key) const
+{
+    return m_settings.group() == QStringLiteral(CONFIG_GROUP_SHORTCUTS) ||
+           key.startsWith(QStringLiteral(CONFIG_GROUP_SHORTCUTS &quot;/&quot;));
+}
+
+QString ConfigHandler::baseName(QString key) const
+{
+    return QFileInfo(key).baseName();
+}
+
+// STATIC MEMBER DEFINITIONS
+
+bool ConfigHandler::m_hasError = false;
+bool ConfigHandler::m_errorCheckPending = true;
+bool ConfigHandler::m_skipNextErrorCheck = false;
+
+QSharedPointer&lt;QFileSystemWatcher&gt; ConfigHandler::m_configWatcher;
+
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

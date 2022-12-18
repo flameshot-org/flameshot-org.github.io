@@ -1,0 +1,855 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/classSelectionWidget/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Class SelectionWidget - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-selectionwidget" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class SelectionWidget
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    Public Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-functions" class="md-nav__link">
+    Protected Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    Public Types Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum-sidetype" class="md-nav__link">
+    enum SideType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-selectionwidget" class="md-nav__link">
+    function SelectionWidget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-fullgeometry" class="md-nav__link">
+    function fullGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-geometry" class="md-nav__link">
+    function geometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getmouseside" class="md-nav__link">
+    function getMouseSide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-handlerareas" class="md-nav__link">
+    function handlerAreas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-rect" class="md-nav__link">
+    function rect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setgeometry" class="md-nav__link">
+    function setGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setgeometryanimated" class="md-nav__link">
+    function setGeometryAnimated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setidlecentralcursor" class="md-nav__link">
+    function setIdleCentralCursor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setignoremouse" class="md-nav__link">
+    function setIgnoreMouse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-functions-documentation" class="md-nav__link">
+    Protected Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Protected Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-eventfilter" class="md-nav__link">
+    function eventFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hideevent" class="md-nav__link">
+    function hideEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-moveevent" class="md-nav__link">
+    function moveEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-paintevent" class="md-nav__link">
+    function paintEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parentmousemoveevent" class="md-nav__link">
+    function parentMouseMoveEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parentmousepressevent" class="md-nav__link">
+    function parentMousePressEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parentmousereleaseevent" class="md-nav__link">
+    function parentMouseReleaseEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-resizeevent" class="md-nav__link">
+    function resizeEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-showevent" class="md-nav__link">
+    function showEvent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/classSelectionWidget.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="class-selectionwidget">Class SelectionWidget<a class="headerlink" href="#class-selectionwidget" title="Permanent link">#</a></h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="./"><strong>SelectionWidget</strong></a></p>
+<p>Inherits the following classes: QWidget</p>
+<h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">enum</td>
+<td align="left"><a href="#enum-sidetype"><strong>SideType</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-selectionwidget"><strong>SelectionWidget</strong></a> (QColor c, QWidget * parent=nullptr) <br></td>
+</tr>
+<tr>
+<td align="right">QRect</td>
+<td align="left"><a href="#function-fullgeometry"><strong>fullGeometry</strong></a> () const<br></td>
+</tr>
+<tr>
+<td align="right">QRect</td>
+<td align="left"><a href="#function-geometry"><strong>geometry</strong></a> () const<br></td>
+</tr>
+<tr>
+<td align="right">SideType</td>
+<td align="left"><a href="#function-getmouseside"><strong>getMouseSide</strong></a> (const QPoint &amp; mousePos) const<br><em>Get the side where the mouse cursor is.</em></td>
+</tr>
+<tr>
+<td align="right">QVector&lt; QRect &gt;</td>
+<td align="left"><a href="#function-handlerareas"><strong>handlerAreas</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right">QRect</td>
+<td align="left"><a href="#function-rect"><strong>rect</strong></a> () const<br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setgeometry"><strong>setGeometry</strong></a> (const QRect &amp; r) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setgeometryanimated"><strong>setGeometryAnimated</strong></a> (const QRect &amp; r) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setidlecentralcursor"><strong>setIdleCentralCursor</strong></a> (const QCursor &amp; cursor) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setignoremouse"><strong>setIgnoreMouse</strong></a> (bool ignore) <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions">Protected Functions<a class="headerlink" href="#protected-functions" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-eventfilter"><strong>eventFilter</strong></a> (QObject * obj, QEvent * event) override<br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-hideevent"><strong>hideEvent</strong></a> (QHideEvent *) override<br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-moveevent"><strong>moveEvent</strong></a> (QMoveEvent *) override<br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-paintevent"><strong>paintEvent</strong></a> (QPaintEvent *) override<br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-parentmousemoveevent"><strong>parentMouseMoveEvent</strong></a> (QMouseEvent * e) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-parentmousepressevent"><strong>parentMousePressEvent</strong></a> (QMouseEvent * e) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-parentmousereleaseevent"><strong>parentMouseReleaseEvent</strong></a> (QMouseEvent * e) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-resizeevent"><strong>resizeEvent</strong></a> (QResizeEvent *) override<br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-showevent"><strong>showEvent</strong></a> (QShowEvent *) override<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types-documentation">Public Types Documentation<a class="headerlink" href="#public-types-documentation" title="Permanent link">#</a></h2>
+<h3 id="enum-sidetype">enum SideType<a class="headerlink" href="#enum-sidetype" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">enum SelectionWidget::SideType {
+    NO_SIDE = 0,
+    TOP_SIDE = 0b0001,
+    BOTTOM_SIDE = 0b0010,
+    RIGHT_SIDE = 0b0100,
+    LEFT_SIDE = 0b1000,
+    TOPLEFT_SIDE = TOP_SIDE | LEFT_SIDE,
+    BOTTOMLEFT_SIDE = BOTTOM_SIDE | LEFT_SIDE,
+    TOPRIGHT_SIDE = TOP_SIDE | RIGHT_SIDE,
+    BOTTOMRIGHT_SIDE = BOTTOM_SIDE | RIGHT_SIDE,
+    CENTER = 0b10000
+};
+</code></pre>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">#</a></h2>
+<h3 id="function-selectionwidget">function SelectionWidget<a class="headerlink" href="#function-selectionwidget" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">explicit SelectionWidget::SelectionWidget (
+    QColor c,
+    QWidget * parent=nullptr
+) 
+</code></pre>
+<h3 id="function-fullgeometry">function fullGeometry<a class="headerlink" href="#function-fullgeometry" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QRect SelectionWidget::fullGeometry () const
+</code></pre>
+<h3 id="function-geometry">function geometry<a class="headerlink" href="#function-geometry" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QRect SelectionWidget::geometry () const
+</code></pre>
+<h3 id="function-getmouseside">function getMouseSide<a class="headerlink" href="#function-getmouseside" title="Permanent link">#</a></h3>
+<p><em>Get the side where the mouse cursor is.</em> </p>
+<pre><code class="language-C++">SideType SelectionWidget::getMouseSide (
+    const QPoint &amp; mousePos
+) const
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>mousePos</code> Mouse cursor position relative to the parent widget. </li>
+</ul>
+<h3 id="function-handlerareas">function handlerAreas<a class="headerlink" href="#function-handlerareas" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QVector&lt; QRect &gt; SelectionWidget::handlerAreas () 
+</code></pre>
+<h3 id="function-rect">function rect<a class="headerlink" href="#function-rect" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QRect SelectionWidget::rect () const
+</code></pre>
+<h3 id="function-setgeometry">function setGeometry<a class="headerlink" href="#function-setgeometry" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::setGeometry (
+    const QRect &amp; r
+) 
+</code></pre>
+<h3 id="function-setgeometryanimated">function setGeometryAnimated<a class="headerlink" href="#function-setgeometryanimated" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::setGeometryAnimated (
+    const QRect &amp; r
+) 
+</code></pre>
+<h3 id="function-setidlecentralcursor">function setIdleCentralCursor<a class="headerlink" href="#function-setidlecentralcursor" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::setIdleCentralCursor (
+    const QCursor &amp; cursor
+) 
+</code></pre>
+<p>Set the cursor that will be active when the mouse is inside the selection and the mouse is not clicked. </p>
+<h3 id="function-setignoremouse">function setIgnoreMouse<a class="headerlink" href="#function-setignoremouse" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::setIgnoreMouse (
+    bool ignore
+) 
+</code></pre>
+<h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">#</a></h2>
+<h3 id="function-eventfilter">function eventFilter<a class="headerlink" href="#function-eventfilter" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool SelectionWidget::eventFilter (
+    QObject * obj,
+    QEvent * event
+) override
+</code></pre>
+<h3 id="function-hideevent">function hideEvent<a class="headerlink" href="#function-hideevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::hideEvent (
+    QHideEvent *
+) override
+</code></pre>
+<h3 id="function-moveevent">function moveEvent<a class="headerlink" href="#function-moveevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::moveEvent (
+    QMoveEvent *
+) override
+</code></pre>
+<h3 id="function-paintevent">function paintEvent<a class="headerlink" href="#function-paintevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::paintEvent (
+    QPaintEvent *
+) override
+</code></pre>
+<h3 id="function-parentmousemoveevent">function parentMouseMoveEvent<a class="headerlink" href="#function-parentmousemoveevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::parentMouseMoveEvent (
+    QMouseEvent * e
+) 
+</code></pre>
+<h3 id="function-parentmousepressevent">function parentMousePressEvent<a class="headerlink" href="#function-parentmousepressevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::parentMousePressEvent (
+    QMouseEvent * e
+) 
+</code></pre>
+<h3 id="function-parentmousereleaseevent">function parentMouseReleaseEvent<a class="headerlink" href="#function-parentmousereleaseevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::parentMouseReleaseEvent (
+    QMouseEvent * e
+) 
+</code></pre>
+<h3 id="function-resizeevent">function resizeEvent<a class="headerlink" href="#function-resizeevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::resizeEvent (
+    QResizeEvent *
+) override
+</code></pre>
+<h3 id="function-showevent">function showEvent<a class="headerlink" href="#function-showevent" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void SelectionWidget::showEvent (
+    QShowEvent *
+) override
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

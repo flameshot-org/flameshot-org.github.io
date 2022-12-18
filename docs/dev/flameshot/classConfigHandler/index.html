@@ -1,0 +1,1086 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/classConfigHandler/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Class ConfigHandler - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-confighandler" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class ConfigHandler
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    Public Static Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-setshowdesktopnotification" class="md-nav__link">
+    variable setShowDesktopNotification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-setshowstartuplaunchmessage" class="md-nav__link">
+    variable setShowStartupLaunchMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-setuploadwithoutconfirmation" class="md-nav__link">
+    variable setUploadWithoutConfirmation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-config_getter_setter-15" class="md-nav__link">
+    function CONFIG_GETTER_SETTER [1/5]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-config_getter_setter-25" class="md-nav__link">
+    function CONFIG_GETTER_SETTER [2/5]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-config_getter_setter-35" class="md-nav__link">
+    function CONFIG_GETTER_SETTER [3/5]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-config_getter_setter-45" class="md-nav__link">
+    function CONFIG_GETTER_SETTER [4/5]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-config_getter_setter-55" class="md-nav__link">
+    function CONFIG_GETTER_SETTER [5/5]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-confighandler" class="md-nav__link">
+    function ConfigHandler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-checkandhandleerror" class="md-nav__link">
+    function checkAndHandleError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-checkforerrors" class="md-nav__link">
+    function checkForErrors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-checksemantics" class="md-nav__link">
+    function checkSemantics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-checkshortcutconflicts" class="md-nav__link">
+    function checkShortcutConflicts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-checkunrecognizedsettings" class="md-nav__link">
+    function checkUnrecognizedSettings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-configfilepath" class="md-nav__link">
+    function configFilePath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-errormessage" class="md-nav__link">
+    function errorMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-filenamepatterndefault" class="md-nav__link">
+    function filenamePatternDefault
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-haserror" class="md-nav__link">
+    function hasError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-keysfromgroup" class="md-nav__link">
+    function keysFromGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-remove" class="md-nav__link">
+    function remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-resetvalue" class="md-nav__link">
+    function resetValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setallthebuttons" class="md-nav__link">
+    function setAllTheButtons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setdefaultsettings" class="md-nav__link">
+    function setDefaultSettings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-seterrorstate" class="md-nav__link">
+    function setErrorState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setshortcut" class="md-nav__link">
+    function setShortcut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setstartuplaunch" class="md-nav__link">
+    function setStartupLaunch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settoolsize" class="md-nav__link">
+    function setToolSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setvalue" class="md-nav__link">
+    function setValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-shortcut" class="md-nav__link">
+    function shortcut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-toolsize" class="md-nav__link">
+    function toolSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-value" class="md-nav__link">
+    function value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions-documentation" class="md-nav__link">
+    Public Static Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-getinstance" class="md-nav__link">
+    function getInstance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-recognizedgeneraloptions" class="md-nav__link">
+    function recognizedGeneralOptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-recognizedshortcutnames" class="md-nav__link">
+    function recognizedShortcutNames
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/classConfigHandler.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="class-confighandler">Class ConfigHandler<a class="headerlink" href="#class-confighandler" title="Permanent link">#</a></h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="./"><strong>ConfigHandler</strong></a></p>
+<p>Inherits the following classes: QObject</p>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#variable-setshowdesktopnotification"><strong>setShowDesktopNotification</strong></a>  <br></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#variable-setshowstartuplaunchmessage"><strong>setShowStartupLaunchMessage</strong></a>  <br></td>
+</tr>
+<tr>
+<td align="right">bool bool</td>
+<td align="left"><a href="#variable-setuploadwithoutconfirmation"><strong>setUploadWithoutConfirmation</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-config_getter_setter-15"><strong>CONFIG_GETTER_SETTER</strong></a> (userColors, setUserColors, QVector&lt; QColor &gt;) <br></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-config_getter_setter-25"><strong>CONFIG_GETTER_SETTER</strong></a> (predefinedColorPaletteLarge, setPredefinedColorPaletteLarge, bool) <br></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-config_getter_setter-35"><strong>CONFIG_GETTER_SETTER</strong></a> (allowMultipleGuiInstances, setAllowMultipleGuiInstances, bool) <br></td>
+</tr>
+<tr>
+<td align="right">bool bool</td>
+<td align="left"><a href="#function-config_getter_setter-45"><strong>CONFIG_GETTER_SETTER</strong></a> (historyConfirmationToDelete, setHistoryConfirmationToDelete, bool) <br></td>
+</tr>
+<tr>
+<td align="right">bool bool bool</td>
+<td align="left"><a href="#function-config_getter_setter-55"><strong>CONFIG_GETTER_SETTER</strong></a> (ignoreUpdateToVersion, setIgnoreUpdateToVersion, QString) <br></td>
+</tr>
+<tr>
+<td align="right"></td>
+<td align="left"><a href="#function-confighandler"><strong>ConfigHandler</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-checkandhandleerror"><strong>checkAndHandleError</strong></a> () const<br><em>Parse the configuration to find any errors in it.</em></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-checkforerrors"><strong>checkForErrors</strong></a> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a> * log=nullptr) const<br></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-checksemantics"><strong>checkSemantics</strong></a> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a> * log=nullptr, QList&lt; QString &gt; * offenders=nullptr) const<br><em>Check each config value semantically.</em></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-checkshortcutconflicts"><strong>checkShortcutConflicts</strong></a> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a> * log=nullptr) const<br><em>Check if there are multiple actions with the same shortcut.</em></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-checkunrecognizedsettings"><strong>checkUnrecognizedSettings</strong></a> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a> * log=nullptr, QList&lt; QString &gt; * offenders=nullptr) const<br><em>Parse the config to find settings with unrecognized names.</em></td>
+</tr>
+<tr>
+<td align="right">QString</td>
+<td align="left"><a href="#function-configfilepath"><strong>configFilePath</strong></a> () const<br></td>
+</tr>
+<tr>
+<td align="right">QString</td>
+<td align="left"><a href="#function-errormessage"><strong>errorMessage</strong></a> () const<br><em>Error message that can be used by other classes as well.</em></td>
+</tr>
+<tr>
+<td align="right">QString</td>
+<td align="left"><a href="#function-filenamepatterndefault"><strong>filenamePatternDefault</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-haserror"><strong>hasError</strong></a> () const<br><em>Return if the config contains an error.</em></td>
+</tr>
+<tr>
+<td align="right">QSet&lt; QString &gt;</td>
+<td align="left"><a href="#function-keysfromgroup"><strong>keysFromGroup</strong></a> (const QString &amp; group) const<br><em>Return keys from group</em> <code>group</code> <em>. Use CONFIG_GROUP_GENERAL (General) for general settings.</em></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-remove"><strong>remove</strong></a> (const QString &amp; key) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-resetvalue"><strong>resetValue</strong></a> (const QString &amp; key) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setallthebuttons"><strong>setAllTheButtons</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setdefaultsettings"><strong>setDefaultSettings</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-seterrorstate"><strong>setErrorState</strong></a> (bool error) const<br><em>Update the tracked error state of the config.</em></td>
+</tr>
+<tr>
+<td align="right">bool</td>
+<td align="left"><a href="#function-setshortcut"><strong>setShortcut</strong></a> (const QString &amp; actionName, const QString &amp; shortcut) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setstartuplaunch"><strong>setStartupLaunch</strong></a> (const bool start) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-settoolsize"><strong>setToolSize</strong></a> (CaptureTool::Type toolType, int size) <br></td>
+</tr>
+<tr>
+<td align="right">void</td>
+<td align="left"><a href="#function-setvalue"><strong>setValue</strong></a> (const QString &amp; key, const QVariant &amp; value) <br></td>
+</tr>
+<tr>
+<td align="right">QString</td>
+<td align="left"><a href="#function-shortcut"><strong>shortcut</strong></a> (const QString &amp; actionName) <br></td>
+</tr>
+<tr>
+<td align="right">int</td>
+<td align="left"><a href="#function-toolsize"><strong>toolSize</strong></a> (CaptureTool::Type toolType) <br></td>
+</tr>
+<tr>
+<td align="right">QVariant</td>
+<td align="left"><a href="#function-value"><strong>value</strong></a> (const QString &amp; key) const<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-functions">Public Static Functions<a class="headerlink" href="#public-static-functions" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><a href="./"><strong>ConfigHandler</strong></a> *</td>
+<td align="left"><a href="#function-getinstance"><strong>getInstance</strong></a> () <br><em>Serves as an object to which slots can be connected.</em></td>
+</tr>
+<tr>
+<td align="right">QSet&lt; QString &gt; &amp;</td>
+<td align="left"><a href="#function-recognizedgeneraloptions"><strong>recognizedGeneralOptions</strong></a> () <br></td>
+</tr>
+<tr>
+<td align="right">QSet&lt; QString &gt; &amp;</td>
+<td align="left"><a href="#function-recognizedshortcutnames"><strong>recognizedShortcutNames</strong></a> () <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">#</a></h2>
+<h3 id="variable-setshowdesktopnotification">variable setShowDesktopNotification<a class="headerlink" href="#variable-setshowdesktopnotification" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">ConfigHandler::setShowDesktopNotification;
+</code></pre>
+<h3 id="variable-setshowstartuplaunchmessage">variable setShowStartupLaunchMessage<a class="headerlink" href="#variable-setshowstartuplaunchmessage" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool ConfigHandler::setShowStartupLaunchMessage;
+</code></pre>
+<h3 id="variable-setuploadwithoutconfirmation">variable setUploadWithoutConfirmation<a class="headerlink" href="#variable-setuploadwithoutconfirmation" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool bool ConfigHandler::setUploadWithoutConfirmation;
+</code></pre>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">#</a></h2>
+<h3 id="function-config_getter_setter-15">function CONFIG_GETTER_SETTER [1/5]<a class="headerlink" href="#function-config_getter_setter-15" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">ConfigHandler::CONFIG_GETTER_SETTER (
+    userColors,
+    setUserColors,
+    QVector&lt; QColor &gt;
+) 
+</code></pre>
+<h3 id="function-config_getter_setter-25">function CONFIG_GETTER_SETTER [2/5]<a class="headerlink" href="#function-config_getter_setter-25" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">ConfigHandler::CONFIG_GETTER_SETTER (
+    predefinedColorPaletteLarge,
+    setPredefinedColorPaletteLarge,
+    bool
+) 
+</code></pre>
+<h3 id="function-config_getter_setter-35">function CONFIG_GETTER_SETTER [3/5]<a class="headerlink" href="#function-config_getter_setter-35" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool ConfigHandler::CONFIG_GETTER_SETTER (
+    allowMultipleGuiInstances,
+    setAllowMultipleGuiInstances,
+    bool
+) 
+</code></pre>
+<h3 id="function-config_getter_setter-45">function CONFIG_GETTER_SETTER [4/5]<a class="headerlink" href="#function-config_getter_setter-45" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool bool ConfigHandler::CONFIG_GETTER_SETTER (
+    historyConfirmationToDelete,
+    setHistoryConfirmationToDelete,
+    bool
+) 
+</code></pre>
+<h3 id="function-config_getter_setter-55">function CONFIG_GETTER_SETTER [5/5]<a class="headerlink" href="#function-config_getter_setter-55" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool bool bool ConfigHandler::CONFIG_GETTER_SETTER (
+    ignoreUpdateToVersion,
+    setIgnoreUpdateToVersion,
+    QString
+) 
+</code></pre>
+<h3 id="function-confighandler">function ConfigHandler<a class="headerlink" href="#function-confighandler" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">explicit ConfigHandler::ConfigHandler () 
+</code></pre>
+<h3 id="function-checkandhandleerror">function checkAndHandleError<a class="headerlink" href="#function-checkandhandleerror" title="Permanent link">#</a></h3>
+<p><em>Parse the configuration to find any errors in it.</em> </p>
+<pre><code class="language-C++">void ConfigHandler::checkAndHandleError () const
+</code></pre>
+<p>If the error state changes as a result of the check, it will perform the appropriate action, e.g. notify the user.</p>
+<p><strong>See also:</strong> <a href="./#function-seterrorstate"><strong>ConfigHandler::setErrorState</strong></a> for all the actions. </p>
+<h3 id="function-checkforerrors">function checkForErrors<a class="headerlink" href="#function-checkforerrors" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool ConfigHandler::checkForErrors (
+    AbstractLogger * log=nullptr
+) const
+</code></pre>
+<h3 id="function-checksemantics">function checkSemantics<a class="headerlink" href="#function-checksemantics" title="Permanent link">#</a></h3>
+<p><em>Check each config value semantically.</em> </p>
+<pre><code class="language-C++">bool ConfigHandler::checkSemantics (
+    AbstractLogger * log=nullptr,
+    QList&lt; QString &gt; * offenders=nullptr
+) const
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>log</code> Destination for error log output. </li>
+<li><code>offenders</code> Destination for the semantically invalid keys. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Whether the config passes this check. </p>
+<h3 id="function-checkshortcutconflicts">function checkShortcutConflicts<a class="headerlink" href="#function-checkshortcutconflicts" title="Permanent link">#</a></h3>
+<p><em>Check if there are multiple actions with the same shortcut.</em> </p>
+<pre><code class="language-C++">bool ConfigHandler::checkShortcutConflicts (
+    AbstractLogger * log=nullptr
+) const
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>Whether the config passes this check.</p>
+<p><strong>Note:</strong></p>
+<p>It is not considered a conflict if action A uses shortcut S because it is the flameshot default (not because the user explicitly configured it), and action B uses the same shortcut. </p>
+<h3 id="function-checkunrecognizedsettings">function checkUnrecognizedSettings<a class="headerlink" href="#function-checkunrecognizedsettings" title="Permanent link">#</a></h3>
+<p><em>Parse the config to find settings with unrecognized names.</em> </p>
+<pre><code class="language-C++">bool ConfigHandler::checkUnrecognizedSettings (
+    AbstractLogger * log=nullptr,
+    QList&lt; QString &gt; * offenders=nullptr
+) const
+</code></pre>
+<p><strong>Returns:</strong></p>
+<p>Whether the config passes this check.</p>
+<p><strong>Note:</strong></p>
+<p>An unrecognized option is one that is not included in <code>recognizedGeneralOptions</code> or <code>recognizedShortcutNames</code> depending on the group the option belongs to. </p>
+<h3 id="function-configfilepath">function configFilePath<a class="headerlink" href="#function-configfilepath" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QString ConfigHandler::configFilePath () const
+</code></pre>
+<h3 id="function-errormessage">function errorMessage<a class="headerlink" href="#function-errormessage" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QString ConfigHandler::errorMessage () const
+</code></pre>
+<h3 id="function-filenamepatterndefault">function filenamePatternDefault<a class="headerlink" href="#function-filenamepatterndefault" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QString ConfigHandler::filenamePatternDefault () 
+</code></pre>
+<h3 id="function-haserror">function hasError<a class="headerlink" href="#function-haserror" title="Permanent link">#</a></h3>
+<p><em>Return if the config contains an error.</em> </p>
+<pre><code class="language-C++">bool ConfigHandler::hasError () const
+</code></pre>
+<p>If an error check is due, it will be performed. </p>
+<h3 id="function-keysfromgroup">function keysFromGroup<a class="headerlink" href="#function-keysfromgroup" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QSet&lt; QString &gt; ConfigHandler::keysFromGroup (
+    const QString &amp; group
+) const
+</code></pre>
+<h3 id="function-remove">function remove<a class="headerlink" href="#function-remove" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::remove (
+    const QString &amp; key
+) 
+</code></pre>
+<h3 id="function-resetvalue">function resetValue<a class="headerlink" href="#function-resetvalue" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::resetValue (
+    const QString &amp; key
+) 
+</code></pre>
+<h3 id="function-setallthebuttons">function setAllTheButtons<a class="headerlink" href="#function-setallthebuttons" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::setAllTheButtons () 
+</code></pre>
+<h3 id="function-setdefaultsettings">function setDefaultSettings<a class="headerlink" href="#function-setdefaultsettings" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::setDefaultSettings () 
+</code></pre>
+<h3 id="function-seterrorstate">function setErrorState<a class="headerlink" href="#function-seterrorstate" title="Permanent link">#</a></h3>
+<p><em>Update the tracked error state of the config.</em> </p>
+<pre><code class="language-C++">void ConfigHandler::setErrorState (
+    bool error
+) const
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>error</code> The new error state.</li>
+</ul>
+<p>The error state is tracked so that signals are not emitted and the user is not spammed every time the config file changes. Instead, only changes in error state get reported. </p>
+<h3 id="function-setshortcut">function setShortcut<a class="headerlink" href="#function-setshortcut" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">bool ConfigHandler::setShortcut (
+    const QString &amp; actionName,
+    const QString &amp; shortcut
+) 
+</code></pre>
+<h3 id="function-setstartuplaunch">function setStartupLaunch<a class="headerlink" href="#function-setstartuplaunch" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::setStartupLaunch (
+    const bool start
+) 
+</code></pre>
+<h3 id="function-settoolsize">function setToolSize<a class="headerlink" href="#function-settoolsize" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::setToolSize (
+    CaptureTool::Type toolType,
+    int size
+) 
+</code></pre>
+<h3 id="function-setvalue">function setValue<a class="headerlink" href="#function-setvalue" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">void ConfigHandler::setValue (
+    const QString &amp; key,
+    const QVariant &amp; value
+) 
+</code></pre>
+<h3 id="function-shortcut">function shortcut<a class="headerlink" href="#function-shortcut" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QString ConfigHandler::shortcut (
+    const QString &amp; actionName
+) 
+</code></pre>
+<h3 id="function-toolsize">function toolSize<a class="headerlink" href="#function-toolsize" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">int ConfigHandler::toolSize (
+    CaptureTool::Type toolType
+) 
+</code></pre>
+<h3 id="function-value">function value<a class="headerlink" href="#function-value" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">QVariant ConfigHandler::value (
+    const QString &amp; key
+) const
+</code></pre>
+<h2 id="public-static-functions-documentation">Public Static Functions Documentation<a class="headerlink" href="#public-static-functions-documentation" title="Permanent link">#</a></h2>
+<h3 id="function-getinstance">function getInstance<a class="headerlink" href="#function-getinstance" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">static ConfigHandler * ConfigHandler::getInstance () 
+</code></pre>
+<h3 id="function-recognizedgeneraloptions">function recognizedGeneralOptions<a class="headerlink" href="#function-recognizedgeneraloptions" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">static QSet&lt; QString &gt; &amp; ConfigHandler::recognizedGeneralOptions () 
+</code></pre>
+<h3 id="function-recognizedshortcutnames">function recognizedShortcutNames<a class="headerlink" href="#function-recognizedshortcutnames" title="Permanent link">#</a></h3>
+<pre><code class="language-C++">static QSet&lt; QString &gt; &amp; ConfigHandler::recognizedShortcutNames () 
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

@@ -1,0 +1,1610 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/class_members/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Class Members - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-members" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class Members
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    a
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    b
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d" class="md-nav__link">
+    d
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e" class="md-nav__link">
+    e
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    f
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g" class="md-nav__link">
+    g
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h" class="md-nav__link">
+    h
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    i
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    k
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l" class="md-nav__link">
+    l
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    m
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#n" class="md-nav__link">
+    n
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    o
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    p
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    q
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    r
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    s
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u" class="md-nav__link">
+    u
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    v
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#w" class="md-nav__link">
+    w
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x" class="md-nav__link">
+    x
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ~
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_" class="md-nav__link">
+    _
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/class_members.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="class-members">Class Members<a class="headerlink" href="#class-members" title="Permanent link">#</a></h1>
+<h2 id="a">a<a class="headerlink" href="#a" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AbstractActionTool</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>)</li>
+<li><strong>AbstractLogger</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>addOutputString</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>attachNotificationPath</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>AbstractPathTool</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>)</li>
+<li><strong>addPoint</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>)</li>
+<li><strong>AbstractTwoPointTool</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>adjustedVector</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>AcceptTool</strong> (<a href="../classAcceptTool/"><strong>AcceptTool</strong></a>)</li>
+<li><strong>AppLauncher</strong> (<a href="../classAppLauncher/"><strong>AppLauncher</strong></a>)</li>
+<li><strong>AppLauncherWidget</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>addAppsToListWidget</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>ArrowTool</strong> (<a href="../classArrowTool/"><strong>ArrowTool</strong></a>)</li>
+<li><strong>adjustHorizontalCenter</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>addPinTask</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>addSaveTask</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>addTask</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>animatedShow</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>, <a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>)</li>
+<li><strong>append</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>at</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>activeButtonTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>activeButtonToolType</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>activeToolObject</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>addPreset</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>AddArgument</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>AddOption</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>AddOptions</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>addHelpOption</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>addVersionOption</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>argument</strong> (<a href="../structCommandLineParser_1_1Node/"><strong>CommandLineParser::Node</strong></a>)</li>
+<li><strong>addChecker</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>assertKeyRecognized</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>autoNumerateDuplicate</strong> (<a href="../classFileNameHandler/"><strong>FileNameHandler</strong></a>)</li>
+<li><strong>attachPin</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>attachScreenshotToClipboard</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>attachTextToClipboard</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>animatedHide</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>)</li>
+<li><strong>appendShortcut</strong> (<a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>arg</strong> (<a href="../structTerminalApp/"><strong>TerminalApp</strong></a>)</li>
+<li><strong>adjustSize</strong> (<a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>appUpdates</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>addLine</strong> (<a href="../classUploadHistory/"><strong>UploadHistory</strong></a>)</li>
+<li><strong>activeLayerIndex</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="b">b<a class="headerlink" href="#b" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>boundingRect</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>, <a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>Bool</strong> (<a href="../classBool/"><strong>Bool</strong></a>)</li>
+<li><strong>BoundedInt</strong> (<a href="../classBoundedInt/"><strong>BoundedInt</strong></a>)</li>
+<li><strong>ButtonHandler</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>buttonsAreInside</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>ButtonListView</strong> (<a href="../classButtonListView/"><strong>ButtonListView</strong></a>)</li>
+<li><strong>baseName</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>buttonBox</strong> (<a href="../classImgUploadDialog/"><strong>ImgUploadDialog</strong></a>)</li>
+</ul>
+<h2 id="c">c<a class="headerlink" href="#c" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Channel</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>closeOnButtonPressed</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classAcceptTool/"><strong>AcceptTool</strong></a>, <a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classCopyTool/"><strong>CopyTool</strong></a>, <a href="../classExitTool/"><strong>ExitTool</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classRedoTool/"><strong>RedoTool</strong></a>, <a href="../classSaveTool/"><strong>SaveTool</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>, <a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>copyParams</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>color</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../structCaptureContext/"><strong>CaptureContext</strong></a>, <a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>copy</strong> (<a href="../classAcceptTool/"><strong>AcceptTool</strong></a>, <a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classCircleTool/"><strong>CircleTool</strong></a>, <a href="../classCopyTool/"><strong>CopyTool</strong></a>, <a href="../classExitTool/"><strong>ExitTool</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classLineTool/"><strong>LineTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classRectangleTool/"><strong>RectangleTool</strong></a>, <a href="../classRedoTool/"><strong>RedoTool</strong></a>, <a href="../classSaveTool/"><strong>SaveTool</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>, <a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>capture</strong> (<a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>)</li>
+<li><strong>configureListView</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>check</strong> (<a href="../classBool/"><strong>Bool</strong></a>, <a href="../classBoundedInt/"><strong>BoundedInt</strong></a>, <a href="../classButtonList/"><strong>ButtonList</strong></a>, <a href="../classColor/"><strong>Color</strong></a>, <a href="../classExistingDir/"><strong>ExistingDir</strong></a>, <a href="../classFilenamePattern/"><strong>FilenamePattern</strong></a>, <a href="../classKeySequence/"><strong>KeySequence</strong></a>, <a href="../classLowerBoundedInt/"><strong>LowerBoundedInt</strong></a>, <a href="../classRegion/"><strong>Region</strong></a>, <a href="../classSaveFileExtension/"><strong>SaveFileExtension</strong></a>, <a href="../classString/"><strong>String</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>, <a href="../classValueHandler/"><strong>ValueHandler</strong></a>)</li>
+<li><strong>calculateShift</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>contains</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>CaptureButton</strong> (<a href="../classCaptureButton/"><strong>CaptureButton</strong></a>)</li>
+<li><strong>circleCount</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>CaptureLauncher</strong> (<a href="../classCaptureLauncher/"><strong>CaptureLauncher</strong></a>)</li>
+<li><strong>connectCaptureSlots</strong> (<a href="../classCaptureLauncher/"><strong>CaptureLauncher</strong></a>)</li>
+<li><strong>CaptureMode</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>CaptureRequest</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>captureMode</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>CaptureToolButton</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>CaptureToolObjects</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>captureToolObjects</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>clear</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>CaptureWidget</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>changeEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>CircleCountTool</strong> (<a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>)</li>
+<li><strong>CircleTool</strong> (<a href="../classCircleTool/"><strong>CircleTool</strong></a>)</li>
+<li><strong>ClickableLabel</strong> (<a href="../classClickableLabel/"><strong>ClickableLabel</strong></a>)</li>
+<li><strong>Color</strong> (<a href="../classColor/"><strong>Color</strong></a>)</li>
+<li><strong>ColorGrabWidget</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>cursorPos</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>ColorPicker</strong> (<a href="../classColorPicker/"><strong>ColorPicker</strong></a>)</li>
+<li><strong>ColorPickerEditMode</strong> (<a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>)</li>
+<li><strong>ColorPickerEditor</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>ColorPickerWidget</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>CommandArgument</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>)</li>
+<li><strong>CommandLineParser</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>CommandOption</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>checkValue</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>ConfigErrorDetails</strong> (<a href="../classConfigErrorDetails/"><strong>ConfigErrorDetails</strong></a>)</li>
+<li><strong>CONFIG_GETTER_SETTER</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>ConfigHandler</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>checkAndHandleError</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>checkForErrors</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>checkSemantics</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>checkShortcutConflicts</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>checkUnrecognizedSettings</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>cleanUnusedKeys</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>configFilePath</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>ConfigResolver</strong> (<a href="../classConfigResolver/"><strong>ConfigResolver</strong></a>)</li>
+<li><strong>ConfigWindow</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>CopyTool</strong> (<a href="../classCopyTool/"><strong>CopyTool</strong></a>)</li>
+<li><strong>categories</strong> (<a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>)</li>
+<li><strong>call</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>checkDBusConnection</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>copyToClipboard</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>createMethodCall</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>createPin</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>chooseFolder</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>compileFromKeyMap</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>closePin</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>currentScreen</strong> (<a href="../classQGuiAppCurrentScreen/"><strong>QGuiAppCurrentScreen</strong></a>)</li>
+<li><strong>closeEditor</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>configurationWidget</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>CreateTool</strong> (<a href="../classToolFactory/"><strong>ToolFactory</strong></a>)</li>
+<li><strong>clearToolWidget</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="d">d<a class="headerlink" href="#d" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>description</strong> (<a href="../classAcceptTool/"><strong>AcceptTool</strong></a>, <a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classCircleTool/"><strong>CircleTool</strong></a>, <a href="../classCommandArgument/"><strong>CommandArgument</strong></a>, <a href="../classCommandOption/"><strong>CommandOption</strong></a>, <a href="../classCopyTool/"><strong>CopyTool</strong></a>, <a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>, <a href="../classExitTool/"><strong>ExitTool</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classLineTool/"><strong>LineTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classRectangleTool/"><strong>RectangleTool</strong></a>, <a href="../classRedoTool/"><strong>RedoTool</strong></a>, <a href="../classSaveTool/"><strong>SaveTool</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>, <a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>disconnectCaptureSlots</strong> (<a href="../classCaptureLauncher/"><strong>CaptureLauncher</strong></a>)</li>
+<li><strong>data</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>delay</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>drawErrorMessage</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>drawInactiveRegion</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>drawObjectSelection</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>drawToolsData</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>deletePreset</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>defaultLargeColorPalette</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>defaultSmallColorPalette</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>dashedNames</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>DesktopAppData</strong> (<a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>)</li>
+<li><strong>DesktopFileParser</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>DESKTOP_SESSION</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>DesktopInfo</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>DraggableWidgetMaker</strong> (<a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>)</li>
+<li><strong>deleteImage</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>, <a href="../classImgurUploader/"><strong>ImgurUploader</strong></a>)</li>
+<li><strong>drawSearchArea</strong> (<a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>)</li>
+<li><strong>drawMagnifier</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>drawMagnifierCircle</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>decreaseOpacity</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>desktopGeometry</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+</ul>
+<h2 id="e">e<a class="headerlink" href="#e" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>enableMessageHeader</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>error</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>expected</strong> (<a href="../classBool/"><strong>Bool</strong></a>, <a href="../classBoundedInt/"><strong>BoundedInt</strong></a>, <a href="../classButtonList/"><strong>ButtonList</strong></a>, <a href="../classColor/"><strong>Color</strong></a>, <a href="../classExistingDir/"><strong>ExistingDir</strong></a>, <a href="../classFilenamePattern/"><strong>FilenamePattern</strong></a>, <a href="../classKeySequence/"><strong>KeySequence</strong></a>, <a href="../classLowerBoundedInt/"><strong>LowerBoundedInt</strong></a>, <a href="../classSaveFileExtension/"><strong>SaveFileExtension</strong></a>, <a href="../classString/"><strong>String</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>, <a href="../classValueHandler/"><strong>ValueHandler</strong></a>)</li>
+<li><strong>ensureSelectionMinimunSize</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>expandSelection</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>ExportTask</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>extendedRect</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>extendedSelection</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>eventFilter</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>, <a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>, <a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>, <a href="../classHoverEventFilter/"><strong>HoverEventFilter</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>, <a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>errorMsg</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>ensureFileWatched</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>errorMessage</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>exec</strong> (<a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>)</li>
+<li><strong>ExitTool</strong> (<a href="../classExitTool/"><strong>ExitTool</strong></a>)</li>
+<li><strong>ExtendedSlider</strong> (<a href="../classExtendedSlider/"><strong>ExtendedSlider</strong></a>)</li>
+<li><strong>enableTrayIcon</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>enterEvent</strong> (<a href="../classNotifierBox/"><strong>NotifierBox</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>event</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>enableCheckUpdatesAction</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+</ul>
+<h2 id="f">f<a class="headerlink" href="#f" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>fallback</strong> (<a href="../classBool/"><strong>Bool</strong></a>, <a href="../classBoundedInt/"><strong>BoundedInt</strong></a>, <a href="../classButtonList/"><strong>ButtonList</strong></a>, <a href="../classColor/"><strong>Color</strong></a>, <a href="../classExistingDir/"><strong>ExistingDir</strong></a>, <a href="../classFilenamePattern/"><strong>FilenamePattern</strong></a>, <a href="../classKeySequence/"><strong>KeySequence</strong></a>, <a href="../classLowerBoundedInt/"><strong>LowerBoundedInt</strong></a>, <a href="../classString/"><strong>String</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>, <a href="../classValueHandler/"><strong>ValueHandler</strong></a>)</li>
+<li><strong>fromIntList</strong> (<a href="../classButtonList/"><strong>ButtonList</strong></a>)</li>
+<li><strong>fullscreen</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>find</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>findWithRadius</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>finalize</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>findParent</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>filenamePatternDefault</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>FileNameEditor</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>FileNameHandler</strong> (<a href="../classFileNameHandler/"><strong>FileNameHandler</strong></a>)</li>
+<li><strong>Flameshot</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>FlameshotDBusAdapter</strong> (<a href="../classFlameshotDBusAdapter/"><strong>FlameshotDBusAdapter</strong></a>)</li>
+<li><strong>FlameshotDaemon</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>file</strong> (<a href="../structHistoryFileName/"><strong>HistoryFileName</strong></a>)</li>
+<li><strong>freeDesktopPortal</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+<li><strong>fullGeometry</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>finalizeGrab</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>fillCaptureTools</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="g">g<a class="headerlink" href="#g" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>globalStyleSheet</strong> (<a href="../classCaptureButton/"><strong>CaptureButton</strong></a>)</li>
+<li><strong>getIterableButtonTypes</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>getPriorityByButton</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>getColorAtPoint</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>getDefaultLargeColorPalette</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>getDefaultSmallColorPalette</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>getInstance</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>getAppsByCategory</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>, <a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+<li><strong>GDMSESSION</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>GNOME_DESKTOP_SESSION_ID</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>GeneralConf</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>GlobalShortcutFilter</strong> (<a href="../classGlobalShortcutFilter/"><strong>GlobalShortcutFilter</strong></a>)</li>
+<li><strong>getNativeModifier</strong> (<a href="../classGlobalShortcutFilter/"><strong>GlobalShortcutFilter</strong></a>)</li>
+<li><strong>gestureEvent</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>grabEntireDesktop</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+<li><strong>grabScreen</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+<li><strong>geometry</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>getMouseSide</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>getPreferedTerminal</strong> (<a href="../classTerminalLauncher/"><strong>TerminalLauncher</strong></a>)</li>
+<li><strong>getAllUsersStartMenuPath</strong> (<a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+<li><strong>getImageFileExtAssociates</strong> (<a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+</ul>
+<h2 id="h">h<a class="headerlink" href="#h" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>hideSectionUnderMouse</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>horizontalPoints</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>hideEvent</strong> (<a href="../classColorPicker/"><strong>ColorPicker</strong></a>, <a href="../classNotifierBox/"><strong>NotifierBox</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>, <a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>hasError</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>haveExternalWidget</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>History</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>history</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>HoverEventFilter</strong> (<a href="../classHoverEventFilter/"><strong>HoverEventFilter</strong></a>)</li>
+<li><strong>handlerAreas</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>hide</strong> (<a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="i">i<a class="headerlink" href="#i" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>isSelectable</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>, <a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>isValid</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>, <a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>info</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>icon</strong> (<a href="../classAcceptTool/"><strong>AcceptTool</strong></a>, <a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classCircleTool/"><strong>CircleTool</strong></a>, <a href="../classCopyTool/"><strong>CopyTool</strong></a>, <a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>, <a href="../classExitTool/"><strong>ExitTool</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classLineTool/"><strong>LineTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classRectangleTool/"><strong>RectangleTool</strong></a>, <a href="../classRedoTool/"><strong>RedoTool</strong></a>, <a href="../classSaveTool/"><strong>SaveTool</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>, <a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>initAppMap</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>initListWidget</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>init</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>, <a href="../classCaptureButton/"><strong>CaptureButton</strong></a>, <a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>, <a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>intersectWithAreas</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>isVisible</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>initButtonList</strong> (<a href="../classButtonListView/"><strong>ButtonListView</strong></a>)</li>
+<li><strong>id</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>initialSelection</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>initButton</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>iterableButtonTypes</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>insert</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>initButtons</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>initContext</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>initHelpMessage</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>initPanel</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>initSelection</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>initShortcuts</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>initColorPicker</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>isRoot</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>)</li>
+<li><strong>isSet</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>isShortcut</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>initErrorIndicator</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>initLayout</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>initWidgets</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>, <a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>instance</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>, <a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>, <a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>initTrayIcon</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>, <a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>isThisInstanceHostingWidgets</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>initAllowMultipleGuiInstances</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initAntialiasingPinZoom</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initAutoCloseIdleDaemon</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initAutostart</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initCheckForUpdates</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initConfigButtons</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initCopyAndCloseAfterUpload</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initCopyOnDoubleClick</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initCopyPathAfterSave</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initHistoryConfirmationToDelete</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initPredefinedColorPaletteLarge</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initSaveAfterCopy</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initSaveLastRegion</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initScrollArea</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowDesktopNotification</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowHelp</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowMagnifier</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowSelectionGeometry</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowSidePanelButton</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowStartupLaunchMessage</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initShowTrayIcon</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initSquareMagnifier</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initUndoLimit</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initUploadClientSecret</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initUploadHistoryMax</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initUploadWithoutConfirmation</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>initUseJpgForClipboard</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>ImageLabel</strong> (<a href="../classImageLabel/"><strong>ImageLabel</strong></a>)</li>
+<li><strong>ImgUploadDialog</strong> (<a href="../classImgUploadDialog/"><strong>ImgUploadDialog</strong></a>)</li>
+<li><strong>ImgUploaderBase</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>imageURL</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>ImgUploaderManager</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>ImgUploaderTool</strong> (<a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>)</li>
+<li><strong>ImgurUploader</strong> (<a href="../classImgurUploader/"><strong>ImgurUploader</strong></a>)</li>
+<li><strong>InfoWindow</strong> (<a href="../classInfoWindow/"><strong>InfoWindow</strong></a>)</li>
+<li><strong>InvertTool</strong> (<a href="../classInvertTool/"><strong>InvertTool</strong></a>)</li>
+<li><strong>increaseOpacity</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>initInfoTable</strong> (<a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>isChanged</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>initMenu</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>initColorWheel</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>initInternalPanel</strong> (<a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>initOpacitySlider</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+</ul>
+<h2 id="k">k<a class="headerlink" href="#k" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>keyPressEvent</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>, <a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>, <a href="../classInfoWindow/"><strong>InfoWindow</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>, <a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>)</li>
+<li><strong>keyReleaseEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>)</li>
+<li><strong>keysFromGroup</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>KDE_FULL_SESSION</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>KeySequence</strong> (<a href="../classKeySequence/"><strong>KeySequence</strong></a>)</li>
+</ul>
+<h2 id="l">l<a class="headerlink" href="#l" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>layout</strong> (<a href="../classConfigResolver/"><strong>ConfigResolver</strong></a>, <a href="../classImgUploadDialog/"><strong>ImgUploadDialog</strong></a>)</li>
+<li><strong>LauncherItemDelegate</strong> (<a href="../classLauncherItemDelegate/"><strong>LauncherItemDelegate</strong></a>)</li>
+<li><strong>LineTool</strong> (<a href="../classLineTool/"><strong>LineTool</strong></a>)</li>
+<li><strong>LoadSpinner</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>LowerBoundedInt</strong> (<a href="../classLowerBoundedInt/"><strong>LowerBoundedInt</strong></a>)</li>
+<li><strong>leaveEvent</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>loadShortcuts</strong> (<a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>launchDetached</strong> (<a href="../classTerminalLauncher/"><strong>TerminalLauncher</strong></a>)</li>
+<li><strong>loadHistory</strong> (<a href="../classUploadHistory/"><strong>UploadHistory</strong></a>)</li>
+</ul>
+<h2 id="m">m<a class="headerlink" href="#m" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>m_defaultChannel</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>m_enableMessageHeader</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>m_notificationPath</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>m_targets</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>m_textStreams</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>messageHeader</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>m_color</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>, <a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>, <a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>, <a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>, <a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_padding</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>m_pathArea</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>)</li>
+<li><strong>m_points</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>m_pos</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>)</li>
+<li><strong>m_thickness</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>mousePreviewRect</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>)</li>
+<li><strong>move</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_supportsDiagonalAdj</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>m_supportsOrthogonalAdj</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>m_appsMap</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_filterList</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_keepOpen</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_keepOpenCheckbox</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_layout</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>, <a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>, <a href="../classGeneralConf/"><strong>GeneralConf</strong></a>, <a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>, <a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>, <a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>, <a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>, <a href="../classTextConfig/"><strong>TextConfig</strong></a>, <a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>, <a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_lineEdit</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_parser</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_pixmap</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>, <a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>, <a href="../classImageLabel/"><strong>ImageLabel</strong></a>, <a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>, <a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_tabWidget</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>, <a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>, <a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_tempFile</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_terminalCheckbox</strong> (<a href="../classAppLauncherWidget/"><strong>AppLauncherWidget</strong></a>)</li>
+<li><strong>m_arrowPath</strong> (<a href="../classArrowTool/"><strong>ArrowTool</strong></a>)</li>
+<li><strong>m_def</strong> (<a href="../classBool/"><strong>Bool</strong></a>, <a href="../classBoundedInt/"><strong>BoundedInt</strong></a>, <a href="../classColor/"><strong>Color</strong></a>, <a href="../classLowerBoundedInt/"><strong>LowerBoundedInt</strong></a>, <a href="../classString/"><strong>String</strong></a>)</li>
+<li><strong>m_max</strong> (<a href="../classBoundedInt/"><strong>BoundedInt</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>)</li>
+<li><strong>m_min</strong> (<a href="../classBoundedInt/"><strong>BoundedInt</strong></a>, <a href="../classLowerBoundedInt/"><strong>LowerBoundedInt</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>)</li>
+<li><strong>m_allSidesBlocked</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_blockedBotton</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_blockedLeft</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_blockedRight</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_blockedTop</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_buttonBaseSize</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_buttonExtendedSize</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_buttonsAreInside</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_horizontalyBlocked</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_oneHorizontalBlocked</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_screenRegions</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_selection</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>, <a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_separator</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_vectorButtons</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>moveButtonsToPoints</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>m_buttonTypeByName</strong> (<a href="../classButtonListView/"><strong>ButtonListView</strong></a>)</li>
+<li><strong>m_listButtons</strong> (<a href="../classButtonListView/"><strong>ButtonListView</strong></a>)</li>
+<li><strong>m_mainColor</strong> (<a href="../classCaptureButton/"><strong>CaptureButton</strong></a>, <a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>mousePos</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>m_data</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_delay</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_initialSelection</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_mode</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_path</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_pinWindowGeometry</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_tasks</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>m_buttonType</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>m_emergeAnimation</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>m_tool</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>mousePressEvent</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>, <a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classClickableLabel/"><strong>ClickableLabel</strong></a>, <a href="../classImageLabel/"><strong>ImageLabel</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_captureToolObjects</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>, <a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classModificationCommand/"><strong>ModificationCommand</strong></a>)</li>
+<li><strong>m_imageCache</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>m_activeButton</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_activeTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_activeToolIsMoved</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_activeToolOffsetToMouseOnStart</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_adjustmentButtonPressed</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_buttonHandler</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_captureDone</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_captureToolObjectsBackup</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classModificationCommand/"><strong>ModificationCommand</strong></a>)</li>
+<li><strong>m_colorPicker</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_config</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>, <a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>, <a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>m_configError</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_configErrorResolved</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_context</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_contrastUiColor</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_eventFilter</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_existingObjectIsChanged</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_helpMessage</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_lastMouseWheel</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_magnifier</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_mouseIsClicked</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_mouseOverHandle</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_mousePressedPos</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_movingSelection</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_newSelection</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_notifierBox</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_opacity</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_panel</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_previewEnabled</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_sidePanel</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_sizeIndButton</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_startMove</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_startMovePos</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_toolSizeByKeyboard</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_toolWidget</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_tools</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_uiColor</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>, <a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_undoStack</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_updateNotificationWidget</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_xywhDisplay</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>m_xywhTimer</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>makeChild</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>mouseDoubleClickEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>mouseMoveEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classColorPicker/"><strong>ColorPicker</strong></a>, <a href="../classImageLabel/"><strong>ImageLabel</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>mouseReleaseEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classImageLabel/"><strong>ImageLabel</strong></a>)</li>
+<li><strong>moveEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_tempString</strong> (<a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_valid</strong> (<a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>)</li>
+<li><strong>m_extraZoomActive</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>m_magnifierActive</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>m_mousePressReceived</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>m_previewImage</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>m_draggedPresetInitialPos</strong> (<a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>)</li>
+<li><strong>m_isDragging</strong> (<a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>, <a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>)</li>
+<li><strong>m_isPressing</strong> (<a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>, <a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>)</li>
+<li><strong>m_mouseMovePos</strong> (<a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>, <a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>)</li>
+<li><strong>m_mousePressPos</strong> (<a href="../classColorPickerEditMode/"><strong>ColorPickerEditMode</strong></a>, <a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>)</li>
+<li><strong>m_addPresetButton</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_addPresetLabel</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_colorEdit</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_colorEditLabel</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_colorInput</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_colorList</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>, <a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>m_colorWheel</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>, <a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>, <a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_colorpicker</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_deletePresetButton</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_gLayout</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_selectedIndex</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>, <a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>m_updatePresetButton</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>m_colorAreaList</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>m_colorAreaSize</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>m_lastIndex</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>m_description</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>, <a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>, <a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>m_name</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>)</li>
+<li><strong>m_foundArgs</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>m_foundOptions</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>m_generalErrorMessage</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>m_parseTree</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>m_withHelp</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>m_withVersion</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>m_checker</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>m_errorMsg</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>m_names</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>m_value</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>m_valueName</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>m_configWatcher</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>m_errorCheckPending</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>m_hasError</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>m_settings</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>m_skipNextErrorCheck</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>m_filenameEditor</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_filenameEditorTab</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_generalConfig</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_generalConfigTab</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_shortcuts</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>, <a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>m_shortcutsTab</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_visuals</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_visualsTab</strong> (<a href="../classConfigWindow/"><strong>ConfigWindow</strong></a>)</li>
+<li><strong>m_appList</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>, <a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+<li><strong>m_defaultIcon</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>m_localeDescription</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>m_localeDescriptionShort</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>m_localeName</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>m_localeNameShort</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>makeDraggable</strong> (<a href="../classDraggableWidgetMaker/"><strong>DraggableWidgetMaker</strong></a>)</li>
+<li><strong>m_timer</strong> (<a href="../classExtendedSlider/"><strong>ExtendedSlider</strong></a>, <a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>, <a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>, <a href="../classNotifierBox/"><strong>NotifierBox</strong></a>)</li>
+<li><strong>mappedValue</strong> (<a href="../classExtendedSlider/"><strong>ExtendedSlider</strong></a>)</li>
+<li><strong>m_clearButton</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>m_helperButtons</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>m_nameEditor</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>m_nameHandler</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>m_outputLabel</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>m_resetButton</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>, <a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_saveButton</strong> (<a href="../classFileNameEditor/"><strong>FileNameEditor</strong></a>)</li>
+<li><strong>MAX_CHARACTERS</strong> (<a href="../classFileNameHandler/"><strong>FileNameHandler</strong></a>)</li>
+<li><strong>m_captureWindow</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>m_configWindow</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>m_haveExternalWidget</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>m_infoWindow</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>m_launcherWindow</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>m_origin</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>m_appLatestUrl</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>, <a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>)</li>
+<li><strong>m_appLatestVersion</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>, <a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>)</li>
+<li><strong>m_clipboardSignalBlocked</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_hostingClipboard</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_instance</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>, <a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>m_networkCheckUpdates</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_persist</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_showCheckAppUpdateStatus</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_trayIcon</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_widgets</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>m_allowMultipleGuiInstances</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_antialiasingPinZoom</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_autoCloseIdleDaemon</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_autostart</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_changeSaveButton</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_checkForUpdates</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_copyOnDoubleClick</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_copyPathAfterSave</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_copyURLAfterUpload</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_exportButton</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_historyConfirmationToDelete</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_importButton</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_predefinedColorPaletteLarge</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_saveAfterCopy</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_saveLastRegion</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_savePath</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_screenshotPathFixedCheck</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_scrollArea</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_scrollAreaLayout</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_selectGeometryLocation</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_setSaveAsFileExtension</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_showMagnifier</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_showSelectionGeometry</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_showStartupLaunchMessage</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_showTray</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_sidePanelButton</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_squareMagnifier</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_sysNotifications</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_undoLimit</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_uploadClientKey</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_uploadHistoryMax</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_uploadWithoutConfirmation</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>, <a href="../classImgUploadDialog/"><strong>ImgUploadDialog</strong></a>)</li>
+<li><strong>m_useJpgForClipboard</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_xywhTimeout</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+<li><strong>m_historyPath</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>m_packedFileName</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>m_thumbs</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>m_unpackedFileName</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>m_DSEffect</strong> (<a href="../classImageLabel/"><strong>ImageLabel</strong></a>)</li>
+<li><strong>m_dragStartPosition</strong> (<a href="../classImageLabel/"><strong>ImageLabel</strong></a>)</li>
+<li><strong>m_uploadLabel</strong> (<a href="../classImgUploadDialog/"><strong>ImgUploadDialog</strong></a>)</li>
+<li><strong>m_copyUrlButton</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_currentImageName</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_hLayout</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>, <a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_imageURL</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_infoLabel</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_notification</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>, <a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>)</li>
+<li><strong>m_openDeleteUrlButton</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_openUrlButton</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_saveToFilesystemButton</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_spinner</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_toClipboardButton</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>m_vLayout</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>, <a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_imgUploaderBase</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>m_imgUploaderPlugin</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>m_urlString</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>m_NetworkAM</strong> (<a href="../classImgurUploader/"><strong>ImgurUploader</strong></a>)</li>
+<li><strong>m_fallback</strong> (<a href="../classKeySequence/"><strong>KeySequence</strong></a>)</li>
+<li><strong>m_frame</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>m_growing</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>m_span</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>m_startAngle</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>MagnifierWidget</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_borderColor</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_devicePixelRatio</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_magOffset</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_magPixels</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_paddedScreenshot</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_pixels</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_screenshot</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>m_square</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>magZoom</strong> (<a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>)</li>
+<li><strong>MarkerTool</strong> (<a href="../classMarkerTool/"><strong>MarkerTool</strong></a>)</li>
+<li><strong>ModificationCommand</strong> (<a href="../classModificationCommand/"><strong>ModificationCommand</strong></a>)</li>
+<li><strong>m_captureWidget</strong> (<a href="../classModificationCommand/"><strong>ModificationCommand</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>MoveTool</strong> (<a href="../classMoveTool/"><strong>MoveTool</strong></a>)</li>
+<li><strong>m_content</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>)</li>
+<li><strong>m_hideAnimation</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>, <a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_label</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_showAnimation</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>, <a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_bgColor</strong> (<a href="../classNotifierBox/"><strong>NotifierBox</strong></a>)</li>
+<li><strong>m_foregroundColor</strong> (<a href="../classNotifierBox/"><strong>NotifierBox</strong></a>)</li>
+<li><strong>m_message</strong> (<a href="../classNotifierBox/"><strong>NotifierBox</strong></a>)</li>
+<li><strong>m_orientation</strong> (<a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>)</li>
+<li><strong>m_fillColor</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>m_messageStack</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>m_targetArea</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>m_textColor</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>m_geometry</strong> (<a href="../classPinTool/"><strong>PinTool</strong></a>)</li>
+<li><strong>m_baseColor</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_currentStepScaleFactor</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_dragStart</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_expanding</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_hoverColor</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_offsetX</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_offsetY</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_rotateFactor</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_scaleFactor</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_shadowEffect</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_sizeChanged</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>m_currentScreen</strong> (<a href="../classQGuiAppCurrentScreen/"><strong>QGuiAppCurrentScreen</strong></a>)</li>
+<li><strong>m_info</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+<li><strong>m_BArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_BHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_BLArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_BLHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_BRArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_BRHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_LArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_LHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_RArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_RHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_TArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_THandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_TLArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_TLHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_TRArea</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_TRHandle</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_activeSide</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_animation</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_areaOffset</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_dragStartPos</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_handleOffset</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_idleCentralCursor</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_ignoreMouse</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_mouseStartMove</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>m_ks</strong> (<a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>)</li>
+<li><strong>m_modifier</strong> (<a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>)</li>
+<li><strong>m_table</strong> (<a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>m_colorGrabButton</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_colorGrabber</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_colorHex</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_colorLabel</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_revertColor</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_toolSize</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_toolSizeSlider</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_toolSizeSpin</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>m_buttonData</strong> (<a href="../classStrftimeChooserWidget/"><strong>StrftimeChooserWidget</strong></a>)</li>
+<li><strong>m_interface</strong> (<a href="../classSystemNotification/"><strong>SystemNotification</strong></a>)</li>
+<li><strong>m_centerAlignButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_fontsCB</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_italicButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_leftAlignButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_rightAlignButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_strikeOutButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_underlineButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_weightButton</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>m_alignment</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_confW</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_currentPos</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_font</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_size</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_text</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_textArea</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_textOld</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_widget</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>m_baseSize</strong> (<a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>m_minSize</strong> (<a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>m_appUpdates</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>m_menu</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>m_buttonContrast</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_buttonIconType</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_buttonMainColor</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_contrastColor</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_labelContrast</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_labelMain</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_lastButtonPressed</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>m_internalPanel</strong> (<a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_bottomLayout</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_buttonDelete</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_buttonMoveDown</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_buttonMoveUp</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_captureTools</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_layersLayout</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_upLayout</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>m_buttonList</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_colorEditor</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_colorEditorTab</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_colorpickerEditor</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_colorpickerEditorTab</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_opacitySlider</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+<li><strong>m_GraphicAppsList</strong> (<a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+</ul>
+<h2 id="n">n<a class="headerlink" href="#n" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>name</strong> (<a href="../classAcceptTool/"><strong>AcceptTool</strong></a>, <a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classCircleTool/"><strong>CircleTool</strong></a>, <a href="../classCommandArgument/"><strong>CommandArgument</strong></a>, <a href="../classCopyTool/"><strong>CopyTool</strong></a>, <a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>, <a href="../classExitTool/"><strong>ExitTool</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classLineTool/"><strong>LineTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classRectangleTool/"><strong>RectangleTool</strong></a>, <a href="../classRedoTool/"><strong>RedoTool</strong></a>, <a href="../classSaveTool/"><strong>SaveTool</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>, <a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>, <a href="../structTerminalApp/"><strong>TerminalApp</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>normalizeButtons</strong> (<a href="../classButtonList/"><strong>ButtonList</strong></a>)</li>
+<li><strong>newShortcut</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>Node</strong> (<a href="../structCommandLineParser_1_1Node/"><strong>CommandLineParser::Node</strong></a>)</li>
+<li><strong>names</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>nativeEventFilter</strong> (<a href="../classGlobalShortcutFilter/"><strong>GlobalShortcutFilter</strong></a>)</li>
+<li><strong>nativeKeycode</strong> (<a href="../classGlobalShortcutFilter/"><strong>GlobalShortcutFilter</strong></a>)</li>
+<li><strong>notification</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>NotificationWidget</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>)</li>
+<li><strong>NotifierBox</strong> (<a href="../classNotifierBox/"><strong>NotifierBox</strong></a>)</li>
+</ul>
+<h2 id="o">o<a class="headerlink" href="#o" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>operator&lt;&lt;</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>origScreenshot</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>operator=</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>, <a href="../classToolFactory/"><strong>ToolFactory</strong></a>)</li>
+<li><strong>operator==</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>, <a href="../structCommandLineParser_1_1Node/"><strong>CommandLineParser::Node</strong></a>, <a href="../classCommandOption/"><strong>CommandOption</strong></a>, <a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>)</li>
+<li><strong>options</strong> (<a href="../structCommandLineParser_1_1Node/"><strong>CommandLineParser::Node</strong></a>)</li>
+<li><strong>operator()</strong> (<a href="../structCompareAppByName/"><strong>CompareAppByName</strong></a>)</li>
+<li><strong>Origin</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>origin</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>OrgFreedesktopPortalRequestInterface</strong> (<a href="../classOrgFreedesktopPortalRequestInterface/"><strong>OrgFreedesktopPortalRequestInterface</strong></a>)</li>
+<li><strong>OrientablePushButton</strong> (<a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>)</li>
+<li><strong>Orientation</strong> (<a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>)</li>
+<li><strong>orientation</strong> (<a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>)</li>
+<li><strong>OverlayMessage</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+</ul>
+<h2 id="p">p<a class="headerlink" href="#p" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>paintMousePreview</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>process</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classButtonList/"><strong>ButtonList</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classCircleTool/"><strong>CircleTool</strong></a>, <a href="../classColor/"><strong>Color</strong></a>, <a href="../classFilenamePattern/"><strong>FilenamePattern</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classKeySequence/"><strong>KeySequence</strong></a>, <a href="../classLineTool/"><strong>LineTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classRectangleTool/"><strong>RectangleTool</strong></a>, <a href="../classRegion/"><strong>Region</strong></a>, <a href="../classSaveFileExtension/"><strong>SaveFileExtension</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>, <a href="../classValueHandler/"><strong>ValueHandler</strong></a>)</li>
+<li><strong>pos</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>points</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>positionButtonsInside</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>path</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>, <a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>paddedUpdateRect</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>paintEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>, <a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>, <a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>, <a href="../classMagnifierWidget/"><strong>MagnifierWidget</strong></a>, <a href="../classNotifierBox/"><strong>NotifierBox</strong></a>, <a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>, <a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>, <a href="../classPinWidget/"><strong>PinWidget</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>pixmap</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>processPixmapWithTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>pushObjectsStateToUndoStack</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>pushToolToStack</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>parse</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>printHelp</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>printVersion</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>processArgs</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>processIfOptionIsHelp</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>processOptions</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>populate</strong> (<a href="../classConfigResolver/"><strong>ConfigResolver</strong></a>)</li>
+<li><strong>parseDesktopFile</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>)</li>
+<li><strong>processDirectory</strong> (<a href="../structDesktopFileParser/"><strong>DesktopFileParser</strong></a>, <a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+<li><strong>parseFilename</strong> (<a href="../classFileNameHandler/"><strong>FileNameHandler</strong></a>)</li>
+<li><strong>parsedPattern</strong> (<a href="../classFileNameHandler/"><strong>FileNameHandler</strong></a>)</li>
+<li><strong>properScreenshotPath</strong> (<a href="../classFileNameHandler/"><strong>FileNameHandler</strong></a>)</li>
+<li><strong>packFileName</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>paint</strong> (<a href="../classLauncherItemDelegate/"><strong>LauncherItemDelegate</strong></a>)</li>
+<li><strong>pop</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>push</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>pushKeyMap</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>PencilTool</strong> (<a href="../classPencilTool/"><strong>PencilTool</strong></a>)</li>
+<li><strong>PinTool</strong> (<a href="../classPinTool/"><strong>PinTool</strong></a>)</li>
+<li><strong>PinWidget</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>pinchTriggered</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>PixelateTool</strong> (<a href="../classPixelateTool/"><strong>PixelateTool</strong></a>)</li>
+<li><strong>parentMouseMoveEvent</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>parentMousePressEvent</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>parentMouseReleaseEvent</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>pushWidget</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>parseLnkFile</strong> (<a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+</ul>
+<h2 id="q">q<a class="headerlink" href="#q" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>quitIfIdle</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>QGuiAppCurrentScreen</strong> (<a href="../classQGuiAppCurrentScreen/"><strong>QGuiAppCurrentScreen</strong></a>)</li>
+</ul>
+<h2 id="r">r<a class="headerlink" href="#r" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>resetRegionTrack</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>representation</strong> (<a href="../classButtonList/"><strong>ButtonList</strong></a>, <a href="../classColor/"><strong>Color</strong></a>, <a href="../classKeySequence/"><strong>KeySequence</strong></a>, <a href="../classUserColors/"><strong>UserColors</strong></a>, <a href="../classValueHandler/"><strong>ValueHandler</strong></a>)</li>
+<li><strong>request</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>removeTask</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>removeAt</strong> (<a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>releaseActiveTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>removeToolObject</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>resizeEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classImageLabel/"><strong>ImageLabel</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>, <a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>restoreCircleCountState</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>repaint</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>recursiveParentSearch</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>rootArgument</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>recognizedGeneralOptions</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>recognizedShortcutNames</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>remove</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>resetValue</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>resetLayout</strong> (<a href="../classConfigResolver/"><strong>ConfigResolver</strong></a>)</li>
+<li><strong>resolveAnyConfigErrors</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>registerShortcut</strong> (<a href="../classGlobalShortcutFilter/"><strong>GlobalShortcutFilter</strong></a>)</li>
+<li><strong>redo</strong> (<a href="../classModificationCommand/"><strong>ModificationCommand</strong></a>)</li>
+<li><strong>rotateLeft</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>rotateRight</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>RectangleTool</strong> (<a href="../classRectangleTool/"><strong>RectangleTool</strong></a>)</li>
+<li><strong>RedoTool</strong> (<a href="../classRedoTool/"><strong>RedoTool</strong></a>)</li>
+<li><strong>rect</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+</ul>
+<h2 id="s">s<a class="headerlink" href="#s" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>showMousePreview</strong> (<a href="../classAbstractActionTool/"><strong>AbstractActionTool</strong></a>, <a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>sendMessage</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>, <a href="../classSystemNotification/"><strong>SystemNotification</strong></a>)</li>
+<li><strong>size</strong> (<a href="../classAbstractPathTool/"><strong>AbstractPathTool</strong></a>, <a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>, <a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>, <a href="../classCaptureToolObjects/"><strong>CaptureToolObjects</strong></a>)</li>
+<li><strong>setPadding</strong> (<a href="../classAbstractTwoPointTool/"><strong>AbstractTwoPointTool</strong></a>)</li>
+<li><strong>setButtons</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>setColor</strong> (<a href="../classCaptureButton/"><strong>CaptureButton</strong></a>, <a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>, <a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>styleSheet</strong> (<a href="../classCaptureButton/"><strong>CaptureButton</strong></a>)</li>
+<li><strong>savePath</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>screenshot</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>selectedScreenshotArea</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>selection</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>setInitialSelection</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>setStaticID</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>selectToolItemAtPos</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>setCaptureToolObjects</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>setToolSize</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>showAppUpdateNotification</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>showColorPicker</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>showxywh</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>startDrawObjectTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>setExtraZoomActive</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>setMagnifierActive</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>showEvent</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>, <a href="../classColorPicker/"><strong>ColorPicker</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>, <a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>startGrabbing</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>)</li>
+<li><strong>setDescription</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>, <a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>, <a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>setName</strong> (<a href="../classCommandArgument/"><strong>CommandArgument</strong></a>, <a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>setGeneralErrorMessage</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>)</li>
+<li><strong>subNodes</strong> (<a href="../structCommandLineParser_1_1Node/"><strong>CommandLineParser::Node</strong></a>)</li>
+<li><strong>setNames</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>setValue</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>, <a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setValueName</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>setAllTheButtons</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setDefaultSettings</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setErrorState</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setShortcut</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setShowDesktopNotification</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setShowStartupLaunchMessage</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setStartupLaunch</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>setUploadWithoutConfirmation</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>shortcut</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>, <a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>)</li>
+<li><strong>showInTerminal</strong> (<a href="../structDesktopAppData/"><strong>DesktopAppData</strong></a>)</li>
+<li><strong>setMapedValue</strong> (<a href="../classExtendedSlider/"><strong>ExtendedSlider</strong></a>)</li>
+<li><strong>setExternalWidget</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>setOrigin</strong> (<a href="../classFlameshot/"><strong>Flameshot</strong></a>)</li>
+<li><strong>sendTrayNotification</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>showUpdateNotificationIfAvailable</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>)</li>
+<li><strong>start</strong> (<a href="../classFlameshotDaemon/"><strong>FlameshotDaemon</strong></a>, <a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>save</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>setScaledPixmap</strong> (<a href="../classImageLabel/"><strong>ImageLabel</strong></a>)</li>
+<li><strong>setScreenshot</strong> (<a href="../classImageLabel/"><strong>ImageLabel</strong></a>)</li>
+<li><strong>setImageURL</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>setInfoLabelText</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>setPixmap</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>spinner</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>)</li>
+<li><strong>sizeHint</strong> (<a href="../classLauncherItemDelegate/"><strong>LauncherItemDelegate</strong></a>, <a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>)</li>
+<li><strong>setHeight</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>setWidth</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>stop</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>showMessage</strong> (<a href="../classNotificationWidget/"><strong>NotificationWidget</strong></a>)</li>
+<li><strong>staticInterfaceName</strong> (<a href="../classOrgFreedesktopPortalRequestInterface/"><strong>OrgFreedesktopPortalRequestInterface</strong></a>)</li>
+<li><strong>setOrientation</strong> (<a href="../classOrientablePushButton/"><strong>OrientablePushButton</strong></a>)</li>
+<li><strong>setVisibility</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>scrollEvent</strong> (<a href="../classPinWidget/"><strong>PinWidget</strong></a>)</li>
+<li><strong>screenAt</strong> (<a href="../classQGuiAppCurrentScreen/"><strong>QGuiAppCurrentScreen</strong></a>)</li>
+<li><strong>SaveTool</strong> (<a href="../classSaveTool/"><strong>SaveTool</strong></a>)</li>
+<li><strong>ScreenGrabber</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+<li><strong>screenGeometry</strong> (<a href="../classScreenGrabber/"><strong>ScreenGrabber</strong></a>)</li>
+<li><strong>SelectionTool</strong> (<a href="../classSelectionTool/"><strong>SelectionTool</strong></a>)</li>
+<li><strong>SelectionWidget</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>SideType</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>setGeometry</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>setGeometryAnimated</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>setGeometryByKeyboard</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>setIdleCentralCursor</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>setIgnoreMouse</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>SetShortcutDialog</strong> (<a href="../classSetShortcutDialog/"><strong>SetShortcutDialog</strong></a>)</li>
+<li><strong>ShortcutsWidget</strong> (<a href="../classShortcutsWidget/"><strong>ShortcutsWidget</strong></a>)</li>
+<li><strong>SidePanelWidget</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>SizeDecreaseTool</strong> (<a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>)</li>
+<li><strong>SizeIncreaseTool</strong> (<a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>)</li>
+<li><strong>StrftimeChooserWidget</strong> (<a href="../classStrftimeChooserWidget/"><strong>StrftimeChooserWidget</strong></a>)</li>
+<li><strong>String</strong> (<a href="../classString/"><strong>String</strong></a>)</li>
+<li><strong>styleHint</strong> (<a href="../classStyleOverride/"><strong>StyleOverride</strong></a>)</li>
+<li><strong>SystemNotification</strong> (<a href="../classSystemNotification/"><strong>SystemNotification</strong></a>)</li>
+<li><strong>setFontFamily</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>setItalic</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>setStrikeOut</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>setTextAlignment</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>setUnderline</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>setWeight</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>setEditMode</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>setFont</strong> (<a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>startGuiCapture</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>setAppLatestVersion</strong> (<a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>)</li>
+<li><strong>show</strong> (<a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>, <a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>setEmptyMessage</strong> (<a href="../classUploadHistory/"><strong>UploadHistory</strong></a>)</li>
+<li><strong>setActiveLayer</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+<li><strong>setToolWidget</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="t">t<a class="headerlink" href="#t" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Target</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>type</strong> (<a href="../classAcceptTool/"><strong>AcceptTool</strong></a>, <a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classArrowTool/"><strong>ArrowTool</strong></a>, <a href="../classCircleCountTool/"><strong>CircleCountTool</strong></a>, <a href="../classCircleTool/"><strong>CircleTool</strong></a>, <a href="../classCopyTool/"><strong>CopyTool</strong></a>, <a href="../classExitTool/"><strong>ExitTool</strong></a>, <a href="../structHistoryFileName/"><strong>HistoryFileName</strong></a>, <a href="../classImgUploaderTool/"><strong>ImgUploaderTool</strong></a>, <a href="../classInvertTool/"><strong>InvertTool</strong></a>, <a href="../classLineTool/"><strong>LineTool</strong></a>, <a href="../classMarkerTool/"><strong>MarkerTool</strong></a>, <a href="../classMoveTool/"><strong>MoveTool</strong></a>, <a href="../classPencilTool/"><strong>PencilTool</strong></a>, <a href="../classPinTool/"><strong>PinTool</strong></a>, <a href="../classPixelateTool/"><strong>PixelateTool</strong></a>, <a href="../classRectangleTool/"><strong>RectangleTool</strong></a>, <a href="../classRedoTool/"><strong>RedoTool</strong></a>, <a href="../classSaveTool/"><strong>SaveTool</strong></a>, <a href="../classSelectionTool/"><strong>SelectionTool</strong></a>, <a href="../classSizeDecreaseTool/"><strong>SizeDecreaseTool</strong></a>, <a href="../classSizeIncreaseTool/"><strong>SizeIncreaseTool</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>, <a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>toIntList</strong> (<a href="../classButtonList/"><strong>ButtonList</strong></a>)</li>
+<li><strong>toolSize</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>, <a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>tasks</strong> (<a href="../classCaptureRequest/"><strong>CaptureRequest</strong></a>)</li>
+<li><strong>tool</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>token</strong> (<a href="../structHistoryFileName/"><strong>HistoryFileName</strong></a>)</li>
+<li><strong>TerminalLauncher</strong> (<a href="../classTerminalLauncher/"><strong>TerminalLauncher</strong></a>)</li>
+<li><strong>TextConfig</strong> (<a href="../classTextConfig/"><strong>TextConfig</strong></a>)</li>
+<li><strong>TextTool</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>TextWidget</strong> (<a href="../classTextWidget/"><strong>TextWidget</strong></a>)</li>
+<li><strong>ToolFactory</strong> (<a href="../classToolFactory/"><strong>ToolFactory</strong></a>)</li>
+<li><strong>TrayIcon</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>toolWidget</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="u">u<a class="headerlink" href="#u" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>updateBlockedSides</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>updateScreenRegions</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>updateActiveButtons</strong> (<a href="../classButtonListView/"><strong>ButtonListView</strong></a>)</li>
+<li><strong>ui</strong> (<a href="../classCaptureLauncher/"><strong>CaptureLauncher</strong></a>, <a href="../classInfoWindow/"><strong>InfoWindow</strong></a>, <a href="../classUploadHistory/"><strong>UploadHistory</strong></a>, <a href="../classUploadLineItem/"><strong>UploadLineItem</strong></a>)</li>
+<li><strong>updateIcon</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>uncheckActiveTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>updateCursor</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>, <a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>updateLayersPanel</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>updateSelectionState</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>updateSizeIndicator</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>updateTool</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>updateWidget</strong> (<a href="../classColorGrabWidget/"><strong>ColorGrabWidget</strong></a>, <a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>updatePreset</strong> (<a href="../classColorPickerEditor/"><strong>ColorPickerEditor</strong></a>)</li>
+<li><strong>updateSelection</strong> (<a href="../classColorPickerWidget/"><strong>ColorPickerWidget</strong></a>)</li>
+<li><strong>unregisterShortcut</strong> (<a href="../classGlobalShortcutFilter/"><strong>GlobalShortcutFilter</strong></a>)</li>
+<li><strong>unpackFileName</strong> (<a href="../classHistory/"><strong>History</strong></a>)</li>
+<li><strong>upload</strong> (<a href="../classImgUploaderBase/"><strong>ImgUploaderBase</strong></a>, <a href="../classImgurUploader/"><strong>ImgurUploader</strong></a>)</li>
+<li><strong>uploader</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>uploaderPlugin</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>url</strong> (<a href="../classImgUploaderManager/"><strong>ImgUploaderManager</strong></a>)</li>
+<li><strong>updateFrame</strong> (<a href="../classLoadSpinner/"><strong>LoadSpinner</strong></a>)</li>
+<li><strong>undo</strong> (<a href="../classModificationCommand/"><strong>ModificationCommand</strong></a>)</li>
+<li><strong>updateGeometry</strong> (<a href="../classOverlayMessage/"><strong>OverlayMessage</strong></a>)</li>
+<li><strong>updateAreas</strong> (<a href="../classSelectionWidget/"><strong>SelectionWidget</strong></a>)</li>
+<li><strong>updateColorNoWheel</strong> (<a href="../classSidePanelWidget/"><strong>SidePanelWidget</strong></a>)</li>
+<li><strong>UIcolorEditor</strong> (<a href="../classUIcolorEditor/"><strong>UIcolorEditor</strong></a>)</li>
+<li><strong>UndoTool</strong> (<a href="../classUndoTool/"><strong>UndoTool</strong></a>)</li>
+<li><strong>UpdateNotificationWidget</strong> (<a href="../classUpdateNotificationWidget/"><strong>UpdateNotificationWidget</strong></a>)</li>
+<li><strong>UploadHistory</strong> (<a href="../classUploadHistory/"><strong>UploadHistory</strong></a>)</li>
+<li><strong>UploadLineItem</strong> (<a href="../classUploadLineItem/"><strong>UploadLineItem</strong></a>)</li>
+<li><strong>UserColors</strong> (<a href="../classUserColors/"><strong>UserColors</strong></a>)</li>
+<li><strong>UtilityPanel</strong> (<a href="../classUtilityPanel/"><strong>UtilityPanel</strong></a>)</li>
+</ul>
+<h2 id="v">v<a class="headerlink" href="#v" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>verticalPoints</strong> (<a href="../classButtonHandler/"><strong>ButtonHandler</strong></a>)</li>
+<li><strong>value</strong> (<a href="../classCommandLineParser/"><strong>CommandLineParser</strong></a>, <a href="../classCommandOption/"><strong>CommandOption</strong></a>, <a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>, <a href="../classValueHandler/"><strong>ValueHandler</strong></a>)</li>
+<li><strong>valueName</strong> (<a href="../classCommandOption/"><strong>CommandOption</strong></a>)</li>
+<li><strong>valueHandler</strong> (<a href="../classConfigHandler/"><strong>ConfigHandler</strong></a>)</li>
+<li><strong>VisualsEditor</strong> (<a href="../classVisualsEditor/"><strong>VisualsEditor</strong></a>)</li>
+</ul>
+<h2 id="w">w<a class="headerlink" href="#w" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>warning</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>widget</strong> (<a href="../classAppLauncher/"><strong>AppLauncher</strong></a>, <a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>widgetOffset</strong> (<a href="../structCaptureContext/"><strong>CaptureContext</strong></a>)</li>
+<li><strong>wheelEvent</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>WAYLAND_DISPLAY</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>WM</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>waylandDetected</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>, <a href="../classWaylandUtils/"><strong>WaylandUtils</strong></a>)</li>
+<li><strong>windowManager</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>WaylandUtils</strong> (<a href="../classWaylandUtils/"><strong>WaylandUtils</strong></a>)</li>
+<li><strong>WinLnkFileParser</strong> (<a href="../structWinLnkFileParser/"><strong>WinLnkFileParser</strong></a>)</li>
+</ul>
+<h2 id="x">x<a class="headerlink" href="#x" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>XDG_CURRENT_DESKTOP</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>XDG_SESSION_TYPE</strong> (<a href="../classDesktopInfo/"><strong>DesktopInfo</strong></a>)</li>
+<li><strong>xywh_position</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+</ul>
+<h2 id="_1">~<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>~AbstractLogger</strong> (<a href="../classAbstractLogger/"><strong>AbstractLogger</strong></a>)</li>
+<li><strong>~CaptureLauncher</strong> (<a href="../classCaptureLauncher/"><strong>CaptureLauncher</strong></a>)</li>
+<li><strong>~CaptureToolButton</strong> (<a href="../classCaptureToolButton/"><strong>CaptureToolButton</strong></a>)</li>
+<li><strong>~CaptureWidget</strong> (<a href="../classCaptureWidget/"><strong>CaptureWidget</strong></a>)</li>
+<li><strong>~FlameshotDBusAdapter</strong> (<a href="../classFlameshotDBusAdapter/"><strong>FlameshotDBusAdapter</strong></a>)</li>
+<li><strong>~InfoWindow</strong> (<a href="../classInfoWindow/"><strong>InfoWindow</strong></a>)</li>
+<li><strong>~OrgFreedesktopPortalRequestInterface</strong> (<a href="../classOrgFreedesktopPortalRequestInterface/"><strong>OrgFreedesktopPortalRequestInterface</strong></a>)</li>
+<li><strong>~TextTool</strong> (<a href="../classTextTool/"><strong>TextTool</strong></a>)</li>
+<li><strong>~TrayIcon</strong> (<a href="../classTrayIcon/"><strong>TrayIcon</strong></a>)</li>
+<li><strong>~UploadHistory</strong> (<a href="../classUploadHistory/"><strong>UploadHistory</strong></a>)</li>
+<li><strong>~UploadLineItem</strong> (<a href="../classUploadLineItem/"><strong>UploadLineItem</strong></a>)</li>
+</ul>
+<h2 id="_">_<a class="headerlink" href="#_" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>_updateComponents</strong> (<a href="../classGeneralConf/"><strong>GeneralConf</strong></a>)</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

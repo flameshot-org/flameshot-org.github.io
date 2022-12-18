@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/flameshotdaemon_8cpp_source/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>File flameshotdaemon.cpp - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-flameshotdaemoncpp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File flameshotdaemon.cpp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/flameshotdaemon_8cpp_source.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="file-flameshotdaemoncpp">File flameshotdaemon.cpp<a class="headerlink" href="#file-flameshotdaemoncpp" title="Permanent link">#</a></h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_aebb8dcc11953d78e620bbef0b9e2183/"><strong>core</strong></a> <strong>&gt;</strong> <a href="../flameshotdaemon_8cpp/"><strong>flameshotdaemon.cpp</strong></a></p>
+<p><a href="../flameshotdaemon_8cpp/">Go to the documentation of this file.</a> </p>
+<pre><code class="language-C++">
+#include &quot;flameshotdaemon.h&quot;
+
+#include &quot;abstractlogger.h&quot;
+#include &quot;confighandler.h&quot;
+#include &quot;flameshot.h&quot;
+#include &quot;pinwidget.h&quot;
+#include &quot;screenshotsaver.h&quot;
+#include &quot;src/utils/globalvalues.h&quot;
+#include &quot;src/widgets/capture/capturewidget.h&quot;
+#include &quot;src/widgets/trayicon.h&quot;
+#include &lt;QApplication&gt;
+#include &lt;QClipboard&gt;
+#include &lt;QDBusConnection&gt;
+#include &lt;QDBusMessage&gt;
+#include &lt;QPixmap&gt;
+#include &lt;QRect&gt;
+
+#if !defined(DISABLE_UPDATE_CHECKER)
+#include &lt;QDesktopServices&gt;
+#include &lt;QJsonDocument&gt;
+#include &lt;QJsonObject&gt;
+#include &lt;QNetworkAccessManager&gt;
+#include &lt;QNetworkReply&gt;
+#include &lt;QTimer&gt;
+#include &lt;QUrl&gt;
+#endif
+
+#ifdef Q_OS_WIN
+#include &quot;src/core/globalshortcutfilter.h&quot;
+#endif
+
+FlameshotDaemon::FlameshotDaemon()
+  : m_persist(false)
+  , m_hostingClipboard(false)
+  , m_clipboardSignalBlocked(false)
+  , m_trayIcon(nullptr)
+#if !defined(DISABLE_UPDATE_CHECKER)
+  , m_networkCheckUpdates(nullptr)
+  , m_showCheckAppUpdateStatus(false)
+  , m_appLatestVersion(QStringLiteral(APP_VERSION).replace(&quot;v&quot;, &quot;&quot;))
+#endif
+{
+    connect(
+      QApplication::clipboard(), &amp;QClipboard::dataChanged, this, [this]() {
+          if (!m_hostingClipboard || m_clipboardSignalBlocked) {
+              m_clipboardSignalBlocked = false;
+              return;
+          }
+          m_hostingClipboard = false;
+          quitIfIdle();
+      });
+#ifdef Q_OS_WIN
+    m_persist = true;
+#else
+    m_persist = !ConfigHandler().autoCloseIdleDaemon();
+    connect(ConfigHandler::getInstance(),
+            &amp;ConfigHandler::fileChanged,
+            this,
+            [this]() {
+                ConfigHandler config;
+                if (config.disabledTrayIcon()) {
+                    enableTrayIcon(false);
+                } else {
+                    enableTrayIcon(true);
+                }
+                m_persist = !config.autoCloseIdleDaemon();
+            });
+#endif
+
+#if !defined(DISABLE_UPDATE_CHECKER)
+    if (ConfigHandler().checkForUpdates()) {
+        getLatestAvailableVersion();
+    }
+#endif
+}
+
+void FlameshotDaemon::start()
+{
+    if (!m_instance) {
+        m_instance = new FlameshotDaemon();
+        // Tray icon needs FlameshotDaemon::instance() to be non-null
+        m_instance-&gt;initTrayIcon();
+        qApp-&gt;setQuitOnLastWindowClosed(false);
+    }
+}
+
+void FlameshotDaemon::createPin(QPixmap capture, QRect geometry)
+{
+    if (instance()) {
+        instance()-&gt;attachPin(capture, geometry);
+        return;
+    }
+
+    QByteArray data;
+    QDataStream stream(&amp;data, QIODevice::WriteOnly);
+    stream &lt;&lt; capture;
+    stream &lt;&lt; geometry;
+    QDBusMessage m = createMethodCall(QStringLiteral(&quot;attachPin&quot;));
+    m &lt;&lt; data;
+    call(m);
+}
+
+void FlameshotDaemon::copyToClipboard(QPixmap capture)
+{
+    if (instance()) {
+        instance()-&gt;attachScreenshotToClipboard(capture);
+        return;
+    }
+
+    QDBusMessage m =
+      createMethodCall(QStringLiteral(&quot;attachScreenshotToClipboard&quot;));
+
+    QByteArray data;
+    QDataStream stream(&amp;data, QIODevice::WriteOnly);
+    stream &lt;&lt; capture;
+
+    m &lt;&lt; data;
+    call(m);
+}
+
+void FlameshotDaemon::copyToClipboard(QString text, QString notification)
+{
+    if (instance()) {
+        instance()-&gt;attachTextToClipboard(text, notification);
+        return;
+    }
+    auto m = createMethodCall(QStringLiteral(&quot;attachTextToClipboard&quot;));
+
+    m &lt;&lt; text &lt;&lt; notification;
+
+    QDBusConnection sessionBus = QDBusConnection::sessionBus();
+    checkDBusConnection(sessionBus);
+    sessionBus.call(m);
+}
+
+bool FlameshotDaemon::isThisInstanceHostingWidgets()
+{
+    return instance() &amp;&amp; !instance()-&gt;m_widgets.isEmpty();
+}
+
+void FlameshotDaemon::sendTrayNotification(const QString&amp; text,
+                                           const QString&amp; title,
+                                           const int timeout)
+{
+    if (m_trayIcon) {
+        m_trayIcon-&gt;showMessage(
+          title, text, QIcon(GlobalValues::iconPath()), timeout);
+    }
+}
+
+#if !defined(DISABLE_UPDATE_CHECKER)
+void FlameshotDaemon::showUpdateNotificationIfAvailable(CaptureWidget* widget)
+{
+    if (!m_appLatestUrl.isEmpty() &amp;&amp;
+        ConfigHandler().ignoreUpdateToVersion().compare(m_appLatestVersion) &lt;
+          0) {
+        widget-&gt;showAppUpdateNotification(m_appLatestVersion, m_appLatestUrl);
+    }
+}
+
+void FlameshotDaemon::getLatestAvailableVersion()
+{
+    // This features is required for MacOS and Windows user and for Linux users
+    // who installed Flameshot not from the repository.
+    m_networkCheckUpdates = new QNetworkAccessManager(this);
+    QNetworkRequest requestCheckUpdates(QUrl(FLAMESHOT_APP_VERSION_URL));
+    connect(m_networkCheckUpdates,
+            &amp;QNetworkAccessManager::finished,
+            this,
+            &amp;FlameshotDaemon::handleReplyCheckUpdates);
+    m_networkCheckUpdates-&gt;get(requestCheckUpdates);
+
+    // check for updates each 24 hours
+    QTimer::singleShot(1000 * 60 * 60 * 24, [this]() {
+        if (ConfigHandler().checkForUpdates()) {
+            this-&gt;getLatestAvailableVersion();
+        }
+    });
+}
+
+void FlameshotDaemon::checkForUpdates()
+{
+    if (m_appLatestUrl.isEmpty()) {
+        m_showCheckAppUpdateStatus = true;
+        getLatestAvailableVersion();
+    } else {
+        QDesktopServices::openUrl(QUrl(m_appLatestUrl));
+    }
+}
+#endif
+
+FlameshotDaemon* FlameshotDaemon::instance()
+{
+    // Because we don't use DBus on MacOS, each instance of flameshot is its own
+    // mini-daemon, responsible for hosting its own persistent widgets (e.g.
+    // pins).
+#if defined(Q_OS_MACOS)
+    start();
+#endif
+    return m_instance;
+}
+
+void FlameshotDaemon::quitIfIdle()
+{
+    if (m_persist) {
+        return;
+    }
+    if (!m_hostingClipboard &amp;&amp; m_widgets.isEmpty()) {
+        qApp-&gt;exit(0);
+    }
+}
+
+// SERVICE METHODS
+
+void FlameshotDaemon::attachPin(QPixmap pixmap, QRect geometry)
+{
+    auto* pinWidget = new PinWidget(pixmap, geometry);
+    m_widgets.append(pinWidget);
+    connect(pinWidget, &amp;QObject::destroyed, this, [=]() {
+        m_widgets.removeOne(pinWidget);
+        quitIfIdle();
+    });
+
+    pinWidget-&gt;show();
+    pinWidget-&gt;activateWindow();
+}
+
+void FlameshotDaemon::attachScreenshotToClipboard(QPixmap pixmap)
+{
+    m_hostingClipboard = true;
+    QClipboard* clipboard = QApplication::clipboard();
+    clipboard-&gt;blockSignals(true);
+    // This variable is necessary because the signal doesn't get blocked on
+    // windows for some reason
+    m_clipboardSignalBlocked = true;
+    saveToClipboard(pixmap);
+    clipboard-&gt;blockSignals(false);
+}
+
+// D-BUS ADAPTER METHODS
+
+void FlameshotDaemon::attachPin(const QByteArray&amp; data)
+{
+    QDataStream stream(data);
+    QPixmap pixmap;
+    QRect geometry;
+
+    stream &gt;&gt; pixmap;
+    stream &gt;&gt; geometry;
+
+    attachPin(pixmap, geometry);
+}
+
+void FlameshotDaemon::attachScreenshotToClipboard(const QByteArray&amp; screenshot)
+{
+    QDataStream stream(screenshot);
+    QPixmap p;
+    stream &gt;&gt; p;
+
+    attachScreenshotToClipboard(p);
+}
+
+void FlameshotDaemon::attachTextToClipboard(QString text, QString notification)
+{
+    // Must send notification before clipboard modification on linux
+    if (!notification.isEmpty()) {
+        AbstractLogger::info() &lt;&lt; notification;
+    }
+
+    m_hostingClipboard = true;
+    QClipboard* clipboard = QApplication::clipboard();
+
+    clipboard-&gt;blockSignals(true);
+    // This variable is necessary because the signal doesn't get blocked on
+    // windows for some reason
+    m_clipboardSignalBlocked = true;
+    clipboard-&gt;setText(text);
+    clipboard-&gt;blockSignals(false);
+}
+
+void FlameshotDaemon::initTrayIcon()
+{
+#if defined(Q_OS_LINUX) || defined(Q_OS_UNIX)
+    if (!ConfigHandler().disabledTrayIcon()) {
+        enableTrayIcon(true);
+    }
+#elif defined(Q_OS_WIN)
+    enableTrayIcon(true);
+
+    GlobalShortcutFilter* nativeFilter = new GlobalShortcutFilter(this);
+    qApp-&gt;installNativeEventFilter(nativeFilter);
+    connect(nativeFilter, &amp;GlobalShortcutFilter::printPressed, this, [this]() {
+        Flameshot::instance()-&gt;gui();
+    });
+#endif
+}
+
+void FlameshotDaemon::enableTrayIcon(bool enable)
+{
+    if (enable) {
+        if (m_trayIcon == nullptr) {
+            m_trayIcon = new TrayIcon();
+        } else {
+            m_trayIcon-&gt;show();
+            return;
+        }
+    } else if (m_trayIcon) {
+        m_trayIcon-&gt;hide();
+    }
+}
+
+#if !defined(DISABLE_UPDATE_CHECKER)
+void FlameshotDaemon::handleReplyCheckUpdates(QNetworkReply* reply)
+{
+    if (!ConfigHandler().checkForUpdates()) {
+        return;
+    }
+    if (reply-&gt;error() == QNetworkReply::NoError) {
+        QJsonDocument response = QJsonDocument::fromJson(reply-&gt;readAll());
+        QJsonObject json = response.object();
+        m_appLatestVersion = json[&quot;tag_name&quot;].toString().replace(&quot;v&quot;, &quot;&quot;);
+
+        QVersionNumber appLatestVersion =
+          QVersionNumber::fromString(m_appLatestVersion);
+        if (Flameshot::instance()-&gt;getVersion() &lt; appLatestVersion) {
+            emit newVersionAvailable(appLatestVersion);
+            m_appLatestUrl = json[&quot;html_url&quot;].toString();
+            QString newVersion =
+              tr(&quot;New version %1 is available&quot;).arg(m_appLatestVersion);
+            if (m_showCheckAppUpdateStatus) {
+                sendTrayNotification(newVersion, &quot;Flameshot&quot;);
+                QDesktopServices::openUrl(QUrl(m_appLatestUrl));
+            }
+        } else if (m_showCheckAppUpdateStatus) {
+            sendTrayNotification(tr(&quot;You have the latest version&quot;),
+                                 &quot;Flameshot&quot;);
+        }
+    } else {
+        qWarning() &lt;&lt; &quot;Failed to get information about the latest version. &quot;
+                   &lt;&lt; reply-&gt;errorString();
+        if (m_showCheckAppUpdateStatus) {
+            if (FlameshotDaemon::instance()) {
+                FlameshotDaemon::instance()-&gt;sendTrayNotification(
+                  tr(&quot;Failed to get information about the latest version.&quot;),
+                  &quot;Flameshot&quot;);
+            }
+        }
+    }
+    m_showCheckAppUpdateStatus = false;
+}
+#endif
+
+QDBusMessage FlameshotDaemon::createMethodCall(QString method)
+{
+    QDBusMessage m =
+      QDBusMessage::createMethodCall(QStringLiteral(&quot;org.flameshot.Flameshot&quot;),
+                                     QStringLiteral(&quot;/&quot;),
+                                     QLatin1String(&quot;&quot;),
+                                     method);
+    return m;
+}
+
+void FlameshotDaemon::checkDBusConnection(const QDBusConnection&amp; connection)
+{
+    if (!connection.isConnected()) {
+        AbstractLogger::error() &lt;&lt; tr(&quot;Unable to connect via DBus&quot;);
+        qApp-&gt;exit(1);
+    }
+}
+
+void FlameshotDaemon::call(const QDBusMessage&amp; m)
+{
+    QDBusConnection sessionBus = QDBusConnection::sessionBus();
+    checkDBusConnection(sessionBus);
+    sessionBus.call(m);
+}
+
+// STATIC ATTRIBUTES
+FlameshotDaemon* FlameshotDaemon::m_instance = nullptr;
+
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

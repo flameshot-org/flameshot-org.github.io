@@ -1,0 +1,2296 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://flameshot.org/docs/dev/flameshot/capturewidget_8cpp_source/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>File capturewidget.cpp - Flameshot Developer Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-capturewidgetcpp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Flameshot Developer Docs" class="md-header__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flameshot Developer Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File capturewidget.cpp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Flameshot Developer Docs" class="md-nav__button md-logo" aria-label="Flameshot Developer Docs" data-md-component="logo">
+      
+  <img src="https://flameshot.org/flameshot-icon.svg" alt="logo">
+
+    </a>
+    Flameshot Developer Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flameshot-org/flameshot/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/" class="md-nav__link">
+        Maintaining the documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        Class Hierarchy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/flameshot-org/flameshot/tree/master/docs/dev/src/flameshot/capturewidget_8cpp_source.md" title="Edit this page" style="display: none !important" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="file-capturewidgetcpp">File capturewidget.cpp<a class="headerlink" href="#file-capturewidgetcpp" title="Permanent link">#</a></h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_50d9a3ace9e44a4976ace91594337bf4/"><strong>capture</strong></a> <strong>&gt;</strong> <a href="../capturewidget_8cpp/"><strong>capturewidget.cpp</strong></a></p>
+<p><a href="../capturewidget_8cpp/">Go to the documentation of this file.</a> </p>
+<pre><code class="language-C++">
+// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-FileCopyrightText: 2017-2019 Alejandro Sirgo Rica &amp; Contributors
+
+// Based on Lightscreen areadialog.cpp, Copyright 2017  Christian Kaiser
+// &lt;info@ckaiser.com.ar&gt; released under the GNU GPL2
+// &lt;https://www.gnu.org/licenses/gpl-2.0.txt&gt;
+
+// Based on KDE's KSnapshot regiongrabber.cpp, revision 796531, Copyright 2007
+// Luca Gugelmann &lt;lucag@student.ethz.ch&gt; released under the GNU LGPL
+// &lt;http://www.gnu.org/licenses/old-licenses/library.txt&gt;
+
+#include &quot;capturewidget.h&quot;
+#include &quot;abstractlogger.h&quot;
+#include &quot;copytool.h&quot;
+#include &quot;src/config/cacheutils.h&quot;
+#include &quot;src/config/generalconf.h&quot;
+#include &quot;src/core/flameshot.h&quot;
+#include &quot;src/core/qguiappcurrentscreen.h&quot;
+#include &quot;src/tools/toolfactory.h&quot;
+#include &quot;src/utils/colorutils.h&quot;
+#include &quot;src/utils/screengrabber.h&quot;
+#include &quot;src/utils/screenshotsaver.h&quot;
+#include &quot;src/utils/systemnotification.h&quot;
+#include &quot;src/widgets/capture/colorpicker.h&quot;
+#include &quot;src/widgets/capture/hovereventfilter.h&quot;
+#include &quot;src/widgets/capture/modificationcommand.h&quot;
+#include &quot;src/widgets/capture/notifierbox.h&quot;
+#include &quot;src/widgets/capture/overlaymessage.h&quot;
+#include &quot;src/widgets/orientablepushbutton.h&quot;
+#include &quot;src/widgets/panel/sidepanelwidget.h&quot;
+#include &quot;src/widgets/panel/utilitypanel.h&quot;
+#include &lt;QApplication&gt;
+#include &lt;QDateTime&gt;
+#include &lt;QDebug&gt;
+#include &lt;QDesktopWidget&gt;
+#include &lt;QFontMetrics&gt;
+#include &lt;QLabel&gt;
+#include &lt;QPaintEvent&gt;
+#include &lt;QPainter&gt;
+#include &lt;QScreen&gt;
+#include &lt;QShortcut&gt;
+#include &lt;draggablewidgetmaker.h&gt;
+
+#if !defined(DISABLE_UPDATE_CHECKER)
+#include &quot;src/widgets/updatenotificationwidget.h&quot;
+#endif
+
+#define MOUSE_DISTANCE_TO_START_MOVING 3
+
+// CaptureWidget is the main component used to capture the screen. It contains
+// an area of selection with its respective buttons.
+
+// enableSaveWindow
+
+CaptureWidget::CaptureWidget(const CaptureRequest&amp; req,
+                             bool fullScreen,
+                             QWidget* parent)
+  : QWidget(parent)
+  , m_mouseIsClicked(false)
+  , m_captureDone(false)
+  , m_previewEnabled(true)
+  , m_adjustmentButtonPressed(false)
+  , m_configError(false)
+  , m_configErrorResolved(false)
+  , m_activeButton(nullptr)
+  , m_activeTool(nullptr)
+  , m_toolWidget(nullptr)
+  , m_colorPicker(nullptr)
+  , m_lastMouseWheel(0)
+#if !defined(DISABLE_UPDATE_CHECKER)
+  , m_updateNotificationWidget(nullptr)
+#endif
+  , m_activeToolIsMoved(false)
+  , m_panel(nullptr)
+  , m_sidePanel(nullptr)
+  , m_selection(nullptr)
+  , m_magnifier(nullptr)
+  , m_existingObjectIsChanged(false)
+  , m_startMove(false)
+  , m_toolSizeByKeyboard(0)
+  , m_xywhDisplay(false)
+
+{
+    m_undoStack.setUndoLimit(ConfigHandler().undoLimit());
+    m_context.circleCount = 1;
+
+    // Base config of the widget
+    m_eventFilter = new HoverEventFilter(this);
+    connect(m_eventFilter,
+            &amp;HoverEventFilter::hoverIn,
+            this,
+            &amp;CaptureWidget::childEnter);
+    connect(m_eventFilter,
+            &amp;HoverEventFilter::hoverOut,
+            this,
+            &amp;CaptureWidget::childLeave);
+
+    connect(&amp;m_xywhTimer, SIGNAL(timeout()), this, SLOT(xywhTick()));
+    setAttribute(Qt::WA_DeleteOnClose);
+    setAttribute(Qt::WA_QuitOnClose, false);
+    m_opacity = m_config.contrastOpacity();
+    m_uiColor = m_config.uiColor();
+    m_contrastUiColor = m_config.contrastUiColor();
+    setMouseTracking(true);
+    initContext(fullScreen, req);
+#if (defined(Q_OS_WIN) || defined(Q_OS_MACOS))
+    // Top left of the whole set of screens
+    QPoint topLeft(0, 0);
+#endif
+    if (fullScreen) {
+        // Grab Screenshot
+        bool ok = true;
+        m_context.screenshot = ScreenGrabber().grabEntireDesktop(ok);
+        if (!ok) {
+            AbstractLogger::error() &lt;&lt; tr(&quot;Unable to capture screen&quot;);
+            this-&gt;close();
+        }
+        m_context.origScreenshot = m_context.screenshot;
+
+#if defined(Q_OS_WIN)
+// Call cmake with -DFLAMESHOT_DEBUG_CAPTURE=ON to enable easier debugging
+#if !defined(FLAMESHOT_DEBUG_CAPTURE)
+        setWindowFlags(Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint |
+                       Qt::SubWindow // Hides the taskbar icon
+        );
+#endif
+
+        for (QScreen* const screen : QGuiApplication::screens()) {
+            QPoint topLeftScreen = screen-&gt;geometry().topLeft();
+
+            if (topLeftScreen.x() &lt; topLeft.x()) {
+                topLeft.setX(topLeftScreen.x());
+            }
+            if (topLeftScreen.y() &lt; topLeft.y()) {
+                topLeft.setY(topLeftScreen.y());
+            }
+        }
+        move(topLeft);
+        resize(pixmap().size());
+#elif defined(Q_OS_MACOS)
+        // Emulate fullscreen mode
+        //        setWindowFlags(Qt::WindowStaysOnTopHint |
+        //        Qt::BypassWindowManagerHint |
+        //                       Qt::FramelessWindowHint |
+        //                       Qt::NoDropShadowWindowHint | Qt::ToolTip |
+        //                       Qt::Popup
+        //                       );
+        QScreen* currentScreen = QGuiAppCurrentScreen().currentScreen();
+        move(currentScreen-&gt;geometry().x(), currentScreen-&gt;geometry().y());
+        resize(currentScreen-&gt;size());
+#else
+// Call cmake with -DFLAMESHOT_DEBUG_CAPTURE=ON to enable easier debugging
+#if !defined(FLAMESHOT_DEBUG_CAPTURE)
+        setWindowFlags(Qt::BypassWindowManagerHint | Qt::WindowStaysOnTopHint |
+                       Qt::FramelessWindowHint | Qt::Tool);
+        resize(pixmap().size());
+#endif
+#endif
+    }
+    QVector&lt;QRect&gt; areas;
+    if (m_context.fullscreen) {
+        QPoint topLeftOffset = QPoint(0, 0);
+#if defined(Q_OS_WIN)
+        topLeftOffset = topLeft;
+#endif
+
+#if defined(Q_OS_MACOS)
+        // MacOS works just with one active display, so we need to append
+        // just one current display and keep multiple displays logic for
+        // other OS
+        QRect r;
+        QScreen* screen = QGuiAppCurrentScreen().currentScreen();
+        r = screen-&gt;geometry();
+        // all calculations are processed according to (0, 0) start
+        // point so we need to move current object to (0, 0)
+        r.moveTo(0, 0);
+        areas.append(r);
+#else
+        for (QScreen* const screen : QGuiApplication::screens()) {
+            QRect r = screen-&gt;geometry();
+            r.moveTo(r.x() / screen-&gt;devicePixelRatio(),
+                     r.y() / screen-&gt;devicePixelRatio());
+            r.moveTo(r.topLeft() - topLeftOffset);
+            areas.append(r);
+        }
+#endif
+    } else {
+        areas.append(rect());
+    }
+
+    m_buttonHandler = new ButtonHandler(this);
+    m_buttonHandler-&gt;updateScreenRegions(areas);
+    m_buttonHandler-&gt;hide();
+
+    initButtons();
+    initSelection(); // button handler must be initialized before
+    initShortcuts(); // must be called after initSelection
+    // init magnify
+    if (m_config.showMagnifier()) {
+        m_magnifier = new MagnifierWidget(
+          m_context.screenshot, m_uiColor, m_config.squareMagnifier(), this);
+    }
+
+    // Init color picker
+    m_colorPicker = new ColorPicker(this);
+    connect(m_colorPicker,
+            &amp;ColorPicker::colorSelected,
+            this,
+            [this](const QColor&amp; c) {
+                m_context.mousePos = mapFromGlobal(QCursor::pos());
+                setDrawColor(c);
+            });
+    m_colorPicker-&gt;hide();
+
+    // Init tool size sigslots
+    connect(this,
+            &amp;CaptureWidget::toolSizeChanged,
+            this,
+            &amp;CaptureWidget::onToolSizeChanged);
+
+    // Init notification widget
+    m_notifierBox = new NotifierBox(this);
+    m_notifierBox-&gt;hide();
+    connect(m_notifierBox, &amp;NotifierBox::hidden, this, [this]() {
+        // Show cursor if it was hidden while adjusting tool size
+        updateCursor();
+        m_toolSizeByKeyboard = 0;
+        onToolSizeChanged(m_context.toolSize);
+        onToolSizeSettled(m_context.toolSize);
+    });
+
+    initPanel();
+
+    m_config.checkAndHandleError();
+    if (m_config.hasError()) {
+        m_configError = true;
+    }
+    connect(ConfigHandler::getInstance(), &amp;ConfigHandler::error, this, [=]() {
+        m_configError = true;
+        m_configErrorResolved = false;
+        OverlayMessage::instance()-&gt;update();
+    });
+    connect(
+      ConfigHandler::getInstance(), &amp;ConfigHandler::errorResolved, this, [=]() {
+          m_configError = false;
+          m_configErrorResolved = true;
+          OverlayMessage::instance()-&gt;update();
+      });
+
+    OverlayMessage::init(this,
+                         QGuiAppCurrentScreen().currentScreen()-&gt;geometry());
+
+    if (m_config.showHelp()) {
+        initHelpMessage();
+        OverlayMessage::push(m_helpMessage);
+    }
+
+    updateCursor();
+}
+
+CaptureWidget::~CaptureWidget()
+{
+#if defined(Q_OS_MACOS)
+    for (QWidget* widget : qApp-&gt;topLevelWidgets()) {
+        QString className(widget-&gt;metaObject()-&gt;className());
+        if (0 ==
+            className.compare(CaptureWidget::staticMetaObject.className())) {
+            widget-&gt;showNormal();
+            widget-&gt;hide();
+            break;
+        }
+    }
+#endif
+    if (m_captureDone) {
+        auto lastRegion = m_selection-&gt;geometry();
+        setLastRegion(lastRegion);
+        QRect geometry(m_context.selection);
+        geometry.setTopLeft(geometry.topLeft() + m_context.widgetOffset);
+        Flameshot::instance()-&gt;exportCapture(
+          pixmap(), geometry, m_context.request);
+    } else {
+        emit Flameshot::instance()-&gt;captureFailed();
+    }
+}
+
+void CaptureWidget::initButtons()
+{
+    auto allButtonTypes = CaptureToolButton::getIterableButtonTypes();
+    auto visibleButtonTypes = m_config.buttons();
+    if ((m_context.request.tasks() == CaptureRequest::NO_TASK) ||
+        (m_context.request.tasks() == CaptureRequest::PRINT_GEOMETRY)) {
+        allButtonTypes.removeOne(CaptureTool::TYPE_ACCEPT);
+        visibleButtonTypes.removeOne(CaptureTool::TYPE_ACCEPT);
+    } else {
+        // Remove irrelevant buttons from both lists
+        for (auto* buttonList : { &amp;allButtonTypes, &amp;visibleButtonTypes }) {
+            buttonList-&gt;removeOne(CaptureTool::TYPE_SAVE);
+            buttonList-&gt;removeOne(CaptureTool::TYPE_COPY);
+            buttonList-&gt;removeOne(CaptureTool::TYPE_IMAGEUPLOADER);
+            buttonList-&gt;removeOne(CaptureTool::TYPE_OPEN_APP);
+            buttonList-&gt;removeOne(CaptureTool::TYPE_PIN);
+        }
+    }
+    QVector&lt;CaptureToolButton*&gt; vectorButtons;
+
+    // Add all buttons but hide those that were disabled in the Interface config
+    // This will allow keyboard shortcuts for those buttons to work
+    for (CaptureTool::Type t : allButtonTypes) {
+        auto* b = new CaptureToolButton(t, this);
+        if (t == CaptureTool::TYPE_SELECTIONINDICATOR) {
+            m_sizeIndButton = b;
+        }
+        b-&gt;setColor(m_uiColor);
+        b-&gt;hide();
+        // must be enabled for SelectionWidget's eventFilter to work correctly
+        b-&gt;setAttribute(Qt::WA_NoMousePropagation);
+        makeChild(b);
+
+        switch (t) {
+            case CaptureTool::TYPE_UNDO:
+            case CaptureTool::TYPE_REDO:
+                // nothing to do, just skip non-dynamic buttons with existing
+                // hard coded slots
+                break;
+            default:
+                // Set shortcuts for a tool
+                QString shortcut =
+                  ConfigHandler().shortcut(QVariant::fromValue(t).toString());
+                if (!shortcut.isNull()) {
+                    auto shortcuts = newShortcut(shortcut, this, nullptr);
+                    for (auto* shortcut : shortcuts) {
+                        connect(shortcut, &amp;QShortcut::activated, this, [=]() {
+                            setState(b);
+                        });
+                    }
+                }
+                break;
+        }
+
+        m_tools[t] = b-&gt;tool();
+
+        connect(b-&gt;tool(),
+                &amp;CaptureTool::requestAction,
+                this,
+                &amp;CaptureWidget::handleToolSignal);
+
+        if (visibleButtonTypes.contains(t)) {
+            connect(b,
+                    &amp;CaptureToolButton::pressedButtonLeftClick,
+                    this,
+                    &amp;CaptureWidget::handleButtonLeftClick);
+
+            if (b-&gt;tool()-&gt;isSelectable()) {
+                connect(b,
+                        &amp;CaptureToolButton::pressedButtonRightClick,
+                        this,
+                        &amp;CaptureWidget::handleButtonRightClick);
+            }
+
+            vectorButtons &lt;&lt; b;
+        }
+    }
+    m_buttonHandler-&gt;setButtons(vectorButtons);
+}
+
+void CaptureWidget::handleButtonRightClick(CaptureToolButton* b)
+{
+    if (!b) {
+        return;
+    }
+
+    // if button already selected, do not deselect it on right click
+    if (!m_activeButton || m_activeButton != b) {
+        setState(b);
+    }
+    if (!m_panel-&gt;isVisible()) {
+        m_panel-&gt;show();
+    }
+}
+
+void CaptureWidget::handleButtonLeftClick(CaptureToolButton* b)
+{
+    if (!b) {
+        return;
+    }
+
+    setState(b);
+}
+
+void CaptureWidget::xywhTick()
+{
+    m_xywhDisplay = false;
+    repaint();
+}
+
+void CaptureWidget::showxywh(bool show)
+{
+    int timeout =
+      ConfigHandler().value(&quot;showSelectionGeometryHideTime&quot;).toInt();
+    m_xywhDisplay = show;
+    m_xywhTimer.stop();
+    repaint();
+    if (show &amp;&amp; timeout != 0) {
+        m_xywhTimer.start(timeout);
+    }
+}
+
+void CaptureWidget::initHelpMessage()
+{
+    QList&lt;QPair&lt;QString, QString&gt;&gt; keyMap;
+    if (keyMap.isEmpty()) {
+        keyMap &lt;&lt; QPair(tr(&quot;Mouse&quot;), tr(&quot;Select screenshot area&quot;));
+        using CT = CaptureTool;
+        for (auto toolType :
+             { CT::TYPE_ACCEPT, CT::TYPE_SAVE, CT::TYPE_COPY }) {
+            if (!m_tools.contains(toolType)) {
+                continue;
+            }
+            auto* tool = m_tools[toolType];
+            QString shortcut = ConfigHandler().shortcut(
+              QVariant::fromValue(toolType).toString());
+            shortcut.replace(&quot;Return&quot;, &quot;Enter&quot;);
+            if (!shortcut.isEmpty()) {
+                keyMap &lt;&lt; QPair(shortcut, tool-&gt;description());
+            }
+        }
+        keyMap &lt;&lt; QPair(tr(&quot;Mouse Wheel&quot;), tr(&quot;Change tool size&quot;));
+        keyMap &lt;&lt; QPair(tr(&quot;Right Click&quot;), tr(&quot;Show color picker&quot;));
+        keyMap &lt;&lt; QPair(ConfigHandler().shortcut(&quot;TYPE_TOGGLE_PANEL&quot;),
+                        tr(&quot;Open side panel&quot;));
+        keyMap &lt;&lt; QPair(tr(&quot;Esc&quot;), tr(&quot;Exit&quot;));
+    }
+    m_helpMessage = OverlayMessage::compileFromKeyMap(keyMap);
+}
+
+QPixmap CaptureWidget::pixmap()
+{
+    return m_context.selectedScreenshotArea();
+}
+
+// Finish whatever the current tool is doing, if there is a current active
+// tool.
+bool CaptureWidget::commitCurrentTool()
+{
+    if (m_activeTool) {
+        processPixmapWithTool(&amp;m_context.screenshot, m_activeTool);
+        if (m_activeTool-&gt;isValid() &amp;&amp; !m_activeTool-&gt;editMode() &amp;&amp;
+            m_toolWidget) {
+            pushToolToStack();
+        }
+        if (m_toolWidget) {
+            m_toolWidget-&gt;update();
+        }
+        releaseActiveTool();
+        return true;
+    }
+    return false;
+}
+
+void CaptureWidget::deleteToolWidgetOrClose()
+{
+    if (m_activeButton != nullptr) {
+        uncheckActiveTool();
+    } else if (m_panel-&gt;activeLayerIndex() &gt;= 0) {
+        // remove active tool selection
+        m_panel-&gt;setActiveLayer(-1);
+    } else if (m_panel-&gt;isVisible()) {
+        // hide panel if visible
+        m_panel-&gt;hide();
+    } else if (m_toolWidget) {
+        // delete toolWidget if exists
+        m_toolWidget-&gt;hide();
+        delete m_toolWidget;
+        m_toolWidget = nullptr;
+    } else if (m_colorPicker &amp;&amp; m_colorPicker-&gt;isVisible()) {
+        m_colorPicker-&gt;hide();
+    } else {
+        // close CaptureWidget
+        close();
+    }
+}
+
+void CaptureWidget::releaseActiveTool()
+{
+    if (m_activeTool) {
+        if (m_activeTool-&gt;editMode()) {
+            // Object shouldn't be deleted here because it is in the undo/redo
+            // stack, just set current pointer to null
+            m_activeTool-&gt;setEditMode(false);
+            if (m_activeTool-&gt;isChanged()) {
+                pushObjectsStateToUndoStack();
+            }
+        } else {
+            delete m_activeTool;
+        }
+        m_activeTool = nullptr;
+    }
+    if (m_toolWidget) {
+        m_toolWidget-&gt;hide();
+        delete m_toolWidget;
+        m_toolWidget = nullptr;
+    }
+}
+
+void CaptureWidget::uncheckActiveTool()
+{
+    // uncheck active tool
+    m_panel-&gt;setToolWidget(nullptr);
+    m_activeButton-&gt;setColor(m_uiColor);
+    updateTool(activeButtonTool());
+    m_activeButton = nullptr;
+    releaseActiveTool();
+    updateSelectionState();
+    updateCursor();
+}
+
+void CaptureWidget::paintEvent(QPaintEvent* paintEvent)
+{
+    Q_UNUSED(paintEvent)
+    QPainter painter(this);
+    GeneralConf::xywh_position position =
+      static_cast&lt;GeneralConf::xywh_position&gt;(
+        ConfigHandler().value(&quot;showSelectionGeometry&quot;).toInt());
+    /* QPainter::save and restore is somewhat costly so we try to guess
+       if we need to do it here. What that means is that if you add
+       anything to the paintEvent and want to save/restore you should
+       add a test to the below if statement -- also if you change
+       any of the conditions that current trigger it you'll need to change here,
+       too
+    */
+    bool save = false;
+    if (((position != GeneralConf::xywh_none &amp;&amp;
+          m_selection &amp;&amp; // clause 1: xywh display
+          m_xywhDisplay)) ||
+        (m_activeTool &amp;&amp; m_mouseIsClicked) ||      // clause 2: tool/click
+        (m_previewEnabled &amp;&amp; activeButtonTool() &amp;&amp; // clause 3: mouse preview
+         m_activeButton-&gt;tool()-&gt;showMousePreview())) {
+        painter.save();
+        save = true;
+    }
+    painter.drawPixmap(0, 0, m_context.screenshot);
+    if (position != GeneralConf::xywh_none &amp;&amp; m_selection &amp;&amp; m_xywhDisplay) {
+        const QRect&amp; selection = m_selection-&gt;geometry().normalized();
+        const qreal scale = m_context.screenshot.devicePixelRatio();
+        QRect xybox;
+        QFontMetrics fm = painter.fontMetrics();
+
+        QString xy = QString(&quot;%1x%2+%3+%4&quot;)
+                       .arg(static_cast&lt;int&gt;(selection.width() * scale))
+                       .arg(static_cast&lt;int&gt;(selection.height() * scale))
+                       .arg(static_cast&lt;int&gt;(selection.left() * scale))
+                       .arg(static_cast&lt;int&gt;(selection.top() * scale));
+
+        xybox = fm.boundingRect(xy);
+        // the small numbers here are just margins so the text doesn't
+        // smack right up to the box; they aren't critical and the box
+        // size itself is tied to the font metrics
+        xybox.adjust(0, 0, 10, 12);
+        // in anticipation of making the position adjustable
+        int x0, y0;
+        // Move these to header
+
+// adjust for small selection
+#if 0 // seems more usable not to do this
+        if (xybox.width() &gt; selection.width())
+            xybox.setWidth(selection.width());
+        if (xybox.height() &gt; selection.height())
+            xybox.setHeight(selection.height());
+#endif
+        switch (position) {
+            case GeneralConf::xywh_top_left:
+                x0 = selection.left();
+                y0 = selection.top();
+                break;
+            case GeneralConf::xywh_bottom_left:
+                x0 = selection.left();
+                y0 = selection.bottom() - xybox.height();
+                break;
+            case GeneralConf::xywh_top_right:
+                x0 = selection.right() - xybox.width();
+                y0 = selection.top();
+                break;
+            case GeneralConf::xywh_bottom_right:
+                x0 = selection.right() - xybox.width();
+                y0 = selection.bottom() - xybox.height();
+                break;
+            case GeneralConf::xywh_center:
+            default:
+                x0 = selection.left() + (selection.width() - xybox.width()) / 2;
+                y0 =
+                  selection.top() + (selection.height() - xybox.height()) / 2;
+        }
+
+        QColor uicolor = ConfigHandler().uiColor();
+        uicolor.setAlpha(200);
+        painter.fillRect(
+          x0, y0, xybox.width(), xybox.height(), QBrush(uicolor));
+        painter.setPen(ColorUtils::colorIsDark(uicolor) ? Qt::white
+                                                        : Qt::black);
+        painter.drawText(x0,
+                         y0,
+                         xybox.width(),
+                         xybox.height(),
+                         Qt::AlignVCenter | Qt::AlignHCenter,
+                         xy);
+    }
+
+    if (m_activeTool &amp;&amp; m_mouseIsClicked) {
+        m_activeTool-&gt;process(painter, m_context.screenshot);
+    } else if (m_previewEnabled &amp;&amp; activeButtonTool() &amp;&amp;
+               m_activeButton-&gt;tool()-&gt;showMousePreview()) {
+        m_activeButton-&gt;tool()-&gt;paintMousePreview(painter, m_context);
+    }
+    if (save)
+        painter.restore();
+    // draw inactive region
+    drawInactiveRegion(&amp;painter);
+
+    if (!isActiveWindow()) {
+        drawErrorMessage(
+          tr(&quot;Flameshot has lost focus. Keyboard shortcuts won't &quot;
+             &quot;work until you click somewhere.&quot;),
+          &amp;painter);
+    } else if (m_configError) {
+        drawErrorMessage(ConfigHandler().errorMessage(), &amp;painter);
+    } else if (m_configErrorResolved) {
+        drawErrorMessage(tr(&quot;Configuration error resolved. Launch `flameshot &quot;
+                            &quot;gui` again to apply it.&quot;),
+                         &amp;painter);
+    }
+}
+
+void CaptureWidget::showColorPicker(const QPoint&amp; pos)
+{
+    // Try to select new object if current pos out of active object
+    auto toolItem = activeToolObject();
+    if (!toolItem || (toolItem &amp;&amp; !toolItem-&gt;boundingRect().contains(pos))) {
+        selectToolItemAtPos(pos);
+    }
+
+    // save current state for undo/redo stack
+    if (m_panel-&gt;activeLayerIndex() &gt;= 0) {
+        m_captureToolObjectsBackup = m_captureToolObjects;
+    }
+
+    // Call color picker
+    m_colorPicker-&gt;move(pos.x() - m_colorPicker-&gt;width() / 2,
+                        pos.y() - m_colorPicker-&gt;height() / 2);
+    m_colorPicker-&gt;raise();
+    m_colorPicker-&gt;show();
+}
+
+bool CaptureWidget::startDrawObjectTool(const QPoint&amp; pos)
+{
+    if (activeButtonToolType() != CaptureTool::NONE &amp;&amp;
+        activeButtonToolType() != CaptureTool::TYPE_MOVESELECTION) {
+        if (commitCurrentTool()) {
+            return false;
+        }
+        m_activeTool = m_activeButton-&gt;tool()-&gt;copy(this);
+
+        connect(this,
+                &amp;CaptureWidget::colorChanged,
+                m_activeTool,
+                &amp;CaptureTool::onColorChanged);
+        connect(this,
+                &amp;CaptureWidget::toolSizeChanged,
+                m_activeTool,
+                &amp;CaptureTool::onSizeChanged);
+        connect(m_activeTool,
+                &amp;CaptureTool::requestAction,
+                this,
+                &amp;CaptureWidget::handleToolSignal);
+        m_context.mousePos = pos;
+        m_activeTool-&gt;drawStart(m_context);
+        // TODO this is the wrong place to do this
+
+        if (m_activeTool-&gt;type() == CaptureTool::TYPE_CIRCLECOUNT) {
+            m_activeTool-&gt;setCount(m_context.circleCount++);
+        }
+
+        return true;
+    }
+    return false;
+}
+
+void CaptureWidget::pushObjectsStateToUndoStack()
+{
+    m_undoStack.push(new ModificationCommand(
+      this, m_captureToolObjects, m_captureToolObjectsBackup));
+    m_captureToolObjectsBackup.clear();
+}
+
+int CaptureWidget::selectToolItemAtPos(const QPoint&amp; pos)
+{
+    // Try to select existing tool, &quot;-1&quot; - no active tool
+    int activeLayerIndex = -1;
+    auto selectionMouseSide = m_selection-&gt;getMouseSide(pos);
+    if (m_activeButton.isNull() &amp;&amp;
+        m_captureToolObjects.captureToolObjects().size() &gt; 0 &amp;&amp;
+        (selectionMouseSide == SelectionWidget::NO_SIDE ||
+         selectionMouseSide == SelectionWidget::CENTER)) {
+        auto toolItem = activeToolObject();
+        if (!toolItem ||
+            (toolItem &amp;&amp; !toolItem-&gt;boundingRect().contains(pos))) {
+            activeLayerIndex = m_captureToolObjects.find(pos, size());
+            int oldToolSize = m_context.toolSize;
+            m_panel-&gt;setActiveLayer(activeLayerIndex);
+            drawObjectSelection();
+            if (oldToolSize != m_context.toolSize) {
+                emit toolSizeChanged(m_context.toolSize);
+            }
+        }
+    }
+    return activeLayerIndex;
+}
+
+void CaptureWidget::mousePressEvent(QMouseEvent* e)
+{
+    activateWindow();
+    m_startMove = false;
+    m_startMovePos = QPoint();
+    m_mousePressedPos = e-&gt;pos();
+    m_activeToolOffsetToMouseOnStart = QPoint();
+    if (m_colorPicker-&gt;isVisible()) {
+        updateCursor();
+        return;
+    }
+    // reset object selection if capture area selection is active
+    if (m_selection-&gt;getMouseSide(e-&gt;pos()) != SelectionWidget::CENTER) {
+        m_panel-&gt;setActiveLayer(-1);
+    }
+
+    if (e-&gt;button() == Qt::RightButton) {
+        if (m_activeTool &amp;&amp; m_activeTool-&gt;editMode()) {
+            return;
+        }
+        showColorPicker(m_mousePressedPos);
+        return;
+    } else if (e-&gt;button() == Qt::LeftButton) {
+        m_mouseIsClicked = true;
+
+        // Click using a tool excluding tool MOVE
+        if (startDrawObjectTool(m_mousePressedPos)) {
+            // return if success
+            return;
+        }
+    }
+
+    // Commit current tool if it has edit widget and mouse click is outside
+    // of it
+    if (m_toolWidget &amp;&amp; !m_toolWidget-&gt;geometry().contains(e-&gt;pos())) {
+        commitCurrentTool();
+        m_panel-&gt;setToolWidget(nullptr);
+        drawToolsData();
+        updateLayersPanel();
+    }
+
+    selectToolItemAtPos(m_mousePressedPos);
+    updateSelectionState();
+    updateCursor();
+}
+
+void CaptureWidget::mouseDoubleClickEvent(QMouseEvent* event)
+{
+    int activeLayerIndex = m_panel-&gt;activeLayerIndex();
+    if (activeLayerIndex != -1) {
+        // Start object editing
+        auto activeTool = m_captureToolObjects.at(activeLayerIndex);
+        if (activeTool &amp;&amp; activeTool-&gt;type() == CaptureTool::TYPE_TEXT) {
+            m_activeTool = activeTool;
+            m_mouseIsClicked = false;
+            m_context.mousePos = *m_activeTool-&gt;pos();
+            m_captureToolObjectsBackup = m_captureToolObjects;
+            m_activeTool-&gt;setEditMode(true);
+            drawToolsData();
+            updateLayersPanel();
+            handleToolSignal(CaptureTool::REQ_ADD_CHILD_WIDGET);
+            m_panel-&gt;setToolWidget(m_activeTool-&gt;configurationWidget());
+        }
+    } else if (m_selection-&gt;geometry().contains(event-&gt;pos())) {
+        if ((event-&gt;button() == Qt::LeftButton) &amp;&amp;
+            (m_config.copyOnDoubleClick())) {
+            CopyTool copyTool;
+            connect(&amp;copyTool,
+                    &amp;CopyTool::requestAction,
+                    this,
+                    &amp;CaptureWidget::handleToolSignal);
+            copyTool.pressed(m_context);
+            qApp-&gt;processEvents(QEventLoop::ExcludeUserInputEvents);
+        }
+    }
+}
+
+void CaptureWidget::mouseMoveEvent(QMouseEvent* e)
+{
+    if (m_magnifier) {
+        if (!m_activeButton) {
+            m_magnifier-&gt;show();
+            m_magnifier-&gt;update();
+        } else {
+            m_magnifier-&gt;hide();
+        }
+    }
+
+    m_context.mousePos = e-&gt;pos();
+    if (e-&gt;buttons() != Qt::LeftButton) {
+        updateTool(activeButtonTool());
+        updateCursor();
+        return;
+    }
+
+    // The rest assumes that left mouse button is clicked
+    if (!m_activeButton &amp;&amp; m_panel-&gt;activeLayerIndex() &gt;= 0) {
+        // Move existing object
+        if (!m_startMove) {
+            // Check for the minimal offset to start moving an object
+            if (m_startMovePos.isNull()) {
+                m_startMovePos = e-&gt;pos();
+            }
+            if ((e-&gt;pos() - m_startMovePos).manhattanLength() &gt;
+                MOUSE_DISTANCE_TO_START_MOVING) {
+                m_startMove = true;
+            }
+        }
+        if (m_startMove) {
+            QPointer&lt;CaptureTool&gt; activeTool =
+              m_captureToolObjects.at(m_panel-&gt;activeLayerIndex());
+            if (m_activeToolOffsetToMouseOnStart.isNull()) {
+                setCursor(Qt::ClosedHandCursor);
+                m_activeToolOffsetToMouseOnStart =
+                  e-&gt;pos() - *activeTool-&gt;pos();
+            }
+            if (!m_activeToolIsMoved) {
+                // save state before movement for undo stack
+                m_captureToolObjectsBackup = m_captureToolObjects;
+            }
+            m_activeToolIsMoved = true;
+            // update the old region of the selection, margins are added to
+            // ensure selection outline is updated too
+            update(paddedUpdateRect(activeTool-&gt;boundingRect()));
+            activeTool-&gt;move(e-&gt;pos() - m_activeToolOffsetToMouseOnStart);
+            drawToolsData();
+        }
+    } else if (m_activeTool) {
+        // drawing with a tool
+        if (m_adjustmentButtonPressed) {
+            m_activeTool-&gt;drawMoveWithAdjustment(e-&gt;pos());
+        } else {
+            m_activeTool-&gt;drawMove(e-&gt;pos());
+        }
+        // update drawing object
+        updateTool(m_activeTool);
+        // Hides the buttons under the mouse. If the mouse leaves, it shows
+        // them.
+        if (m_buttonHandler-&gt;buttonsAreInside()) {
+            const bool containsMouse =
+              m_buttonHandler-&gt;contains(m_context.mousePos);
+            if (containsMouse) {
+                m_buttonHandler-&gt;hide();
+            } else if (m_selection-&gt;isVisible()) {
+                m_buttonHandler-&gt;show();
+            }
+        }
+    }
+    updateCursor();
+}
+
+void CaptureWidget::mouseReleaseEvent(QMouseEvent* e)
+{
+    if (e-&gt;button() == Qt::LeftButton &amp;&amp; m_colorPicker-&gt;isVisible()) {
+        // Color picker
+        if (m_colorPicker-&gt;isVisible() &amp;&amp; m_panel-&gt;activeLayerIndex() &gt;= 0 &amp;&amp;
+            m_context.color.isValid()) {
+            pushObjectsStateToUndoStack();
+        }
+        m_colorPicker-&gt;hide();
+        if (!m_context.color.isValid()) {
+            m_context.color = ConfigHandler().drawColor();
+            m_panel-&gt;show();
+        }
+    } else if (m_mouseIsClicked) {
+        if (m_activeTool) {
+            // end draw/edit
+            m_activeTool-&gt;drawEnd(m_context.mousePos);
+            if (m_activeTool-&gt;isValid()) {
+                pushToolToStack();
+            } else if (!m_toolWidget) {
+                releaseActiveTool();
+            }
+        } else {
+            if (m_activeToolIsMoved) {
+                m_activeToolIsMoved = false;
+                pushObjectsStateToUndoStack();
+            }
+        }
+    }
+    m_mouseIsClicked = false;
+    m_activeToolIsMoved = false;
+
+    updateSelectionState();
+    updateCursor();
+}
+
+void CaptureWidget::setToolSize(int size)
+{
+    int oldSize = m_context.toolSize;
+    m_context.toolSize = qBound(1, size, maxToolSize);
+    updateTool(activeButtonTool());
+
+    QPoint topLeft =
+      QGuiAppCurrentScreen().currentScreen()-&gt;geometry().topLeft();
+    int offset = m_notifierBox-&gt;width() / 4;
+    m_notifierBox-&gt;move(mapFromGlobal(topLeft) + QPoint(offset, offset));
+    m_notifierBox-&gt;showMessage(QString::number(m_context.toolSize));
+
+    if (m_context.toolSize != oldSize) {
+        emit toolSizeChanged(m_context.toolSize);
+    }
+}
+
+void CaptureWidget::keyPressEvent(QKeyEvent* e)
+{
+    // If the key is a digit, change the tool size
+    bool ok;
+    int digit = e-&gt;text().toInt(&amp;ok);
+    if (ok &amp;&amp; ((e-&gt;modifiers() == Qt::NoModifier) ||
+               e-&gt;modifiers() == Qt::KeypadModifier)) { // digit received
+        m_toolSizeByKeyboard = 10 * m_toolSizeByKeyboard + digit;
+        setToolSize(m_toolSizeByKeyboard);
+        if (m_context.toolSize != m_toolSizeByKeyboard) {
+            // The tool size was out of range and was clipped by setToolSize
+            m_toolSizeByKeyboard = 0;
+        }
+    } else {
+        m_toolSizeByKeyboard = 0;
+    }
+
+    if (!m_selection-&gt;isVisible()) {
+        return;
+    } else if (e-&gt;key() == Qt::Key_Control) {
+        m_adjustmentButtonPressed = true;
+        updateCursor();
+    } else if (e-&gt;key() == Qt::Key_Enter) {
+        // Make no difference for Return and Enter keys
+        QCoreApplication::postEvent(
+          this,
+          new QKeyEvent(QEvent::KeyPress, Qt::Key_Return, Qt::NoModifier));
+    }
+}
+
+void CaptureWidget::keyReleaseEvent(QKeyEvent* e)
+{
+    if (e-&gt;key() == Qt::Key_Control) {
+        m_adjustmentButtonPressed = false;
+        updateCursor();
+    }
+}
+
+void CaptureWidget::wheelEvent(QWheelEvent* e)
+{
+    /* Mouse scroll usually gives value 120, not more or less, just how many
+     * times.
+     * Touchpad gives the value 2 or more (usually 2-8), it doesn't give
+     * too big values like mouse wheel on normal scrolling, so it is almost
+     * impossible to scroll. It's easier to calculate number of requests and do
+     * not accept events faster that one in 200ms.
+     * */
+    int toolSizeOffset = 0;
+    if (e-&gt;angleDelta().y() &gt;= 60) {
+        // mouse scroll (wheel) increment
+        toolSizeOffset = 1;
+    } else if (e-&gt;angleDelta().y() &lt;= -60) {
+        // mouse scroll (wheel) decrement
+        toolSizeOffset = -1;
+    } else {
+        // touchpad scroll
+        qint64 current = QDateTime::currentMSecsSinceEpoch();
+        if ((current - m_lastMouseWheel) &gt; 200) {
+            if (e-&gt;angleDelta().y() &gt; 0) {
+                toolSizeOffset = 1;
+            } else if (e-&gt;angleDelta().y() &lt; 0) {
+                toolSizeOffset = -1;
+            }
+            m_lastMouseWheel = current;
+        } else {
+            return;
+        }
+    }
+
+    setToolSize(m_context.toolSize + toolSizeOffset);
+}
+
+void CaptureWidget::resizeEvent(QResizeEvent* e)
+{
+    QWidget::resizeEvent(e);
+    m_context.widgetOffset = mapToGlobal(QPoint(0, 0));
+    if (!m_context.fullscreen) {
+        m_panel-&gt;setFixedHeight(height());
+        m_buttonHandler-&gt;updateScreenRegions(rect());
+    }
+}
+
+void CaptureWidget::moveEvent(QMoveEvent* e)
+{
+    QWidget::moveEvent(e);
+    m_context.widgetOffset = mapToGlobal(QPoint(0, 0));
+}
+
+void CaptureWidget::changeEvent(QEvent* e)
+{
+    if (e-&gt;type() == QEvent::ActivationChange) {
+        QPoint bottomRight = rect().bottomRight();
+        // Update the message in the bottom right corner. A rough estimate is
+        // used for the update rect
+        update(QRect(bottomRight - QPoint(1000, 200), bottomRight));
+    }
+}
+
+void CaptureWidget::initContext(bool fullscreen, const CaptureRequest&amp; req)
+{
+    m_context.color = m_config.drawColor();
+    m_context.widgetOffset = mapToGlobal(QPoint(0, 0));
+    m_context.mousePos = mapFromGlobal(QCursor::pos());
+    m_context.toolSize = m_config.drawThickness();
+    m_context.fullscreen = fullscreen;
+
+    // initialize m_context.request
+    m_context.request = req;
+}
+
+void CaptureWidget::initPanel()
+{
+    QRect panelRect = rect();
+    if (m_context.fullscreen) {
+#if (defined(Q_OS_MACOS) || defined(Q_OS_LINUX))
+        QScreen* currentScreen = QGuiAppCurrentScreen().currentScreen();
+        panelRect = currentScreen-&gt;geometry();
+        auto devicePixelRatio = currentScreen-&gt;devicePixelRatio();
+        panelRect.moveTo(static_cast&lt;int&gt;(panelRect.x() / devicePixelRatio),
+                         static_cast&lt;int&gt;(panelRect.y() / devicePixelRatio));
+#else
+        panelRect = QGuiApplication::primaryScreen()-&gt;geometry();
+        auto devicePixelRatio =
+          QGuiApplication::primaryScreen()-&gt;devicePixelRatio();
+        panelRect.moveTo(panelRect.x() / devicePixelRatio,
+                         panelRect.y() / devicePixelRatio);
+#endif
+    }
+
+    if (ConfigHandler().showSidePanelButton()) {
+        auto* panelToggleButton =
+          new OrientablePushButton(tr(&quot;Tool Settings&quot;), this);
+        makeChild(panelToggleButton);
+        panelToggleButton-&gt;setColor(m_uiColor);
+        panelToggleButton-&gt;setOrientation(
+          OrientablePushButton::VerticalBottomToTop);
+#if defined(Q_OS_MACOS)
+        panelToggleButton-&gt;move(
+          0,
+          static_cast&lt;int&gt;(panelRect.height() / 2) -
+            static_cast&lt;int&gt;(panelToggleButton-&gt;width() / 2));
+#else
+        panelToggleButton-&gt;move(panelRect.x(),
+                                panelRect.y() + panelRect.height() / 2 -
+                                  panelToggleButton-&gt;width() / 2);
+#endif
+        panelToggleButton-&gt;setCursor(Qt::ArrowCursor);
+        (new DraggableWidgetMaker(this))-&gt;makeDraggable(panelToggleButton);
+        connect(panelToggleButton,
+                &amp;QPushButton::clicked,
+                this,
+                &amp;CaptureWidget::togglePanel);
+    }
+
+    m_panel = new UtilityPanel(this);
+    m_panel-&gt;hide();
+    makeChild(m_panel);
+#if defined(Q_OS_MACOS)
+    QScreen* currentScreen = QGuiAppCurrentScreen().currentScreen();
+    panelRect.moveTo(mapFromGlobal(panelRect.topLeft()));
+    m_panel-&gt;setFixedWidth(static_cast&lt;int&gt;(m_colorPicker-&gt;width() * 1.5));
+    m_panel-&gt;setFixedHeight(currentScreen-&gt;geometry().height());
+#else
+    panelRect.moveTo(mapFromGlobal(panelRect.topLeft()));
+    panelRect.setWidth(m_colorPicker-&gt;width() * 1.5);
+    m_panel-&gt;setGeometry(panelRect);
+#endif
+    connect(m_panel,
+            &amp;UtilityPanel::layerChanged,
+            this,
+            &amp;CaptureWidget::updateActiveLayer);
+    connect(m_panel,
+            &amp;UtilityPanel::moveUpClicked,
+            this,
+            &amp;CaptureWidget::onMoveCaptureToolUp);
+    connect(m_panel,
+            &amp;UtilityPanel::moveDownClicked,
+            this,
+            &amp;CaptureWidget::onMoveCaptureToolDown);
+
+    m_sidePanel = new SidePanelWidget(&amp;m_context.screenshot, this);
+    connect(m_sidePanel,
+            &amp;SidePanelWidget::colorChanged,
+            this,
+            &amp;CaptureWidget::setDrawColor);
+    connect(m_sidePanel,
+            &amp;SidePanelWidget::toolSizeChanged,
+            this,
+            &amp;CaptureWidget::onToolSizeChanged);
+    connect(this,
+            &amp;CaptureWidget::colorChanged,
+            m_sidePanel,
+            &amp;SidePanelWidget::onColorChanged);
+    connect(this,
+            &amp;CaptureWidget::toolSizeChanged,
+            m_sidePanel,
+            &amp;SidePanelWidget::onToolSizeChanged);
+    connect(m_sidePanel,
+            &amp;SidePanelWidget::togglePanel,
+            m_panel,
+            &amp;UtilityPanel::toggle);
+    // TODO replace with a CaptureWidget signal
+    emit m_sidePanel-&gt;colorChanged(m_context.color);
+    emit toolSizeChanged(m_context.toolSize);
+    m_panel-&gt;pushWidget(m_sidePanel);
+
+    // Fill undo/redo/history list widget
+    m_panel-&gt;fillCaptureTools(m_captureToolObjects.captureToolObjects());
+}
+
+#if !defined(DISABLE_UPDATE_CHECKER)
+void CaptureWidget::showAppUpdateNotification(const QString&amp; appLatestVersion,
+                                              const QString&amp; appLatestUrl)
+{
+    if (!ConfigHandler().checkForUpdates()) {
+        // option check for updates disabled
+        return;
+    }
+    if (nullptr == m_updateNotificationWidget) {
+        m_updateNotificationWidget =
+          new UpdateNotificationWidget(this, appLatestVersion, appLatestUrl);
+    }
+#if defined(Q_OS_MACOS)
+    int ax = (width() - m_updateNotificationWidget-&gt;width()) / 2;
+#elif (defined(Q_OS_LINUX) &amp;&amp; QT_VERSION &lt; QT_VERSION_CHECK(5, 10, 0))
+    QRect helpRect = QGuiApplication::primaryScreen()-&gt;geometry();
+    int ax = helpRect.left() +
+             ((helpRect.width() - m_updateNotificationWidget-&gt;width()) / 2);
+#else
+    QRect helpRect;
+    QScreen* currentScreen = QGuiAppCurrentScreen().currentScreen();
+    if (currentScreen) {
+        helpRect = currentScreen-&gt;geometry();
+    } else {
+        helpRect = QGuiApplication::primaryScreen()-&gt;geometry();
+    }
+    int ax = helpRect.left() +
+             ((helpRect.width() - m_updateNotificationWidget-&gt;width()) / 2);
+#endif
+    m_updateNotificationWidget-&gt;move(ax, 0);
+    makeChild(m_updateNotificationWidget);
+    m_updateNotificationWidget-&gt;show();
+}
+#endif
+
+void CaptureWidget::initSelection()
+{
+    // Be mindful of the order of statements, so that slots are called properly
+    m_selection = new SelectionWidget(m_uiColor, this);
+    QRect initialSelection = m_context.request.initialSelection();
+    connect(m_selection, &amp;SelectionWidget::geometryChanged, this, [this]() {
+        QRect constrainedToCaptureArea =
+          m_selection-&gt;geometry().intersected(rect());
+        m_context.selection = extendedRect(constrainedToCaptureArea);
+        updateSizeIndicator();
+        m_buttonHandler-&gt;hide();
+        updateCursor();
+        OverlayMessage::pop();
+    });
+    connect(m_selection, &amp;SelectionWidget::geometrySettled, this, [this]() {
+        if (m_selection-&gt;isVisibleTo(this)) {
+            auto&amp; req = m_context.request;
+            if (req.tasks() &amp; CaptureRequest::ACCEPT_ON_SELECT) {
+                req.removeTask(CaptureRequest::ACCEPT_ON_SELECT);
+                m_captureDone = true;
+                close();
+            }
+            m_buttonHandler-&gt;updatePosition(m_selection-&gt;geometry());
+            m_buttonHandler-&gt;show();
+        } else {
+            m_buttonHandler-&gt;hide();
+        }
+    });
+    connect(m_selection, &amp;SelectionWidget::visibilityChanged, this, [this]() {
+        if (!m_selection-&gt;isVisible() &amp;&amp; !m_helpMessage.isEmpty()) {
+            OverlayMessage::push(m_helpMessage);
+        }
+    });
+    if (!initialSelection.isNull()) {
+        const qreal scale = m_context.screenshot.devicePixelRatio();
+        initialSelection.moveTopLeft(initialSelection.topLeft() -
+                                     mapToGlobal({}));
+        initialSelection.setTop(initialSelection.top() / scale);
+        initialSelection.setBottom(initialSelection.bottom() / scale);
+        initialSelection.setLeft(initialSelection.left() / scale);
+        initialSelection.setRight(initialSelection.right() / scale);
+    }
+    m_selection-&gt;setGeometry(initialSelection);
+    m_selection-&gt;setVisible(!initialSelection.isNull());
+    if (!initialSelection.isNull()) {
+        m_context.selection = extendedRect(m_selection-&gt;geometry());
+        emit m_selection-&gt;geometrySettled();
+    }
+
+    updateSizeIndicator();
+}
+
+void CaptureWidget::setState(CaptureToolButton* b)
+{
+    if (!b) {
+        return;
+    }
+
+    commitCurrentTool();
+    if (m_toolWidget &amp;&amp; m_activeTool) {
+        if (m_activeTool-&gt;isValid()) {
+            pushToolToStack();
+        } else {
+            releaseActiveTool();
+        }
+    }
+    if (m_activeButton != b) {
+        auto backup = m_activeTool;
+        // The tool is active during the pressed().
+        // This must be done in order to handle tool requests correctly.
+        m_activeTool = b-&gt;tool();
+        m_activeTool-&gt;pressed(m_context);
+        m_activeTool = backup;
+    }
+
+    if (b-&gt;tool()-&gt;isSelectable()) {
+        if (m_activeButton != b) {
+            if (m_activeButton) {
+                m_activeButton-&gt;setColor(m_uiColor);
+            }
+            m_activeButton = b;
+            m_activeButton-&gt;setColor(m_contrastUiColor);
+            m_panel-&gt;setActiveLayer(-1);
+            m_panel-&gt;setToolWidget(b-&gt;tool()-&gt;configurationWidget());
+        } else if (m_activeButton) {
+            m_panel-&gt;clearToolWidget();
+            m_activeButton-&gt;setColor(m_uiColor);
+            m_activeButton = nullptr;
+        }
+        m_context.toolSize = ConfigHandler().toolSize(activeButtonToolType());
+        emit toolSizeChanged(m_context.toolSize);
+        updateCursor();
+        updateSelectionState();
+        updateTool(b-&gt;tool());
+    }
+}
+
+void CaptureWidget::handleToolSignal(CaptureTool::Request r)
+{
+    switch (r) {
+        case CaptureTool::REQ_CLOSE_GUI:
+            close();
+            break;
+        case CaptureTool::REQ_HIDE_GUI:
+            hide();
+            break;
+        case CaptureTool::REQ_UNDO_MODIFICATION:
+            undo();
+            break;
+        case CaptureTool::REQ_REDO_MODIFICATION:
+            redo();
+            break;
+        case CaptureTool::REQ_SHOW_COLOR_PICKER:
+            // TODO
+            break;
+        case CaptureTool::REQ_CAPTURE_DONE_OK:
+            m_captureDone = true;
+            break;
+        case CaptureTool::REQ_CLEAR_SELECTION:
+            if (m_panel-&gt;activeLayerIndex() &gt;= 0) {
+                m_panel-&gt;setActiveLayer(-1);
+                drawToolsData(false);
+            }
+            break;
+        case CaptureTool::REQ_ADD_CHILD_WIDGET:
+            if (!m_activeTool) {
+                break;
+            }
+            if (m_toolWidget) {
+                m_toolWidget-&gt;hide();
+                delete m_toolWidget;
+                m_toolWidget = nullptr;
+            }
+            m_toolWidget = m_activeTool-&gt;widget();
+            if (m_toolWidget) {
+                makeChild(m_toolWidget);
+                m_toolWidget-&gt;move(m_context.mousePos);
+                m_toolWidget-&gt;show();
+                m_toolWidget-&gt;setFocus();
+            }
+            break;
+        case CaptureTool::REQ_ADD_EXTERNAL_WIDGETS:
+            if (!m_activeTool) {
+                break;
+            } else {
+                QWidget* w = m_activeTool-&gt;widget();
+                w-&gt;setAttribute(Qt::WA_DeleteOnClose);
+                w-&gt;activateWindow();
+                w-&gt;show();
+                Flameshot::instance()-&gt;setExternalWidget(true);
+            }
+            break;
+        case CaptureTool::REQ_INCREASE_TOOL_SIZE:
+            setToolSize(m_context.toolSize + 1);
+            break;
+        case CaptureTool::REQ_DECREASE_TOOL_SIZE:
+            setToolSize(m_context.toolSize - 1);
+            break;
+        default:
+            break;
+    }
+}
+
+void CaptureWidget::onToolSizeChanged(int t)
+{
+
+    m_context.toolSize = t;
+    CaptureTool* tool = activeButtonTool();
+    if (tool &amp;&amp; tool-&gt;showMousePreview()) {
+        setCursor(Qt::BlankCursor);
+        tool-&gt;onSizeChanged(t);
+    }
+
+    // update tool size of object being drawn
+    if (m_activeTool != nullptr) {
+        updateTool(m_activeTool);
+    }
+
+    // update tool size of selected object
+    auto toolItem = activeToolObject();
+    if (toolItem) {
+        // Change thickness
+        toolItem-&gt;onSizeChanged(t);
+        if (!m_existingObjectIsChanged) {
+            m_captureToolObjectsBackup = m_captureToolObjects;
+            m_existingObjectIsChanged = true;
+        }
+        drawToolsData();
+        updateTool(toolItem);
+    }
+
+    // Force a repaint to prevent artifacting
+    this-&gt;repaint();
+}
+
+void CaptureWidget::onToolSizeSettled(int size)
+{
+    m_config.setToolSize(activeButtonToolType(), size);
+}
+
+void CaptureWidget::setDrawColor(const QColor&amp; c)
+{
+    m_context.color = c;
+    if (m_context.color.isValid()) {
+        ConfigHandler().setDrawColor(m_context.color);
+        emit colorChanged(c);
+        // Update mouse preview
+        updateTool(activeButtonTool());
+
+        // change color for the active tool
+        auto toolItem = activeToolObject();
+        if (toolItem) {
+            // Change color
+            toolItem-&gt;onColorChanged(c);
+            drawToolsData();
+        }
+    }
+}
+
+void CaptureWidget::updateActiveLayer(int layer)
+{
+    // TODO - refactor this part, make all objects to work with
+    // m_activeTool-&gt;isChanged() and remove m_existingObjectIsChanged
+    if (m_activeTool &amp;&amp; m_activeTool-&gt;type() == CaptureTool::TYPE_TEXT &amp;&amp;
+        m_activeTool-&gt;isChanged()) {
+        commitCurrentTool();
+    }
+
+    if (m_toolWidget) {
+        // Release active tool if it is in the editing mode but not changed and
+        // has editing widget (ex: text tool)
+        releaseActiveTool();
+    }
+
+    if (m_existingObjectIsChanged) {
+        m_existingObjectIsChanged = false;
+        pushObjectsStateToUndoStack();
+    }
+    drawToolsData();
+    drawObjectSelection();
+    updateSelectionState();
+}
+
+void CaptureWidget::onMoveCaptureToolUp(int captureToolIndex)
+{
+    m_captureToolObjectsBackup = m_captureToolObjects;
+    pushObjectsStateToUndoStack();
+    auto tool = m_captureToolObjects.at(captureToolIndex);
+    m_captureToolObjects.removeAt(captureToolIndex);
+    m_captureToolObjects.insert(captureToolIndex - 1, tool);
+    updateLayersPanel();
+}
+
+void CaptureWidget::onMoveCaptureToolDown(int captureToolIndex)
+{
+    m_captureToolObjectsBackup = m_captureToolObjects;
+    pushObjectsStateToUndoStack();
+    auto tool = m_captureToolObjects.at(captureToolIndex);
+    m_captureToolObjects.removeAt(captureToolIndex);
+    m_captureToolObjects.insert(captureToolIndex + 1, tool);
+    updateLayersPanel();
+}
+
+void CaptureWidget::selectAll()
+{
+    m_selection-&gt;show();
+    m_selection-&gt;setGeometry(rect());
+    emit m_selection-&gt;geometrySettled();
+    m_buttonHandler-&gt;show();
+    updateSelectionState();
+}
+
+void CaptureWidget::removeToolObject(int index)
+{
+    --index;
+    if (index &gt;= 0 &amp;&amp; index &lt; m_captureToolObjects.size()) {
+        // in case this tool is circle counter
+        int removedCircleCount = -1;
+
+        const CaptureTool::Type currentToolType =
+          m_captureToolObjects.at(index)-&gt;type();
+        m_captureToolObjectsBackup = m_captureToolObjects;
+        update(
+          paddedUpdateRect(m_captureToolObjects.at(index)-&gt;boundingRect()));
+        if (currentToolType == CaptureTool::TYPE_CIRCLECOUNT) {
+            removedCircleCount = m_captureToolObjects.at(index)-&gt;count();
+            --m_context.circleCount;
+            // Decrement circle counter numbers starting from deleted circle
+            for (int cnt = 0; cnt &lt; m_captureToolObjects.size(); cnt++) {
+                auto toolItem = m_captureToolObjects.at(cnt);
+                if (toolItem-&gt;type() != CaptureTool::TYPE_CIRCLECOUNT) {
+                    continue;
+                }
+                auto circleTool = m_captureToolObjects.at(cnt);
+                if (circleTool-&gt;count() &gt;= removedCircleCount) {
+                    circleTool-&gt;setCount(circleTool-&gt;count() - 1);
+                }
+            }
+        }
+        m_captureToolObjects.removeAt(index);
+        pushObjectsStateToUndoStack();
+        drawToolsData();
+        updateLayersPanel();
+    }
+}
+
+void CaptureWidget::initShortcuts()
+{
+    newShortcut(
+      QKeySequence(ConfigHandler().shortcut(&quot;TYPE_UNDO&quot;)), this, SLOT(undo()));
+
+    newShortcut(
+      QKeySequence(ConfigHandler().shortcut(&quot;TYPE_REDO&quot;)), this, SLOT(redo()));
+
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_TOGGLE_PANEL&quot;)),
+                this,
+                SLOT(togglePanel()));
+
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_RESIZE_LEFT&quot;)),
+                m_selection,
+                SLOT(resizeLeft()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_RESIZE_RIGHT&quot;)),
+                m_selection,
+                SLOT(resizeRight()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_RESIZE_UP&quot;)),
+                m_selection,
+                SLOT(resizeUp()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_RESIZE_DOWN&quot;)),
+                m_selection,
+                SLOT(resizeDown()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_SYM_RESIZE_LEFT&quot;)),
+                m_selection,
+                SLOT(symResizeLeft()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_SYM_RESIZE_RIGHT&quot;)),
+                m_selection,
+                SLOT(symResizeRight()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_SYM_RESIZE_UP&quot;)),
+                m_selection,
+                SLOT(symResizeUp()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_SYM_RESIZE_DOWN&quot;)),
+                m_selection,
+                SLOT(symResizeDown()));
+
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_MOVE_LEFT&quot;)),
+                m_selection,
+                SLOT(moveLeft()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_MOVE_RIGHT&quot;)),
+                m_selection,
+                SLOT(moveRight()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_MOVE_UP&quot;)),
+                m_selection,
+                SLOT(moveUp()));
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_MOVE_DOWN&quot;)),
+                m_selection,
+                SLOT(moveDown()));
+
+    newShortcut(
+      QKeySequence(ConfigHandler().shortcut(&quot;TYPE_DELETE_CURRENT_TOOL&quot;)),
+      this,
+      SLOT(deleteCurrentTool()));
+
+    newShortcut(
+      QKeySequence(ConfigHandler().shortcut(&quot;TYPE_COMMIT_CURRENT_TOOL&quot;)),
+      this,
+      SLOT(commitCurrentTool()));
+
+    newShortcut(QKeySequence(ConfigHandler().shortcut(&quot;TYPE_SELECT_ALL&quot;)),
+                this,
+                SLOT(selectAll()));
+
+    newShortcut(Qt::Key_Escape, this, SLOT(deleteToolWidgetOrClose()));
+}
+
+void CaptureWidget::deleteCurrentTool()
+{
+    int oldToolSize = m_context.toolSize;
+    m_panel-&gt;slotButtonDelete(true);
+    drawObjectSelection();
+    if (oldToolSize != m_context.toolSize) {
+        emit toolSizeChanged(m_context.toolSize);
+    }
+}
+
+void CaptureWidget::updateSizeIndicator()
+{
+    showxywh(); // Note: even if sizeIndButton goes away, we have to keep this!
+    if (m_sizeIndButton) {
+        const QRect&amp; selection = extendedSelection();
+        m_sizeIndButton-&gt;setText(QStringLiteral(&quot;%1\n%2&quot;)
+                                   .arg(selection.width())
+                                   .arg(selection.height()));
+    }
+}
+
+void CaptureWidget::updateCursor()
+{
+    if (m_colorPicker &amp;&amp; m_colorPicker-&gt;isVisible()) {
+        setCursor(Qt::ArrowCursor);
+    } else if (m_activeButton != nullptr &amp;&amp;
+               activeButtonToolType() != CaptureTool::TYPE_MOVESELECTION) {
+        setCursor(Qt::CrossCursor);
+    } else if (m_selection-&gt;getMouseSide(mapFromGlobal(QCursor::pos())) !=
+               SelectionWidget::NO_SIDE) {
+        setCursor(m_selection-&gt;cursor());
+    } else if (activeButtonToolType() == CaptureTool::TYPE_MOVESELECTION) {
+        setCursor(Qt::OpenHandCursor);
+    } else {
+        setCursor(Qt::CrossCursor);
+    }
+}
+
+void CaptureWidget::updateSelectionState()
+{
+    auto toolType = activeButtonToolType();
+    if (toolType == CaptureTool::TYPE_MOVESELECTION) {
+        m_selection-&gt;setIdleCentralCursor(Qt::OpenHandCursor);
+        m_selection-&gt;setIgnoreMouse(false);
+    } else {
+        m_selection-&gt;setIdleCentralCursor(Qt::ArrowCursor);
+        if (toolType == CaptureTool::NONE) {
+            m_selection-&gt;setIgnoreMouse(m_panel-&gt;activeLayerIndex() != -1);
+        } else {
+            m_selection-&gt;setIgnoreMouse(true);
+        }
+    }
+}
+
+void CaptureWidget::updateTool(CaptureTool* tool)
+{
+    if (!tool || !tool-&gt;showMousePreview()) {
+        return;
+    }
+
+    static QRect oldPreviewRect, oldToolObjectRect;
+
+    QRect previewRect(tool-&gt;mousePreviewRect(m_context));
+    previewRect += QMargins(previewRect.width(),
+                            previewRect.height(),
+                            previewRect.width(),
+                            previewRect.height());
+
+    QRect toolObjectRect = paddedUpdateRect(tool-&gt;boundingRect());
+
+    // old rects are united with current rects to handle sudden mouse movement
+    update(previewRect);
+    update(toolObjectRect);
+    update(oldPreviewRect);
+    update(oldToolObjectRect);
+
+    oldPreviewRect = previewRect;
+    oldToolObjectRect = toolObjectRect;
+}
+
+void CaptureWidget::updateLayersPanel()
+{
+    m_panel-&gt;fillCaptureTools(m_captureToolObjects.captureToolObjects());
+}
+
+void CaptureWidget::pushToolToStack()
+{
+    // append current tool to the new state
+    if (m_activeTool &amp;&amp; m_activeButton) {
+        disconnect(this,
+                   &amp;CaptureWidget::colorChanged,
+                   m_activeTool,
+                   &amp;CaptureTool::onColorChanged);
+        disconnect(this,
+                   &amp;CaptureWidget::toolSizeChanged,
+                   m_activeTool,
+                   &amp;CaptureTool::onSizeChanged);
+        if (m_panel-&gt;toolWidget()) {
+            disconnect(m_panel-&gt;toolWidget(), nullptr, m_activeTool, nullptr);
+        }
+
+        // disable signal connect for updating layer because it may call this
+        // function again on text objects
+        m_panel-&gt;blockSignals(true);
+
+        m_captureToolObjectsBackup = m_captureToolObjects;
+        m_captureToolObjects.append(m_activeTool);
+        pushObjectsStateToUndoStack();
+        releaseActiveTool();
+        drawToolsData();
+        updateLayersPanel();
+
+        // restore signal connection for updating layer
+        m_panel-&gt;blockSignals(false);
+    }
+}
+
+void CaptureWidget::drawToolsData(bool drawSelection)
+{
+    // TODO refactor this for performance. The objects should not all be updated
+    // at once every time
+    QPixmap pixmapItem = m_context.origScreenshot;
+    for (auto toolItem : m_captureToolObjects.captureToolObjects()) {
+        processPixmapWithTool(&amp;pixmapItem, toolItem);
+        update(paddedUpdateRect(toolItem-&gt;boundingRect()));
+    }
+
+    m_context.screenshot = pixmapItem;
+    if (drawSelection) {
+        drawObjectSelection();
+    }
+}
+
+void CaptureWidget::drawObjectSelection()
+{
+    auto toolItem = activeToolObject();
+    if (toolItem &amp;&amp; !toolItem-&gt;editMode()) {
+        QPainter painter(&amp;m_context.screenshot);
+        toolItem-&gt;drawObjectSelection(painter);
+        // TODO move this elsewhere
+        if (m_context.toolSize != toolItem-&gt;size()) {
+            m_context.toolSize = toolItem-&gt;size();
+        }
+        if (activeToolObject() &amp;&amp; m_activeButton) {
+            uncheckActiveTool();
+        }
+    }
+}
+
+void CaptureWidget::processPixmapWithTool(QPixmap* pixmap, CaptureTool* tool)
+{
+    QPainter painter(pixmap);
+    painter.setRenderHint(QPainter::Antialiasing);
+    tool-&gt;process(painter, *pixmap);
+}
+
+CaptureTool* CaptureWidget::activeButtonTool() const
+{
+    if (m_activeButton == nullptr) {
+        return nullptr;
+    }
+    return m_activeButton-&gt;tool();
+}
+
+CaptureTool::Type CaptureWidget::activeButtonToolType() const
+{
+    auto* activeTool = activeButtonTool();
+    if (activeTool == nullptr) {
+        return CaptureTool::NONE;
+    }
+    return activeTool-&gt;type();
+}
+
+QPointer&lt;CaptureTool&gt; CaptureWidget::activeToolObject()
+{
+    return m_captureToolObjects.at(m_panel-&gt;activeLayerIndex());
+}
+
+void CaptureWidget::makeChild(QWidget* w)
+{
+    w-&gt;setParent(this);
+    w-&gt;installEventFilter(m_eventFilter);
+}
+
+void CaptureWidget::restoreCircleCountState()
+{
+    int largest = 0;
+    for (int cnt = 0; cnt &lt; m_captureToolObjects.size(); cnt++) {
+        auto toolItem = m_captureToolObjects.at(cnt);
+        if (toolItem-&gt;type() != CaptureTool::TYPE_CIRCLECOUNT) {
+            continue;
+        }
+        if (toolItem-&gt;count() &gt; largest) {
+            largest = toolItem-&gt;count();
+        }
+    }
+    m_context.circleCount = largest + 1;
+}
+
+QList&lt;QShortcut*&gt; CaptureWidget::newShortcut(const QKeySequence&amp; key,
+                                             QWidget* parent,
+                                             const char* slot)
+{
+    QList&lt;QShortcut*&gt; shortcuts;
+    QString strKey = key.toString();
+    if (strKey.contains(&quot;Enter&quot;) || strKey.contains(&quot;Return&quot;)) {
+        strKey.replace(&quot;Enter&quot;, &quot;Return&quot;);
+        shortcuts &lt;&lt; new QShortcut(strKey, parent, slot);
+        strKey.replace(&quot;Return&quot;, &quot;Enter&quot;);
+        shortcuts &lt;&lt; new QShortcut(strKey, parent, slot);
+    } else {
+        shortcuts &lt;&lt; new QShortcut(key, parent, slot);
+    }
+    return shortcuts;
+}
+
+void CaptureWidget::togglePanel()
+{
+    m_panel-&gt;toggle();
+}
+
+void CaptureWidget::childEnter()
+{
+    m_previewEnabled = false;
+    updateTool(activeButtonTool());
+}
+
+void CaptureWidget::childLeave()
+{
+    m_previewEnabled = true;
+    updateTool(activeButtonTool());
+}
+
+void CaptureWidget::setCaptureToolObjects(
+  const CaptureToolObjects&amp; captureToolObjects)
+{
+    // Used for undo/redo
+    m_captureToolObjects = captureToolObjects;
+    drawToolsData();
+    updateLayersPanel();
+    drawObjectSelection();
+}
+
+void CaptureWidget::undo()
+{
+    if (m_activeTool &amp;&amp;
+        (m_activeTool-&gt;isChanged() || m_activeTool-&gt;editMode())) {
+        // Remove selection on undo, at the same time commit current tool will
+        // be called
+        m_panel-&gt;setActiveLayer(-1);
+    }
+
+    // drawToolsData is called twice to update both previous and new regions
+    // FIXME this is a temporary workaround
+    drawToolsData();
+    m_undoStack.undo();
+    drawToolsData();
+    updateLayersPanel();
+
+    restoreCircleCountState();
+}
+
+void CaptureWidget::redo()
+{
+    // drawToolsData is called twice to update both previous and new regions
+    // FIXME this is a temporary workaround
+    drawToolsData();
+    m_undoStack.redo();
+    drawToolsData();
+    update();
+    updateLayersPanel();
+
+    restoreCircleCountState();
+}
+
+QRect CaptureWidget::extendedSelection() const
+{
+    if (m_selection == nullptr) {
+        return {};
+    }
+    QRect r = m_selection-&gt;geometry();
+    return extendedRect(r);
+}
+
+QRect CaptureWidget::extendedRect(const QRect&amp; r) const
+{
+    auto devicePixelRatio = m_context.screenshot.devicePixelRatio();
+    return { static_cast&lt;int&gt;(r.left() * devicePixelRatio),
+             static_cast&lt;int&gt;(r.top() * devicePixelRatio),
+             static_cast&lt;int&gt;(r.width() * devicePixelRatio),
+             static_cast&lt;int&gt;(r.height() * devicePixelRatio) };
+}
+
+QRect CaptureWidget::paddedUpdateRect(const QRect&amp; r) const
+{
+    if (r.isNull()) {
+        return r;
+    } else {
+        return r + QMargins(20, 20, 20, 20);
+    }
+}
+
+void CaptureWidget::drawErrorMessage(const QString&amp; msg, QPainter* painter)
+{
+    auto textRect = painter-&gt;fontMetrics().boundingRect(msg);
+    int w = textRect.width(), h = textRect.height();
+    textRect = {
+        size().width() - w - 10, size().height() - h - 5, w + 100, h + 100
+    };
+    QScreen* currentScreen = QGuiAppCurrentScreen().currentScreen();
+
+    if (!textRect.contains(QCursor::pos(currentScreen))) {
+        QColor textColor(Qt::white);
+        painter-&gt;setPen(textColor);
+        painter-&gt;drawText(textRect, msg);
+    }
+}
+
+void CaptureWidget::drawInactiveRegion(QPainter* painter)
+{
+    QColor overlayColor(0, 0, 0, m_opacity);
+    painter-&gt;setBrush(overlayColor);
+    QRect r;
+    if (m_selection-&gt;isVisible()) {
+        r = m_selection-&gt;geometry().normalized();
+    }
+    QRegion grey(rect());
+    grey = grey.subtracted(r);
+
+    painter-&gt;setClipRegion(grey);
+    painter-&gt;drawRect(-1, -1, rect().width() + 1, rect().height() + 1);
+}
+
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
