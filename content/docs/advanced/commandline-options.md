@@ -87,7 +87,7 @@ In Flameshot (version 11.0.0 or later) we now have the concept of "final actions
 The benefit of having the concept of Final Actions is that you can use more than one of them at the same time. For instance you can pin, copy to clipboard, save to a file, and get the geometry of the screenshot using this:
 
 ```sh
-flameshot gui --pin --clipboard --path "~/Pictures" --print--geometry
+flameshot gui --pin --clipboard --path "~/Pictures" --print-geometry
 ```
 
 These Final Actions can be used with `--accept-on-select` to immediately capture the selected area immediately after the mouse release.
