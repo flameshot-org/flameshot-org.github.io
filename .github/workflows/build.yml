@@ -36,7 +36,7 @@ jobs:
       - name: Deploy developer docs
         working-directory: ${{github.workspace}}
         run: |
-          git checkout gh-pages
+          git fetch gh-pages:gh-pages developer-docs:developer-docs
           git cherry-pick developer-docs || true
           git remote add destination "https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}}.git"
           git push destination gh-pages
