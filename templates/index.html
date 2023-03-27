@@ -148,8 +148,8 @@
             <h5 class="fs-3 text-dark mx-2 my-0"><strong>Windows Downloads</strong></h5>
             <p class="fs-6 text-dark mx-2 mt-2 mb-3">64-bit only, either installer or portable version available</p>
             <div class="col-12 my-4 mx-auto">
-              <a class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download Installer</a>
-              <a class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download Portable</a>
+              <a id="windowsMsi" class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download Installer</a>
+              <a id="windowsPortable" class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download Portable</a>
             </div>
             <a class="text-secondary text-decoration-underline fw-bold fs-6" href="https://github.com/flameshot-org/flameshot/releases">Looking for older releases?</a>
           </div>
@@ -159,7 +159,7 @@
             <p class="fs-6 text-dark mx-2 mt-2 mb-3">64-bit only, install via Homebrew or download the dmg file</p>
             <div class="col-12 my-4 mx-auto">
               <a class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://formulae.brew.sh/cask/flameshot">Install via Homebrew</a>
-              <a class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download .dmg</a>
+              <a id="macDmg" class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download .dmg</a>
             </div>
             <a class="text-secondary text-decoration-underline fw-bold fs-6" href="https://github.com/flameshot-org/flameshot/releases">Looking for older releases?</a>
           </div>
@@ -168,7 +168,7 @@
             <h5 class="fs-3 text-dark mx-2 my-0"><strong>Linux Downloads</strong></h5>
             <p class="fs-6 text-dark mx-2 mt-2 mb-3">64-bit only, install via Appimage, your package manager, Snapcraft or Flathub</p>
             <div class="col-12 my-4 mx-auto">
-              <a class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download AppImage</a>
+              <a id="linuxAppImage" class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="https://github.com/flameshot-org/flameshot/releases/latest">Download AppImage</a>
               <a class="btn btn-cta-solid btn-lg d-block d-md-inline-block m-2" href="/docs/installation/development-build">Download Nightly-builds Binaries</a>
             </div>
             <div class="col-12 my-5 mx-auto">
@@ -246,4 +246,32 @@
     </div>
   </div>
 </section>
+
+
+<script>
+  // Get the latest release links for the download buttons
+  var windowsMsi = document.getElementById('windowsMsi');
+  var windowsPortable = document.getElementById('windowsPortable');
+  var macDng = document.getElementById('macDmg');
+  var linuxAppImage = document.getElementById('linuxAppImage');
+
+  fetch("https://api.github.com/repos/flameshot-org/flameshot/releases/latest").then(response => {
+    return response.json();
+  }).then((release) => {
+    updateDownloadBtn(release, "win64.msi", windowsMsi);
+    updateDownloadBtn(release, "win64.zip", windowsPortable);
+    updateDownloadBtn(release, ".dmg", macDng);
+    updateDownloadBtn(release, ".AppImage", linuxAppImage);
+  });
+
+  function updateDownloadBtn(release, assetExt, element) {
+    let asset = release.assets.find(asset => asset.name.endsWith(assetExt));
+    let releaseInfo = "Version: " + release.tag_name.substring(1) +
+        "\nFile size: " + (asset.size / 1024 / 1024).toFixed(2) + " MB" +
+        "\nRelease date: " + new Date(asset.updated_at).toLocaleDateString("en-US") +
+        "\nDownload count: " + asset.download_count.toLocaleString();
+    element.setAttribute("href", asset.browser_download_url);
+    element.setAttribute("title", releaseInfo);
+  }
+</script>
 {% endblock content %}
