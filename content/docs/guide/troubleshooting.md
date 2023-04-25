@@ -27,6 +27,16 @@ In case you didn't find similar issue, create a new issue and explain in detail 
 
 ## Linux
 
+
+### I have fractional scaling on my monitors (e.g. 150%)
+
+It has been reported numerous times on various display servers and window managers that when the fractional scaling is on, Flameshot does not correctly capture and show the screenshot. [[1](https://github.com/flameshot-org/flameshot/issues/564), [2](https://github.com/flameshot-org/flameshot/issues/724), [3](https://github.com/flameshot-org/flameshot/issues/748)]. The solution that the community provided so far is to try to modify an environment variable when running Flameshot. For example:
+
+```sh
+env QT_AUTO_SCREEN_SCALE_FACTOR=1.5 QT_SCREEN_SCALE_FACTORS="" flameshot gui
+```
+
+
 ### In the System tray area, Flameshot appears to have duplicate icons/indicator
 
 It is currently known that in Ubuntu 14.04 and 16.04 Unity environments such problems occur. This problem does not occur with Ubuntu 17.10 Unity. [#92](https://github.com/flameshot-org/flameshot/issues/92)
