@@ -25,6 +25,7 @@ As kindly [explained by one of our users](https://github.com/flameshot-org/flame
 
 ![Windows settings screenshot](/media/content/docs/guide/windows-help/disable-windows-snipping-tool.png)
 
+As some of our users have reported, this does not always solve the issue. because Windows being Windows, it seems you sometimes have to take an extra step to fix this (as [reported](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771) by [archadallas](https://github.com/archadallas)). This has been explained in [an article in makeuseof.com](https://www.makeuseof.com/windows-11-disable-snipping-tool/#how-to-disable-the-snipping-tool-using-the-registry-editor). If this solved your issue, please up-vote [this](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771).
 
 ## Setting up custom shortcut to start Flameshot
 
