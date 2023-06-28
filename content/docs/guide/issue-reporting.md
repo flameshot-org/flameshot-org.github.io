@@ -219,3 +219,42 @@ which gives an output similar to the following:
 >```
 >Linux MyComputer 5.8.11-1-MANJARO #1 SMP PREEMPT Wed Sep 23 14:35:40 UTC 2020 x86_64 GNU/Linux
 >```
+
+
+### DBus log
+
+This is a very simple step and it will give us how different parts of Flameshot are communicating with each other via DBus. Just follow these instructions and provide us the output of the **first terminal**:
+
+1. Open **3** terminals
+2. Kill Flameshot if it is already open using:
+    ```sh
+    pkill flameshot
+    ```
+3. In the **first terminal** run:
+   ```sh
+   dbus-monitor --session sender=org.flameshot.Flameshot
+   ```
+4. In the **second terminal** run:
+    ```sh
+    flameshot
+    ```
+5. In the **third terminal** run the command you want us to investigate. For example:
+    ```sh
+    flameshot gui
+    ```
+6. Copy the following into the text of your Github issue:
+    ````html
+    <details>
+    <summary>The dbus-monitor content</summary>
+    
+    ```
+    
+    REPLACE THIS LINE WITH YOUR DBUS LOG
+    
+    ```
+    
+    </details>
+    ````
+7. Replace the line in the middle with the content of the **first terminal**
+
+We encourage you to read this short log file and make sure there is nothing personal in it (it should not contain personal info anyways).

@@ -78,14 +78,39 @@ for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disa
 * First try the using the command `flameshot gui` in terminal. This does exactly what clicking on the tray icon does (make sure can you see Flameshot icon in the tray area).
 
 * If the step above didn't work:
-    1. Open 3 terminals
-    2. Kill Flameshot if it is already open using `pkill flameshot`
-    3. In the first terminal run `dbus-monitor --session sender=org.flameshot.Flameshot`
-    4. In the second terminal run `flameshot`
-    5. In the third terminal run `flameshot gui`
-    6. Copy the content of the first terminal in pastebin: https://bin.snopyta.org/
-    - ![image](https://user-images.githubusercontent.com/390889/116671105-3b09d780-a9a9-11eb-8941-df52c9802c85.png)
-    7. Post the link in the [issue on Github](https://github.com/flameshot-org/flameshot/issues)
+    1. Open **3** terminals
+    2. Kill Flameshot if it is already open using:
+        ```sh
+        pkill flameshot
+        ```
+    3. In the **first terminal** run:
+       ```sh
+       dbus-monitor --session sender=org.flameshot.Flameshot
+       ```
+    4. In the **second terminal** run:
+       ```sh
+        flameshot
+        ```
+    5. In the **third terminal** run the command you want us to investigate. For example:
+        ```sh
+        flameshot gui
+        ```
+    6. Copy the following into the text of your Github issue:
+        ````html
+        <details>
+        <summary>The dbus-monitor content</summary>
+        
+        ```
+        
+        REPLACE THIS LINE WITH YOUR DBUS LOG
+        
+        ```
+        
+        </details>
+        ````
+    7. Replace the line in the middle with the content of the **first terminal**
+
+This way we can see how different parts of flameshot are communicating with each other and resolve the issue. We encourage you to read this short log file and make sure there is nothing personal in it (it should not contain personal info anyways).
 
 
 ### In **Xfce** sometimes Flameshot does not let me select screenshot area
