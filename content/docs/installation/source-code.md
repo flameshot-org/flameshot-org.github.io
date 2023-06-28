@@ -126,6 +126,10 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ../
 make
 ```
 
+At this point, you can use Flameshot even _without installing_ it as you have already compiled the code into a binary file.
+The file is stored in `src/flameshot` inside the `build/` directory (which you are already there).
+So you can just run it directly by `./src/flameshot`.
+
 **NOTE #1:** for macOS you should replace command
 
 ```sh
@@ -146,9 +150,12 @@ to
 cmake ../ -DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5
 ```
 
-At this point, you can use Flameshot even _without installing_ it as you have already compiled the code into a binary file.
-The file is stored in `src/flameshot` inside the `build/` directory (which you are already there).
-So you can just run it directly by `./src/flameshot`.
+**NOTE #3:** If you are on Sway or any other place that installing `grim` applies to you, you should add these two flags to the `cmake` before running it:
+
+```
+-DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON
+```
+
 
 --------------------------------------------------------------------------------
 
