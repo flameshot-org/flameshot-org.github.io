@@ -117,6 +117,12 @@ This way we can see how different parts of flameshot are communicating with each
 
 It has been confirmed by multiple users that the compositor is at fault [#629](https://github.com/flameshot-org/flameshot/issues/629#issuecomment-989136575). It has been suggested to disable "Display fullscreen overlay windows directly". You just need to open "Window Manager Tweaks" in your Xfce, go to the "Compositor" tab and remove the checkmark from "Display fullscreen overlay windows directly".
 
+
+### In **Gnome** keybinding to run flameshot does not work
+
+It has been reported that users have tried to bind a keybinding in their Gnome settings to start Flameshot, but nothing opens, although when they run the same command in terminal it works just fine (e.g [issue #3253](https://github.com/flameshot-org/flameshot/issues/3252)). If in the command you are using `~` or `$HOME` to tell flameshot where to save the file, then the reason is that, unlike KDE, Gnome does not expand environmental variables. You can easily test it by using `notify-send "this is test" "$HOME"` in the keybinding. The solution is to use the full path and avoid any environmental variables.
+
+
 --------------------------------------------------------------------------------
 
 ## macOS
