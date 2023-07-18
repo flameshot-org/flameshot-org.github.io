@@ -19,13 +19,13 @@ top = false
 You can always use `--help` for all commands or subcommands of Flameshot.
 
 ```sh
-#     ___ command  ____ Argument
-#     |            |
-# ,---^---,     ,--^--,
+#  command	    argument
+#  ___|___       __|__ 
+# |       |     |     | 
   flameshot gui --help
-#           'v'
+#           |_|
 #            |
-#            -- Subcommand
+#        subcommand
 ```
 
 Example commands:
