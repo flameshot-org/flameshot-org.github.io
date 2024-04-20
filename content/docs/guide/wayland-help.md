@@ -34,11 +34,42 @@ Therefore please **do not** waste your time ([like many have](https://github.com
 
 Thank you!
 
+
 ## Can't screen anything on Wayland Gnome
 
 **Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
 
 You install `xdg-desktop-portal-gnome` and `xdg-desktop-portal`.
+
+
+## Gnome shortcut does not trigger Flameshot
+
+**Symptom:** When using a shortcut (Print screen) to run Flameshot I get "Unable to capture screen". When I run the command from the shortcut in a terminal, it works. Both used to work fine before, but stopped working after my daily updates. The normal Gnome screenshot program still works. [[source](https://github.com/flameshot-org/flameshot/issues/3365)]
+
+We don't have a definit answer of what in Gnome have changed, but Gnome users have provided the following solution:
+
+Run the `flameshot gui` via a shell script
+
+```sh
+script --command "flameshot gui" /dev/null
+# or
+bash -c -- "flameshot gui"
+# or
+sh -c -- "flameshot gui"
+```
+
+If this didn't solve your issue or if you are not sure what you do about this, Best places to look for are [#3365](https://github.com/flameshot-org/flameshot/issues/3365) and [#3326](https://github.com/flameshot-org/flameshot/issues/3326).
+
+In general, these specific comments worth your attention:
+
+- https://github.com/flameshot-org/flameshot/issues/3326#issuecomment-1789267986
+- https://github.com/flameshot-org/flameshot/issues/3326#issuecomment-1826336292
+- https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1928940359
+- https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1930538662
+- https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1817581463
+- https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1810832381
+- [Specifically for NixOS users](https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1868580715)
+
 
 --------------------------------------------------------------------------------
 
