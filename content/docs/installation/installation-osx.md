@@ -20,11 +20,11 @@ You can install Flameshot on [macOS](https://en.wikipedia.org/wiki/MacOS) using 
 
 - [MacPorts](https://ports.macports.org/port/flameshot/summary): `sudo port selfupdate && sudo port install flameshot`
 - [Homebrew](https://formulae.brew.sh/cask/flameshot): `brew install --cask flameshot`
-    > Note that because of macOS security features, you may not be able to open flameshot when installed using brew. If you see the message “flameshot” cannot be opened because the developer cannot be verified. you will need to follow the steps below:
+    > Note that because of macOS security features, you may not be able to open flameshot when installed using brew. If you see the message `“flameshot” cannot be opened because the developer cannot be verified.` you will need to follow the steps below:
     >
     > 1. Go to the Applications folder (Finder > Go > Applications, or Shift+Command+A)
-    > 2. Right-Click on "flameshot.app" and choose "Open" from the context menu
-    > 3. In the dialog click "Open"
+    > 2. Right-Click on `flameshot.app` and choose `Open` from the context menu
+    > 3. In the dialog click `Open`
     >
     > After following all those steps above, flameshot will open without problems in your Mac.
 - Download DMG file:
