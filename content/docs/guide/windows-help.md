@@ -15,7 +15,7 @@ top = false
 +++
 
 
-In this page you can find possible solutions for issues on Windows. This page probably needs frequent update, so if something was outdate, please [report it here](https://github.com/flameshot-org/flameshot-org.github.io/issues/new).
+On this page you can find possible solutions for issues on Windows. This page probably needs frequent updates, so if something is outdated, please [report it here](https://github.com/flameshot-org/flameshot-org.github.io/issues/new).
 
 # Keyboard shortcuts
 
@@ -25,13 +25,13 @@ As kindly [explained by one of our users](https://github.com/flameshot-org/flame
 
 ![Windows settings screenshot](/media/content/docs/guide/windows-help/disable-windows-snipping-tool.png)
 
-As some of our users have reported, this does not always solve the issue. because Windows being Windows, it seems you sometimes have to take an extra step to fix this (as [reported](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771) by [archadallas](https://github.com/archadallas)). This has been explained in [an article in makeuseof.com](https://www.makeuseof.com/windows-11-disable-snipping-tool/#how-to-disable-the-snipping-tool-using-the-registry-editor). If this solved your issue, please up-vote [this](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771).
+As some of our users have reported, this does not always solve the issue, because Windows being Windows, it seems you sometimes have to take an extra step to fix this (as [reported](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771) by [archadallas](https://github.com/archadallas)). This has been explained in [an article on makeuseof.com](https://www.makeuseof.com/windows-11-disable-snipping-tool/#how-to-disable-the-snipping-tool-using-the-registry-editor). If this solves your issue, please up-vote [this](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771).
 
 ## Setting up custom shortcut to start Flameshot
 
-Windows is pretty limitted, but there is a way to make windows to run a software based on a keybinding. To do this, you have to:
+Windows is pretty limited, but there is a way to make windows to start a program with a keybinding. To do this, you have to:
 1. create a shortcut file (right-click on Desktop > New > Shortcut)
-2. in the "Target" field, add the software you want to run with keybinding (in this case the path to the `flameshot.exe`)
+2. in the "Target" field, add the program you want to run (in this case the path to the `flameshot.exe`)
 3. in the "Shortcut key" field, type the keybinding you want (e.g `Ctrl + Alt + p`)
 
 For a more detailed instruction, visit [this article from the Digital Citizen](https://www.digitalcitizen.life/start-windows-apps-keyboard-shortcut/).
