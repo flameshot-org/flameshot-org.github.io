@@ -18,11 +18,15 @@ top = false
 
 ### I don't have PrintScreen key, how to take screenshot?
 
-Checkout our [keyboard shortcut page](../key-bindings) for more information.
+Check our [keyboard shortcut page](../key-bindings) for more information.
 
 ### On macOS Flameshot only captures a blank desktop
 
 When running Flameshot on MacOs, you must grant it permission to screen record. See [troubleshooting](../troubleshooting#macos) for more information.
+
+### I can't launch Flameshot on macOS
+
+Check the solution at [troubleshooting](../troubleshooting#macos).
 
 --------------------------------------------------------------------------------
 
