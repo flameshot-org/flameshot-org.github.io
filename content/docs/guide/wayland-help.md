@@ -58,10 +58,6 @@ bash -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 sh -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 ```
 
-```
-sh -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
-```
-
 If this didn't solve your issue or if you are not sure what you do about this, Best places to look for are [#3365](https://github.com/flameshot-org/flameshot/issues/3365) and [#3326](https://github.com/flameshot-org/flameshot/issues/3326).
 
 In general, these specific comments worth your attention:
