@@ -17,7 +17,7 @@ top = true
 
 ## Creating your own custom Client ID
 
-In Flameshot we have provided our uses a common Client ID with which they can upload their screenshot without creating their own accounts on Imgur, but considering the sheer volume of our ever growing users it can happen more often that the users get an error similar to the following from Imgur which indicates that our hourly quota is full:
+In Flameshot we have provided our users a common Client ID with which they can upload their screenshot without creating their own accounts on Imgur, but considering the sheer volume of our ever growing users it can happen more often that the users get an error similar to the following from Imgur which indicates that our hourly quota is full:
 
 > Error transferring https://api.imgur.com/3/image?title=&description=2022-07-12_12-26 - server replied: nginx
 
