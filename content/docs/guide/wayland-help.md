@@ -51,11 +51,15 @@ We don't have a definit answer of what in Gnome have changed, but Gnome users ha
 Run the `flameshot gui` via a shell script
 
 ```sh
-script --command "flameshot gui" /dev/null
+script --command "QT_QPA_PLATFORM=wayland flameshot gui" /dev/null
 # or
-bash -c -- "flameshot gui"
+bash -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 # or
-sh -c -- "flameshot gui"
+sh -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
+```
+
+```
+sh -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 ```
 
 If this didn't solve your issue or if you are not sure what you do about this, Best places to look for are [#3365](https://github.com/flameshot-org/flameshot/issues/3365) and [#3326](https://github.com/flameshot-org/flameshot/issues/3326).
