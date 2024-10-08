@@ -151,6 +151,23 @@ In general to have a command in your shell (e.g zsh) you should put the binary i
 
 Depending on how you have Spaces configured in Mission Control you may only be able to activate Flameshot on a particular external display by using the `shift+alt+cmd+4` hotkey. Otherwise, Flameshot will only activate on the main display if you click "Take Screenshot" from the application menu. Fix it by uninstalling, installing again and selecting Flameshot again in the `Screen Recording` section. (reported to work [here](https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496))
 
+
+### “flameshot” app cannot be opened
+
+As it has been frequently reported ([1](https://github.com/flameshot-org/flameshot/issues/1641), [2](https://github.com/flameshot-org/flameshot/issues/1925), [3](https://github.com/flameshot-org/flameshot/issues/3049)), macOS prevents the applications that are not signed with Apple certificate from launching.
+
+![A screenshot of macOS error message that prevents Flameshot from opening](/media/macos_flameshot_cannot_be_opened.png)
+
+It is possible to omit the error via the System Settings:
+1. Open System Settings -> Privacy & Security
+2. Scroll all the way to the bottom and click "Open anyway" below "flameshot.app was blocked from use because it is not from an identified developer".
+
+Alternatively (or if the above approach didn't help), it is possible to allow Flameshot to launch via the following command:
+
+```sh
+sudo xattr -rd com.apple.quarantine /Applications/flameshot.app
+```
+
 --------------------------------------------------------------------------------
 
 ## Windows
