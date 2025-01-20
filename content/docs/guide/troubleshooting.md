@@ -158,7 +158,7 @@ As it has been frequently reported ([1](https://github.com/flameshot-org/flamesh
 
 ![A screenshot of macOS error message that prevents Flameshot from opening](/media/macos_flameshot_cannot_be_opened.png)
 
-It is possible to omit the error via the System Settings:
+It is possible to bypass the error via the System Settings:
 1. Open System Settings -> Privacy & Security
 2. Scroll all the way to the bottom and click "Open anyway" below "flameshot.app was blocked from use because it is not from an identified developer".
 
