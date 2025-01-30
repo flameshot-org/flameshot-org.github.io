@@ -2,7 +2,7 @@
 title = "Key Bindings"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2021-05-01T08:00:00+00:00
+updated = 2025-01-30T14:54:57+02:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -19,34 +19,35 @@ These shortcuts are available in GUI mode, meaning for example when you have ran
 
 These shortcuts are the default keybindings, and can be changed by the user.
 
-|  Keys                                                                                         |  Description                                  |
-|---                                                                                            |---                                            |
-| <kbd>p</kbd>                                                                                  | Set the Pencil as paint tool                  |
-| <kbd>d</kbd>                                                                                  | Set the Line as paint tool                    |
-| <kbd>a</kbd>                                                                                  | Set the Arrow as paint tool                   |
-| <kbd>s</kbd>                                                                                  | Set Selection as paint tool                   |
-| <kbd>r</kbd>                                                                                  | Set the Rectangle as paint tool               |
-| <kbd>c</kbd>                                                                                  | Set the Circle as paint tool                  |
-| <kbd>m</kbd>                                                                                  | Set the Marker as paint tool                  |
-| <kbd>t</kbd>                                                                                  | Add text to your capture                      |
-| <kbd>b</kbd>                                                                                  | Set Pixalate as the paint tool                |
-| <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                                        | Move selection 1px                            |
-| <kbd>Shift</kbd> + <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                     | Resize selection 1px                          |
-| <kbd>Esc</kbd>                                                                                | Quit capture                                  |
-| <kbd>Ctrl</kbd> + <kbd>m</kbd>                                                                | Move the selection area                       |
-| <kbd>Ctrl</kbd> + <kbd>c</kbd>                                                                | Copy to clipboard                             |
-| <kbd>Ctrl</kbd> + <kbd>s</kbd>                                                                | Save selection as a file                      |
-| <kbd>Ctrl</kbd> + <kbd>z</kbd>                                                                | Undo the last modification                    |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>z</kbd>                                             | Redo the next modification                    |
-| <kbd>Ctrl</kbd> + <kbd>q</kbd>                                                                | Leave the capture screen                      |
-| <kbd>Ctrl</kbd> + <kbd>o</kbd>                                                                | Choose an app to open the capture             |
-| <kbd>Return</kbd>                                                                             | Upload the selection to Imgur                 |
-| <kbd>Spacebar</kbd>                                                                           | Toggle visibility of sidebar with options of the selected tool, color picker for the drawing color and history menu |
-| Right Click                                                                                   | Show the color wheel                          |
-| Mouse Wheel (scroll)                                                                          | Change the tool's thickness                   |
-| <kbd>Print screen</kbd>                                                                       | Capture Screen                                |
-| <kbd>Shift</kbd> + <kbd>Print</kbd>                                                           | Screenshot History                            |
-| <kbd>Shift</kbd> + drag a handler of the selection area                                       | Mirror re-dimension in the opposite handler.  |
+| Keys                                                                      | Description                                                                                                         |
+|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| <kbd>p</kbd>                                                              | Set the Pencil as paint tool                                                                                        |
+| <kbd>d</kbd>                                                              | Set the Line as paint tool                                                                                          |
+| <kbd>a</kbd>                                                              | Set the Arrow as paint tool                                                                                         |
+| <kbd>s</kbd>                                                              | Set Selection as paint tool                                                                                         |
+| <kbd>r</kbd>                                                              | Set the Rectangle as paint tool                                                                                     |
+| <kbd>c</kbd>                                                              | Set the Circle as paint tool                                                                                        |
+| <kbd>m</kbd>                                                              | Set the Marker as paint tool                                                                                        |
+| <kbd>t</kbd>                                                              | Add text to your capture                                                                                            |
+| <kbd>b</kbd>                                                              | Set Pixalate as the paint tool                                                                                      |
+| <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                    | Move selection 1px                                                                                                  |
+| <kbd>Shift</kbd> + <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd> | Resize selection 1px                                                                                                |
+| <kbd>Esc</kbd>                                                            | Quit capture                                                                                                        |
+| <kbd>Ctrl</kbd> + <kbd>m</kbd>                                            | Move the selection area                                                                                             |
+| <kbd>Ctrl</kbd> + <kbd>c</kbd>                                            | Copy to clipboard                                                                                                   |
+| <kbd>Ctrl</kbd> + <kbd>s</kbd>                                            | Save selection as a file                                                                                            |
+| <kbd>Ctrl</kbd> + <kbd>z</kbd>                                            | Undo the last modification                                                                                          |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>z</kbd>                         | Redo the next modification                                                                                          |
+| <kbd>Ctrl</kbd> + <kbd>q</kbd>                                            | Leave the capture screen                                                                                            |
+| <kbd>Ctrl</kbd> + <kbd>o</kbd>                                            | Choose an app to open the capture                                                                                   |
+| <kbd>Return</kbd>                                                         | Upload the selection to Imgur                                                                                       |
+| <kbd>Spacebar</kbd>                                                       | Toggle visibility of sidebar with options of the selected tool, color picker for the drawing color and history menu |
+| Right Click                                                               | Show the color wheel                                                                                                |
+| Mouse Wheel (scroll)                                                      | Change the tool's thickness                                                                                         |
+| <kbd>Print screen</kbd>                                                   | Capture Screen                                                                                                      |
+| <kbd>Shift</kbd> + <kbd>Print</kbd>                                       | Screenshot History                                                                                                  |
+| <kbd>Ctrl</kbd> + drag a handler of the selection area                    | Preserve the aspect ratio                                                                                           |
+| <kbd>Shift</kbd> + drag a handler of the selection area                   | Mirror re-dimension in the opposite handler.                                                                        |
 
 You can change these default keybindings and more by opening the configuration, either by right-clicking on the tray icon or by running `flameshot config`, and navigating to **Shortcuts** tab:
 
