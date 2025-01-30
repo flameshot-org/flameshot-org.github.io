@@ -2,7 +2,7 @@
 title = "Install on Linux"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2022-06-01T08:00:00+00:00
+updated = 2025-01-30T14:50:24+02:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -31,6 +31,8 @@ There are packages available for different distros:
 - **[Fedora](https://src.fedoraproject.org/rpms/flameshot):** `dnf install flameshot`
 
 - **[NixOS](https://search.nixos.org/packages?query=flameshot):** `nix-env --install --attr nixos.flameshot`
+
+- **[Guix](https://packages.guix.gnu.org/packages/flameshot/):** `guix install flameshot`
 
 - **[openSUSE](https://software.opensuse.org/package/flameshot):** `zypper install flameshot`
 
