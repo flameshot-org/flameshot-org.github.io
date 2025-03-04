@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - dev-docs
+      - dev-docs-staging
   pull_request:
 
 jobs:
@@ -40,8 +41,8 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "github-actions-bot@users.noreply.github.com"
 
-          git fetch origin gh-pages:gh-pages developer-docs:developer-docs
+          git fetch origin gh-pages:gh-pages dev-docs-staging:dev-docs-staging
           git checkout gh-pages
-          git cherry-pick developer-docs || true
+          git cherry-pick dev-docs-staging || true
           git remote add destination "https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}}.git"
           git push destination gh-pages
