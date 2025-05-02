@@ -1,8 +1,6 @@
 +++
 title = "Donation"
 description = "Flameshot is a powerful yet simple to use screenshot software."
-date = 2022-07-25T08:00:00+00:00
-updated = 2022-07-25T08:00:00+00:00
 draft = false
 weight = 4
 sort_by = "weight"
