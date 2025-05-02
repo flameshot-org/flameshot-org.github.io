@@ -17,6 +17,10 @@ top = false
 
 In this page you can find possible solutions for issues on Wayland. This page probably needs frequent update, so if something was outdate, please [report it here](https://github.com/flameshot-org/flameshot-org.github.io/issues/new).
 
+
+**Disclaimer:** Of course it should go without saying that it is not a good idea to run a code you find online on your computer without understanding it. So run the code presented here at your own risk. We try to vet all the code snippets on this website, but it is always possible that we miss something. To be clear, your computer and the code your decide to run on it is your responsibility. 
+
+
 # Gnome Wayland
 
 ## I am asked to "Share" my screen every time
@@ -70,6 +74,15 @@ In general, these specific comments worth your attention:
 - https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1810832381
 - [Specifically for NixOS users](https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1868580715)
 
+
+## Reset Gnome shortcut permission
+
+In Gome Wayland the users is asked if they want to give permission to the screenshot tool to capture the screen. It is possible to hit the wrong button and permanently block Flameshot from taking the screenshot. The workaround [have been proposed by the community](https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-2823998280). Running the following command in terminal would reset the permission in Gnome Wayland:
+
+```sh
+dbus-send --session  --print-reply=literal --dest=org.freedesktop.impl.portal.PermissionStore /org/freedesktop/impl/portal/PermissionStore org.freedesktop.impl.portal.PermissionStore.D
+eletePermission string:'screenshot' string:'screenshot' string:''
+```
 
 --------------------------------------------------------------------------------
 
