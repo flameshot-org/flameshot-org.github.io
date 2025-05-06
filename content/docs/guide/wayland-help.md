@@ -84,6 +84,20 @@ dbus-send --session  --print-reply=literal --dest=org.freedesktop.impl.portal.Pe
 eletePermission string:'screenshot' string:'screenshot' string:''
 ```
 
+## Flatpak permissions
+
+Using the Flatpak application on Gnome with Wayland requires some additional permissions to be set.
+
+```sh
+flatpak permission-set screenshot screenshot org.flameshot.Flameshot yes
+```
+
+Restart Flameshot and launch with the following command:
+
+```sh
+flatpak run --command=flameshot org.flameshot.Flameshot gui
+```
+
 --------------------------------------------------------------------------------
 
 # KDE Wayland
