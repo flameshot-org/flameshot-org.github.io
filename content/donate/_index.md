@@ -33,9 +33,9 @@ All these said, if you would like to financially contribute to the Flameshot pro
 
 The best donation would be your time! With it you can
 
-- tell others about flameshot
-- help us improve the documentation and the website
-- help us by trying to reproduce [unconfirmed bug reports](https://github.com/flameshot-org/flameshot/issues?q=is%3Aopen+is%3Aissue+label%3A%22Unconfirmed+Bug%22), especially in a clean virtual machine
-- do graphic design for the software, website, and even our [social media](https://fosstodon.org/@flameshot) 
-- help us address bugs if you know C++
-- suggest new ideas and elegant ways to make Flameshot better
+- Tell others about Flameshot
+- Help us improve the documentation and the website
+- Help us by trying to reproduce [unconfirmed bug reports](https://github.com/flameshot-org/flameshot/issues?q=is%3Aopen+is%3Aissue+label%3A%22Unconfirmed+Bug%22), especially in a clean virtual machine
+- Do graphic design for the software, website, and even our [social media](https://fosstodon.org/@flameshot) 
+- Help us address bugs if you know C++
+- Suggest new ideas and elegant ways to make Flameshot better
