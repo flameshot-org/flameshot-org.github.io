@@ -19,7 +19,16 @@ top = false
 You can always use `--help` for all commands or subcommands of Flameshot.
 
 ```sh
-#     ___ command  ____ Argument
+#      ___ command
+#     |
+# ,---^---,
+  flameshot --help
+#           '--v--'
+#              |
+#              -- Argument
+
+
+#      ___ command  ____ Argument
 #     |            |
 # ,---^---,     ,--^--,
   flameshot gui --help
@@ -126,3 +135,113 @@ You can use the graphical menu to configure Flameshot, but alternatively you can
     ```sh
     flameshot config --help
     ```
+
+## Available CLI options based on `--help`
+
+This would list the available subcommands:
+```console
+❯  flameshot --help
+Usage: flameshot [flameshot-options] [subcommands]
+
+Per default runs Flameshot in the background and adds a tray icon for configuration.
+
+Options:
+-h, --help     Displays this help
+-v, --version  Displays version information
+
+Subcommands:
+gui            Start a manual capture in GUI mode.
+screen         Capture a screenshot of the specified monitor.
+full           Capture screenshot of all monitors at the same time.
+launcher       Open the capture launcher.
+config         Configure flameshot.
+```
+
+This would show the acceptable arguments for the `gui` sumcommand:
+```consol
+❯  flameshot gui --help
+Usage: flameshot gui [gui-options]
+
+Per default runs Flameshot in the background and adds a tray icon for configuration.
+
+Options:
+-p, --path <path>             Existing directory or new file to save to
+-c, --clipboard               Save the capture to the clipboard
+-d, --delay <milliseconds>    Delay time in milliseconds
+--region <WxH+X+Y or string>  Screenshot region to select
+--last-region                 Repeat screenshot with previously selected region
+-r, --raw                     Print raw PNG capture
+-g, --print-geometry          Print geometry of the selection in the format WxH+X+Y. Does nothing if raw is specified
+-u, --upload                  Upload screenshot
+--pin                         Pin the capture to the screen
+-s, --accept-on-select        Accept capture as soon as a selection is made
+-h, --help                    Displays this help
+```
+
+This would show the acceptable arguments for the `screen` sumcommand:
+```console
+❯  flameshot screen --help
+Usage: flameshot screen [screen-options]
+
+Per default runs Flameshot in the background and adds a tray icon for configuration.
+
+Options:
+-n, --number <Screen number>  Define the screen to capture (starting from 0),
+default: screen containing the cursor
+-c, --clipboard               Save the capture to the clipboard
+-p, --path <path>             Existing directory or new file to save to
+-d, --delay <milliseconds>    Delay time in milliseconds
+--region <WxH+X+Y or string>  Screenshot region to select
+-r, --raw                     Print raw PNG capture
+-u, --upload                  Upload screenshot
+--pin                         Pin the capture to the screen
+-h, --help                    Displays this help
+
+```
+
+This would show the acceptable arguments for the `full` sumcommand:
+```console
+❯  flameshot full --help
+Usage: flameshot full [full-options]
+
+Per default runs Flameshot in the background and adds a tray icon for configuration.
+
+Options:
+-p, --path <path>             Existing directory or new file to save to
+-c, --clipboard               Save the capture to the clipboard
+-d, --delay <milliseconds>    Delay time in milliseconds
+--region <WxH+X+Y or string>  Screenshot region to select
+-r, --raw                     Print raw PNG capture
+-u, --upload                  Upload screenshot
+-h, --help                    Displays this help
+```
+
+This would show the acceptable arguments for the `launcher` sumcommand:
+```console
+❯  flameshot launcher --help
+Usage: flameshot launcher [launcher-options]
+
+Per default runs Flameshot in the background and adds a tray icon for configuration.
+
+Options:
+-h, --help  Displays this help
+```
+
+This would show the acceptable arguments for the `config` sumcommand:
+```console
+❯  flameshot config --help
+Usage: flameshot config [config-options]
+
+Per default runs Flameshot in the background and adds a tray icon for configuration.
+
+Options:
+-a, --autostart <bool>            Enable or disable run at startup
+-n, --notifications <bool>        Enable or disable the notifications
+-f, --filename <pattern>          Set the filename pattern
+-t, --trayicon <bool>             Enable or disable the trayicon
+-s, --showhelp <bool>             Show the help message in the capture mode
+-m, --maincolor <color-code>      Define the main UI color
+-k, --contrastcolor <color-code>  Define the contrast UI color
+--check                           Check the configuration for errors
+-h, --help                        Displays this help
+```
