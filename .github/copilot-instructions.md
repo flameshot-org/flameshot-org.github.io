@@ -7,7 +7,7 @@ Always reference these instructions first and fallback to search or bash command
 ## Working Effectively
 
 ### Quick Setup and Build
-- Download Zola: `curl -L https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz | tar xz`
+- Download Zola: `curl -s https://api.github.com/repos/getzola/zola/releases/latest | grep "browser_download_url.*x86_64-unknown-linux-gnu.tar.gz" | cut -d '"' -f 4 | head -1 | xargs curl -L | tar xz`
 - Build the site: `./zola build` -- takes <1 second. Build warnings about highlight languages are normal and non-critical.
 - Start development server: `./zola serve --interface 0.0.0.0` -- starts in <1 second, serves on port 1111
 - Access the site: Open `http://127.0.0.1:1111` in browser
@@ -44,7 +44,7 @@ Always test these complete scenarios after changes:
 ### Core Commands
 ```bash
 # Download Zola (run once per environment)
-curl -L https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz | tar xz
+curl -s https://api.github.com/repos/getzola/zola/releases/latest | grep "browser_download_url.*x86_64-unknown-linux-gnu.tar.gz" | cut -d '"' -f 4 | head -1 | xargs curl -L | tar xz
 
 # Build site (takes <1 second)
 ./zola build
