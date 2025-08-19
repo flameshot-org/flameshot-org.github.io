@@ -36,6 +36,22 @@ Windows is pretty limited, but there is a way to make windows to start a program
 
 For a more detailed instruction, visit [this article from the Digital Citizen](https://www.digitalcitizen.life/start-windows-apps-keyboard-shortcut/).
 
+### Using PowerToys 
+
+1. Choose remap a shortcut
+
+<img width="1734" height="1213" alt="2025-08-19_10-57" src="https://github.com/user-attachments/assets/dee63f49-3c37-43a9-86db-08d80497f371" />
+
+2. Define your shortcut (e.g. `Ctrl + Alt + s`)
+ 
+<img width="2215" height="1174" alt="2025-08-19_11-00" src="https://github.com/user-attachments/assets/99ba9868-4520-45b5-b1e4-702aa343b118" />
+
+3. In the Action field, Choose `Run Program`
+4. In the App field, fill in the path to the `flameshot.exe` file (e.g. `C:\Program Files\Flameshot\bin\flameshot.exe`)
+5. In the Args field, fill in `gui`
+6. In the If running field, choose `Start another`
+7. Choose OK
+
 -------
 
 # CommandLine Interface
