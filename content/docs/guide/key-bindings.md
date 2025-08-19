@@ -30,6 +30,7 @@ These shortcuts are the default keybindings, and can be changed by the user.
 | <kbd>m</kbd>                                                              | Set the Marker as paint tool                                                                                        |
 | <kbd>t</kbd>                                                              | Add text to your capture                                                                                            |
 | <kbd>b</kbd>                                                              | Set Pixalate as the paint tool                                                                                      |
+| <kbd>g</kbd>                                                              | Start the color picker to grab a color from the screen                                                             |
 | <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd>                    | Move selection 1px                                                                                                  |
 | <kbd>Shift</kbd> + <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd> | Resize selection 1px                                                                                                |
 | <kbd>Esc</kbd>                                                            | Quit capture                                                                                                        |
