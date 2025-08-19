@@ -18,7 +18,7 @@ top = false
 In this page you can find possible solutions for issues on Wayland. This page probably needs frequent update, so if something was outdate, please [report it here](https://github.com/flameshot-org/flameshot-org.github.io/issues/new).
 
 
-**Disclaimer:** Of course it should go without saying that it is not a good idea to run a code you find online on your computer without understanding it. So run the code presented here at your own risk. We try to vet all the code snippets on this website, but it is always possible that we miss something. To be clear, your computer and the code your decide to run on it is your responsibility. 
+**Disclaimer:** Of course it should go without saying that it is not a good idea to run a code you find online on your computer without understanding it. So run the code presented here at your own risk. We try to vet all the code snippets on this website, but it is always possible that we miss something. To be clear, your computer and the code your decide to run on it is your responsibility.
 
 
 # Gnome Wayland
@@ -43,7 +43,7 @@ Thank you!
 
 **Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
 
-You install `xdg-desktop-portal-gnome` and `xdg-desktop-portal`.
+You install `xdg-desktop-portal` and `xdg-desktop-portal-gnome`.
 
 
 ## Gnome shortcut does not trigger Flameshot
@@ -102,4 +102,39 @@ and then you can normally use Flameshot (e.g `flameshot gui`)
 
 **Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
 
-You install `xdg-desktop-portal-kde` and `xdg-desktop-portal`.
+You install `xdg-desktop-portal` and `xdg-desktop-portal-kde`.
+
+
+--------------------------------------------------------------------------------
+
+# Hyprland
+
+## Can't screen anything on Wayland Hyprland
+
+Hyprland is a Wayland copositor, and like any other compositor, you would need the [XDG Portals](https://wiki.archlinux.org/title/XDG_Desktop_Portal) to allow programs like Flameshot to access your system. You need to at least install `xdg-desktop-portal` and `xdg-desktop-portal-hyprland` packages. The naming might be different in your distribution, but the idea is the same. For example, in Arch Linux you can install them with:
+
+```sh
+sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
+```
+
+## Multi-display issue
+
+It has [been reported](https://github.com/flameshot-org/flameshot/issues/2978#issuecomment-3199328102) that adding the following window rules resolved the issue (credit: [Ryan Wise’s blog](https://ryanwise.me/blog/flameshot-on-hyprland)):
+
+```ini
+# flameshot multi-display fix
+windowrulev2 = move 0 0,class:(flameshot),title:(flameshot)
+windowrulev2 = pin,class:(flameshot),title:(flameshot)
+windowrulev2 = fullscreenstate,class:(flameshot),title:(flameshot)
+windowrulev2 = float,class:(flameshot),title:(flameshot)
+```
+
+**Optional**
+Some users also suggested tweaking ~/.config/flameshot/flameshot.ini:
+
+```ini
+disabledGrimWarning=true
+useGrimAdapter=true
+```
+
+and after these, Flameshot works with or without `grim` as expected.
