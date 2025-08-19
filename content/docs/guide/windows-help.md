@@ -44,13 +44,11 @@ For a more detailed instruction, visit [this article from the Digital Citizen](h
 
 2. Define your shortcut (e.g. `Ctrl + Alt + s`)
  
-<img width="2215" height="1174" alt="2025-08-19_11-00" src="https://github.com/user-attachments/assets/99ba9868-4520-45b5-b1e4-702aa343b118" />
+<img width="1412" height="604" alt="image" src="https://github.com/user-attachments/assets/e9536753-2f4a-4596-a18a-db5fcb6a0177" />
 
-3. In the Action field, Choose `Run Program`
-4. In the App field, fill in the path to the `flameshot.exe` file (e.g. `C:\Program Files\Flameshot\bin\flameshot.exe`)
-5. In the Args field, fill in `gui`
-6. In the If running field, choose `Start another`
-7. Choose OK
+3. In the Action field, Choose `Send Key/Shortcut`
+4. Choose `Print Screen`
+5. Choose OK
 
 -------
 
