@@ -38,6 +38,13 @@ Therefore please **do not** waste your time ([like many have](https://github.com
 
 Thank you!
 
+## `Unable to capture screen` error
+
+If you are experiencing "Unable to capture" error on Wayland, especially on Ubuntu or Fedora Gnome, regardless of your installation method (apt, flatpak, etc.), give screenshot permission to Flameshot through `xdg-portal` by running this in terminal:
+
+```sh
+flatpak permission-set screenshot screenshot org.flameshot.Flameshot yes
+```
 
 ## Can't screen anything on Wayland Gnome
 
