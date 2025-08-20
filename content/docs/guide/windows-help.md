@@ -36,6 +36,20 @@ Windows is pretty limited, but there is a way to make windows to start a program
 
 For a more detailed instruction, visit [this article from the Digital Citizen](https://www.digitalcitizen.life/start-windows-apps-keyboard-shortcut/).
 
+### Using PowerToys 
+
+1. Choose remap a shortcut
+
+![PowerToys Keyboard Shortcuts](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts.png)
+
+2. Define your shortcut (e.g. `Ctrl + Alt + s`)
+
+![PowerToys Keyboard Shortcuts Configuration](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts-Configuration.png)
+
+3. In the Action field, Choose `Send Key/Shortcut`
+4. Choose `Print Screen`
+5. Choose OK
+
 -------
 
 # CommandLine Interface
