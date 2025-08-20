@@ -40,11 +40,11 @@ For a more detailed instruction, visit [this article from the Digital Citizen](h
 
 1. Choose remap a shortcut
 
-<img width="1734" height="1213" alt="2025-08-19_10-57" src="https://github.com/user-attachments/assets/dee63f49-3c37-43a9-86db-08d80497f371" />
+![PowerToys Keyboard Shortcuts](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts.png)
 
 2. Define your shortcut (e.g. `Ctrl + Alt + s`)
- 
-<img width="1412" height="604" alt="image" src="https://github.com/user-attachments/assets/e9536753-2f4a-4596-a18a-db5fcb6a0177" />
+
+![PowerToys Keyboard Shortcuts Configuration](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts-Configuration.png)
 
 3. In the Action field, Choose `Send Key/Shortcut`
 4. Choose `Print Screen`
