@@ -245,3 +245,16 @@ Options:
 --check                           Check the configuration for errors
 -h, --help                        Displays this help
 ```
+
+
+## Exit codes
+
+Flameshot returns different exit codes to indicate the result of the operation:
+
+- **0**: Normal exit - The command completed successfully
+- **2**: Screenshot aborted - The user cancelled or aborted the screenshot operation  
+- **3**: DBus connection lost - Flameshot was unable to connect via DBus
+- **130**: SIGINT received - The process was interrupted (Ctrl+C)
+- **143**: SIGTERM received - The process was terminated by the system
+
+These exit codes can be useful when using Flameshot in scripts or automation workflows to determine the outcome of the screenshot operation.
