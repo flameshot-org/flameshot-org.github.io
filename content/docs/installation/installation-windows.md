@@ -55,7 +55,7 @@ choco install flameshot
 ### Manual installation
 
 If you want to manually download and install the Windows version, you have to follow these steps:
-1. Go to [the latest release on out Github repo](https://github.com/flameshot-org/flameshot/releases/latest)
+1. Go to [the latest release on out GitHub repo](https://github.com/flameshot-org/flameshot/releases/latest)
    ![](/media/content/docs/installation/installation-windows/2023-06-28_13-45_go_to_latest_release.png)
 2. Scroll down to find the "Assets" as shown in the picture below (it might be collapsed, so click on the triangle on the left side to open it)
    ![](/media/content/docs/installation/installation-windows/2023-06-28_13-46_go_to_assets.png)
