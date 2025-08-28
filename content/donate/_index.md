@@ -29,7 +29,7 @@ _This might change in future as the project grows along with its potential costs
 
 All these said, if you would like to financially contribute to the Flameshot project, we suggest you to use code bounty platform to put bounty on the issues (bugs or feature requests). This way your money and contribution goes directly towards improving Flameshot as you see it fit and would immediately benefit you and other users. This is also a good way to get the features implemented that you want, or get the bugs that annoys you fixed. The beautiful part of this approach is that multiple people can put bounty on the same issue which would increase the chance of getting it addressed by one of the developers in that platform.
 
-At the moment are looking for a platform that does code bounty. If you know any platform suitable for this, please send us an email (info@ this domain) or open an issue on [this Github repo](https://github.com/flameshot-org/flameshot-org.github.io/issues/) or the [main repo](https://github.com/flameshot-org/flameshot/issues/).
+At the moment are looking for a platform that does code bounty. If you know any platform suitable for this, please send us an email (info@ this domain) or open an issue on [this GitHub repo](https://github.com/flameshot-org/flameshot-org.github.io/issues/) or the [main repo](https://github.com/flameshot-org/flameshot/issues/).
 
 ## Other form of donation
 
