@@ -137,8 +137,16 @@ If you were still getting the following message when restarting Flameshot, try r
 
 ![A screenshot of a permission request window in macOS which says "Flameshot.app would like to record this computer's screen"](/media/macos_screenrecording_permission_request.png)
 
-When this step is done you have to restart your macOS to make the permissions get working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple, but until that day, the only easy solution is rebooting.
+When this step is done you have to restart your macOS to get the permissions working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple soon.
 
+If the reboot fails to fix the problem try resetting the privacy permissions for flameshot:
+
+```sh
+# get the bundle identifier for the app
+osascript -e 'id of app "Flameshot"'
+# reset the privacy permissions
+sudo tccutil reset ScreenCapture org.flameshot.Flameshot
+```
 
 ### The command `flameshot` does not exist in my terminal
 
