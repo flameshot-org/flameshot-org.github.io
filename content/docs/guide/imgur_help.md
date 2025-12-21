@@ -21,7 +21,7 @@ In Flameshot we have provided our users with a common Client ID with which they 
 
 > Error transferring https://api.imgur.com/3/image?title=&description=2022-07-12_12-26 - server replied: nginx
 
-To mitigate that, since version 11.0.0, users can use their own Client ID. This way their quota would be independent of other FLamehsot users. To create your own Client ID, you can follow the following steps:
+To mitigate that, since version 11.0.0, users can use their own Client ID. This way their quota would be independent of other Flameshot users. To create your own Client ID, you can follow the following steps:
 
 1. Login to your Imgur account
 2. go to <https://api.imgur.com/oauth2/addclient>
