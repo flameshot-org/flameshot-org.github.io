@@ -126,14 +126,23 @@ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
 
 ## Multi-display issue
 
-It has [been reported](https://github.com/flameshot-org/flameshot/issues/2978#issuecomment-3199328102) that adding the following window rules resolved the issue (credit: [Ryan Wise’s blog](https://ryanwise.me/blog/flameshot-on-hyprland)):
+Adding the following window rule will place flameshot correctly and make it occupy multiple monitors **of equal resolution**. Replace `monitor_w*2` in the last line to match the amount of monitors in your setup.
 
-```ini
-# flameshot multi-display fix
-windowrulev2 = move 0 0,class:(flameshot),title:(flameshot)
-windowrulev2 = pin,class:(flameshot),title:(flameshot)
-windowrulev2 = fullscreenstate,class:(flameshot),title:(flameshot)
-windowrulev2 = float,class:(flameshot),title:(flameshot)
+```conf
+windowrule {
+    name = flameshot-multi-display-fix
+    match:class = flameshot
+
+    animation = fade
+    rounding = 0
+    border_size = 0
+    fullscreen_state = 0 0
+    float = on
+    pin = on
+    monitor = DP-1
+    move = 0 0
+    size = (monitor_w*2) (monitor_h)
+}
 ```
 
 **Optional**
