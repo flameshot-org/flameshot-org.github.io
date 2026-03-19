@@ -97,6 +97,9 @@ eletePermission string:'screenshot' string:'screenshot' string:''
 
 ## 4k displayed and fractional scaling
 
+**Note:** This issue is now fixed after merging [#4498](https://github.com/flameshot-org/flameshot/pull/4498). So the following is only useful for Flameshot versions before v14.0.0 .
+
+
 It has been [reported](https://github.com/flameshot-org/flameshot/issues/227#issuecomment-1002696986) that setting the environmental variable `QT_SCREEN_SCALE_FACTORS` to `1;1` can solve the issue. You can do the following every time your computer boots:
 
 ```sh
