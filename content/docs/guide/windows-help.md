@@ -104,12 +104,3 @@ HKEY_CLASSES_ROOT\Flameshot\Shell\Open\command
       6. Click on "Select default" button.
 
 Reference for protocol associations can be found in the [official Microsoft Documentation](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914%28v=vs.85%29).
-
--------
-
-# CommandLine Interface
-
-For the time being, the Commandline Interface (CLI) is **not** implemented for Windows. you can follow the progress in [the dedicated feature request](https://github.com/flameshot-org/flameshot/issues/2118).
-
--------
-
