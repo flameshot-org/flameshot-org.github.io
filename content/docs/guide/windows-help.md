@@ -19,41 +19,43 @@ On this page you can find possible solutions for issues on Windows. This page pr
 
 # Keyboard shortcuts
 
-## How to disable Windows Snipping tool when I press PrintScreen
+Since **v14.0**, the Flameshot screenshot shortcut is freely configurable. However, there are some constraints imposed by Microsoft. Even though Flameshot provides the option to register "every" shortcut, you cannot use any shortcut that is already assigned to a Windows feature!
 
-As kindly [explained by one of our users](https://github.com/flameshot-org/flameshot/issues/1551#issuecomment-1232164940), you can disable the built-in snipping tool by going to Windows Settings -> Ease of Access -> Keyboard -> Scroll down to "Print Screen Shortcut" and turn off the "Use the Prtscn button to open screen snipping":
+Additionally, a little more configuration is needed to use <kbd>PrtScr</kbd> and <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>. If you want to use one of these, please read the following two chapters.
+
+## How to use PrtScr key
+
+Flameshot is able to detect when Windows forces its own screen snipping tool to open when the <kbd>PrtScr</kbd> key is pressed. If so, the following pop-up will appear when you open the Flameshot settings. Pressing "Yes" disables that Windows setting, and after restarting Flameshot, you can take a screenshot with Flameshot by pressing <kbd>PrtScr</kbd> **if Flameshot is running** (consider enabling the Autostart option!). Pressing "No" will hide the pop-up once and when pressing "No, don't ask again" the pop-up won't show up in future (this is saved in `flameshot.ini` option `ignorePrntScrForcesSnipping`).
+
+![Windows forces snipping](/media/content/docs/guide/windows-help/windows_forces_prntscr.png)
+
+To revert to the default Windows behavior, access Windows Settings > Ease of Access > Keyboard. Scroll down to "Print Screen Shortcut" and toggle the "Use the Prtscn button to open screen snipping" button:
 
 ![Windows settings screenshot](/media/content/docs/guide/windows-help/disable-windows-snipping-tool.png)
 
 As some of our users have reported, this does not always solve the issue, because Windows being Windows, it seems you sometimes have to take an extra step to fix this (as [reported](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771) by [archadallas](https://github.com/archadallas)). This has been explained in [an article on makeuseof.com](https://www.makeuseof.com/windows-11-disable-snipping-tool/#how-to-disable-the-snipping-tool-using-the-registry-editor). If this solves your issue, please up-vote [this](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1521632771).
 
-## Setting up custom shortcut to start Flameshot
 
-Windows is pretty limited, but there is a way to make windows to start a program with a keybinding. To do this, you have to:
-1. create a shortcut file (right-click on Desktop > New > Shortcut)
-2. in the "Target" field, add the program you want to run (in this case the path to the `flameshot.exe`)
-3. in the "Shortcut key" field, type the keybinding you want (e.g `Ctrl + Alt + p`)
+## How to use Win+Shift+S
 
-For a more detailed instruction, visit [this article from the Digital Citizen](https://www.digitalcitizen.life/start-windows-apps-keyboard-shortcut/).
+Windows hardbound the shortcut <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> for taking a screenshot and by default, this is linked to Microsoft's own Snipping Tool. However, Flameshot can be registered as the "MS-Screenclip" application, which allows you to select Flameshot as the default screenshot tool. Once registered, pressing <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> will open Flameshot!
 
-### Using PowerToys 
+Administrative privileges are required **once** for the following! Start Flameshot as an Administrator, open the Settings > Shortcuts, and select "Register Flameshot as MS-SCREENCLIP application" below the Shortcuts table. Once this has been done, you can restart Flameshot with your usual user privileges.
 
-1. Choose remap a shortcut
+![Register ms-screenclip](/media/content/docs/guide/windows-help/register-ms-screenclip.png)
 
-![PowerToys Keyboard Shortcuts](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts.png)
+The last step is to select Flameshot as the default screen clip application. To do this, access Windows Settings > Apps > Default apps > Screenclip, and select Flameshot:
 
-2. Define your shortcut (e.g. `Ctrl + Alt + s`)
+![Windows settings ms-screenclip](/media/content/docs/guide/windows-help/ms-screenclip.png)
 
-![PowerToys Keyboard Shortcuts Configuration](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts-Configuration.png)
+### Alternative: Direct registry change
 
-3. In the Action field, Choose `Send Key/Shortcut`
-4. Choose `Print Screen`
-5. Choose OK
-## Overriding Windows default shortcut
-**Do NOT DELETE any key or modify any existing ones, you have been warned! Play around in the registry at your own risk!**  
-If you want to override <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to take a screenshot using Flameshot directly instead of the default app (Snipping Tool), follow one of the two methods below.  
-### Automatic
-Put the following in a `.reg` file using any text editor and run it. Update Flameshot's path in the last line if you installed it elsewhere.
+As an alternative to the above, you can register Flameshot as MS-Screenclip application via a registry change. Administrative privileges are required for this! This procedure may be used e.g. by IT administrators in a company, for example, who want to deploy Flameshot on employees' office computers.
+
+**Do NOT DELETE OR MODIFY any existing keys, you have been warned! Modifying the registry is at your own risk!**
+
+Using a text editor, put the following into a `.reg` file, updating the path to Flameshot in the last line according to your installation, and then run the file on the desired computer.
+
 ```reg
 Windows Registry Editor Version 5.00
 
@@ -67,49 +69,8 @@ Windows Registry Editor Version 5.00
 @="\"C:\\Program Files\\Flameshot\\bin\\flameshot.exe\" gui"
 ```
 
+Afterwards, select Flameshot as the default screenshot application in Windows Settings > Apps > Default apps > Screenclip, as shown in the previous chapter.
+
 Original proposal can be found on GitHub in [this comment](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-3536988036).
-### Manual
-Note: In steps 1-5, you can replace `Flameshot` in the names, values, and paths with any name of your choosing as long as the change is consistently applied.
-1. Create this path in Windows Registry:
-```
-HKEY_LOCAL_MACHINE\SOFTWARE\Flameshot\Capabilities\URLAssociations
-```
-2. Create a new "String Value" there with the following data:  
-	Name: `ms-screenclip`  
-	Value: `Flameshot`
-3. Go to this path:
-```
-HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications
-```
-4. Create a new "String Value" with the name `Flameshot` and value:
-```
-SOFTWARE\Flameshot\Capabilities
-```
-5. Then create this path:
-```
-HKEY_CLASSES_ROOT\Flameshot\Shell\Open\command
-```
-6. Then set the default key value to where Flameshot is installed, default is:
-```
-"C:\Program Files\Flameshot\bin\flameshot.exe" gui
-```
-7. Change the default app by one of the following methods:
-   1. Trigger the default hotkey <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> and it will show you a prompt to select the default one between Snipping Tool and Flameshot, select Flameshot and choose Always.
-   2. Manual instructions:
-      1. Open Windows Settings app.
-      2. Go to Default Apps.
-      3. Scroll down to "Choose defaults by link type" and click it.
-      4. Search for "MS-SCREENCLIP" and click on the result.
-      5. Flameshot should come up, select it.
-      6. Click on "Select default" button.
 
-Reference for protocol associations can be found in the [official Microsoft Documentation](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914%28v=vs.85%29).
-
--------
-
-# CommandLine Interface
-
-For the time being, the Commandline Interface (CLI) is **not** implemented for Windows. you can follow the progress in [the dedicated feature request](https://github.com/flameshot-org/flameshot/issues/2118).
-
--------
-
+Reference for protocol associations can be found in the [official Microsoft documentation](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914%28v=vs.85%29).
