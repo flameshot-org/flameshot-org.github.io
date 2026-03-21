@@ -22,7 +22,7 @@ Alternatively, you can always compile from the source code.
 
 ## OS Dependencies
 
-The compilation requires **Qt version 5.3 or higher** and **GCC 4.9.2 or higher**.
+The compilation requires **Qt version 6.2 or higher**, **GCC 11 or higher** and **CMake 3.22 or higher**.
 
 
 ### Debian/Ubuntu
@@ -30,7 +30,7 @@ The compilation requires **Qt version 5.3 or higher** and **GCC 4.9.2 or higher*
 Compilation Dependencies:
 
 ```sh
-apt install g++ cmake extra-cmake-modules build-essential qtbase5-dev qttools5-dev-tools qttools5-dev libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5-dev
+apt install g++ cmake build-essential qt6-base-dev qt6-tools-dev-tools qt6-svg-dev qt6-tools-dev
 ```
 
 ### Fedora
@@ -38,7 +38,7 @@ apt install g++ cmake extra-cmake-modules build-essential qtbase5-dev qttools5-d
 Compilation Dependencies:
 
 ```sh
-dnf install gcc-c++ cmake qt5-qtbase-devel qt5-linguist qt5-qtsvg-devel
+dnf install gcc-c++ cmake qt6-qtbase-devel qt6-qtsvg-devel qt6-qttools qt6-linguist qt6-qttools-devel kf6-kguiaddons-devel
 ```
 
 ### Arch
@@ -46,7 +46,7 @@ dnf install gcc-c++ cmake qt5-qtbase-devel qt5-linguist qt5-qtsvg-devel
 Compilation Dependencies:
 
 ```sh
-pacman -S cmake base-devel git qt5-base qt5-tools hicolor-icon-theme qt5-svg
+pacman -S cmake base-devel git qt6-base qt6-tools kguiaddons
 ```
 
 ### OSX
@@ -54,29 +54,13 @@ pacman -S cmake base-devel git qt5-base qt5-tools hicolor-icon-theme qt5-svg
 Compilation Dependencies:
 
 ```sh
-brew install qt5
+brew install qt6
 brew install cmake
 ```
 
 --------------------------------------------------------------------------------
 
 ## DE/WM dependencies
-
-### Gnome
-
-### KDE
-
-On Fedora:
-
-```sh
-dnf install kf5-kguiaddons-devel
-```
-
-On Arch:
-
-```sh
-pacman -S kguiaddons
-```
 
 ### Sway
 
@@ -147,13 +131,13 @@ make -j$(nproc --ignore 1)
 to
 
 ```sh
-cmake ../ -DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5
+cmake ../ -DQt6_DIR=$(brew --prefix qt6)/lib/cmake/Qt6
 ```
 
-**NOTE #3:** If you are on Sway or any other place that installing `grim` applies to you, you should add these two flags to the `cmake` before running it:
+**NOTE #3:** If you are on Sway or any other place that installing `grim` applies to you, you should add the following flag to the `cmake` before running it:
 
 ```
--DUSE_WAYLAND_CLIPBOARD=true -DUSE_WAYLAND_GRIM=ON
+-DUSE_WAYLAND_CLIPBOARD=true
 ```
 
 
