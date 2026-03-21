@@ -180,13 +180,6 @@ sudo xattr -rd com.apple.quarantine /Applications/flameshot.app
 
 ## Windows
 
-### Command line arguments do not work
-
-At the time of writing this (version 11.0.0), the command line is not implemented for Windows. We might add it in future versions. You can follow the discussions/development of this feature in [#2118](https://github.com/flameshot-org/flameshot/issues/2118).
-
-In the meanwhile you can use [AutoHotKey](https://www.autohotkey.com/) as [explained here](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-1126669379).
-
-
 ### Flameshot does not launch at startup even when the settings are set
 
 As [explained by @HoshyarKarimi](https://github.com/flameshot-org/flameshot/issues/2422#issuecomment-1140393544) (this should only be done once):
@@ -200,10 +193,6 @@ As [explained by @HoshyarKarimi](https://github.com/flameshot-org/flameshot/issu
 The settings should now be set. You can close Flameshot from the system tray and use it normally from here after.
 
 
-### PrintScreen key opens Snip tool instead of Flameshot
+### PrintScreen key opens MS Snipping tool instead of Flameshot
 
-The following solution [was provided](https://github.com/flameshot-org/flameshot/issues/1551#issuecomment-1166317630) by a member of our community:
-
-1. set `Computer\HKEY_CURRENT_USER\Control Panel\Keyboard\PrintScreenKeyForSnippingEnabled` to 0
-2. set `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TabletPC\DisableSnippingTool` to 1 (skip this step if you don't have the `\TabletPC\`)
-3. uninstall "Snip and Sketch" via the Microsoft Store
+Please read the [Windows keyboard shortcut page](../windows-help/#keyboard-shortcuts) for more information.
