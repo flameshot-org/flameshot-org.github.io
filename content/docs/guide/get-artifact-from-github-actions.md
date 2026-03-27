@@ -17,7 +17,7 @@ top = false
 ## Very brief introduction
 Flameshot uses the CI/CD system that is provided by Github, called Github Actions. CI stands for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) which in simple terms is the automatic building system that the project use.
 
-In this page We explain how to download the pre-compiled files in case you want to use un-stable builds of Flameshot. The reason for "unstable" is that these are bleeding edge builds and although in general they are trying to improve Flameshot, they might as well introduce new bugs. As always, use at your own risk. Many Free/Libre OpenSource Software projects on Github use the Github Actions too, so this instructions can be to some extent similar across all projects, but of course there will be also some obvious differences that you can figure it out by spending a little more time on them.
+In this page We explain how to download the pre-compiled files in case you want to use unstable builds of Flameshot. The reason for "unstable" is that these are bleeding edge builds and although in general they are trying to improve Flameshot, they might as well introduce new bugs. As always, use at your own risk. Many Free/Libre OpenSource Software projects on Github use the Github Actions too, so this instructions can be to some extent similar across all projects, but of course there will be also some obvious differences that you can figure it out by spending a little more time on them.
 
 Also, as a side-note, the numbers in the images of this instructions illustrate the orders of places you should click and they don't correspond to the number of the steps.
 
