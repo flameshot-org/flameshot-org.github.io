@@ -36,11 +36,71 @@ Windows is pretty limited, but there is a way to make windows to start a program
 
 For a more detailed instruction, visit [this article from the Digital Citizen](https://www.digitalcitizen.life/start-windows-apps-keyboard-shortcut/).
 
--------
+### Using PowerToys 
 
-# CommandLine Interface
+1. Choose remap a shortcut
 
-For the time being, the Commandline Interface (CLI) is **not** implemented for Windows. you can follow the progress in [the dedicated feature request](https://github.com/flameshot-org/flameshot/issues/2118).
+![PowerToys Keyboard Shortcuts](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts.png)
 
--------
+2. Define your shortcut (e.g. `Ctrl + Alt + s`)
 
+![PowerToys Keyboard Shortcuts Configuration](/media/content/docs/guide/windows-help/PowerToys-KeyboardShortcuts-Configuration.png)
+
+3. In the Action field, Choose `Send Key/Shortcut`
+4. Choose `Print Screen`
+5. Choose OK
+## Overriding Windows default shortcut
+**Do NOT DELETE any key or modify any existing ones, you have been warned! Play around in the registry at your own risk!**  
+If you want to override <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to take a screenshot using Flameshot directly instead of the default app (Snipping Tool), follow one of the two methods below.  
+### Automatic
+Put the following in a `.reg` file using any text editor and run it. Update Flameshot's path in the last line if you installed it elsewhere.
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Flameshot\Capabilities\URLAssociations]
+"ms-screenclip"="Flameshot"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications]
+"Flameshot"="SOFTWARE\\Flameshot\\Capabilities"
+
+[HKEY_CLASSES_ROOT\Flameshot\Shell\Open\command]
+@="\"C:\\Program Files\\Flameshot\\bin\\flameshot.exe\" gui"
+```
+
+Original proposal can be found on GitHub in [this comment](https://github.com/flameshot-org/flameshot/issues/1341#issuecomment-3536988036).
+### Manual
+Note: In steps 1-5, you can replace `Flameshot` in the names, values, and paths with any name of your choosing as long as the change is consistently applied.
+1. Create this path in Windows Registry:
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Flameshot\Capabilities\URLAssociations
+```
+2. Create a new "String Value" there with the following data:  
+	Name: `ms-screenclip`  
+	Value: `Flameshot`
+3. Go to this path:
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications
+```
+4. Create a new "String Value" with the name `Flameshot` and value:
+```
+SOFTWARE\Flameshot\Capabilities
+```
+5. Then create this path:
+```
+HKEY_CLASSES_ROOT\Flameshot\Shell\Open\command
+```
+6. Then set the default key value to where Flameshot is installed, default is:
+```
+"C:\Program Files\Flameshot\bin\flameshot.exe" gui
+```
+7. Change the default app by one of the following methods:
+   1. Trigger the default hotkey <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> and it will show you a prompt to select the default one between Snipping Tool and Flameshot, select Flameshot and choose Always.
+   2. Manual instructions:
+      1. Open Windows Settings app.
+      2. Go to Default Apps.
+      3. Scroll down to "Choose defaults by link type" and click it.
+      4. Search for "MS-SCREENCLIP" and click on the result.
+      5. Flameshot should come up, select it.
+      6. Click on "Select default" button.
+
+Reference for protocol associations can be found in the [official Microsoft Documentation](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914%28v=vs.85%29).

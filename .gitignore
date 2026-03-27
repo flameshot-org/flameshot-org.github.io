@@ -3,3 +3,8 @@ public
 .vscode
 node_modules
 *.DS_Store
+
+# Zola binary and build artifacts
+zola
+zola.tar.gz
+*.tar.gz

@@ -17,6 +17,10 @@ top = false
 
 In this page you can find possible solutions for issues on Wayland. This page probably needs frequent update, so if something was outdate, please [report it here](https://github.com/flameshot-org/flameshot-org.github.io/issues/new).
 
+
+**Disclaimer:** Of course it should go without saying that it is not a good idea to run a code you find online on your computer without understanding it. So run the code presented here at your own risk. We try to vet all the code snippets on this website, but it is always possible that we miss something. To be clear, your computer and the code your decide to run on it is your responsibility.
+
+
 # Gnome Wayland
 
 ## I am asked to "Share" my screen every time
@@ -34,28 +38,35 @@ Therefore please **do not** waste your time ([like many have](https://github.com
 
 Thank you!
 
+## `Unable to capture screen` error
+
+If you are experiencing "Unable to capture" error on Wayland, especially on Ubuntu or Fedora Gnome, regardless of your installation method (apt, flatpak, etc.), give screenshot permission to Flameshot through `xdg-portal` by running this in terminal:
+
+```sh
+flatpak permission-set screenshot screenshot org.flameshot.Flameshot yes
+```
 
 ## Can't screen anything on Wayland Gnome
 
 **Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
 
-You install `xdg-desktop-portal-gnome` and `xdg-desktop-portal`.
+You install `xdg-desktop-portal` and `xdg-desktop-portal-gnome`.
 
 
 ## Gnome shortcut does not trigger Flameshot
 
 **Symptom:** When using a shortcut (Print screen) to run Flameshot I get "Unable to capture screen". When I run the command from the shortcut in a terminal, it works. Both used to work fine before, but stopped working after my daily updates. The normal Gnome screenshot program still works. [[source](https://github.com/flameshot-org/flameshot/issues/3365)]
 
-We don't have a definit answer of what in Gnome have changed, but Gnome users have provided the following solution:
+We don't have a definite answer of what in Gnome have changed, but Gnome users have provided the following solution:
 
 Run the `flameshot gui` via a shell script
 
 ```sh
-script --command "flameshot gui" /dev/null
+script --command "QT_QPA_PLATFORM=wayland flameshot gui" /dev/null
 # or
-bash -c -- "flameshot gui"
+bash -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 # or
-sh -c -- "flameshot gui"
+sh -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 ```
 
 If this didn't solve your issue or if you are not sure what you do about this, Best places to look for are [#3365](https://github.com/flameshot-org/flameshot/issues/3365) and [#3326](https://github.com/flameshot-org/flameshot/issues/3326).
@@ -71,11 +82,23 @@ In general, these specific comments worth your attention:
 - [Specifically for NixOS users](https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1868580715)
 
 
+## Reset Gnome shortcut permission
+
+In Gome Wayland the users is asked if they want to give permission to the screenshot tool to capture the screen. It is possible to hit the wrong button and permanently block Flameshot from taking the screenshot. The workaround [have been proposed by the community](https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-2823998280). Running the following command in terminal would reset the permission in Gnome Wayland:
+
+```sh
+dbus-send --session  --print-reply=literal --dest=org.freedesktop.impl.portal.PermissionStore /org/freedesktop/impl/portal/PermissionStore org.freedesktop.impl.portal.PermissionStore.D
+eletePermission string:'screenshot' string:'screenshot' string:''
+```
+
 --------------------------------------------------------------------------------
 
 # KDE Wayland
 
 ## 4k displayed and fractional scaling
+
+**Note:** This issue is now fixed after merging [#4498](https://github.com/flameshot-org/flameshot/pull/4498). So the following is only useful for Flameshot versions before v14.0.0 .
+
 
 It has been [reported](https://github.com/flameshot-org/flameshot/issues/227#issuecomment-1002696986) that setting the environmental variable `QT_SCREEN_SCALE_FACTORS` to `1;1` can solve the issue. You can do the following every time your computer boots:
 
@@ -89,4 +112,48 @@ and then you can normally use Flameshot (e.g `flameshot gui`)
 
 **Symptom:** Launcher (right-click on tray icon, then "Open Launcher") does not show anything in the preview section (left-side of the window)
 
-You install `xdg-desktop-portal-kde` and `xdg-desktop-portal`.
+You install `xdg-desktop-portal` and `xdg-desktop-portal-kde`.
+
+
+--------------------------------------------------------------------------------
+
+# Hyprland
+
+## Can't screen anything on Wayland Hyprland
+
+Hyprland is a Wayland copositor, and like any other compositor, you would need the [XDG Portals](https://wiki.archlinux.org/title/XDG_Desktop_Portal) to allow programs like Flameshot to access your system. You need to at least install `xdg-desktop-portal` and `xdg-desktop-portal-hyprland` packages. The naming might be different in your distribution, but the idea is the same. For example, in Arch Linux you can install them with:
+
+```sh
+sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
+```
+
+## Multi-display issue
+
+Adding the following window rule will place flameshot correctly and make it occupy multiple monitors **of equal resolution**. Replace `monitor_w*2` in the last line to match the amount of monitors in your setup.
+
+```conf
+windowrule {
+    name = flameshot-multi-display-fix
+    match:class = flameshot
+
+    animation = fade
+    rounding = 0
+    border_size = 0
+    fullscreen_state = 0 0
+    float = on
+    pin = on
+    monitor = DP-1
+    move = 0 0
+    size = (monitor_w*2) (monitor_h)
+}
+```
+
+**Optional**
+Some users also suggested tweaking ~/.config/flameshot/flameshot.ini:
+
+```ini
+disabledGrimWarning=true
+useGrimAdapter=true
+```
+
+and after these, Flameshot works with or without `grim` as expected.

@@ -2,7 +2,7 @@
 title = "Install on Linux"
 description = "Flameshot is a powerful yet simple to use screenshot software."
 date = 2021-05-01T08:00:00+00:00
-updated = 2022-06-01T08:00:00+00:00
+updated = 2025-01-30T14:50:24+02:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -32,6 +32,8 @@ There are packages available for different distros:
 
 - **[NixOS](https://search.nixos.org/packages?query=flameshot):** `nix-env --install --attr nixos.flameshot`
 
+- **[Guix](https://packages.guix.gnu.org/packages/flameshot/):** `guix install flameshot`
+
 - **[openSUSE](https://software.opensuse.org/package/flameshot):** `zypper install flameshot`
 
 - **[Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot):** `xbps-install flameshot`
@@ -50,7 +52,7 @@ download a development version from [here](../development-build) or use AUR if y
 2. In rolling-release distros (e.g Arch, Solus), you can expect to get the recent version of Flameshot within the first few days of release, but in nonrolling-release distros (e.g Ubuntu, Debian, Fedora) you will most probably stay a few versions behind, especially if your Linux release version is old (check [here](https://repology.org/metapackage/flameshot/versions)). In these cases you might want to either go for the packages we provide on [Flameshot release page](https://github.com/flameshot-org/flameshot/releases) or go with distro-agnostic solutions which are explained [here](#distro-agnostic).
 
 
-In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [Github release page](https://github.com/flameshot-org/flameshot/releases):
+In addition, we also have continuous integration, it currently provides the following packages which can be accessed via our [GitHub release page](https://github.com/flameshot-org/flameshot/releases):
 
 - Debian10 (buster)
 - Ubuntu18.04 (bionic)

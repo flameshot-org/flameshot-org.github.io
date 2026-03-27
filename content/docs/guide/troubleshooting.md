@@ -137,8 +137,16 @@ If you were still getting the following message when restarting Flameshot, try r
 
 ![A screenshot of a permission request window in macOS which says "Flameshot.app would like to record this computer's screen"](/media/macos_screenrecording_permission_request.png)
 
-When this step is done you have to restart your macOS to make the permissions get working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple, but until that day, the only easy solution is rebooting.
+When this step is done you have to restart your macOS to get the permissions working. This has been an issue of macOS that many users have reported, hopefully this macOS bug will be addressed by Apple soon.
 
+If the reboot fails to fix the problem try resetting the privacy permissions for flameshot:
+
+```sh
+# get the bundle identifier for the app
+osascript -e 'id of app "Flameshot"'
+# reset the privacy permissions
+sudo tccutil reset ScreenCapture org.flameshot.Flameshot
+```
 
 ### The command `flameshot` does not exist in my terminal
 
@@ -150,6 +158,23 @@ In general to have a command in your shell (e.g zsh) you should put the binary i
 ### Flameshot only works on the primary screen
 
 Depending on how you have Spaces configured in Mission Control you may only be able to activate Flameshot on a particular external display by using the `shift+alt+cmd+4` hotkey. Otherwise, Flameshot will only activate on the main display if you click "Take Screenshot" from the application menu. Fix it by uninstalling, installing again and selecting Flameshot again in the `Screen Recording` section. (reported to work [here](https://github.com/flameshot-org/flameshot/issues/1258#issuecomment-1004297496))
+
+
+### “flameshot” app cannot be opened
+
+As it has been frequently reported ([1](https://github.com/flameshot-org/flameshot/issues/1641), [2](https://github.com/flameshot-org/flameshot/issues/1925), [3](https://github.com/flameshot-org/flameshot/issues/3049)), macOS prevents the applications that are not signed with Apple certificate from launching.
+
+![A screenshot of macOS error message that prevents Flameshot from opening](/media/macos_flameshot_cannot_be_opened.png)
+
+It is possible to bypass the error via the System Settings:
+1. Open System Settings -> Privacy & Security
+2. Scroll all the way to the bottom and click "Open anyway" below "flameshot.app was blocked from use because it is not from an identified developer".
+
+Alternatively (or if the above approach didn't help), it is possible to allow Flameshot to launch via the following command:
+
+```sh
+sudo xattr -rd com.apple.quarantine /Applications/flameshot.app
+```
 
 --------------------------------------------------------------------------------
 

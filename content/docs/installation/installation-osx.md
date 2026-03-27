@@ -28,7 +28,7 @@ You can install Flameshot on [macOS](https://en.wikipedia.org/wiki/MacOS) using 
     >
     > After following all those steps above, flameshot will open without problems in your Mac.
 - Download DMG file:
-    1. Navigate to [the release page on Github](https://github.com/flameshot-org/flameshot/releases)
+    1. Navigate to [the release page on GitHub](https://github.com/flameshot-org/flameshot/releases)
     2. From the assets of the latest stable release, download the latest DMG file
     3. Double-click on the DMG file you downloaded
     4. Drag and drop the `flameshot.app` to your `/Applications` folder
