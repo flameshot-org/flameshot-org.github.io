@@ -18,7 +18,7 @@ top = false
 
 You can always use `--help` for all commands or subcommands of Flameshot.
 
-**Note:** On Windows, you have use `flameshot-cli` instead of `flameshot`!
+**Note:** On Windows, you have to use `flameshot-cli` instead of `flameshot`!
 
 ```sh
 #      ___ command
