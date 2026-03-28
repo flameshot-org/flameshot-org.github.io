@@ -77,7 +77,7 @@ Flameshot uses <kbd>Print screen</kbd> (Windows) and <kbd>cmd</kbd>-<kbd>option<
 On Linux, Flameshot doesn't yet support <kbd>Pr Scr</kbd> out of the box, but with a bit of configuration you can set this up:
 
 #### On KDE Plasma desktop
-To make configuration easier, there's [a file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
+To make configuration easier, there's [a file](https://github.com/flameshot-org/flameshot/blob/master/docs/shortcuts-config/flameshot-shortcuts-kde.kksrc) in the repository that more or less automates this process. This file will assign the following keys to the following actions by default:
 
 |  Keys                                                           |  Description                                                                                |
 |---                                                              |---                                                                                          |
@@ -99,13 +99,13 @@ Steps for using the configuration:
 2. Download the configuration file:
     ```sh
     cd ~/Desktop
-    wget https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys
+    wget https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.kksrc
     ```
-3. Go to _System Settings_ → _Shortcuts_ → _Custom Shortcuts_.
-4. If there's one, you'll need to disable an entry for Spectacle, the default KDE screenshot utility first because its shortcuts might collide with Flameshot's ones; so, just uncheck the _Spectacle_ entry.
-5. Click _Edit_ → _Import..._, navigate to the Desktop folder (or wherever you saved the configuration file) and open the configuration file.
-6. Now the Flameshot entry should appear in the list. Click _Apply_ to apply the changes.
-7. If you want to change the defaults, you can expand the entry, select the appropriate action and modify it as you wish; the process is pretty mush self-explanatory.
+3. Go to _System Settings_ → _Keyboard_ → _Shortcuts_.
+4. If there's one, you'll need to disable an entry for Spectacle, the default KDE screenshot utility first because its shortcuts might collide with Flameshot's ones; so, just open the Spectacle entry and  uncheck any of its pre-configured shortcuts.
+5. Click _Import..._, navigate to the Desktop folder (or wherever you saved the configuration file) and open the configuration file.
+6. Now the Flameshot entry should appear in the list (under _Commands_). Click _Apply_ to apply the changes.
+7. If you want to change the defaults, you can expand the entry and modify it as you wish; the process is pretty mush self-explanatory.
 
 #### On Ubuntu and other Gnome based distros
 
