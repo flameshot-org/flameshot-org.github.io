@@ -59,11 +59,10 @@ In addition, we also have continuous integration, it currently provides the foll
 - Ubuntu22.04 (jammy)
 - Ubuntu24.04 (nobel)
 - Fedora41
-- Fedora41
+- Fedora42
 <!---
 - OpenSUSE Leap 15.2
 -->
-
 General packages (AppImage, snap, and Flatpak): they can run on common Linux-based operating systems, such as RHEL, CentOS, openSUSE, SLED, Ubuntu, Fedora, Debian and derivatives.
 
 <details>
@@ -73,9 +72,16 @@ General packages (AppImage, snap, and Flatpak): they can run on common Linux-bas
   </a>
 </details>
 
+There is also continuous integration for ARM architectures:
+- ARM64
+  - Debian 12 (bookworm)
+  - Ubuntu 22.04 (jammy)
+  - Ubuntu 24.04 (nobel)
+- ARMhf (ARM hard float)
+  - Debian 12 (bookworm)
+
 
 -------------------------------------------------
-
 ## Distro-Agnostic
 
 ### AppImage
