@@ -75,16 +75,19 @@ For a shortcut that persists after reboot, create a small wrapper script:
 mkdir -p "$HOME/.local/bin"
 cat > "$HOME/.local/bin/flameshot-gui-wayland" <<'EOF'
 #!/usr/bin/env sh
+FLAMESHOT_BIN="/usr/bin/flameshot"
 export QT_QPA_PLATFORM=wayland
-exec flameshot gui "$@"
+exec "$FLAMESHOT_BIN" gui "$@"
 EOF
 chmod +x "$HOME/.local/bin/flameshot-gui-wayland"
 ```
 
+If `command -v flameshot` prints a different path, replace `/usr/bin/flameshot` with that path in the script.
+For Flatpak, replace the `exec` line with `exec /usr/bin/flatpak run org.flameshot.Flameshot gui "$@"` if `command -v flatpak` prints `/usr/bin/flatpak`.
 Then open Gnome Settings → Keyboard → View and Customize Shortcuts → Custom Shortcuts, add a new shortcut, and use the absolute path to that script as the command.
 For example, set the command to `/home/YOUR_USERNAME/.local/bin/flameshot-gui-wayland` and bind it to <kbd>Ctrl</kbd> + <kbd>Print</kbd>.
 Using <kbd>Ctrl</kbd> + <kbd>Print</kbd> keeps the default Gnome screenshot UI available on <kbd>Print</kbd>.
-Use an absolute path because desktop shortcut launchers might not expand `~` or load your shell `PATH`.
+Use absolute paths because desktop shortcut launchers might not expand `~` or load your shell `PATH`.
 
 If this didn't solve your issue or if you are not sure what you do about this, Best places to look for are [#3365](https://github.com/flameshot-org/flameshot/issues/3365) and [#3326](https://github.com/flameshot-org/flameshot/issues/3326).
 
