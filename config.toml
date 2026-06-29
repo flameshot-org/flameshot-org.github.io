@@ -101,6 +101,12 @@ url = "#features"
 weight = 0
 
 [[extra.menu.main]]
+name = "Docs"
+section = "docs"
+url = "/docs/"
+weight = 20
+
+[[extra.menu.main]]
 name = "Download"
 section = ""
 url = "#download"
@@ -117,9 +123,3 @@ name = "Donate"
 section = ""
 url = "/donate/"
 weight = 0
-
-[[extra.menu.main]]
-name = "Docs"
-section = "docs"
-url = "/docs/"
-weight = 20
