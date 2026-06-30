@@ -2,7 +2,7 @@
 title = "Wayland Help"
 description = "A page to help Wayland users sort out some Wayland-specific issues"
 date = 2022-01-28T16:31:10+00:00
-updated = 2022-09-13T17:58:00+00:00
+updated = 2026-06-15T06:51:14+00:00
 draft = false
 weight = 1
 sort_by = "weight"
@@ -68,6 +68,26 @@ bash -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 # or
 sh -c -- "QT_QPA_PLATFORM=wayland flameshot gui"
 ```
+
+For a shortcut that persists after reboot, create a small wrapper script:
+
+```sh
+mkdir -p "$HOME/.local/bin"
+cat > "$HOME/.local/bin/flameshot-gui-wayland" <<'EOF'
+#!/usr/bin/env sh
+FLAMESHOT_BIN="/usr/bin/flameshot"
+export QT_QPA_PLATFORM=wayland
+exec "$FLAMESHOT_BIN" gui "$@"
+EOF
+chmod +x "$HOME/.local/bin/flameshot-gui-wayland"
+```
+
+If `command -v flameshot` prints a different path, replace `/usr/bin/flameshot` with that path in the script.
+For Flatpak, replace the `exec` line with `exec /usr/bin/flatpak run org.flameshot.Flameshot gui "$@"` if `command -v flatpak` prints `/usr/bin/flatpak`.
+Then open Gnome Settings → Keyboard → View and Customize Shortcuts → Custom Shortcuts, add a new shortcut, and use the absolute path to that script as the command.
+For example, set the command to `/home/YOUR_USERNAME/.local/bin/flameshot-gui-wayland` and bind it to <kbd>Ctrl</kbd> + <kbd>Print</kbd>.
+Using <kbd>Ctrl</kbd> + <kbd>Print</kbd> keeps the default Gnome screenshot UI available on <kbd>Print</kbd>.
+Use absolute paths because desktop shortcut launchers might not expand `~` or load your shell `PATH`.
 
 If this didn't solve your issue or if you are not sure what you do about this, Best places to look for are [#3365](https://github.com/flameshot-org/flameshot/issues/3365) and [#3326](https://github.com/flameshot-org/flameshot/issues/3326).
 
