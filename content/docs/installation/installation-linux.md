@@ -160,7 +160,7 @@ To update the snap applications on your computer, you should run `snap refresh`.
 
 ### Flatpak  <img src="https://img.shields.io/flathub/downloads/org.flameshot.Flameshot">
 
-Flameshot is not currently on Flathub, but it will be there soon and the information here will be updated accordingly. For now you can install the Flatpak from the github release:
+Flameshot can be installed through Flathub with the following command:
 
 ```sh
 flatpak install flathub org.flameshot.Flameshot
