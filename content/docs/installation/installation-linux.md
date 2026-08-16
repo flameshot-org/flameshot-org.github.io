@@ -36,7 +36,7 @@ There are packages available for different distros:
 
 - **[openSUSE](https://software.opensuse.org/package/flameshot):** `zypper install flameshot`
 
-- **[Void Linux](https://github.com/voidlinux/void-packages/tree/master/srcpkgs/flameshot):** `xbps-install flameshot`
+- **[Void Linux](https://github.com/void-linux/void-packages/tree/master/srcpkgs/flameshot):** `xbps-install flameshot`
 
 - **[Solus](https://dev.getsol.us/source/flameshot/):** `eopkg install flameshot`
 
