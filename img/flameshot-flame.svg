@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="150px" height="158px" viewBox="0 0 150 158" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="flameshot-Copy">
+    <path d="M56.333 42.4132C123.747 29.4008 126.337 0 126.337 0C126.337 0 121.028 91.1176 71.7607 95.9384C9.32758 102.047 0 131.5 0 131.5C0 131.5 16.6961 50.0639 56.333 42.4132L56.333 42.4132Z" transform="translate(22.95459 25.263733)" id="Shape" fill="#FF0066" fill-rule="evenodd" stroke="none" />
+    <path d="M19.8032 63.6564C76.9256 39.4645 71.6937 0 71.6937 0C71.6937 0 103.231 80.5099 55.9524 99.2794C3.13699 120.247 5.48706 156.062 5.48706 156.062C5.48706 156.062 -13.7455 77.8646 19.8032 63.6564L19.8032 63.6564Z" transform="translate(18.807129 0)" id="Shape" fill="#FF6600" fill-rule="evenodd" stroke="none" />
+    <path d="M4.95781 72.0008C37.051 29.6815 29.8325 0 29.8325 0C29.8325 0 70.9507 51.5593 42.971 83.4933C11.7147 119.167 25.3269 143.985 25.3269 143.985C25.3269 143.985 -13.4497 96.2735 4.95781 72.0008L4.95781 72.0008Z" transform="translate(0 13.058838)" id="Shape" fill="#FFCC00" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
