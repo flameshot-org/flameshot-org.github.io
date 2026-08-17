@@ -1,4 +1,4 @@
-{% macro header(current_section) %}
+{% component header.current_section(current_section, config) %}
 <header class="navbar fixed-top navbar-expand-lg navbar-light">
 	<div class="container">
 		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
@@ -29,4 +29,4 @@
 		</div>
 	</div>
 </header>
-{% endmacro %}
+{% endcomponent header.current_section %}

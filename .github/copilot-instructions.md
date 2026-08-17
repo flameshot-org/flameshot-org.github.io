@@ -91,7 +91,7 @@ templates/
 ├── index.html           # Homepage template
 ├── base.html            # Base template for all pages
 ├── docs/                # Documentation-specific templates
-└── macros/              # Reusable template macros
+└── components/          # Reusable components template
 ```
 
 ### Configuration Files

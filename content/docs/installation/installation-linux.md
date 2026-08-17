@@ -21,7 +21,7 @@ top = true
 
 There are packages available for different distros:
 
-- **[Arch](https://www.archlinux.org/packages/community/x86_64/flameshot/):** `pacman --sync flameshot`
+- **[Arch](https://archlinux.org/packages/extra/x86_64/flameshot/):** `pacman --sync flameshot`
     - Official AUR: [flameshot-git](https://aur.archlinux.org/packages/flameshot-git).
 
 - **[Debian 10+](https://tracker.debian.org/pkg/flameshot):** `apt install flameshot`

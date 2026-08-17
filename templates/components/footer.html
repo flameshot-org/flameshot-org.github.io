@@ -1,4 +1,4 @@
-{% macro footer() %}
+{% component footer(config) %}
 <footer class="footer container-fluid">
     <div class="row">
       <a class="navbar-brand text-center text-decoration-none" href="{{ config.base_url | safe }}">
@@ -34,4 +34,4 @@
       <small class="text-white mt-3">Copyright &copy; 2017-{{ now() | date(format="%Y") }} Flameshot contributors &bullet; Site design by <a class="cs-link" href="https://github.com/Correct-Syntax">Correct Syntax</a></small>
     </div>
 </footer>
-{% endmacro %}
+{% endcomponent footer %}
