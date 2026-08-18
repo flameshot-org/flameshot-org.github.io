@@ -1,4 +1,4 @@
-{% macro docs_navigation(page, current_section) %}
+{% component docs_navigation(page, current_section) %}
 <div class="docs-navigation d-flex justify-content-between">
   {# Find lighter navigation. There are three types: #}
   {# 1. directly find the lighter if exists, #}
@@ -65,7 +65,7 @@
       </div>
     </a>
   {% elif page.extra.top %}
-    {% set index_path = current_section ~ "/_index.md" | trim_start_matches(pat="/") %}
+    {% set index_path = (current_section ~ "/_index.md") | trim_start(pat="/") %}
     {% set index = get_section(path=index_path) %}
     {% set first_subsection = get_section(path=index.subsections | first) %}
     {% if first_subsection.pages %}
@@ -104,4 +104,4 @@
     {% endfor %}
   {% endif %}
 </div>
-{% endmacro %}
+{% endcomponent docs_navigation %}

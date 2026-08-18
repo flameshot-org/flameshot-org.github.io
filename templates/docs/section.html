@@ -7,16 +7,16 @@
 {% block header %}
   {# This value is matched by the config.extra.menu.main~section #}
   {% set current_section = "docs" %}
-  {{ macros_header::header(current_section=current_section)}}
+  {{<header.current_section current_section={current_section} config={config} />}}
 {% endblock header %}
 
-{% macro page_card(permalink, title) %}
+{% component page_card(permalink, title) %}
   <div class="card my-3">
     <div class="card-body">
       <a class="stretched-link" href="{{ permalink }}">{{ title }} &rarr;</a>
     </div>
   </div>
-{% endmacro page_card %}
+{% endcomponent page_card %}
 
 {% block content %}
 <div class="wrap container" role="document">
@@ -27,21 +27,21 @@
           <h1 class="text-center">{{ section.title }}</h1>
           <div class="text-center">{{ section.content | safe }}</div>
           <div class="card-list">
-            {% set index_path = current_path ~ "_index.md" | trim_start_matches(pat="/") %}
+            {% set index_path = (current_path ~ "_index.md") | trim_start(pat="/") %}
             {% set index = get_section(path=index_path) %}
             {% for page in index.pages %}
-              {{ self::page_card(permalink=page.permalink, title=page.title) }}
+              {{<page_card permalink={page.permalink} title={page.title} />}}
             {% endfor %}
             {% for s in index.subsections %}
               {% set subsection = get_section(path=s) %}
               {% if subsection.pages %}
                 {% for page in subsection.pages %}
-                  {{ self::page_card(permalink=page.permalink, title=page.title) }}
+                  {{<page_card permalink={page.permalink} title={page.title} />}}
                 {% endfor %}
               {% endif %}
             {% endfor %}
             {# TODO maybe there is a better way to do this. #}
-            {{ self::page_card(permalink="/docs/dev", title="Developer Docs") }}
+            {{<page_card permalink="/docs/dev" title="Developer Docs" />}}
           </div>
         </article>
       </div>

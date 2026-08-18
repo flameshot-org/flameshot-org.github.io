@@ -19,7 +19,12 @@
 
   {% set description = config.description %}
 
-  {{ macros_head::seo(title=title, title_addition=title_addition, description=description, is_home=true) }}
+  {{<head.seo 
+      title={title}
+      title_addition={title_addition}
+      description={description}
+      is_home={true}
+    /> }}
 {% endblock seo %}
 
 {% block content %}

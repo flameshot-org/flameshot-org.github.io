@@ -1,16 +1,16 @@
-{% macro resource() %}
+{% component head.resource() %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-{% endmacro %}
+{% endcomponent head.resource %}
 
 
-{% macro stylesheet() %}
+{% component head.stylesheet() %}
 <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
-{% endmacro %}
+{% endcomponent head.stylesheet %}
 
 
-{% macro favicons() %}
+{% component head.favicons(config) %}
   <meta name="theme-color" content="{{ config.extra.theme_color | default(value="#fff") }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="apple-touch-icon.png") | safe }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon-32x32.png") | safe }}">
@@ -18,14 +18,14 @@
   {% if not config.extra.is_netlify %}
     <link rel="manifest" href="{{ get_url(path="site.webmanifest") | safe }}">
   {% endif %}
-{% endmacro %}
+{% endcomponent head.favicons %}
 
 
 {# type:          website or article, generally setting article for blog articles #}
 {# page_images:   using for the blog single template page #}
 {# page_section:  the blog single template page have to pass the parameter #}
 {# is_404:        using for the 404.html template #}
-{% macro seo(
+{% component head.seo(
   title="",
   title_addition="",
   description="",
@@ -37,8 +37,8 @@
   page_section="",
   created_time="2021-05-01T08:08:00+08:00",
   updated_time="2021-05-01T08:08:08+08:00"
-  )
-%}
+  ) %}
+{% endcomponent head.seo %}
 
 {% if is_404 %}
   <meta name="robots" content="noindex, follow">
@@ -208,7 +208,7 @@
       "item": "{{ url_item | safe }}"
     },
     {% else %}
-      {% set paths = page_path | trim_start_matches(pat="/") | trim_end_matches(pat="/") | split(pat="/") %}
+      {% set paths = page_path | trim(pat="/") | split(pat="/") %}
       {% for val in paths %}
         {% set name_array = val | split(pat="-") %}
         {% set_global str = "" %}
@@ -216,7 +216,7 @@
         {% set cap_val = val | capitalize %}
         {% set_global str = str ~ cap_val ~ " " %}
         {% endfor %}
-        {% set name = str | trim_end_matches(pat=" ") | title %}
+        {% set name = str | trim(pat=" ") | title %}
         {% if not index %}
           {
             "@type": "ListItem",
@@ -246,4 +246,4 @@
     {% endif %}
   }
 </script>
-{% endmacro %}
+{# {% endmacro %} #}

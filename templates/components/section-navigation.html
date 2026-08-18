@@ -1,4 +1,4 @@
-{% macro navigation(paginator) %}
+{% component navigation(paginator) %}
 <div class="blog-navigation d-flex justify-content-between">
 	{% if paginator.previous %}
 	<a href="{{ paginator.previous | safe }}">
@@ -19,4 +19,4 @@
 	</a>
 	{% endif %}
 </div>
-{% endmacro %}
+{% endcomponent navigation %}

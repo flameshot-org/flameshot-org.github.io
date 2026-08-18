@@ -27,7 +27,16 @@
     {% set page_section = "" %}
   {% endif %}
   
-  {{ macros_head::seo(title=title, title_addition=title_addition, description=description, type="article", is_page=true, created_time=created_time, updated_time=updated_time, page_section=page_section) }}
+  {{ <head.seo 
+    title={title} 
+    title_addition={title_addition} 
+    description={description} 
+    type={"article"} 
+    is_page={true} 
+    created_time={created_time} 
+    updated_time={updated_time} 
+    page_section={page_section} 
+  /> }}
 {% endblock seo %}
   
 {% block body %}
