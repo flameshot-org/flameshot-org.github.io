@@ -208,7 +208,7 @@
       "item": "{{ url_item | safe }}"
     },
     {% else %}
-      {% set paths = page_path | trim(pat="/") | trim(pat="/") | split(pat="/") %}
+      {% set paths = page_path | trim(pat="/") | split(pat="/") %}
       {% for val in paths %}
         {% set name_array = val | split(pat="-") %}
         {% set_global str = "" %}
